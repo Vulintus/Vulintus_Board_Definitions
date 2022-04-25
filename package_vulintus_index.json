@@ -5,7 +5,6 @@
 			"maintainer": "Vulintus, Inc.",
 			"websiteURL": "https://www.vulintus.com/",
 			"email": "support@vulintus.com",
-
 			"help": {
 				"online": "https://www.vulintus.com/support/"
 			},
@@ -24,8 +23,8 @@
 					},
 					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/vulintus_samd_v0_1_0.zip",
 					"archiveFileName": "vulintus_samd_v0_1_0.zip",
-					"checksum": "SHA-256:7f11049be8e71d7acec2783e06d2e3707069fa4d76c83337be95242dcc4bafe1",
-					"size": "1042761",			
+					"checksum": "SHA-256:99fed78e97b95dfa5a475462bad42767222a81554c2fd5e7f70f743c4be5ab6c",
+					"size": "1042755",			
 					"toolsDependencies": [
 						{
 							"packager": "arduino",
