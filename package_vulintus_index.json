@@ -22,10 +22,10 @@
 					"help": {
 						"online": "https://www.vulintus.com/support/"
 					},
-					"url": "https://vulintus.squarespace.com/s/vulintus_samd_v0p1p0.zip",
-					"archiveFileName": "vulintus_samd_v0p1p0.zip",
+					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/vulintus_samd_v0_1_0.zip",
+					"archiveFileName": "vulintus_samd_v0_1_0.zip",
 					"checksum": "SHA-256:7f11049be8e71d7acec2783e06d2e3707069fa4d76c83337be95242dcc4bafe1",
-					"size": "884653",			
+					"size": "1042761",			
 					"toolsDependencies": [
 						{
 							"packager": "arduino",
