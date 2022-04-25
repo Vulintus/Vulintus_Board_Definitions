@@ -1,0 +1,55 @@
+{
+	"packages": [
+		{
+			"name": "Vulintus_SAMD",
+			"maintainer": "Vulintus, Inc.",
+			"websiteURL": "https://www.vulintus.com/",
+			"email": "support@vulintus.com",
+
+			"help": {
+				"online": "https://www.vulintus.com/support/"
+			},
+
+			"platforms": [
+				{
+					"name": "Vulintus SAMD Devices",
+					"boards": [
+						{"name": "HabiTrak V1.0.0"}
+					],
+					"architecture": "samd",
+					"version": "0.1.0",
+					"category": "Contributed",
+					"help": {
+						"online": "https://www.vulintus.com/support/"
+					},
+					"url": "https://vulintus.squarespace.com/s/vulintus_samd_v0p1p0.zip",
+					"archiveFileName": "vulintus_samd_v0p1p0.zip",
+					"checksum": "SHA-256:7f11049be8e71d7acec2783e06d2e3707069fa4d76c83337be95242dcc4bafe1",
+					"size": "884653",			
+					"toolsDependencies": [
+						{
+							"packager": "arduino",
+							"name": "arm-none-eabi-gcc",
+							"version": "4.8.3-2014q1"
+						},
+						{
+							"packager": "arduino",
+							"name": "bossac",
+							"version": "1.5-arduino"
+						},
+						{
+							"packager": "arduino",
+							"name": "openocd",
+							"version": "0.9.0-arduino"
+						},
+						{
+							"packager": "arduino",
+							"name": "CMSIS",
+							"version": "4.0.0-atmel"
+						}
+					]
+				}
+			]
+		}
+	]
+}
