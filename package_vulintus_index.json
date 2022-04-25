@@ -1,7 +1,7 @@
 {
 	"packages": [
 		{
-			"name": "Vulintus_SAMD",
+			"name": "vulintus",
 			"maintainer": "Vulintus, Inc.",
 			"websiteURL": "https://www.vulintus.com/",
 			"email": "support@vulintus.com",
