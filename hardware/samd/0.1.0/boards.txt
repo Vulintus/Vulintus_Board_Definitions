@@ -21,15 +21,19 @@ menu.maxqspi=Max QSPI
 menu.usbstack=USB Stack
 menu.debug=Debug
 
+##############################################################
 # Vulintus HabiTrak V1.0.0 (SAMD51P)
 # ------------------------------
+
 vulintus_habitrak_v1_0_0.name=Vulintus HabiTrak V1.0.0 (SAMD51P)
+
 vulintus_habitrak_v1_0_0.vid.0=0x239A
 vulintus_habitrak_v1_0_0.pid.0=0x8031
 vulintus_habitrak_v1_0_0.vid.1=0x239A
 vulintus_habitrak_v1_0_0.pid.1=0x0031
 vulintus_habitrak_v1_0_0.vid.1=0x239A
 vulintus_habitrak_v1_0_0.pid.1=0x0032
+
 vulintus_habitrak_v1_0_0.upload.tool=bossac18
 vulintus_habitrak_v1_0_0.upload.protocol=sam-ba
 vulintus_habitrak_v1_0_0.upload.maximum_size=520192
@@ -37,6 +41,7 @@ vulintus_habitrak_v1_0_0.upload.offset=0x4000
 vulintus_habitrak_v1_0_0.upload.use_1200bps_touch=true
 vulintus_habitrak_v1_0_0.upload.wait_for_upload_port=true
 vulintus_habitrak_v1_0_0.upload.native_usb=true
+
 vulintus_habitrak_v1_0_0.build.mcu=cortex-m4
 #vulintus_habitrak_v1_0_0.build.f_cpu=120000000L
 vulintus_habitrak_v1_0_0.build.usb_product="Vulintus HabiTrak V1.0.0"
@@ -50,9 +55,12 @@ vulintus_habitrak_v1_0_0.build.variant=habitrak_v1_0_0
 vulintus_habitrak_v1_0_0.build.variant_system_lib=
 vulintus_habitrak_v1_0_0.build.vid=0x239A
 vulintus_habitrak_v1_0_0.build.pid=0x8031
+
 vulintus_habitrak_v1_0_0.bootloader.tool=openocd
 vulintus_habitrak_v1_0_0.bootloader.file=habitrak_v1_0_0/bootloader-habitrak_v1_0_0.bin
+
 vulintus_habitrak_v1_0_0.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+
 vulintus_habitrak_v1_0_0.menu.cache.on=Enabled
 vulintus_habitrak_v1_0_0.menu.cache.on.build.cache_flags=-DENABLE_CACHE
 vulintus_habitrak_v1_0_0.menu.cache.off=Disabled
@@ -85,3 +93,5 @@ vulintus_habitrak_v1_0_0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUS
 vulintus_habitrak_v1_0_0.menu.debug.off=Off
 vulintus_habitrak_v1_0_0.menu.debug.on=On
 vulintus_habitrak_v1_0_0.menu.debug.on.build.flags.debug=-g
+
+##############################################################
