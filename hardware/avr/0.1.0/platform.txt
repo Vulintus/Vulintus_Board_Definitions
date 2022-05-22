@@ -1,12 +1,14 @@
 
-# Arduino AVR Core and platform.
+# Vulintus AVR devices configurations.
 # ------------------------------
+#
+# This file was adapted from Arduino AVR configuration.
 #
 # For more info:
 # https://arduino.github.io/arduino-cli/latest/platform-specification/
 
-name=Arduino AVR Boards
-version=1.8.5
+name=Vulintus AVR Devices
+version=0.1.0
 
 # AVR compile variables
 # ---------------------

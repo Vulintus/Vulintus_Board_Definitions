@@ -35,32 +35,32 @@
 #define digitalPinHasPWM(p)         ((p) == 3 || (p) == 5 || (p) == 6 || (p) == 9 || (p) == 10 || (p) == 11)
 #endif
 
-#define PIN_SPI_SS    (10)
-#define PIN_SPI_MOSI  (11)
-#define PIN_SPI_MISO  (12)
-#define PIN_SPI_SCK   (13)
+#define PIN_SPI_SS    (10)		//PB2
+#define PIN_SPI_MOSI  (11)		//PB3
+#define PIN_SPI_MISO  (12)		//PB4
+#define PIN_SPI_SCK   (13)		//PB5
 
 static const uint8_t SS   = PIN_SPI_SS;
 static const uint8_t MOSI = PIN_SPI_MOSI;
 static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SCK  = PIN_SPI_SCK;
 
-#define PIN_WIRE_SDA        (18)
-#define PIN_WIRE_SCL        (19)
+#define PIN_WIRE_SDA        (18)		//PC4
+#define PIN_WIRE_SCL        (19)		//PC5
 
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
 #define LED_BUILTIN 13
 
-#define PIN_A0   (14)
-#define PIN_A1   (15)
-#define PIN_A2   (16)
-#define PIN_A3   (17)
-#define PIN_A4   (18)
-#define PIN_A5   (19)
-#define PIN_A6   (20)
-#define PIN_A7   (21)
+#define PIN_A0   (14)		//PC0
+#define PIN_A1   (15)		//PC1
+#define PIN_A2   (16)		//PC2
+#define PIN_A3   (17)		//PC3
+#define PIN_A4   (18)		//PC4
+#define PIN_A5   (19)		//PC5
+#define PIN_A6   (20)		//PC6
+#define PIN_A7   (21)		//PC7
 
 static const uint8_t A0 = PIN_A0;
 static const uint8_t A1 = PIN_A1;
@@ -77,6 +77,32 @@ static const uint8_t A7 = PIN_A7;
 #define digitalPinToPCMSKbit(p) (((p) <= 7) ? (p) : (((p) <= 13) ? ((p) - 8) : ((p) - 14)))
 
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : NOT_AN_INTERRUPT))
+
+#define PIN_IR_INT			10
+#define PIN_NOSEPOKE_L 	A2
+#define PIN_NOSEPOKE_C 	A15
+#define PIN_NOSEPOKE_R 	A0
+
+#define PIN_IV_IN_ADC 	A7
+#define PIN_I_IN_ADC 		A4
+#define PIN_PWR_FAULT 	A3
+#define PIN_I_IN_RESET 	A5
+
+#define PIN_BNC_IO 			A6
+
+#define PIN_CAP_SEND 		2
+#define PIN_CAPSENSE_L 	8
+#define PIN_CAPSENSE_C 	9
+#define PIN_CAPSENSE_R 	4
+
+#define PIN_LEDS_EN 		3
+#define PIN_NEOPIX			13
+
+#define PIN_24VPB_TRG				12
+#define PIN_24VPB_CLK_IN		11
+#define PIN_24VPB_CLK_IN		6
+#define PIN_24VPB_BLOCK_AB	7
+#define PIN_24VPB_BLOCK_BC	5
 
 #ifdef ARDUINO_MAIN
 
@@ -220,7 +246,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	TIMER2,
 #else
 	TIMER2A,
-#endif
+#endif		//if defined(__AVR_ATmega8__)
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
@@ -231,7 +257,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER,
 };
 
-#endif
+#endif		//#ifdef ARDUINO_MAIN
 
 // These serial port names are intended to allow libraries and architecture-neutral
 // sketches to automatically default to the correct port name for a particular type
@@ -251,4 +277,4 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 #define SERIAL_PORT_MONITOR   Serial
 #define SERIAL_PORT_HARDWARE  Serial
 
-#endif
+#endif	//#ifndef Pins_Arduino_h

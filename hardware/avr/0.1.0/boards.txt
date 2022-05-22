@@ -6,47 +6,27 @@ menu.cpu=Processor
 # Vulintus Kroener Box V2.3 (ATMEGA328P)
 # ------------------------------
 
-uno.name=Vulintus Kroener Box V2.3 (ATMEGA328P)
+kroener_box_v2_3.name=Vulintus Kroener Box V2.3 (ATMEGA328P)
 
-uno.vid.0=0x2341
-uno.pid.0=0x0043
-uno.vid.1=0x2341
-uno.pid.1=0x0001
-uno.vid.2=0x2A03
-uno.pid.2=0x0043
-uno.vid.3=0x2341
-uno.pid.3=0x0243
-uno.upload_port.0.vid=0x2341
-uno.upload_port.0.pid=0x0043
-uno.upload_port.1.vid=0x2341
-uno.upload_port.1.pid=0x0001
-uno.upload_port.2.vid=0x2A03
-uno.upload_port.2.pid=0x0043
-uno.upload_port.3.vid=0x2341
-uno.upload_port.3.pid=0x0243
-uno.upload_port.4.board=uno
+kroener_box_v2_3.upload.tool=avrdude
+kroener_box_v2_3.upload.protocol=arduino
+kroener_box_v2_3.upload.maximum_size=32256
+kroener_box_v2_3.upload.maximum_data_size=2048
+kroener_box_v2_3.upload.speed=115200
 
-uno.upload.tool=avrdude
-uno.upload.tool.default=avrdude
-uno.upload.tool.network=arduino_ota
-uno.upload.protocol=arduino
-uno.upload.maximum_size=32256
-uno.upload.maximum_data_size=2048
-uno.upload.speed=115200
+kroener_box_v2_3.bootloader.tool=avrdude
+kroener_box_v2_3.bootloader.tool.default=avrdude
+kroener_box_v2_3.bootloader.low_fuses=0xFF
+kroener_box_v2_3.bootloader.high_fuses=0xDE
+kroener_box_v2_3.bootloader.extended_fuses=0xFD
+kroener_box_v2_3.bootloader.unlock_bits=0x3F
+kroener_box_v2_3.bootloader.lock_bits=0x0F
+kroener_box_v2_3.bootloader.file=optiboot/optiboot_atmega328.hex
 
-uno.bootloader.tool=avrdude
-uno.bootloader.tool.default=avrdude
-uno.bootloader.low_fuses=0xFF
-uno.bootloader.high_fuses=0xDE
-uno.bootloader.extended_fuses=0xFD
-uno.bootloader.unlock_bits=0x3F
-uno.bootloader.lock_bits=0x0F
-uno.bootloader.file=optiboot/optiboot_atmega328.hex
-
-uno.build.mcu=atmega328p
-uno.build.f_cpu=16000000L
-uno.build.board=AVR_UNO
-uno.build.core=arduino
-uno.build.variant=standard
+kroener_box_v2_3.build.mcu=atmega328p
+kroener_box_v2_3.build.f_cpu=16000000L
+kroener_box_v2_3.build.board=AVR_KROENER_BOX_V2_3
+kroener_box_v2_3.build.core=arduino
+kroener_box_v2_3.build.variant=kroener_box_v2_3
 
 ##############################################################

@@ -64,10 +64,10 @@
 					"help": {
 						"online": "https://www.vulintus.com/support/"
 					},
-					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_avr_v0_1_0_2022xxxxxxxx.zip",
-					"archiveFileName": "vulintus_avr_v0_1_0_2022xxxxxxxx.zip",
-					"checksum": "SHA-256:0ee11ab2374ff9710ff87209e3f57c94fc20aa6a3b67785e2157c3bd49f2d913",
-					"size": "1024040",			
+					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_avr_v0_1_0_202205220918.zip",
+					"archiveFileName": "vulintus_avr_v0_1_0_202205220918.zip",
+					"checksum": "SHA-256:5b3f6b7379c92506a247108fc521c996ade1833edbb770fe9cb59b6af3c2709c",
+					"size": "71929",			
 					"toolsDependencies": [
             {
               "name": "avr-gcc",
