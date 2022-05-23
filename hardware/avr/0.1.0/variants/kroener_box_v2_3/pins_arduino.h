@@ -80,7 +80,7 @@ static const uint8_t A7 = PIN_A7;
 
 #define PIN_IR_INT			10
 #define PIN_NOSEPOKE_L 	A2
-#define PIN_NOSEPOKE_C 	A15
+#define PIN_NOSEPOKE_C 	A1
 #define PIN_NOSEPOKE_R 	A0
 
 #define PIN_IV_IN_ADC 	A7
