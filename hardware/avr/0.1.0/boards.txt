@@ -1,7 +1,5 @@
 # See: https://arduino.github.io/arduino-cli/latest/platform-specification/
 
-menu.cpu=Processor
-
 ##############################################################
 # Vulintus Kroener Box V2.3 (ATMEGA328P)
 # ------------------------------
@@ -25,8 +23,8 @@ kroener_box_v2_3.bootloader.file=optiboot/optiboot_atmega328.hex
 
 kroener_box_v2_3.build.mcu=atmega328p
 kroener_box_v2_3.build.f_cpu=16000000L
-kroener_box_v2_3.build.board=AVR_KROENER_BOX_V2_3
-kroener_box_v2_3.build.core=arduino
+kroener_box_v2_3.build.core=arduino:arduino
 kroener_box_v2_3.build.variant=kroener_box_v2_3
+kroener_box_v2_3.build.board=AVR_KROENER_BOX_V2_3
 
 ##############################################################
