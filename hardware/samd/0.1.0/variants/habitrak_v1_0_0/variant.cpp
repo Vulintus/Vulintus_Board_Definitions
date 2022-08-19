@@ -50,8 +50,8 @@ const PinDescription g_APinDescription[]=
   { PORTD, 1, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1 },    //WINC_CS     (10)  PIO_DIGITAL_04
 
   // ATWINC3400 Bluetooth Serial (Serial2, SERCOM0)
-  { PORTA, 5, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_5 },     //WINC_BT_TX  (11)  PIO_SERCOM_08
-  { PORTA, 4, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4 },     //WINC_BT_RX  (12)  PIO_SERCOM_09
+  { PORTA, 5, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_5 },     //WINC_BT_TX (Winc TX, SAMD RX)  (11)  PIO_SERCOM_08
+  { PORTA, 4, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4 },     //WINC_BT_RX (Winc RX, SAMD TX)  (12)  PIO_SERCOM_09
 
   // ATWINC3400 Debug I2C (SERCOM1)
   { PORTC, 27, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11 },  //WINC_SDA_M  (13)  PIO_DIGITAL_05
@@ -66,7 +66,7 @@ const PinDescription g_APinDescription[]=
   { PORTA, 11, PIO_COM, PIN_ATTR_NONE, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11 },         //SD_DAT2     (20)  PIO_COM_06
   { PORTB, 10, PIO_COM, PIN_ATTR_NONE, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10 },         //SD_DAT3     (21)  PIO_COM_07
 
-  // USB (S3, SA5)
+  // USB (SERCOM3 or SERCOM5)
   { PORTA, 25, PIO_COM, PIN_ATTR_NONE, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_9 },          //USB_D+      (22)  PIO_COM_08
   { PORTA, 24, PIO_COM, PIN_ATTR_NONE, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_8 },          //USB_D-      (23)  PIO_COM_09
   { PORTB, 19, PIO_COM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_3 },       //USB_DETECT  (24)  PIO_COM_10
@@ -164,21 +164,40 @@ SERCOM sercom5( SERCOM5 ) ;
 SERCOM sercom6( SERCOM6 ) ;
 SERCOM sercom7( SERCOM7 ) ;
 
-Uart Serial1( &sercom0, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ;
+Uart Serial1( &sercom3, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ;
+Uart Serial2( &sercom0, PIN_SERIAL2_RX, PIN_SERIAL2_TX, PAD_SERIAL2_RX, PAD_SERIAL2_TX ) ;
+
+void SERCOM3_0_Handler()
+{
+  Serial1.IrqHandler();
+}
+void SERCOM3_1_Handler()
+{
+  Serial1.IrqHandler();
+}
+void SERCOM3_2_Handler()
+{
+  Serial1.IrqHandler();
+}
+void SERCOM3_3_Handler()
+{
+  Serial1.IrqHandler();
+}
+
 
 void SERCOM0_0_Handler()
 {
-  Serial1.IrqHandler();
+  Serial2.IrqHandler();
 }
 void SERCOM0_1_Handler()
 {
-  Serial1.IrqHandler();
+  Serial2.IrqHandler();
 }
 void SERCOM0_2_Handler()
 {
-  Serial1.IrqHandler();
+  Serial2.IrqHandler();
 }
 void SERCOM0_3_Handler()
 {
-  Serial1.IrqHandler();
+  Serial2.IrqHandler();
 }
