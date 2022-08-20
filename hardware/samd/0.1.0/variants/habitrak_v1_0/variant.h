@@ -97,10 +97,8 @@ extern "C"
 /*
  * Analog pins
  */
-#define PIN_A0              (9)
-#define PIN_A1              (11)
-#define PIN_A2              (69)
-#define PIN_A3              (70)
+#define PIN_A0              (69)
+#define PIN_A1              (70)
 #define PIN_BOARD_ID        (PIN_A0)
 #define PIN_VREF            (PIN_A1)
 
@@ -126,8 +124,8 @@ static const uint8_t DAC1 = PIN_DAC1;
 #define SERCOM_SERIAL1		  sercom3
 
 // Serial2 (Bluetooth)
-#define PIN_SERIAL2_RX      (12)
-#define PIN_SERIAL2_TX      (11)
+#define PIN_SERIAL2_RX      (11)
+#define PIN_SERIAL2_TX      (12)
 #define PAD_SERIAL2_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL2_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL2		  sercom0
@@ -145,12 +143,16 @@ static const uint8_t DAC1 = PIN_DAC1;
 #define PAD_SPI_TX          SPI_PAD_0_SCK_1
 #define PAD_SPI_RX          SERCOM_RX_PAD_3
 
-//static const uint8_t SS	  = (53);
 static const uint8_t MOSI = PIN_SPI_MOSI;
 static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SCK  = PIN_SPI_SCK;
 
 // Needed for SD library
+#define PIN_SPI1_MISO       (18)
+#define PIN_SPI1_MOSI       (16)
+#define PIN_SPI1_SCK        (17)
+#define PIN_SPI1_SS         (21)
+
 #define SDCARD_SPI          SPI1
 #define SDCARD_MISO_PIN     PIN_SPI1_MISO
 #define SDCARD_MOSI_PIN     PIN_SPI1_MOSI
@@ -198,46 +200,29 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
  */
 #define I2S_INTERFACES_COUNT 0
 
-// On-board QSPI Flash
-#define EXTERNAL_FLASH_DEVICES   GD25Q16C
-#define EXTERNAL_FLASH_USE_QSPI
-
-//QSPI Pins
-#define PIN_QSPI_SCK	      (17)
-#define PIN_QSPI_CS		      (16)
-#define PIN_QSPI_IO0	      (18)
-#define PIN_QSPI_IO1	      (19)
-#define PIN_QSPI_IO2	      (20)
-#define PIN_QSPI_IO3	      (21)
-
 //SDHC Pins
 #define PIN_SDHC_CLK	      (17)
-#define PIN_SDHC_CMD        (16)
+#define PIN_SDHC_CMD          (16)
 #define PIN_SDHC_DAT0	      (18)
-#define PIN_SDHC_DAT0	      (19)
-#define PIN_SDHC_DAT0	      (20)
-#define PIN_SDHC_DAT0	      (21)
+#define PIN_SDHC_DAT1	      (19)
+#define PIN_SDHC_DAT2	      (20)
+#define PIN_SDHC_DAT3	      (21)
 
 //PCC Pins
 #define PIN_PCC_DEN1        (53)
 #define PIN_PCC_DEN2        (54)
 #define PIN_PCC_CLK         (55)
-#define PIN_PCC_XCLK	      (56)
+#define PIN_PCC_XCLK	    (56)
 #define PIN_PCC_D0          (59)
 #define PIN_PCC_D1          (60)
 #define PIN_PCC_D2          (61)
 #define PIN_PCC_D3          (62)
 #define PIN_PCC_D4          (63)
 #define PIN_PCC_D5          (64)
-#define PIN_PCC_D6          (64)
+#define PIN_PCC_D6          (65)
 #define PIN_PCC_D7          (66)
 #define PIN_PCC_D8          (67)
-#define PIN_PCC_D9          (67)
-
-#if !defined(VARIANT_QSPI_BAUD_DEFAULT)
-  // TODO: meaningful value for this
-  #define VARIANT_QSPI_BAUD_DEFAULT 5000000
-#endif
+#define PIN_PCC_D9          (68)
 
 #ifdef __cplusplus
 }
@@ -263,6 +248,7 @@ extern SERCOM sercom6;
 extern SERCOM sercom7;
 
 extern Uart Serial1;
+extern Uart Serial2;
 
 #endif
 
