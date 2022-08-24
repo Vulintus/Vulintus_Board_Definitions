@@ -22,10 +22,10 @@ menu.usbstack=USB Stack
 menu.debug=Debug
 
 ##############################################################
-# Vulintus HabiTrak V1.0.0 (SAMD51P)
+# Vulintus HabiTrak V1.0.0 (SAMD51P19A)
 # ------------------------------
 
-vulintus_habitrak_v1_0_0.name=Vulintus HabiTrak V1.0.0 (SAMD51P)
+vulintus_habitrak_v1_0_0.name=Vulintus HabiTrak V1.0.0 (SAMD51P19A)
 
 vulintus_habitrak_v1_0_0.vid.0=0x239A
 vulintus_habitrak_v1_0_0.pid.0=0x8031
