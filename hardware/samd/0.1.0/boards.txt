@@ -22,76 +22,76 @@ menu.usbstack=USB Stack
 menu.debug=Debug
 
 ##############################################################
-# Vulintus HabiTrak V1.0.0 (SAMD51P19A)
+# Vulintus HabiTrak V1.0 (SAMD51P19A)
 # ------------------------------
 
-vulintus_habitrak_v1_0_0.name=Vulintus HabiTrak V1.0.0 (SAMD51P19A)
+vulintus_habitrak_v1_0.name=Vulintus HabiTrak V1.0 (SAMD51P19A)
 
-vulintus_habitrak_v1_0_0.vid.0=0x239A
-vulintus_habitrak_v1_0_0.pid.0=0x8031
-vulintus_habitrak_v1_0_0.vid.1=0x239A
-vulintus_habitrak_v1_0_0.pid.1=0x0031
-vulintus_habitrak_v1_0_0.vid.1=0x239A
-vulintus_habitrak_v1_0_0.pid.1=0x0032
+vulintus_habitrak_v1_0.vid.0=0x239A
+vulintus_habitrak_v1_0.pid.0=0x8031
+vulintus_habitrak_v1_0.vid.1=0x239A
+vulintus_habitrak_v1_0.pid.1=0x0031
+vulintus_habitrak_v1_0.vid.1=0x239A
+vulintus_habitrak_v1_0.pid.1=0x0032
 
-vulintus_habitrak_v1_0_0.upload.tool=bossac18
-vulintus_habitrak_v1_0_0.upload.protocol=sam-ba
-vulintus_habitrak_v1_0_0.upload.maximum_size=520192
-vulintus_habitrak_v1_0_0.upload.offset=0x4000
-vulintus_habitrak_v1_0_0.upload.use_1200bps_touch=true
-vulintus_habitrak_v1_0_0.upload.wait_for_upload_port=true
-vulintus_habitrak_v1_0_0.upload.native_usb=true
+vulintus_habitrak_v1_0.upload.tool=bossac18
+vulintus_habitrak_v1_0.upload.protocol=sam-ba
+vulintus_habitrak_v1_0.upload.maximum_size=520192
+vulintus_habitrak_v1_0.upload.offset=0x4000
+vulintus_habitrak_v1_0.upload.use_1200bps_touch=true
+vulintus_habitrak_v1_0.upload.wait_for_upload_port=true
+vulintus_habitrak_v1_0.upload.native_usb=true
 
-vulintus_habitrak_v1_0_0.build.mcu=cortex-m4
-#vulintus_habitrak_v1_0_0.build.f_cpu=120000000L
-vulintus_habitrak_v1_0_0.build.usb_product="Vulintus HabiTrak V1.0.0"
-vulintus_habitrak_v1_0_0.build.usb_manufacturer="Adafruit LLC"
-vulintus_habitrak_v1_0_0.build.board=HABITRAK_V1_0_0
-vulintus_habitrak_v1_0_0.build.core=arduino
-vulintus_habitrak_v1_0_0.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK_V1_0_0 -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
-vulintus_habitrak_v1_0_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_habitrak_v1_0_0.build.openocdscript=openocd_scripts/habitrak_v1_0_0.cfg
-vulintus_habitrak_v1_0_0.build.variant=habitrak_v1_0_0
-vulintus_habitrak_v1_0_0.build.variant_system_lib=
-vulintus_habitrak_v1_0_0.build.vid=0x239A
-vulintus_habitrak_v1_0_0.build.pid=0x8031
+vulintus_habitrak_v1_0.build.mcu=cortex-m4
+#vulintus_habitrak_v1_0.build.f_cpu=120000000L
+vulintus_habitrak_v1_0.build.usb_product="Vulintus HabiTrak V1.0"
+vulintus_habitrak_v1_0.build.usb_manufacturer="Adafruit LLC"
+vulintus_habitrak_v1_0.build.board=HABITRAK_V1_0
+vulintus_habitrak_v1_0.build.core=arduino
+vulintus_habitrak_v1_0.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK_V1_0 -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+vulintus_habitrak_v1_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_habitrak_v1_0.build.openocdscript=openocd_scripts/habitrak_v1_0.cfg
+vulintus_habitrak_v1_0.build.variant=habitrak_v1_0
+vulintus_habitrak_v1_0.build.variant_system_lib=
+vulintus_habitrak_v1_0.build.vid=0x239A
+vulintus_habitrak_v1_0.build.pid=0x8031
 
-vulintus_habitrak_v1_0_0.bootloader.tool=openocd
-vulintus_habitrak_v1_0_0.bootloader.file=habitrak_v1_0_0/bootloader-habitrak_v1_0_0.bin
+vulintus_habitrak_v1_0.bootloader.tool=openocd
+vulintus_habitrak_v1_0.bootloader.file=habitrak_v1_0/bootloader-habitrak_v1_0.bin
 
-vulintus_habitrak_v1_0_0.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+vulintus_habitrak_v1_0.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
-vulintus_habitrak_v1_0_0.menu.cache.on=Enabled
-vulintus_habitrak_v1_0_0.menu.cache.on.build.cache_flags=-DENABLE_CACHE
-vulintus_habitrak_v1_0_0.menu.cache.off=Disabled
-vulintus_habitrak_v1_0_0.menu.cache.off.build.cache_flags=
-vulintus_habitrak_v1_0_0.menu.speed.120=120 MHz (standard)
-vulintus_habitrak_v1_0_0.menu.speed.120.build.f_cpu=120000000L
-vulintus_habitrak_v1_0_0.menu.speed.150=150 MHz (overclock)
-vulintus_habitrak_v1_0_0.menu.speed.150.build.f_cpu=150000000L
-vulintus_habitrak_v1_0_0.menu.speed.180=180 MHz (overclock)
-vulintus_habitrak_v1_0_0.menu.speed.180.build.f_cpu=180000000L
-vulintus_habitrak_v1_0_0.menu.speed.200=200 MHz (overclock)
-vulintus_habitrak_v1_0_0.menu.speed.200.build.f_cpu=200000000L
-vulintus_habitrak_v1_0_0.menu.opt.small=Small (-Os) (standard)
-vulintus_habitrak_v1_0_0.menu.opt.small.build.flags.optimize=-Os
-vulintus_habitrak_v1_0_0.menu.opt.fast=Fast (-O2)
-vulintus_habitrak_v1_0_0.menu.opt.fast.build.flags.optimize=-O2
-vulintus_habitrak_v1_0_0.menu.opt.faster=Faster (-O3)
-vulintus_habitrak_v1_0_0.menu.opt.faster.build.flags.optimize=-O3
-vulintus_habitrak_v1_0_0.menu.opt.fastest=Fastest (-Ofast)
-vulintus_habitrak_v1_0_0.menu.opt.fastest.build.flags.optimize=-Ofast
-vulintus_habitrak_v1_0_0.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
-vulintus_habitrak_v1_0_0.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
-vulintus_habitrak_v1_0_0.menu.maxqspi.50=50 MHz (standard)
-vulintus_habitrak_v1_0_0.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
-vulintus_habitrak_v1_0_0.menu.maxqspi.fcpu=CPU Speed / 2
-vulintus_habitrak_v1_0_0.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
-vulintus_habitrak_v1_0_0.menu.usbstack.arduino=Arduino
-vulintus_habitrak_v1_0_0.menu.usbstack.tinyusb=TinyUSB
-vulintus_habitrak_v1_0_0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
-vulintus_habitrak_v1_0_0.menu.debug.off=Off
-vulintus_habitrak_v1_0_0.menu.debug.on=On
-vulintus_habitrak_v1_0_0.menu.debug.on.build.flags.debug=-g
+vulintus_habitrak_v1_0.menu.cache.on=Enabled
+vulintus_habitrak_v1_0.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+vulintus_habitrak_v1_0.menu.cache.off=Disabled
+vulintus_habitrak_v1_0.menu.cache.off.build.cache_flags=
+vulintus_habitrak_v1_0.menu.speed.120=120 MHz (standard)
+vulintus_habitrak_v1_0.menu.speed.120.build.f_cpu=120000000L
+vulintus_habitrak_v1_0.menu.speed.150=150 MHz (overclock)
+vulintus_habitrak_v1_0.menu.speed.150.build.f_cpu=150000000L
+vulintus_habitrak_v1_0.menu.speed.180=180 MHz (overclock)
+vulintus_habitrak_v1_0.menu.speed.180.build.f_cpu=180000000L
+vulintus_habitrak_v1_0.menu.speed.200=200 MHz (overclock)
+vulintus_habitrak_v1_0.menu.speed.200.build.f_cpu=200000000L
+vulintus_habitrak_v1_0.menu.opt.small=Small (-Os) (standard)
+vulintus_habitrak_v1_0.menu.opt.small.build.flags.optimize=-Os
+vulintus_habitrak_v1_0.menu.opt.fast=Fast (-O2)
+vulintus_habitrak_v1_0.menu.opt.fast.build.flags.optimize=-O2
+vulintus_habitrak_v1_0.menu.opt.faster=Faster (-O3)
+vulintus_habitrak_v1_0.menu.opt.faster.build.flags.optimize=-O3
+vulintus_habitrak_v1_0.menu.opt.fastest=Fastest (-Ofast)
+vulintus_habitrak_v1_0.menu.opt.fastest.build.flags.optimize=-Ofast
+vulintus_habitrak_v1_0.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+vulintus_habitrak_v1_0.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+vulintus_habitrak_v1_0.menu.maxqspi.50=50 MHz (standard)
+vulintus_habitrak_v1_0.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+vulintus_habitrak_v1_0.menu.maxqspi.fcpu=CPU Speed / 2
+vulintus_habitrak_v1_0.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+vulintus_habitrak_v1_0.menu.usbstack.arduino=Arduino
+vulintus_habitrak_v1_0.menu.usbstack.tinyusb=TinyUSB
+vulintus_habitrak_v1_0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+vulintus_habitrak_v1_0.menu.debug.off=Off
+vulintus_habitrak_v1_0.menu.debug.on=On
+vulintus_habitrak_v1_0.menu.debug.on.build.flags.debug=-g
 
 ##############################################################

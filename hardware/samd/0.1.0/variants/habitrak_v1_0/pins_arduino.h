@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "../habitrak_v1_0_0/variant.h"
+#include "../habitrak_v1_0/variant.h"
 
