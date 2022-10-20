@@ -14,7 +14,7 @@
 
 
 				{
-					"name": "Vulintus SAMD Devices",
+					"name": "Vulintus SAMD Devices (Beta)",
 					"architecture": "samd",
 					"version": "0.1.0",
 					"boards": [
@@ -54,7 +54,7 @@
 
 
 				{
-					"name": "Vulintus AVR Devices",
+					"name": "Vulintus AVR Devices (Beta)",
 					"architecture": "avr",
 					"version": "0.1.0",
 					"boards": [

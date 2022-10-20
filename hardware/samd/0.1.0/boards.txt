@@ -45,7 +45,7 @@ vulintus_habitrak_v1_0.upload.native_usb=true
 vulintus_habitrak_v1_0.build.mcu=cortex-m4
 #vulintus_habitrak_v1_0.build.f_cpu=120000000L
 vulintus_habitrak_v1_0.build.usb_product="Vulintus HabiTrak V1.0"
-vulintus_habitrak_v1_0.build.usb_manufacturer="Adafruit LLC"
+vulintus_habitrak_v1_0.build.usb_manufacturer="Vulintus Inc"
 vulintus_habitrak_v1_0.build.board=HABITRAK_V1_0
 vulintus_habitrak_v1_0.build.core=arduino
 vulintus_habitrak_v1_0.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK_V1_0 -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
@@ -93,5 +93,74 @@ vulintus_habitrak_v1_0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
 vulintus_habitrak_v1_0.menu.debug.off=Off
 vulintus_habitrak_v1_0.menu.debug.on=On
 vulintus_habitrak_v1_0.menu.debug.on.build.flags.debug=-g
+
+##############################################################
+# Vulintus OmniTrak Controller V2.0 (SAMD51P20A)
+# ------------------------------
+
+vulintus_omnitrak_controller_v2_0.name=Vulintus OmniTrak Controller V2.0 (SAMD51P20A)
+
+vulintus_omnitrak_controller_v2_0.vid.0=0x239A
+vulintus_omnitrak_controller_v2_0.pid.0=0x8031
+vulintus_omnitrak_controller_v2_0.vid.1=0x239A
+vulintus_omnitrak_controller_v2_0.pid.1=0x0031
+vulintus_omnitrak_controller_v2_0.vid.1=0x239A
+vulintus_omnitrak_controller_v2_0.pid.1=0x0032
+
+vulintus_omnitrak_controller_v2_0.upload.tool=bossac18
+vulintus_omnitrak_controller_v2_0.upload.protocol=sam-ba
+vulintus_omnitrak_controller_v2_0.upload.maximum_size=1032192
+vulintus_omnitrak_controller_v2_0.upload.offset=0x4000
+vulintus_omnitrak_controller_v2_0.upload.use_1200bps_touch=true
+vulintus_omnitrak_controller_v2_0.upload.wait_for_upload_port=true
+vulintus_omnitrak_controller_v2_0.upload.native_usb=true
+
+vulintus_omnitrak_controller_v2_0.build.mcu=cortex-m4
+#vulintus_omnitrak_controller_v2_0.build.f_cpu=120000000L
+vulintus_omnitrak_controller_v2_0.build.usb_product="Vulintus OmniTrak Controller V2.0"
+vulintus_omnitrak_controller_v2_0.build.usb_manufacturer="Vulintus Inc"
+vulintus_omnitrak_controller_v2_0.build.board=OMNITRAK_CONTROLLER_V2_0
+vulintus_omnitrak_controller_v2_0.build.core=arduino
+vulintus_omnitrak_controller_v2_0.build.extra_flags=-D__SAMD51P20A__ -DVULINTUS_OMNITRAK_CONTROLLER_V2_0 -D__SAMD51__ -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 {build.usb_flags}
+vulintus_omnitrak_controller_v2_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_omnitrak_controller_v2_0.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
+vulintus_omnitrak_controller_v2_0.build.variant=omnitrak_controller_v2_0
+vulintus_omnitrak_controller_v2_0.build.variant_system_lib=
+vulintus_omnitrak_controller_v2_0.build.vid=0x239A
+vulintus_omnitrak_controller_v2_0.build.pid=0x8031
+
+vulintus_omnitrak_controller_v2_0.bootloader.tool=openocd
+vulintus_omnitrak_controller_v2_0.bootloader.file=omnitrak_controller_v2_0/bootloader-omnitrak_controller_v2_0.bin
+
+vulintus_omnitrak_controller_v2_0.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+
+vulintus_omnitrak_controller_v2_0.menu.cache.on=Enabled
+vulintus_omnitrak_controller_v2_0.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+vulintus_omnitrak_controller_v2_0.menu.cache.off=Disabled
+vulintus_omnitrak_controller_v2_0.menu.cache.off.build.cache_flags=
+vulintus_omnitrak_controller_v2_0.menu.speed.120=120 MHz (standard)
+vulintus_omnitrak_controller_v2_0.menu.speed.120.build.f_cpu=120000000L
+vulintus_omnitrak_controller_v2_0.menu.speed.150=150 MHz (overclock)
+vulintus_omnitrak_controller_v2_0.menu.speed.150.build.f_cpu=150000000L
+vulintus_omnitrak_controller_v2_0.menu.speed.180=180 MHz (overclock)
+vulintus_omnitrak_controller_v2_0.menu.speed.180.build.f_cpu=180000000L
+vulintus_omnitrak_controller_v2_0.menu.speed.200=200 MHz (overclock)
+vulintus_omnitrak_controller_v2_0.menu.speed.200.build.f_cpu=200000000L
+vulintus_omnitrak_controller_v2_0.menu.opt.small=Small (-Os) (standard)
+vulintus_omnitrak_controller_v2_0.menu.opt.small.build.flags.optimize=-Os
+vulintus_omnitrak_controller_v2_0.menu.opt.fast=Fast (-O2)
+vulintus_omnitrak_controller_v2_0.menu.opt.fast.build.flags.optimize=-O2
+vulintus_omnitrak_controller_v2_0.menu.opt.faster=Faster (-O3)
+vulintus_omnitrak_controller_v2_0.menu.opt.faster.build.flags.optimize=-O3
+vulintus_omnitrak_controller_v2_0.menu.opt.fastest=Fastest (-Ofast)
+vulintus_omnitrak_controller_v2_0.menu.opt.fastest.build.flags.optimize=-Ofast
+vulintus_omnitrak_controller_v2_0.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+vulintus_omnitrak_controller_v2_0.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+vulintus_omnitrak_controller_v2_0.menu.usbstack.arduino=Arduino
+vulintus_omnitrak_controller_v2_0.menu.usbstack.tinyusb=TinyUSB
+vulintus_omnitrak_controller_v2_0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+vulintus_omnitrak_controller_v2_0.menu.debug.off=Off
+vulintus_omnitrak_controller_v2_0.menu.debug.on=On
+vulintus_omnitrak_controller_v2_0.menu.debug.on.build.flags.debug=-g
 
 ##############################################################

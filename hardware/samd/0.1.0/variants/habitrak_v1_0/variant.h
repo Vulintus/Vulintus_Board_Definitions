@@ -105,6 +105,8 @@ extern "C"
 #define PIN_DAC0            PIN_A0
 #define PIN_DAC1            PIN_A1
 
+
+
 static const uint8_t A0   = PIN_A0;
 static const uint8_t A1   = PIN_A1;
 
@@ -159,6 +161,21 @@ static const uint8_t SCK  = PIN_SPI_SCK;
 #define SDCARD_SCK_PIN      PIN_SPI1_SCK
 #define SDCARD_SS_PIN       PIN_SPI1_SS
 
+#define PIN_SD_DETECT       (15)
+#define PIN_SD_CMD          (16)
+#define PIN_SD_CLK          (17)
+#define PIN_SD_DAT0         (18)
+#define PIN_SD_DAT1         (19)
+#define PIN_SD_DAT2         (20)
+#define PIN_SD_DAT3         (21)
+#define SD_DETECT           PIN_SD_DETECT
+#define SD_CMD              PIN_SD_CMD
+#define SD_CLK              PIN_SD_CLK
+#define SD_DAT0             PIN_SD_DAT0
+#define SD_DAT1             PIN_SD_DAT1
+#define SD_DAT2             PIN_SD_DAT2
+#define SD_DAT3             PIN_SD_DAT3
+
 /*
  * Wire Interfaces
  */
@@ -194,13 +211,17 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 #define PIN_USB_HOST_ENABLE (71)
 #define PIN_USB_DM          (23)
 #define PIN_USB_DP          (22)
+#define PIN_USB_DETECT      (24)
+#define USB_DETECT          PIN_USB_DETECT
 
 /*
  * I2S Interfaces
  */
 #define I2S_INTERFACES_COUNT 0
 
-//SDHC Pins
+/*
+ * SDHC Pins
+*/
 #define PIN_SDHC_CLK	      (17)
 #define PIN_SDHC_CMD          (16)
 #define PIN_SDHC_DAT0	      (18)
@@ -208,11 +229,13 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 #define PIN_SDHC_DAT2	      (20)
 #define PIN_SDHC_DAT3	      (21)
 
-//PCC Pins
+/*
+ * PCC Pins
+*/
 #define PIN_PCC_DEN1        (53)
 #define PIN_PCC_DEN2        (54)
 #define PIN_PCC_CLK         (55)
-#define PIN_PCC_XCLK	    (56)
+#define PIN_PCC_XCLK	      (56)
 #define PIN_PCC_D0          (59)
 #define PIN_PCC_D1          (60)
 #define PIN_PCC_D2          (61)
@@ -223,6 +246,55 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 #define PIN_PCC_D7          (66)
 #define PIN_PCC_D8          (67)
 #define PIN_PCC_D9          (68)
+
+#define PIN_SCCB_SDA        (51)
+#define PIN_SCCB_SCL        (52)
+#define PIN_CAM_VSYNC       PIN_PCC_DEN1
+#define PIN_CAM_HSYNC       PIN_PCC_DEN2
+#define PIN_CAM_PCLK        PIN_PCC_CLK
+#define PIN_CAM_XCLK        PIN_PCC_XCLK
+#define PIN_CAM_RST         (57)
+#define PIN_CAM_PWDN        (58)
+
+
+/*
+ * Digital pins
+ */
+#define PIN_WINC_RST        (7)
+#define PIN_WINC_EN         (8)
+#define PIN_WINC_IRQ        (9)
+#define PIN_WINC_CS         (10)
+
+#define PIN_TFT_RST         (26)
+#define PIN_TFT_LED         (27)
+#define PIN_TFT_DC          (28)
+#define PIN_TFT_CS          (29)
+
+#define PIN_RTC_INT         (32)
+#define PIN_RTC_EVI         (33)
+#define PIN_RTC_CLK         (34)
+
+#define PIN_BTN_U           (35)
+#define PIN_BTN_S           (39)
+#define PIN_BTN_D           (36)
+#define PIN_QT_MODE         (40)
+
+#define PIN_VLX_GPIO        (41)
+#define PIN_VLX_XSHUT       (42)
+
+#define PIN_MAX_INT         (43)
+#define PIN_MAX_CLR         (44)
+
+#define PIN_RGB_INT         (45)
+
+#define PIN_BME_CS          (46)
+
+#define PIN_BQ_GPO          (47)
+
+#define PIN_LSM_INT1        (48)
+#define PIN_LSM_INT2        (49)
+#define PIN_LSM_CS          (50)
+
 
 #ifdef __cplusplus
 }
