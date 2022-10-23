@@ -223,7 +223,7 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
  * SDHC Pins
 */
 #define PIN_SDHC_CLK	      (17)
-#define PIN_SDHC_CMD          (16)
+#define PIN_SDHC_CMD        (16)
 #define PIN_SDHC_DAT0	      (18)
 #define PIN_SDHC_DAT1	      (19)
 #define PIN_SDHC_DAT2	      (20)
