@@ -22,6 +22,7 @@
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
+
 /*----------------------------------------------------------------------------
  *        Definitions
  *----------------------------------------------------------------------------*/
@@ -185,6 +186,9 @@ static const uint8_t ATN = PIN_ATN;
 #define PIN_NINA_DEBUG      (21)
 #define PIN_NINA_ACK        (22)
 #define PIN_NINA_BOOT       (23)
+#define NINA_GPIO0          PIN_NINA_BOOT
+#define NINA_RESETN         PIN_NINA_RST
+#define NINA_ACK            PIN_NINA_ACK
 
 // TFT Display
 #define PIN_TFT_RST         (26)

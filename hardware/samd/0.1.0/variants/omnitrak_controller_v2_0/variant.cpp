@@ -17,6 +17,7 @@
 */
 
 #include "variant.h"
+#include "Arduino.h"
 
 /*
  * Pins descriptions
@@ -183,8 +184,24 @@ const PinDescription g_APinDescription[]=
 
 } ;
 
+extern "C" {
+    unsigned int PINCOUNT_fn() {
+        return (sizeof(g_APinDescription) / sizeof(g_APinDescription[0]));
+    }
+}
+
 const void* g_apTCInstances[TCC_INST_NUM+TC_INST_NUM]={ TCC0, TCC1, TCC2, TCC3, TCC4, TC0, TC1, TC2, TC3, TC4, TC5, TC6, TC7 } ;
 const uint32_t GCLK_CLKCTRL_IDs[TCC_INST_NUM+TC_INST_NUM] = { TCC0_GCLK_ID, TCC1_GCLK_ID, TCC2_GCLK_ID, TCC3_GCLK_ID, TCC4_GCLK_ID, TC0_GCLK_ID, TC1_GCLK_ID, TC2_GCLK_ID, TC3_GCLK_ID, TC4_GCLK_ID, TC5_GCLK_ID, TC6_GCLK_ID, TC7_GCLK_ID } ;
+
+void initVariant() {
+  // NINA - SPI boot
+  pinMode(NINA_GPIO0, OUTPUT);
+  digitalWrite(NINA_GPIO0, HIGH);
+
+  // disable NINA
+  pinMode(NINA_RESETN, OUTPUT);
+  digitalWrite(NINA_RESETN, LOW);
+}
 
 
 // Multi-serial objects instantiation
