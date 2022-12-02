@@ -156,7 +156,7 @@ static const uint8_t DAC1 = PIN_DAC1;
 
 #define PIN_V_IN_ADC        PIN_A0      //24V power supply voltage monitor.
 #define PIN_I_IN_ADC        PIN_A1      //24V power supply current monitor.
-#define PIN_9_UVLO          PIN_A2      //Under-voltage lock-out level on the 9V power supply.
+#define PIN_9V_UVLO         PIN_A2      //Under-voltage lock-out level on the 9V power supply.
 #define PIN_9V_ADC          PIN_A3      //9V power supply voltage monitor.
 #define PIN_5V_ADC          PIN_A4      //9V power supply voltage monitor.
 
@@ -307,6 +307,10 @@ static const uint8_t SCK  = PIN_SPI_SCK;
 static const uint8_t COPI = PIN_SPI_MOSI;
 static const uint8_t CIPO = PIN_SPI_MISO;
 
+#define SPIWIFI_SS          PIN_NINA_CS
+#define SPIWIFI_ACK         NINA_ACK
+#define SPIWIFI_RESET       NINA_RESETN
+
 
 // Needed for SD library
 #define PIN_SPI1_MISO       (9)         //SD_DAT0
@@ -405,8 +409,16 @@ extern Uart Serial6;
 //                            pins are NOT connected to anything by default.
 #define SERIAL_PORT_USBVIRTUAL      Serial
 #define SERIAL_PORT_MONITOR         Serial
+
 // Serial has no physical pins broken out, so it's not listed as HARDWARE port
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
+
+// Alias Serial1 to SerialNina (useful in libraries)
+#define SerialNina                  Serial2
+#define SPIWIFI                     SPI
+
+// Alias Serial to SerialUSB
+#define Serial                      SerialUSB
 
 #endif /* _VARIANT_OMNITRAK_CONTROLLER_V2_0_ */
