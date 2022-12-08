@@ -1,4 +1,4 @@
-# Vulintus_Board_Definitions
+# Vulintus Board Definitions
 
 This repository contains Vulintus board definition files for the Arduino IDE.
 
