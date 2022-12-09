@@ -212,15 +212,16 @@ vulintus_linear_autopositioner_v2_0.bootloader.file=linear_autopositioner_v2_0/b
 vulintus_liquid_dispenser_v2_0.name=Vulintus Liquid Dispenser V2.0 (SAMD21G17A)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-vulintus_liquid_dispenser_v2_0.vid.0=0x239A
-vulintus_liquid_dispenser_v2_0.pid.0=0x8013
-vulintus_liquid_dispenser_v2_0.vid.1=0x239A
-vulintus_liquid_dispenser_v2_0.pid.1=0x0013
+vulintus_liquid_dispenser_v2_0.vid.0=0x2341
+vulintus_liquid_dispenser_v2_0.pid.0=0x804d
+vulintus_liquid_dispenser_v2_0.vid.1=0x2341
+vulintus_liquid_dispenser_v2_0.pid.1=0x804d
 
 # Upload
 vulintus_liquid_dispenser_v2_0.upload.tool=bossac18
 vulintus_liquid_dispenser_v2_0.upload.protocol=sam-ba
 vulintus_liquid_dispenser_v2_0.upload.maximum_size=122880
+vulintus_liquid_dispenser_v2_0.upload.maximum_data_size=16384
 vulintus_liquid_dispenser_v2_0.upload.offset=0x2000
 vulintus_liquid_dispenser_v2_0.upload.use_1200bps_touch=true
 vulintus_liquid_dispenser_v2_0.upload.wait_for_upload_port=true
@@ -235,16 +236,16 @@ vulintus_liquid_dispenser_v2_0.build.usb_product="Vulintus Liquid Dispenser V2.0
 vulintus_liquid_dispenser_v2_0.build.usb_manufacturer="Vulintus Inc"
 vulintus_liquid_dispenser_v2_0.build.board=LIQUID_DISPENSER_V2_0
 vulintus_liquid_dispenser_v2_0.build.core=arduino
-vulintus_liquid_dispenser_v2_0.build.extra_flags=-D__SAMD21G17A__ -DVULINTUS_LIQUID_DISPENSER_V2_0 -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
+vulintus_liquid_dispenser_v2_0.build.extra_flags=-DCRYSTALLESS -D__SAMD21G17A__ -DVULINTUS_LIQUID_DISPENSER_V2_0 -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
 vulintus_liquid_dispenser_v2_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_liquid_dispenser_v2_0.build.openocdscript=openocd_scripts/linear_autopositioner_v2_0.cfg
+vulintus_liquid_dispenser_v2_0.build.openocdscript=openocd_scripts/liquid_dispenser_v2_0.cfg
 vulintus_liquid_dispenser_v2_0.build.variant=liquid_dispenser_v2_0
 vulintus_liquid_dispenser_v2_0.build.variant_system_lib=
-vulintus_liquid_dispenser_v2_0.build.vid=0x239A
-vulintus_liquid_dispenser_v2_0.build.pid=0x8013
+vulintus_liquid_dispenser_v2_0.build.vid=0x2341
+vulintus_liquid_dispenser_v2_0.build.pid=0x804d
 
 # Bootloader
 vulintus_linear_autopositioner_v2_0.bootloader.tool=openocd
-vulintus_linear_autopositioner_v2_0.bootloader.file=liquid_dispenser_v2_0/bootloader-vulintus_liquid_dispenser-v3.14.0-5-g779ccde-dirty.bin
+vulintus_linear_autopositioner_v2_0.bootloader.file=liquid_dispenser_v2_0/samd21g17a_sam_ba.bin
 
 ##############################################################
