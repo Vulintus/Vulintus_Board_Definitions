@@ -30,7 +30,7 @@
 #define VARIANT_MAINOSC		(32768ul)
 
 /** Master clock frequency */
-#define VARIANT_MCK	(F_CPU)
+#define VARIANT_MCK			  (48000000ul)
 
 /*----------------------------------------------------------------------------
  *        Headers
@@ -53,7 +53,10 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (32u)
+#ifdef __cplusplus
+  extern "C" unsigned int PINCOUNT_fn();
+#endif
+#define PINS_COUNT           (PINCOUNT_fn())
 #define NUM_DIGITAL_PINS     (32u)
 #define NUM_ANALOG_INPUTS    (9u)
 #define NUM_ANALOG_OUTPUTS   (0u)
@@ -99,6 +102,7 @@ extern "C"
 #define NEOPIXEL_BUILTIN     (9u)
 #define PIN_NEOPIXEL         NEOPIXEL_BUILTIN
 #define PIN_NEOPIX           NEOPIXEL_BUILTIN
+#define LEFT_NEOPIX_I				 1    //Index (0 or 1) for the left NeoPixel.
 
 /*
  * Analog pins
@@ -138,6 +142,8 @@ static const uint8_t A7  = PIN_A7 ;
 
 #define PIN_BOARD_ID          PIN_A8     //Board ID analog reference.
 
+#define DRV_ITRIP_REF				3.0				   //Reference voltage for the DRV8834 current control. 
+#define R_ISENSE						0.402 		   //Sense resistor value for the DRV8834 current control.
 
 // Other pins
 #define PIN_ATN              (4ul)
@@ -168,34 +174,44 @@ static const uint8_t ATN = PIN_ATN;
 
 // Pump Selection (Left/Right).
 #define PIN_PUMP_SEL        (22u)
+#define LEFT_MOTOR_I				0       //Index (0 or 1) for the left motor.
 
 // Water Detectors.
 #define PIN_DET_INT         (29u)
 
+// USB
+#define PIN_USB_DETECT      (32ul)
 
 /*
  * Serial interfaces
  */
 
+// Serial (same as I2C, SERCOM3)
+#define PIN_SERIAL_RX       (1ul)        //PA23
+#define PIN_SERIAL_TX       (0ul)        //PA22
+#define PAD_SERIAL_TX       (UART_TX_PAD_0)
+#define PAD_SERIAL_RX       (SERCOM_RX_PAD_1)
+
 // Serial1
-#define PIN_SERIAL1_RX       (0ul)
-#define PIN_SERIAL1_TX       (1ul)
+#define PIN_SERIAL1_RX       (9ul)       //PA11
+#define PIN_SERIAL1_TX       (24ul)      //PA10
 #define PAD_SERIAL1_TX       (UART_TX_PAD_2)
 #define PAD_SERIAL1_RX       (SERCOM_RX_PAD_3)
 
 /*
  * SPI Interfaces
  */
-#define SPI_INTERFACES_COUNT 0
+#define SPI_INTERFACES_COUNT 1
 
-#define PIN_SPI_MISO         (28u)
-#define PIN_SPI_MOSI         (29u)
-#define PIN_SPI_SCK          (30u)
-#define PERIPH_SPI           sercom4
+// SPI0 (SERCOM2)
+#define PIN_SPI_MISO         (22u)       //PA12
+#define PIN_SPI_MOSI         (19u)       //PA14
+#define PIN_SPI_SCK          (11u)       //PA15
+#define PERIPH_SPI           sercom2
 #define PAD_SPI_TX           SPI_PAD_2_SCK_3
 #define PAD_SPI_RX           SERCOM_RX_PAD_0
 
-static const uint8_t SS	  = PIN_A2 ;	// SERCOM4 last PAD is present on A2 but HW SS isn't used. Set here only for reference.
+static const uint8_t SS	  = PIN_NEOPIX ;	 //PA11
 static const uint8_t MOSI = PIN_SPI_MOSI ;
 static const uint8_t MISO = PIN_SPI_MISO ;
 static const uint8_t SCK  = PIN_SPI_SCK ;
@@ -206,20 +222,26 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (0u)
-#define PIN_WIRE_SCL         (1u)
+#define PIN_WIRE_SDA         (0u)        //PA22
+#define PIN_WIRE_SCL         (1u)        //PA23
 #define PERIPH_WIRE          sercom3
 #define WIRE_IT_HANDLER      SERCOM3_Handler
 
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
+// I2C Addresses.
+#define OLED_I2C_ADDR				0x3C		//I2C address for the OLED display.
+#define AD5273_L_I2C_ADDR		0x2C		//I2C address for the first AD5273 digital potentiometer (left loadcell baseline adjustment).
+#define AD5273_R_I2C_ADDR		0x2D		//I2C address for the second AD5273 digital potentiometer (right loadcell baseline adjustment).
+#define MCP40D18T_I2C_ADDR	0x2E		//I2C address for the MCP40D18T digital potentiometer (motor current adjustment).
+
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (31ul)
-#define PIN_USB_DM          (32ul)
-#define PIN_USB_DP          (33ul)
+#define PIN_USB_HOST_ENABLE   PIN_USB_DETECT
+#define PIN_USB_DM            (33ul)
+#define PIN_USB_DP            (34ul)
 
 /*
  * I2S Interfaces
@@ -247,9 +269,17 @@ extern SERCOM sercom3;
 extern SERCOM sercom4;
 extern SERCOM sercom5;
 
-extern Uart Serial5;
+extern Uart Serial;
 extern Uart Serial1;
 
+#endif
+
+#ifdef __cplusplus
+  extern "C" {
+#endif
+    unsigned int PINCOUNT_fn();
+#ifdef __cplusplus
+  }
 #endif
 
 // These serial port names are intended to allow libraries and architecture-neutral
@@ -267,11 +297,11 @@ extern Uart Serial1;
 //
 // SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
 //                            pins are NOT connected to anything by default.
-#define SERIAL_PORT_USBVIRTUAL      Serial
+#define SERIAL_PORT_USBVIRTUAL      SerialUSB
 #define SERIAL_PORT_MONITOR         Serial
 // Serial has no physical pins broken out, so it's not listed as HARDWARE port
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
-#endif /* _VARIANT_LIQUID_DISPENSER_V2_0_ */
+#endif /* _VARIANT_ARDUINO_ZERO_ */
 
