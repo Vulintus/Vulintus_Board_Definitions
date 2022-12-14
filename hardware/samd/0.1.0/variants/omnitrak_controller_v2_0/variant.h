@@ -415,7 +415,7 @@ extern Uart Serial6;
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
 // Alias Serial1 to SerialNina (useful in libraries)
-#define SerialNina                  Serial2
+#define SerialNina                  Serial6
 #define SPIWIFI                     SPI
 
 // Alias Serial to SerialUSB
