@@ -33,9 +33,10 @@ const PinDescription g_APinDescription[]=
 //{ .ulPort, .ulPin, ??, ??, .ulPWMChannel, .ulTCChannel, ??}
 
   // SPI Bus (SERCOM1)
-  { PORTC, 27, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11 },   //SPI_COPI   (0)
-  { PORTA, 30, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14 },   //SPI_CIPO   (1)
-  { PORTC, 28, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_12 },   //SPI_SCK    (2)
+  { PORTC, 27, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11 },     //SPI_PICO (0)
+  { PORTA, 30, PIO_SERCOM_ALT, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14 }, //SPI_POCI (1)
+  // { PORTB, 22, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6 },      //SPI_POCI (1)
+  { PORTC, 28, PIO_SERCOM, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_12 },     //SPI_SCK  (2)
 
   // I2C Bus (SERCOM4)
   { PORTA, 13, PIO_SERCOM_ALT, PIN_ATTR_PWM_F, No_ADC_Channel, TCC0_CH1, NOT_ON_TIMER, EXTERNAL_INT_13 },  //I2C_SDA     (3)
@@ -176,6 +177,7 @@ const PinDescription g_APinDescription[]=
   // USB
   { PORTA, 15, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15 },  //nSAMBA     (92) >>USB Host Enable
   { PORTB, 22, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6 },   //USB_DETECT (93)
+  // { PORTA, 30, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14 },  //USB_DETECT (93)
   { PORTA, 24, PIO_COM,     PIN_ATTR_NONE,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_8 },   //USB_D_N    (94)
   { PORTA, 25, PIO_COM,     PIN_ATTR_NONE,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_9 },   //USB_D_P    (95)
 
@@ -214,117 +216,52 @@ SERCOM sercom5( SERCOM5 ) ;
 SERCOM sercom6( SERCOM6 ) ;
 SERCOM sercom7( SERCOM7 ) ;
 
-Uart Serial1( &sercom0, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ; //OTMP Port 1
-Uart Serial2( &sercom3, PIN_SERIAL2_RX, PIN_SERIAL2_TX, PAD_SERIAL2_RX, PAD_SERIAL2_TX ) ; //OTMP Port 2
-Uart Serial3( &sercom5, PIN_SERIAL3_RX, PIN_SERIAL3_TX, PAD_SERIAL3_RX, PAD_SERIAL3_TX ) ; //OTMP Port 3
-Uart Serial4( &sercom2, PIN_SERIAL4_RX, PIN_SERIAL4_TX, PAD_SERIAL4_RX, PAD_SERIAL4_TX ) ; //OTMP Port 4
-Uart Serial5( &sercom7, PIN_SERIAL5_RX, PIN_SERIAL5_TX, PAD_SERIAL5_RX, PAD_SERIAL5_TX ) ; //OTMP Port 5
-Uart Serial6( &sercom6, PIN_SERIAL6_RX, PIN_SERIAL6_TX, PAD_SERIAL6_RX, PAD_SERIAL6_TX ) ; //NINA W102 Programming
 
-//Serial 1 (OTMP Port 1, SERCOM0) handlers.
-void SERCOM0_0_Handler()
-{
-  Serial1.IrqHandler();
-}
-void SERCOM0_1_Handler()
-{
-  Serial1.IrqHandler();
-}
-void SERCOM0_2_Handler()
-{
-  Serial1.IrqHandler();
-}
-void SERCOM0_3_Handler()
+//Serial 1 (OTMP Port 1, SERCOM0) handler.
+Uart Serial1( &sercom0, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ; //OTMP Port 1
+void SERCOM0_Handler()
 {
   Serial1.IrqHandler();
 }
 
 //Serial 2 (OTMP Port 2, SERCOM3) handlers.
-void SERCOM3_0_Handler()
-{
-  Serial2.IrqHandler();
-}
-void SERCOM3_1_Handler()
-{
-  Serial2.IrqHandler();
-}
-void SERCOM3_2_Handler()
-{
-  Serial2.IrqHandler();
-}
-void SERCOM3_3_Handler()
+Uart Serial2( &sercom3, PIN_SERIAL2_RX, PIN_SERIAL2_TX, PAD_SERIAL2_RX, PAD_SERIAL2_TX ) ; //OTMP Port 2
+void SERCOM3_Handler()
 {
   Serial2.IrqHandler();
 }
 
-//Serial 3 (OTMP Port 3, SERCOM5) handlers.
-void SERCOM5_0_Handler()
-{
-  Serial3.IrqHandler();
-}
-void SERCOM5_1_Handler()
-{
-  Serial3.IrqHandler();
-}
-void SERCOM5_2_Handler()
-{
-  Serial3.IrqHandler();
-}
-void SERCOM5_3_Handler()
+//Serial 3 (OTMP Port 3, SERCOM5) handler.
+Uart Serial3( &sercom5, PIN_SERIAL3_RX, PIN_SERIAL3_TX, PAD_SERIAL3_RX, PAD_SERIAL3_TX ) ; //OTMP Port 3
+void SERCOM5_Handler()
 {
   Serial3.IrqHandler();
 }
 
-//Serial 4 (OTMP Port 4, SERCOM2) handlers.
-void SERCOM2_0_Handler()
-{
-  Serial4.IrqHandler();
-}
-void SERCOM2_1_Handler()
-{
-  Serial4.IrqHandler();
-}
-void SERCOM2_2_Handler()
-{
-  Serial4.IrqHandler();
-}
-void SERCOM2_3_Handler()
+//Serial 4 (OTMP Port 4, SERCOM2) handler.
+Uart Serial4( &sercom2, PIN_SERIAL4_RX, PIN_SERIAL4_TX, PAD_SERIAL4_RX, PAD_SERIAL4_TX ) ; //OTMP Port 4
+void SERCOM2_Handler()
 {
   Serial4.IrqHandler();
 }
 
-//Serial 5 (OTMP Port 5, SERCOM7) handlers.
-void SERCOM7_0_Handler()
-{
-  Serial5.IrqHandler();
-}
-void SERCOM7_1_Handler()
-{
-  Serial5.IrqHandler();
-}
-void SERCOM7_2_Handler()
-{
-  Serial5.IrqHandler();
-}
-void SERCOM7_3_Handler()
+//Serial 5 (OTMP Port 5, SERCOM7) handler.
+Uart Serial5( &sercom7, PIN_SERIAL5_RX, PIN_SERIAL5_TX, PAD_SERIAL5_RX, PAD_SERIAL5_TX ) ; //OTMP Port 5
+void SERCOM7_Handler()
 {
   Serial5.IrqHandler();
 }
 
-//Serial 6 (NINA W102 Programming, SERCOM6) handlers.
-void SERCOM6_0_Handler()
+//Serial 6 (NINA W102 Programming, SERCOM6) handler.
+Uart Serial6( &sercom6, PIN_SERIAL6_RX, PIN_SERIAL6_TX, PAD_SERIAL6_RX, PAD_SERIAL6_TX ) ; //NINA W102 Programming
+void SERCOM6_Handler()
 {
   Serial6.IrqHandler();
 }
-void SERCOM6_1_Handler()
+
+//Serial HCI (something to do with the NINA, SERCOM1) handler.
+Uart SerialHCI( &sercom1, PIN_SERIALHCI_RX, PIN_SERIALHCI_TX, PAD_SERIALHCI_RX, PAD_SERIALHCI_TX, PIN_SERIALHCI_RTS, PIN_SERIALHCI_CTS);
+void SERCOM1_Handler()
 {
-  Serial6.IrqHandler();
-}
-void SERCOM6_2_Handler()
-{
-  Serial6.IrqHandler();
-}
-void SERCOM6_3_Handler()
-{
-  Serial6.IrqHandler();
+  SerialHCI.IrqHandler();
 }
