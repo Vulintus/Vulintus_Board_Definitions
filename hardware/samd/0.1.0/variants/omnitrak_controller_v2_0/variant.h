@@ -43,14 +43,9 @@
 
 #include "WVariant.h"
 
-#ifdef __cplusplus
-#include "SERCOM.h"
-#include "Uart.h"
-#endif // __cplusplus
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" unsigned int PINCOUNT_fn();
 #endif // __cplusplus
 
 /*----------------------------------------------------------------------------
@@ -58,7 +53,7 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (97)
+#define PINS_COUNT           (PINCOUNT_fn())
 #define NUM_DIGITAL_PINS     (94)
 #define NUM_ANALOG_INPUTS    (16)
 #define NUM_ANALOG_OUTPUTS   (2)
@@ -247,65 +242,66 @@ static const uint8_t ATN = PIN_ATN;
  */
 
 // Serial1, OTMP Port 1 (SERCOM0)
-#define PIN_SERIAL1_TX      (52)
-#define PIN_SERIAL1_RX      (53)
+#define PIN_SERIAL1_TX      (52)        //PC17
+#define PIN_SERIAL1_RX      (53)        //PC16
 #define PAD_SERIAL1_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL1_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL1		  sercom0
 
 // Serial2, OTMP Port 2 (SERCOM3)
-#define PIN_SERIAL2_TX      (54)
-#define PIN_SERIAL2_RX      (55)
+#define PIN_SERIAL2_TX      (54)        //PC23
+#define PIN_SERIAL2_RX      (55)        //PC22
 #define PAD_SERIAL2_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL2_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL2		  sercom3
 
 // Serial3, OTMP Port 3 (SERCOM5)
-#define PIN_SERIAL3_TX      (56)
-#define PIN_SERIAL3_RX      (57)
+#define PIN_SERIAL3_TX      (56)        //PA23
+#define PIN_SERIAL3_RX      (57)        //PA22
 #define PAD_SERIAL3_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL3_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL3		  sercom5
 
 // Serial4, OTMP Port 4 (SERCOM2)
-#define PIN_SERIAL4_TX      (58)
-#define PIN_SERIAL4_RX      (59)
+#define PIN_SERIAL4_TX      (58)        //PB25
+#define PIN_SERIAL4_RX      (59)        //PB24
 #define PAD_SERIAL4_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL4_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL4		  sercom2
 
 // Serial5, OTMP Port 5 (SERCOM7)
-#define PIN_SERIAL5_TX      (60)
-#define PIN_SERIAL5_RX      (61)
+#define PIN_SERIAL5_TX      (60)        //PB30
+#define PIN_SERIAL5_RX      (61)        //PB31
 #define PAD_SERIAL5_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL5_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL5		  sercom7
 
 // Serial6, NINA Programming Serial (SERCOM6)
-#define PIN_SERIAL6_TX      (25)
-#define PIN_SERIAL6_RX      (24)
+#define PIN_SERIAL6_TX      (25)        //PC04
+#define PIN_SERIAL6_RX      (24)        //PC05
 #define PAD_SERIAL6_TX      (UART_TX_PAD_0)
 #define PAD_SERIAL6_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL6		  sercom6
+
 
 /*
  * SPI Interfaces
  */
 #define SPI_INTERFACES_COUNT 1
 
-#define PIN_SPI_MISO        (1)
-#define PIN_SPI_MOSI        (0)
-#define PIN_SPI_SCK         (2)
+#define PIN_SPI_MISO        (1)         //PA30 (SA1.2)
+#define PIN_SPI_MOSI        (0)         //PC27 (S1.0)
+#define PIN_SPI_SCK         (2)         //PC28 (S1.1)
 #define PERIPH_SPI          sercom1
-#define PAD_SPI_TX          SPI_PAD_0_SCK_1
-#define PAD_SPI_RX          SERCOM_RX_PAD_3
+#define PAD_SPI_TX          SPI_PAD_0_SCK_1       //?!?!
+#define PAD_SPI_RX          SERCOM_RX_PAD_2       //?!?!
 
 static const uint8_t MOSI = PIN_SPI_MOSI;
 static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SCK  = PIN_SPI_SCK;
 
-static const uint8_t COPI = PIN_SPI_MOSI;
-static const uint8_t CIPO = PIN_SPI_MISO;
+static const uint8_t PICO = PIN_SPI_MOSI;
+static const uint8_t POCI = PIN_SPI_MISO;
 
 #define SPIWIFI_SS          PIN_NINA_CS
 #define SPIWIFI_ACK         NINA_ACK
@@ -313,10 +309,17 @@ static const uint8_t CIPO = PIN_SPI_MISO;
 
 
 // Needed for SD library
-#define PIN_SPI1_MISO       (9)         //SD_DAT0
-#define PIN_SPI1_MOSI       (7)         //SD_CMD
-#define PIN_SPI1_SCK        (8)         //SD_CLK
-#define PIN_SPI1_SS         (12)        //SD_DAT3
+#define PIN_SPI1_MISO       (9)         //SD_DAT0,  PA09, S0.1/SA2.0
+#define PIN_SPI1_MOSI       (7)         //SD_CMD,   PA08, S0.0/SA2.1
+#define PIN_SPI1_SCK        (8)         //SD_CLK,   PB11, SA4.3
+#define PIN_SPI1_SS         (12)        //SD_DAT3,  PB10, SA4.2
+// #define PERIPH_SPI1   sercom2             
+#define PAD_SPI1_TX   SPI_PAD_0_SCK_3   
+#define PAD_SPI1_RX   SERCOM_RX_PAD_1     
+static const uint8_t SS1   = PIN_SPI1_SS;   
+static const uint8_t MOSI1 = PIN_SPI1_MOSI; 
+static const uint8_t MISO1 = PIN_SPI1_MISO;   
+static const uint8_t SCK1  = PIN_SPI1_SCK;    
 
 #define SDCARD_SPI          SPI1
 #define SDCARD_MISO_PIN     PIN_SPI1_MISO
@@ -342,10 +345,10 @@ static const uint8_t CIPO = PIN_SPI_MISO;
 #define PIN_WIRE_SCL        (4)
 #define PERIPH_WIRE         sercom4
 #define WIRE_IT_HANDLER     SERCOM4_Handler
-#define WIRE_IT_HANDLER_0   SERCOM4_0_Handler
-#define WIRE_IT_HANDLER_1   SERCOM4_1_Handler
-#define WIRE_IT_HANDLER_2   SERCOM4_2_Handler
-#define WIRE_IT_HANDLER_3   SERCOM4_3_Handler
+// #define WIRE_IT_HANDLER_0   SERCOM4_0_Handler
+// #define WIRE_IT_HANDLER_1   SERCOM4_1_Handler
+// #define WIRE_IT_HANDLER_2   SERCOM4_2_Handler
+// #define WIRE_IT_HANDLER_3   SERCOM4_3_Handler
 
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
@@ -359,10 +362,11 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 #define PIN_USB_DETECT      (93)
 #define USB_DETECT          PIN_USB_DETECT
 
+/*
+ * I2S Interfaces
+ */
+#define I2S_INTERFACES_COUNT 0
 
-#ifdef __cplusplus
-}
-#endif
 
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
@@ -370,27 +374,32 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 
 #ifdef __cplusplus
 
+#include "SERCOM.h"
+#include "Uart.h"
+
 /*	=========================
  *	===== SERCOM DEFINITION
  *	=========================
 */
-extern SERCOM sercom0;
-extern SERCOM sercom1;
-extern SERCOM sercom2;
-extern SERCOM sercom3;
-extern SERCOM sercom4;
-extern SERCOM sercom5;
-extern SERCOM sercom6;
-extern SERCOM sercom7;
+extern SERCOM sercom0;    //OTMP Port 1
+extern SERCOM sercom1;    //SPI, SerialHCI
+extern SERCOM sercom2;    //OTMP Port 4
+extern SERCOM sercom3;    //OTMP Port 2
+extern SERCOM sercom4;    //I2C
+extern SERCOM sercom5;    //OTMP Port 3
+extern SERCOM sercom6;    //SerialNina
+extern SERCOM sercom7;    //OTMP Port 5
 
-extern Uart Serial1;
-extern Uart Serial2;
-extern Uart Serial3;
-extern Uart Serial4;
-extern Uart Serial5;
-extern Uart Serial6;
+// SerialHCI
+extern Uart SerialHCI;
+#define PIN_SERIALHCI_RX (1ul)           //NINA_MISO, PA30, S7.2/SA1.2
+#define PIN_SERIALHCI_TX (0ul)           //NINA_MOSI, PC27, S1.0
+#define PAD_SERIALHCI_TX (UART_TX_PAD_0)    
+#define PAD_SERIALHCI_RX (SERCOM_RX_PAD_2)
+#define PIN_SERIALHCI_RTS (20u)          //NINA_CS,  PA06, SA0.2
+#define PIN_SERIALHCI_CTS (2u)           //NINA_SCK, PC28, S1.1
 
-#endif
+#endif // __cplusplus
 
 // These serial port names are intended to allow libraries and architecture-neutral
 // sketches to automatically default to the correct port name for a particular type
