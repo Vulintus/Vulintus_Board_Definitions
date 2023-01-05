@@ -354,7 +354,7 @@ extern Uart Serial2;
 //
 // SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
 //                            pins are NOT connected to anything by default.
-#define SERIAL_PORT_USBVIRTUAL      SerialUSB
+#define SERIAL_PORT_USBVIRTUAL      Serial
 // SERIAL_PORT_MONITOR seems to be used only by the USB Host library (as of 1.6.5).
 // It normally allows debugging output on the USB programming port, while the USB host uses the USB native port.
 // The programming port is connected to a hardware UART through a USB-Serial bridge (EDBG chip) on the Zero.
@@ -373,7 +373,7 @@ extern Uart Serial2;
 
 // When USB CDC is enabled, Serial refers to SerialUSB, otherwise it refers to Serial1.
 #if defined(CDC_ONLY) || defined(CDC_HID) || defined(WITH_CDC)
-#define Serial                      SerialUSB
+#define SerialUSB                   Serial
 #else
 #define Serial                      Serial1
 #endif

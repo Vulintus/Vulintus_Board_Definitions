@@ -429,6 +429,6 @@ extern Uart SerialHCI;
 #define SPIWIFI                     SPI
 
 // Alias Serial to SerialUSB
-#define Serial                      SerialUSB
+#define SerialUSB                   Serial
 
 #endif /* _VARIANT_OMNITRAK_CONTROLLER_V2_0_ */
