@@ -179,10 +179,10 @@ static const uint8_t SCK  = PIN_SPI_SCK;
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 3
+#define WIRE_INTERFACES_COUNT 2
 
-#define PIN_WIRE_SDA        (3)
-#define PIN_WIRE_SCL        (4)
+#define PIN_WIRE_SDA        (51)
+#define PIN_WIRE_SCL        (52)
 #define PERIPH_WIRE         sercom7
 #define WIRE_IT_HANDLER     SERCOM7_Handler
 #define WIRE_IT_HANDLER_0   SERCOM7_0_Handler
@@ -205,6 +205,7 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 static const uint8_t SDA1 = PIN_WIRE1_SDA;
 static const uint8_t SCL1 = PIN_WIRE1_SCL;
 
+/*
 #define PIN_WIRE2_SDA       (51)
 #define PIN_WIRE2_SCL       (52)
 #define PERIPH_WIRE2        sercom6
@@ -216,6 +217,7 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 
 static const uint8_t SDA2 = PIN_WIRE2_SDA;
 static const uint8_t SCL2 = PIN_WIRE2_SCL;
+*/
 
 /*
  * USB

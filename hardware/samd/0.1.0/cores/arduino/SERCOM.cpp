@@ -596,6 +596,7 @@ bool SERCOM::sendDataMasterWIRE(uint8_t data)
   sercom->I2CM.DATA.bit.DATA = data;
 
   //Wait transmission successful
+  /*
   while(!sercom->I2CM.INTFLAG.bit.MB) {
 
     // If a bus error occurs, the MB bit may never be set.
@@ -604,6 +605,7 @@ bool SERCOM::sendDataMasterWIRE(uint8_t data)
       return false;
     }
   }
+  */
 
   //Problems on line? nack received?
   if(sercom->I2CM.STATUS.bit.RXNACK)
