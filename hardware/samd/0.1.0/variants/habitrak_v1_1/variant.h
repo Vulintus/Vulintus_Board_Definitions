@@ -329,6 +329,8 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 #define PIN_QT_MODE         (37u)       //PB04
 #define PIN_LED_BTN_U       (40u)       //PA01
 #define PIN_LED_BTN_D       (41u)       //PC23
+#define PIN_BTN_U_TEST      (38u)       //PC26
+#define PIN_BTN_D_TEST      (39u)       //PC24
 #define LED_BTN_U           PIN_LED_BTN_U
 #define LED_BTN_D           PIN_LED_BTN_D
 
