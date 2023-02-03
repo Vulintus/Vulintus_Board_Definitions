@@ -251,7 +251,7 @@ void SERCOM3_3_Handler()
   Serial2.IrqHandler();
 }
 
-//Serial HCI (Something to do with the NINA, SERCOM1) handler.
+//Serial HCI (Something to do with the NINA, SERCOM2) handler.
 Uart SerialHCI( &sercom2, PIN_SERIALHCI_RX, PIN_SERIALHCI_TX, PAD_SERIALHCI_RX, PAD_SERIALHCI_TX, PIN_SERIALHCI_RTS, PIN_SERIALHCI_CTS);
 void SERCOM2_0_Handler()
 {

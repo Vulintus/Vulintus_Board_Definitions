@@ -75,7 +75,7 @@ extern "C" unsigned int PINCOUNT_fn();
     91;                                 96
   }
   else {
-    -1;
+    -1;                                 : -1
   }
 */
 
@@ -298,8 +298,8 @@ static const uint8_t DAC1 = PIN_DAC1;
  */
 #define SPI_INTERFACES_COUNT 1
 
-#define PIN_SPI_MISO        (1u)         //PA30 (SA1.2)
 #define PIN_SPI_MOSI        (0u)         //PC27 (S1.0)
+#define PIN_SPI_MISO        (1u)         //PA30 (SA1.2)
 #define PIN_SPI_SCK         (2u)         //PC28 (S1.1)
 #define PERIPH_SPI          sercom1
 #define PAD_SPI_TX          SPI_PAD_0_SCK_1       //?!?!
@@ -311,16 +311,18 @@ static const uint8_t SCK  = PIN_SPI_SCK;
 
 static const uint8_t PICO = PIN_SPI_MOSI;
 static const uint8_t POCI = PIN_SPI_MISO;
+static const uint8_t PICO = PIN_SPI_PICO;
+static const uint8_t POCI = PIN_SPI_POCI;
 
 #define SPIWIFI_SS          PIN_NINA_CS
 #define SPIWIFI_ACK         PIN_NINA_ACK
 #define SPIWIFI_RESET       PIN_NINA_RST
 
 // Needed for SD library
-#define PIN_SPI1_MISO       (9u)         //SD_DAT0,  PA09, S0.1/SA2.0
-#define PIN_SPI1_MOSI       (7u)         //SD_CMD,   PA08, S0.0/SA2.1
-#define PIN_SPI1_SCK        (8u)         //SD_CLK,   PB11, SA4.3
-#define PIN_SPI1_SS         (12u)        //SD_DAT3,  PB10, SA4.2
+#define PIN_SPI1_MISO       (9u)        //SD_DAT0,  PA09, S0.1/SA2.0
+#define PIN_SPI1_MOSI       (7u)        //SD_CMD,   PA08, S0.0/SA2.1
+#define PIN_SPI1_SCK        (8u)        //SD_CLK,   PB11, SA4.3
+#define PIN_SPI1_SS         (12u)       //SD_DAT3,  PB10, SA4.2
 // #define PERIPH_SPI1   sercom2             
 #define PAD_SPI1_TX   SPI_PAD_0_SCK_3   
 #define PAD_SPI1_RX   SERCOM_RX_PAD_1     

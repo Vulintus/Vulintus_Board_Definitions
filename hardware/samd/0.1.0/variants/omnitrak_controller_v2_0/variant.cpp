@@ -237,8 +237,6 @@ SERCOM sercom7( SERCOM7 ) ;
           //   Serial1.IrqHandler();
           // }
 
-// ** FOR THE SAMD51, YOU HAVE TO DEFINE ALL 4 INTERRUPT HANDLERS** //
-
 //Serial 1 (OTMP Port 1, SERCOM0) handler.
 Uart Serial1( &sercom0, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ; //OTMP Port 1
 void SERCOM0_0_Handler()
