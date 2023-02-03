@@ -17,6 +17,7 @@
 */
 
 #include "variant.h"
+#include "Arduino.h"
 
 /*
  * Pins descriptions
@@ -58,7 +59,7 @@ const PinDescription g_APinDescription[]=
   // SD Card (SDHC0)
   { PORTB, 12, PIO_DIGITAL,    PIN_ATTR_DIGITAL,     No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_12  }, //nSD_DETECT     (14) XINT
   { PORTA, 8,  PIO_SDHC,       PIN_ATTR_DIGITAL,     No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NMI }, //SD_CMD         (15) SDHC SDCMD
-  { PORTB, 11, PIO_SDHC,       PIN_ATTR_DIGITAL,     No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11  }, //SD_CLK         (16) SDHC SDCK
+  { PORTB, 11, PIO_SDHC,       PIN_ATTR_DIGITAL,     No_ADC_Channel, TC5_CH1,    TC5_CH1,      EXTERNAL_INT_11  }, //SD_CLK         (16) SDHC SDCK
   { PORTA, 9,  PIO_SDHC,       PIN_ATTR_DIGITAL,     No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_9   }, //SD_DAT0        (17) SDHC SDDAT/0
   { PORTA, 10, PIO_SDHC,       PIN_ATTR_DIGITAL,     No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10  }, //SD_DAT1        (18) SDHC SDDAT/1
   { PORTA, 11, PIO_SDHC,       PIN_ATTR_DIGITAL,     No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11  }, //SD_DAT2        (19) SDHC SDDAT/2
@@ -168,15 +169,15 @@ extern "C" {
 const void* g_apTCInstances[TCC_INST_NUM+TC_INST_NUM]={ TCC0, TCC1, TCC2, TCC3, TCC4, TC0, TC1, TC2, TC3, TC4, TC5, TC6, TC7 } ;
 const uint32_t GCLK_CLKCTRL_IDs[TCC_INST_NUM+TC_INST_NUM] = { TCC0_GCLK_ID, TCC1_GCLK_ID, TCC2_GCLK_ID, TCC3_GCLK_ID, TCC4_GCLK_ID, TC0_GCLK_ID, TC1_GCLK_ID, TC2_GCLK_ID, TC3_GCLK_ID, TC4_GCLK_ID, TC5_GCLK_ID, TC6_GCLK_ID, TC7_GCLK_ID } ;
 
-// void initVariant() {
-//   // NINA - SPI boot
-//   pinMode(NINA_GPIO0, OUTPUT);
-//   digitalWrite(NINA_GPIO0, HIGH);
+void initVariant() {
+  // NINA - SPI boot
+  pinMode(NINA_GPIO0, OUTPUT);
+  digitalWrite(NINA_GPIO0, HIGH);
 
-//   // disable NINA
-//   pinMode(NINA_RESETN, OUTPUT);
-//   digitalWrite(NINA_RESETN, LOW);
-// }
+  // disable NINA
+  pinMode(NINA_RESETN, OUTPUT);
+  digitalWrite(NINA_RESETN, LOW);
+}
 
 // Multi-serial objects instantiation
 SERCOM sercom0( SERCOM0 ) ;
@@ -187,6 +188,30 @@ SERCOM sercom4( SERCOM4 ) ;
 SERCOM sercom5( SERCOM5 ) ;
 SERCOM sercom6( SERCOM6 ) ;
 SERCOM sercom7( SERCOM7 ) ;
+
+//NOTE: the SAMD51 has 4 total interrupt handles for each SERCOM, and you have 
+//      to define them all, like so:
+          // void SERCOM0_0_Handler()
+          // {
+          //   Serial1.IrqHandler();
+          // }
+          // void SERCOM0_1_Handler()
+          // {
+          //   Serial1.IrqHandler();
+          // }
+          // void SERCOM0_2_Handler()
+          // {
+          //   Serial1.IrqHandler();
+          // }
+          // void SERCOM0_3_Handler()
+          // {
+          //   Serial1.IrqHandler();
+          // }
+//      For the SAMD21, you only need to define one interrupt handler:
+          // void SERCOM0_Handler()
+          // {
+          //   Serial1.IrqHandler();
+          // }
 
 //Serial 1 (NINA Programming Serial, SERCOM0) handler.
 Uart Serial1( &sercom0, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ;
@@ -226,9 +251,21 @@ void SERCOM3_3_Handler()
   Serial2.IrqHandler();
 }
 
-// //Serial HCI (Something to do with the NINA, SERCOM1) handler.
-// Uart SerialHCI( &sercom1, PIN_SERIALHCI_RX, PIN_SERIALHCI_TX, PAD_SERIALHCI_RX, PAD_SERIALHCI_TX, PIN_SERIALHCI_RTS, PIN_SERIALHCI_CTS);
-// void SERCOM1_Handler()
-// {
-//   SerialHCI.IrqHandler();
-// }
+//Serial HCI (Something to do with the NINA, SERCOM1) handler.
+Uart SerialHCI( &sercom2, PIN_SERIALHCI_RX, PIN_SERIALHCI_TX, PAD_SERIALHCI_RX, PAD_SERIALHCI_TX, PIN_SERIALHCI_RTS, PIN_SERIALHCI_CTS);
+void SERCOM2_0_Handler()
+{
+  SerialHCI.IrqHandler();
+}
+void SERCOM2_1_Handler()
+{
+  SerialHCI.IrqHandler();
+}
+void SERCOM2_2_Handler()
+{
+  SerialHCI.IrqHandler();
+}
+void SERCOM2_3_Handler()
+{
+  SerialHCI.IrqHandler();
+}

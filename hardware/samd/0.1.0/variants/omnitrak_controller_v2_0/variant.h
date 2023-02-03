@@ -19,7 +19,7 @@
 #ifndef _VARIANT_OMNITRAK_CONTROLLER_V2_0_
 #define _VARIANT_OMNITRAK_CONTROLLER_V2_0_
 
-// The definitions here needs a SAMD core >=1.6.10
+// The definitions here need a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 
@@ -42,7 +42,6 @@
  *----------------------------------------------------------------------------*/
 
 #include "WVariant.h"
-
 
 #ifdef __cplusplus
 extern "C" unsigned int PINCOUNT_fn();
@@ -97,7 +96,10 @@ extern "C" unsigned int PINCOUNT_fn();
  */
 // #define digitalPinToTimer(P)
 
-// LEDs
+
+/*
+ * Status LEDs
+ */
 #define PIN_LED_R           (30u)        //Red channel of the RGB LED.
 #define PIN_LED_G           (31u)        //Green channel of the RGB LED.
 #define PIN_LED_B           (32u)        //Blue channel of the RGB LED.
@@ -124,7 +126,6 @@ extern "C" unsigned int PINCOUNT_fn();
 #define PIN_A12             (PIN_A10 + 2) //BNC_IN_1   (84)
 #define PIN_A13             (PIN_A10 + 3) //BNC_IN_2   (85)
 #define PIN_A14             (91ul)        //BOARD_ID   (91)
-
 
 #define PIN_DAC0            PIN_A10
 #define PIN_DAC1            PIN_A11
@@ -170,9 +171,15 @@ static const uint8_t DAC1 = PIN_DAC1;
 #define PIN_BOARD_ID        PIN_A14     //Board ID analog reference.
 
 
-// Other pins
-#define PIN_ATN             (40u)
-static const uint8_t ATN = PIN_ATN;
+/*
+ * Digital pins
+ */
+
+// Vulintus Peripheral Bus (VPB)
+#define PIN_VPB_CLK_IN      (13u)
+#define PIN_VPB_CLK_OUT     (14u)
+#define PIN_VPB_TRG         (15u)
+#define PIN_VPB_BLOCK       (16u)
 
 // NINA W102 Module
 #define PIN_NINA_RST        (17u)
@@ -237,6 +244,7 @@ static const uint8_t ATN = PIN_ATN;
 
 // Fan Control
 #define PIN_FAN             (90u)
+
 
 /*
  * Serial interfaces
@@ -305,9 +313,8 @@ static const uint8_t PICO = PIN_SPI_MOSI;
 static const uint8_t POCI = PIN_SPI_MISO;
 
 #define SPIWIFI_SS          PIN_NINA_CS
-#define SPIWIFI_ACK         NINA_ACK
-#define SPIWIFI_RESET       NINA_RESETN
-
+#define SPIWIFI_ACK         PIN_NINA_ACK
+#define SPIWIFI_RESET       PIN_NINA_RST
 
 // Needed for SD library
 #define PIN_SPI1_MISO       (9u)         //SD_DAT0,  PA09, S0.1/SA2.0
@@ -328,20 +335,13 @@ static const uint8_t SCK1  = PIN_SPI1_SCK;
 #define SDCARD_SCK_PIN      PIN_SPI1_SCK
 #define SDCARD_SS_PIN       PIN_SPI1_SS
 
-#define PIN_SD_DETECT       (5u)         //SD card detection
-#define PIN_SD_WP           (6u)         //SD card write protection
-#define PIN_SD_CMD          (7u)         //Command line for SDHC operation.
-#define PIN_SD_CLK          (8u)         //Clock line for SDHC operation.
-#define PIN_SD_DAT0         (9u)         //Data 0 line for SDHC operation.
-#define PIN_SD_DAT1         (10u)        //Data 1 line for SDHC operation.
-#define PIN_SD_DAT2         (11u)        //Data 2 line for SDHC operation.
-#define PIN_SD_DAT3         (12u)        //Data 3 line for SDHC operation.
 
 /*
  * Wire Interfaces
  */
 #define WIRE_INTERFACES_COUNT 1
 
+//I2C bus.
 #define PIN_WIRE_SDA        (3u)
 #define PIN_WIRE_SCL        (4u)
 #define PERIPH_WIRE         sercom4
@@ -354,6 +354,7 @@ static const uint8_t SCK1  = PIN_SPI1_SCK;
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
+
 /*
  * USB
  */
@@ -363,10 +364,37 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 #define PIN_USB_DETECT      (93ul)
 #define USB_DETECT          PIN_USB_DETECT
 
+
 /*
  * I2S Interfaces
  */
 #define I2S_INTERFACES_COUNT 0
+
+
+/*
+ * SDHC Interfaces (SDHC0)
+*/
+#define PIN_SD_DETECT       (5u)         //SD card detection
+#define PIN_SD_WP           (6u)         //SD card write protection
+#define PIN_SD_CMD          (7u)         //Command line for SDHC operation.
+#define PIN_SD_CLK          (8u)         //Clock line for SDHC operation.
+#define PIN_SD_DAT0         (9u)         //Data 0 line for SDHC operation.
+#define PIN_SD_DAT1         (10u)        //Data 1 line for SDHC operation.
+#define PIN_SD_DAT2         (11u)        //Data 2 line for SDHC operation.
+#define PIN_SD_DAT3         (12u)        //Data 3 line for SDHC operation.
+#define SD_CMD              PIN_SD_CMD
+#define SD_CLK              PIN_SD_CLK
+#define SD_DAT0             PIN_SD_DAT0
+#define SD_DAT1             PIN_SD_DAT1
+#define SD_DAT2             PIN_SD_DAT2
+#define SD_DAT3             PIN_SD_DAT3
+
+
+/*
+ * Other pins?? 
+ */
+#define PIN_ATN             (40u)       //I don't think we need this definition....
+static const uint8_t ATN = PIN_ATN;
 
 
 /*----------------------------------------------------------------------------
@@ -391,7 +419,17 @@ extern SERCOM sercom5;    //OTMP Port 3
 extern SERCOM sercom6;    //SerialNina
 extern SERCOM sercom7;    //OTMP Port 5
 
-// SerialHCI
+//OTMP serial ports.
+extern Uart Serial1;
+extern Uart Serial2;
+extern Uart Serial3;
+extern Uart Serial4;
+extern Uart Serial5;
+
+//NINA programming serial port.
+extern Uart Serial6;
+
+// SerialHCI - Required for NINA operation, no idea what it does.
 extern Uart SerialHCI;
 #define PIN_SERIALHCI_RX (1ul)           //NINA_MISO, PA30, S7.2/SA1.2
 #define PIN_SERIALHCI_TX (0ul)           //NINA_MOSI, PC27, S1.0
