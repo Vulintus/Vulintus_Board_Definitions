@@ -309,8 +309,8 @@ static const uint8_t MOSI = PIN_SPI_MOSI;
 static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SCK  = PIN_SPI_SCK;
 
-static const uint8_t PICO = PIN_SPI_MOSI;
-static const uint8_t POCI = PIN_SPI_MISO;
+#define PIN_SPI_PICO        PIN_SPI_MOSI
+#define PIN_SPI_POCI        PIN_SPI_MISO
 static const uint8_t PICO = PIN_SPI_PICO;
 static const uint8_t POCI = PIN_SPI_POCI;
 
@@ -433,8 +433,8 @@ extern Uart Serial6;
 
 // SerialHCI - Required for NINA operation, no idea what it does.
 extern Uart SerialHCI;
-#define PIN_SERIALHCI_RX (1ul)           //NINA_MISO, PA30, S7.2/SA1.2
 #define PIN_SERIALHCI_TX (0ul)           //NINA_MOSI, PC27, S1.0
+#define PIN_SERIALHCI_RX (1ul)           //NINA_MISO, PA30, S7.2/SA1.2
 #define PAD_SERIALHCI_TX (UART_TX_PAD_0)    
 #define PAD_SERIALHCI_RX (SERCOM_RX_PAD_2)
 #define PIN_SERIALHCI_RTS (20u)          //NINA_CS,  PA06, SA0.2
