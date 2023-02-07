@@ -207,7 +207,7 @@ static const uint8_t DAC1 = PIN_DAC1;
 #define PAD_SERIAL1_RX      (SERCOM_RX_PAD_1)
 #define SERCOM_SERIAL1		  sercom0
 
-// Serial2, QTouch Debugging (SERCOM2)
+// Serial2, QTouch Debugging (SERCOM3)
 #define PIN_SERIAL2_TX      (5u)        //PB20 (S3.0, SA7.1)
 #define PIN_SERIAL2_RX      (6u)        //PB21 (S3.1, SA7.0)
 #define PAD_SERIAL2_TX      (UART_TX_PAD_0)
