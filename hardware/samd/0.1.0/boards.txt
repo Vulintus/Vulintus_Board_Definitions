@@ -21,7 +21,7 @@ menu.maxqspi=Max QSPI
 menu.usbstack=USB Stack
 menu.debug=Debug
 
-##############################################################
+########################################################################################################################
 # Vulintus HabiTrak V1.0 (SAMD51P19A)
 # ------------------------------
 
@@ -94,7 +94,8 @@ vulintus_habitrak_v1_0.menu.debug.off=Off
 vulintus_habitrak_v1_0.menu.debug.on=On
 vulintus_habitrak_v1_0.menu.debug.on.build.flags.debug=-g
 
-##############################################################
+
+########################################################################################################################
 # Vulintus OmniTrak Controller V2.0 (SAMD51P20A)
 # ------------------------------
 
@@ -163,49 +164,51 @@ vulintus_omnitrak_controller_v2_0.menu.debug.off=Off
 vulintus_omnitrak_controller_v2_0.menu.debug.on=On
 vulintus_omnitrak_controller_v2_0.menu.debug.on.build.flags.debug=-g
 
-##############################################################
-# Vulintus Linear Autopositioner V2.0 (SAMD21G17A)
+
+########################################################################################################################
+# Vulintus Linear Autopositioner V2.1 (SAMD21G17A)
 # ------------------------------
 
-vulintus_linear_autopositioner_v2_0.name=Vulintus Linear Autopositioner V2.0 (SAMD21G17A)
+vulintus_linear_autopositioner_v2_1.name=Vulintus Linear Autopositioner V2.1 (SAMD21G17A)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-vulintus_linear_autopositioner_v2_0.vid.0=0x239A
-vulintus_linear_autopositioner_v2_0.pid.0=0x8013
-vulintus_linear_autopositioner_v2_0.vid.1=0x239A
-vulintus_linear_autopositioner_v2_0.pid.1=0x0013
+vulintus_linear_autopositioner_v2_1.vid.0=0x239A
+vulintus_linear_autopositioner_v2_1.pid.0=0x8013
+vulintus_linear_autopositioner_v2_1.vid.1=0x239A
+vulintus_linear_autopositioner_v2_1.pid.1=0x0013
 
 # Upload
-vulintus_linear_autopositioner_v2_0.upload.tool=bossac18
-vulintus_linear_autopositioner_v2_0.upload.protocol=sam-ba
-vulintus_linear_autopositioner_v2_0.upload.maximum_size=122880
-vulintus_linear_autopositioner_v2_0.upload.offset=0x2000
-vulintus_linear_autopositioner_v2_0.upload.use_1200bps_touch=true
-vulintus_linear_autopositioner_v2_0.upload.wait_for_upload_port=true
-vulintus_linear_autopositioner_v2_0.upload.native_usb=true
+vulintus_linear_autopositioner_v2_1.upload.tool=bossac18
+vulintus_linear_autopositioner_v2_1.upload.protocol=sam-ba
+vulintus_linear_autopositioner_v2_1.upload.maximum_size=122880
+vulintus_linear_autopositioner_v2_1.upload.offset=0x2000
+vulintus_linear_autopositioner_v2_1.upload.use_1200bps_touch=true
+vulintus_linear_autopositioner_v2_1.upload.wait_for_upload_port=true
+vulintus_linear_autopositioner_v2_1.upload.native_usb=true
 
 # Build
-vulintus_linear_autopositioner_v2_0.build.mcu=cortex-m0plus
-vulintus_linear_autopositioner_v2_0.build.f_cpu=48000000L
-vulintus_linear_autopositioner_v2_0.build.cache_flags=-DENABLE_CACHE
-vulintus_linear_autopositioner_v2_0.build.flags.optimize=-Os
-vulintus_linear_autopositioner_v2_0.build.usb_product="Vulintus Linear Autopositioner V2.0"
-vulintus_linear_autopositioner_v2_0.build.usb_manufacturer="Vulintus Inc"
-vulintus_linear_autopositioner_v2_0.build.board=LINEAR_AUTOPOSITIONER_V2_0
-vulintus_linear_autopositioner_v2_0.build.core=arduino
-vulintus_linear_autopositioner_v2_0.build.extra_flags=-D__SAMD21G17A__ -DVULINTUS_LINEAR_AUTOPOSITIONER_V2_0 -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
-vulintus_linear_autopositioner_v2_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_linear_autopositioner_v2_0.build.openocdscript=openocd_scripts/linear_autopositioner_v2_0.cfg
-vulintus_linear_autopositioner_v2_0.build.variant=linear_autopositioner_v2_0
-vulintus_linear_autopositioner_v2_0.build.variant_system_lib=
-vulintus_linear_autopositioner_v2_0.build.vid=0x239A
-vulintus_linear_autopositioner_v2_0.build.pid=0x8013
+vulintus_linear_autopositioner_v2_1.build.mcu=cortex-m0plus
+vulintus_linear_autopositioner_v2_1.build.f_cpu=48000000L
+vulintus_linear_autopositioner_v2_1.build.cache_flags=-DENABLE_CACHE
+vulintus_linear_autopositioner_v2_1.build.flags.optimize=-Os
+vulintus_linear_autopositioner_v2_1.build.usb_product="Vulintus Linear Autopositioner V2.0"
+vulintus_linear_autopositioner_v2_1.build.usb_manufacturer="Vulintus Inc"
+vulintus_linear_autopositioner_v2_1.build.board=LINEAR_AUTOPOSITIONER_V2_1
+vulintus_linear_autopositioner_v2_1.build.core=arduino
+vulintus_linear_autopositioner_v2_1.build.extra_flags=-D__SAMD21G17A__ -DVULINTUS_LINEAR_AUTOPOSITIONER_V2_1 -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
+vulintus_linear_autopositioner_v2_1.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_linear_autopositioner_v2_1.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
+vulintus_linear_autopositioner_v2_1.build.variant=linear_autopositioner_v2_1
+vulintus_linear_autopositioner_v2_1.build.variant_system_lib=
+vulintus_linear_autopositioner_v2_1.build.vid=0x239A
+vulintus_linear_autopositioner_v2_1.build.pid=0x8013
 
 # Bootloader
-vulintus_linear_autopositioner_v2_0.bootloader.tool=openocd
-vulintus_linear_autopositioner_v2_0.bootloader.file=linear_autopositioner_v2_0/bootloader-linear_autopositioner_v2_0.bin
+vulintus_linear_autopositioner_v2_1.bootloader.tool=openocd
+vulintus_linear_autopositioner_v2_1.bootloader.file=linear_autopositioner_v2_1/bootloader-linear_autopositioner_v2_1.bin
 
-##############################################################
+
+########################################################################################################################
 # Vulintus Liquid Dispenser V2.0 (SAMD21G17A)
 # ------------------------------
 
@@ -245,8 +248,8 @@ vulintus_liquid_dispenser_v2_0.build.vid=0x2341
 vulintus_liquid_dispenser_v2_0.build.pid=0x804d
 
 # Bootloader
-vulintus_linear_autopositioner_v2_0.bootloader.tool=openocd
-vulintus_linear_autopositioner_v2_0.bootloader.file=liquid_dispenser_v2_0/samd21g17a_sam_ba.bin
+vulintus_liquid_dispenser_v2_0.bootloader.tool=openocd
+vulintus_liquid_dispenser_v2_0.bootloader.file=liquid_dispenser_v2_0/samd21g17a_sam_ba.bin
 
 
 ########################################################################################################################

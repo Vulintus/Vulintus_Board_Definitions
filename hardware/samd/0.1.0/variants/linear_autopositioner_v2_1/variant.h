@@ -16,8 +16,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_LINEAR_AUTOPOSITIONER_V2_0_
-#define _VARIANT_LINEAR_AUTOPOSITIONER_V2_0_
+#ifndef _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_
+#define _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_
 
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
@@ -262,4 +262,4 @@ extern Uart Serial1;
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
-#endif /* _VARIANT_LINEAR_AUTOPOSITIONER_V2_0_ */
+#endif /* _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_ */

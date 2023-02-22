@@ -375,30 +375,30 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 
 #ifdef __cplusplus
 
-#include "SERCOM.h"
-#include "Uart.h"
+  #include "SERCOM.h"
+  #include "Uart.h"
 
-/*	=========================
- *	===== SERCOM DEFINITION
- *	=========================
-*/
-extern SERCOM sercom0;    //OTMP Port 1
-extern SERCOM sercom1;    //SPI, SerialHCI
-extern SERCOM sercom2;    //OTMP Port 4
-extern SERCOM sercom3;    //OTMP Port 2
-extern SERCOM sercom4;    //I2C
-extern SERCOM sercom5;    //OTMP Port 3
-extern SERCOM sercom6;    //SerialNina
-extern SERCOM sercom7;    //OTMP Port 5
+  /*	=========================
+  *	===== SERCOM DEFINITION
+  *	=========================
+  */
+  extern SERCOM sercom0;    //OTMP Port 1
+  extern SERCOM sercom1;    //SPI, SerialHCI
+  extern SERCOM sercom2;    //OTMP Port 4
+  extern SERCOM sercom3;    //OTMP Port 2
+  extern SERCOM sercom4;    //I2C
+  extern SERCOM sercom5;    //OTMP Port 3
+  extern SERCOM sercom6;    //SerialNina
+  extern SERCOM sercom7;    //OTMP Port 5
 
-// SerialHCI
-extern Uart SerialHCI;
-#define PIN_SERIALHCI_RX (1ul)           //NINA_MISO, PA30, S7.2/SA1.2
-#define PIN_SERIALHCI_TX (0ul)           //NINA_MOSI, PC27, S1.0
-#define PAD_SERIALHCI_TX (UART_TX_PAD_0)    
-#define PAD_SERIALHCI_RX (SERCOM_RX_PAD_2)
-#define PIN_SERIALHCI_RTS (20u)          //NINA_CS,  PA06, SA0.2
-#define PIN_SERIALHCI_CTS (2u)           //NINA_SCK, PC28, S1.1
+  // SerialHCI
+  extern Uart SerialHCI;
+  #define PIN_SERIALHCI_RX (1ul)           //NINA_MISO, PA30, S7.2/SA1.2
+  #define PIN_SERIALHCI_TX (0ul)           //NINA_MOSI, PC27, S1.0
+  #define PAD_SERIALHCI_TX (UART_TX_PAD_0)    
+  #define PAD_SERIALHCI_RX (SERCOM_RX_PAD_2)
+  #define PIN_SERIALHCI_RTS (20u)          //NINA_CS,  PA06, SA0.2
+  #define PIN_SERIALHCI_CTS (2u)           //NINA_SCK, PC28, S1.1
 
 #endif // __cplusplus
 
