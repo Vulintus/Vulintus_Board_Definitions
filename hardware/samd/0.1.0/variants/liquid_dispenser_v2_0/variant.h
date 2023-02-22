@@ -22,6 +22,7 @@
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
+
 /*----------------------------------------------------------------------------
  *        Definitions
  *----------------------------------------------------------------------------*/
@@ -32,6 +33,7 @@
 /** Master clock frequency */
 #define VARIANT_MCK			  (48000000ul)
 
+
 /*----------------------------------------------------------------------------
  *        Headers
  *----------------------------------------------------------------------------*/
@@ -39,13 +41,8 @@
 #include "WVariant.h"
 
 #ifdef __cplusplus
-#include "SERCOM.h"
-#include "Uart.h"
-#endif // __cplusplus
-
-#ifdef __cplusplus
-extern "C"
-{
+  extern "C"
+  {
 #endif // __cplusplus
 
 /*----------------------------------------------------------------------------
@@ -60,7 +57,7 @@ extern "C"
 #define NUM_DIGITAL_PINS     (32u)
 #define NUM_ANALOG_INPUTS    (9u)
 #define NUM_ANALOG_OUTPUTS   (0u)
-#define analogInputToDigitalPin(p)  ((p == 0u) ?  14 : (p == 1u) ?  21 : (p < 8u) ? 21u + (p) : (p == 8u) ? 30u :-1)
+#define analogInputToDigitalPin(p)  ((p == 0u) ?  14u : (p == 1u) ?  21 : (p < 8u) ? 21u + (p) : (p == 8u) ? 30u :-1)
 
 /* 
   if (p == 0) {                         (p == 0u) ?
@@ -149,7 +146,7 @@ static const uint8_t A7  = PIN_A7 ;
 #define PIN_ATN              (4ul)
 static const uint8_t ATN = PIN_ATN;
 
-// 24VPB
+// Vulintus Peripheral Bux (VPB)
 #define PIN_24VPB_CLK_IN    (2u)       
 #define PIN_24VPB_CLK_OUT   (3u)   
 #define PIN_24VPB_TRG       (4u)
@@ -258,29 +255,31 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 
 #ifdef __cplusplus
 
-/*	=========================
- *	===== SERCOM DEFINITION
- *	=========================
-*/
-extern SERCOM sercom0;
-extern SERCOM sercom1;
-extern SERCOM sercom2;
-extern SERCOM sercom3;
-extern SERCOM sercom4;
-extern SERCOM sercom5;
+  #include "SERCOM.h"
+  #include "Uart.h"
+  /*	=========================
+  *	===== SERCOM DEFINITION
+  *	=========================
+  */
+  extern SERCOM sercom0;
+  extern SERCOM sercom1;
+  extern SERCOM sercom2;
+  extern SERCOM sercom3;
+  extern SERCOM sercom4;
+  extern SERCOM sercom5;
 
-extern Uart Serial;
-extern Uart Serial1;
+  extern Uart Serial;
+  extern Uart Serial1;
 
 #endif
 
 #ifdef __cplusplus
   extern "C" {
-#endif
+#endif    // __cplusplus
     unsigned int PINCOUNT_fn();
 #ifdef __cplusplus
   }
-#endif
+#endif    // __cplusplus
 
 // These serial port names are intended to allow libraries and architecture-neutral
 // sketches to automatically default to the correct port name for a particular type
@@ -299,11 +298,12 @@ extern Uart Serial1;
 //                            pins are NOT connected to anything by default.
 #define SERIAL_PORT_USBVIRTUAL      Serial
 #define SERIAL_PORT_MONITOR         Serial
+
 // Serial has no physical pins broken out, so it's not listed as HARDWARE port
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
 #define SerialUSB                   Serial
 
-#endif /* _VARIANT_ARDUINO_ZERO_ */
+#endif    // _VARIANT_LIQUID_DISPENSER_V2_0_
 

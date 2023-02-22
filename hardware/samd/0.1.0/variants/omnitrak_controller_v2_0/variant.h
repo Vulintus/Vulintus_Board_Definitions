@@ -409,8 +409,8 @@ static const uint8_t ATN = PIN_ATN;
 #include "Uart.h"
 
 /*	=========================
- *	===== SERCOM DEFINITION
- *	=========================
+*	===== SERCOM DEFINITION
+*	=========================
 */
 extern SERCOM sercom0;    //OTMP Port 1
 extern SERCOM sercom1;    //SPI, SerialHCI
