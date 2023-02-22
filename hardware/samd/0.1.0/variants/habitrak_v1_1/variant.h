@@ -428,4 +428,7 @@ extern Uart SerialHCI;
 // Alias Serial to SerialUSB
 #define SerialUSB                   Serial
 
+//This define is needed for the ArduinoBLE and WiFiNINA libraries to fully function properly.
+#define ARDUINO_SAMD_NANO_33_IOT
+
 #endif /* _VARIANT_HABITRAK_V1_1_ */
