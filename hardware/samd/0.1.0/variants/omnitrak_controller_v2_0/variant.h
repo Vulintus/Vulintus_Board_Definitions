@@ -337,14 +337,6 @@ static const uint8_t SCK1  = PIN_SPI1_SCK;
 #define SDCARD_SCK_PIN      PIN_SPI1_SCK
 #define SDCARD_SS_PIN       PIN_SPI1_SS
 
-#define PIN_SD_DETECT       (5u)         //SD card detection
-#define PIN_SD_WP           (6u)         //SD card write protection
-#define PIN_SD_CMD          (7u)         //Command line for SDHC operation.
-#define PIN_SD_CLK          (8u)         //Clock line for SDHC operation.
-#define PIN_SD_DAT0         (9u)         //Data 0 line for SDHC operation.
-#define PIN_SD_DAT1         (10u)        //Data 1 line for SDHC operation.
-#define PIN_SD_DAT2         (11u)        //Data 2 line for SDHC operation.
-#define PIN_SD_DAT3         (12u)        //Data 3 line for SDHC operation.
 
 /*
  * Wire Interfaces

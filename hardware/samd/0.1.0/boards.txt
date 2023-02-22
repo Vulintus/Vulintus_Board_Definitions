@@ -14,12 +14,6 @@
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-menu.cache=Cache
-menu.speed=CPU Speed
-menu.opt=Optimize
-menu.maxqspi=Max QSPI
-menu.usbstack=USB Stack
-menu.debug=Debug
 
 ########################################################################################################################
 # Vulintus HabiTrak V1.0 (SAMD51P19A)
@@ -27,72 +21,126 @@ menu.debug=Debug
 
 vulintus_habitrak_v1_0.name=Vulintus HabiTrak V1.0 (SAMD51P19A)
 
-vulintus_habitrak_v1_0.vid.0=0x239A
-vulintus_habitrak_v1_0.pid.0=0x8031
-vulintus_habitrak_v1_0.vid.1=0x239A
-vulintus_habitrak_v1_0.pid.1=0x0031
-vulintus_habitrak_v1_0.vid.1=0x239A
-vulintus_habitrak_v1_0.pid.1=0x0032
+# VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4325, submitted by Drew on 2/2/2022
+vulintus_habitrak_v1_0.vid.0=0x04D8
+vulintus_habitrak_v1_0.pid.0=0xE6AC
+vulintus_habitrak_v1_0.build.vid=0x04D8
+vulintus_habitrak_v1_0.build.pid=0xE6AC
 
-vulintus_habitrak_v1_0.upload.tool=bossac18
-vulintus_habitrak_v1_0.upload.protocol=sam-ba
+# Upload
 vulintus_habitrak_v1_0.upload.maximum_size=520192
+vulintus_habitrak_v1_0.upload.native_usb=true
 vulintus_habitrak_v1_0.upload.offset=0x4000
+vulintus_habitrak_v1_0.upload.protocol=sam-ba
+vulintus_habitrak_v1_0.upload.tool=bossac18
 vulintus_habitrak_v1_0.upload.use_1200bps_touch=true
 vulintus_habitrak_v1_0.upload.wait_for_upload_port=true
-vulintus_habitrak_v1_0.upload.native_usb=true
 
-vulintus_habitrak_v1_0.build.mcu=cortex-m4
-#vulintus_habitrak_v1_0.build.f_cpu=120000000L
-vulintus_habitrak_v1_0.build.usb_product="Vulintus HabiTrak V1.0"
-vulintus_habitrak_v1_0.build.usb_manufacturer="Vulintus Inc"
+# Build
 vulintus_habitrak_v1_0.build.board=HABITRAK_V1_0
+vulintus_habitrak_v1_0.build.cache_flags=-DENABLE_CACHE
 vulintus_habitrak_v1_0.build.core=arduino
 vulintus_habitrak_v1_0.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK_V1_0 -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+vulintus_habitrak_v1_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+vulintus_habitrak_v1_0.build.flags.optimize=-Os
+vulintus_habitrak_v1_0.build.f_cpu=120000000L
 vulintus_habitrak_v1_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_habitrak_v1_0.build.mcu=cortex-m4
 vulintus_habitrak_v1_0.build.openocdscript=openocd_scripts/habitrak_v1_0.cfg
+vulintus_habitrak_v1_0.build.usb_product="Vulintus HabiTrak V1.0"
+vulintus_habitrak_v1_0.build.usb_manufacturer="Vulintus Inc"
 vulintus_habitrak_v1_0.build.variant=habitrak_v1_0
 vulintus_habitrak_v1_0.build.variant_system_lib=
-vulintus_habitrak_v1_0.build.vid=0x239A
-vulintus_habitrak_v1_0.build.pid=0x8031
 
+# Bootloader
+vulintus_habitrak_v1_0.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
 vulintus_habitrak_v1_0.bootloader.tool=openocd
-vulintus_habitrak_v1_0.bootloader.file=habitrak_v1_0/bootloader-habitrak_v1_0.bin
 
+# Compiler
 vulintus_habitrak_v1_0.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
-vulintus_habitrak_v1_0.menu.cache.on=Enabled
-vulintus_habitrak_v1_0.menu.cache.on.build.cache_flags=-DENABLE_CACHE
-vulintus_habitrak_v1_0.menu.cache.off=Disabled
-vulintus_habitrak_v1_0.menu.cache.off.build.cache_flags=
-vulintus_habitrak_v1_0.menu.speed.120=120 MHz (standard)
-vulintus_habitrak_v1_0.menu.speed.120.build.f_cpu=120000000L
-vulintus_habitrak_v1_0.menu.speed.150=150 MHz (overclock)
-vulintus_habitrak_v1_0.menu.speed.150.build.f_cpu=150000000L
-vulintus_habitrak_v1_0.menu.speed.180=180 MHz (overclock)
-vulintus_habitrak_v1_0.menu.speed.180.build.f_cpu=180000000L
-vulintus_habitrak_v1_0.menu.speed.200=200 MHz (overclock)
-vulintus_habitrak_v1_0.menu.speed.200.build.f_cpu=200000000L
-vulintus_habitrak_v1_0.menu.opt.small=Small (-Os) (standard)
-vulintus_habitrak_v1_0.menu.opt.small.build.flags.optimize=-Os
-vulintus_habitrak_v1_0.menu.opt.fast=Fast (-O2)
-vulintus_habitrak_v1_0.menu.opt.fast.build.flags.optimize=-O2
-vulintus_habitrak_v1_0.menu.opt.faster=Faster (-O3)
-vulintus_habitrak_v1_0.menu.opt.faster.build.flags.optimize=-O3
-vulintus_habitrak_v1_0.menu.opt.fastest=Fastest (-Ofast)
-vulintus_habitrak_v1_0.menu.opt.fastest.build.flags.optimize=-Ofast
-vulintus_habitrak_v1_0.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
-vulintus_habitrak_v1_0.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
-vulintus_habitrak_v1_0.menu.maxqspi.50=50 MHz (standard)
-vulintus_habitrak_v1_0.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
-vulintus_habitrak_v1_0.menu.maxqspi.fcpu=CPU Speed / 2
-vulintus_habitrak_v1_0.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
-vulintus_habitrak_v1_0.menu.usbstack.arduino=Arduino
-vulintus_habitrak_v1_0.menu.usbstack.tinyusb=TinyUSB
-vulintus_habitrak_v1_0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
-vulintus_habitrak_v1_0.menu.debug.off=Off
-vulintus_habitrak_v1_0.menu.debug.on=On
-vulintus_habitrak_v1_0.menu.debug.on.build.flags.debug=-g
+#Parameter options formerly set with the menu:
+# vulintus_habitrak_v1_0.build.cache_flags=-DENABLE_CACHE
+# vulintus_habitrak_v1_0.build.cache_flags=
+# vulintus_habitrak_v1_0.build.flags.debug=-g
+# vulintus_habitrak_v1_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+# vulintus_habitrak_v1_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+# vulintus_habitrak_v1_0.build.flags.optimize=-Os
+# vulintus_habitrak_v1_0.build.flags.optimize=-O2
+# vulintus_habitrak_v1_0.build.flags.optimize=-O3
+# vulintus_habitrak_v1_0.build.flags.optimize=-Ofast
+# vulintus_habitrak_v1_0.build.flags.optimize=-Ofast -funroll-loops
+# vulintus_habitrak_v1_0.build.flags.usbstack=-DUSE_TINYUSB
+# vulintus_habitrak_v1_0.build.f_cpu=120000000L
+# vulintus_habitrak_v1_0.build.f_cpu=150000000L
+# vulintus_habitrak_v1_0.build.f_cpu=180000000L
+# vulintus_habitrak_v1_0.build.f_cpu=200000000L
+
+
+########################################################################################################################
+# Vulintus HabiTrak V1.1 (SAMD51P19A)
+# ------------------------------
+
+vulintus_habitrak_v1_1.name=Vulintus HabiTrak V1.1 (SAMD51P19A)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4290, submitted by Drew on 1/13/2022
+vulintus_habitrak_v1_1.vid.0=0x04D8    
+vulintus_habitrak_v1_1.pid.0=0xE6C2    
+vulintus_habitrak_v1_1.build.vid=0x04D8
+vulintus_habitrak_v1_1.build.pid=0xE6C2
+
+# Upload
+vulintus_habitrak_v1_1.upload.maximum_size=520192
+vulintus_habitrak_v1_1.upload.native_usb=true
+vulintus_habitrak_v1_1.upload.offset=0x4000
+vulintus_habitrak_v1_1.upload.protocol=sam-ba
+vulintus_habitrak_v1_1.upload.tool=bossac18
+vulintus_habitrak_v1_1.upload.use_1200bps_touch=true
+vulintus_habitrak_v1_1.upload.wait_for_upload_port=true
+
+# Build
+vulintus_habitrak_v1_1.build.board=HABITRAK_V1_1
+vulintus_habitrak_v1_1.build.cache_flags=-DENABLE_CACHE
+vulintus_habitrak_v1_1.build.core=arduino
+vulintus_habitrak_v1_1.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK_V1_1 -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+vulintus_habitrak_v1_1.build.flags.optimize=-Os
+vulintus_habitrak_v1_1.build.f_cpu=120000000L
+vulintus_habitrak_v1_1.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_habitrak_v1_1.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+vulintus_habitrak_v1_1.build.mcu=cortex-m4
+vulintus_habitrak_v1_1.build.openocdscript=openocd_scripts/habitrak_v1_1.cfg
+vulintus_habitrak_v1_1.build.usb_manufacturer="Vulintus Inc"
+vulintus_habitrak_v1_1.build.usb_product="Vulintus HabiTrak V1.1"
+vulintus_habitrak_v1_1.build.variant=habitrak_v1_1
+vulintus_habitrak_v1_1.build.variant_system_lib=
+
+# Bootloader
+vulintus_habitrak_v1_1.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
+vulintus_habitrak_v1_1.bootloader.tool=openocd
+
+# Compiler
+vulintus_habitrak_v1_1.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+
+#Parameter options formerly set with the menu:
+# vulintus_habitrak_v1_1.build.cache_flags=-DENABLE_CACHE
+# vulintus_habitrak_v1_1.build.cache_flags=
+# vulintus_habitrak_v1_1.build.flags.debug=-g
+# vulintus_habitrak_v1_1.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+# vulintus_habitrak_v1_1.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+# vulintus_habitrak_v1_1.build.flags.optimize=-Os
+# vulintus_habitrak_v1_1.build.flags.optimize=-O2
+# vulintus_habitrak_v1_1.build.flags.optimize=-O3
+# vulintus_habitrak_v1_1.build.flags.optimize=-Ofast
+# vulintus_habitrak_v1_1.build.flags.optimize=-Ofast -funroll-loops
+# vulintus_habitrak_v1_1.build.flags.usbstack=-DUSE_TINYUSB
+# vulintus_habitrak_v1_1.build.f_cpu=120000000L
+# vulintus_habitrak_v1_1.build.f_cpu=150000000L
+# vulintus_habitrak_v1_1.build.f_cpu=180000000L
+# vulintus_habitrak_v1_1.build.f_cpu=200000000L
 
 
 ########################################################################################################################
@@ -101,68 +149,62 @@ vulintus_habitrak_v1_0.menu.debug.on.build.flags.debug=-g
 
 vulintus_omnitrak_controller_v2_0.name=Vulintus OmniTrak Controller V2.0 (SAMD51P20A)
 
-vulintus_omnitrak_controller_v2_0.vid.0=0x239A
-vulintus_omnitrak_controller_v2_0.pid.0=0x8031
-vulintus_omnitrak_controller_v2_0.vid.1=0x239A
-vulintus_omnitrak_controller_v2_0.pid.1=0x0031
-vulintus_omnitrak_controller_v2_0.vid.1=0x239A
-vulintus_omnitrak_controller_v2_0.pid.1=0x0032
+# VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4289, submitted by Drew on 1/13/2022
+vulintus_omnitrak_controller_v2_0.vid.0=0x04D8    
+vulintus_omnitrak_controller_v2_0.pid.0=0xE6C3    
+vulintus_omnitrak_controller_v2_0.build.vid=0x04D8
+vulintus_omnitrak_controller_v2_0.build.pid=0xE6C3
 
-vulintus_omnitrak_controller_v2_0.upload.tool=bossac18
+# Upload
+vulintus_omnitrak_controller_v2_0.upload.offset=0x4000
 vulintus_omnitrak_controller_v2_0.upload.protocol=sam-ba
 vulintus_omnitrak_controller_v2_0.upload.maximum_size=1032192
-vulintus_omnitrak_controller_v2_0.upload.offset=0x4000
+vulintus_omnitrak_controller_v2_0.upload.tool=bossac18
 vulintus_omnitrak_controller_v2_0.upload.use_1200bps_touch=true
 vulintus_omnitrak_controller_v2_0.upload.wait_for_upload_port=true
 vulintus_omnitrak_controller_v2_0.upload.native_usb=true
 
-vulintus_omnitrak_controller_v2_0.build.mcu=cortex-m4
-#vulintus_omnitrak_controller_v2_0.build.f_cpu=120000000L
-vulintus_omnitrak_controller_v2_0.build.usb_product="Vulintus OmniTrak Controller V2.0"
-vulintus_omnitrak_controller_v2_0.build.usb_manufacturer="Vulintus Inc"
+# Build
 vulintus_omnitrak_controller_v2_0.build.board=OMNITRAK_CONTROLLER_V2_0
+vulintus_omnitrak_controller_v2_0.build.cache_flags=-DENABLE_CACHE
 vulintus_omnitrak_controller_v2_0.build.core=arduino
 vulintus_omnitrak_controller_v2_0.build.extra_flags=-D__SAMD51P20A__ -DVULINTUS_OMNITRAK_CONTROLLER_V2_0 -D__SAMD51__ -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 {build.usb_flags}
+vulintus_omnitrak_controller_v2_0.build.flags.optimize=-Os
+vulintus_omnitrak_controller_v2_0.build.f_cpu=120000000L
 vulintus_omnitrak_controller_v2_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_omnitrak_controller_v2_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+vulintus_omnitrak_controller_v2_0.build.mcu=cortex-m4
 vulintus_omnitrak_controller_v2_0.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
+vulintus_omnitrak_controller_v2_0.build.usb_product="Vulintus OmniTrak Controller V2.0"
+vulintus_omnitrak_controller_v2_0.build.usb_manufacturer="Vulintus Inc"
 vulintus_omnitrak_controller_v2_0.build.variant=omnitrak_controller_v2_0
 vulintus_omnitrak_controller_v2_0.build.variant_system_lib=
-vulintus_omnitrak_controller_v2_0.build.vid=0x239A
-vulintus_omnitrak_controller_v2_0.build.pid=0x8031
 
+# Bootloader
 vulintus_omnitrak_controller_v2_0.bootloader.tool=openocd
 vulintus_omnitrak_controller_v2_0.bootloader.file=omnitrak_controller_v2_0/bootloader-omnitrak_controller_v2_0.bin
 
+# Compiler
 vulintus_omnitrak_controller_v2_0.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
-vulintus_omnitrak_controller_v2_0.menu.cache.on=Enabled
-vulintus_omnitrak_controller_v2_0.menu.cache.on.build.cache_flags=-DENABLE_CACHE
-vulintus_omnitrak_controller_v2_0.menu.cache.off=Disabled
-vulintus_omnitrak_controller_v2_0.menu.cache.off.build.cache_flags=
-vulintus_omnitrak_controller_v2_0.menu.speed.120=120 MHz (standard)
-vulintus_omnitrak_controller_v2_0.menu.speed.120.build.f_cpu=120000000L
-vulintus_omnitrak_controller_v2_0.menu.speed.150=150 MHz (overclock)
-vulintus_omnitrak_controller_v2_0.menu.speed.150.build.f_cpu=150000000L
-vulintus_omnitrak_controller_v2_0.menu.speed.180=180 MHz (overclock)
-vulintus_omnitrak_controller_v2_0.menu.speed.180.build.f_cpu=180000000L
-vulintus_omnitrak_controller_v2_0.menu.speed.200=200 MHz (overclock)
-vulintus_omnitrak_controller_v2_0.menu.speed.200.build.f_cpu=200000000L
-vulintus_omnitrak_controller_v2_0.menu.opt.small=Small (-Os) (standard)
-vulintus_omnitrak_controller_v2_0.menu.opt.small.build.flags.optimize=-Os
-vulintus_omnitrak_controller_v2_0.menu.opt.fast=Fast (-O2)
-vulintus_omnitrak_controller_v2_0.menu.opt.fast.build.flags.optimize=-O2
-vulintus_omnitrak_controller_v2_0.menu.opt.faster=Faster (-O3)
-vulintus_omnitrak_controller_v2_0.menu.opt.faster.build.flags.optimize=-O3
-vulintus_omnitrak_controller_v2_0.menu.opt.fastest=Fastest (-Ofast)
-vulintus_omnitrak_controller_v2_0.menu.opt.fastest.build.flags.optimize=-Ofast
-vulintus_omnitrak_controller_v2_0.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
-vulintus_omnitrak_controller_v2_0.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
-vulintus_omnitrak_controller_v2_0.menu.usbstack.arduino=Arduino
-vulintus_omnitrak_controller_v2_0.menu.usbstack.tinyusb=TinyUSB
-vulintus_omnitrak_controller_v2_0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
-vulintus_omnitrak_controller_v2_0.menu.debug.off=Off
-vulintus_omnitrak_controller_v2_0.menu.debug.on=On
-vulintus_omnitrak_controller_v2_0.menu.debug.on.build.flags.debug=-g
+#Parameter options formerly set with the menu:
+# vulintus_omnitrak_controller_v2_0.build.cache_flags=-DENABLE_CACHE
+# vulintus_omnitrak_controller_v2_0.build.cache_flags=
+# vulintus_omnitrak_controller_v2_0.build.flags.debug=-g
+# vulintus_omnitrak_controller_v2_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+# vulintus_omnitrak_controller_v2_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-Os
+# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-O2
+# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-O3
+# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-Ofast
+# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-Ofast -funroll-loops
+# vulintus_omnitrak_controller_v2_0.build.flags.usbstack=-DUSE_TINYUSB
+# vulintus_omnitrak_controller_v2_0.build.f_cpu=120000000L
+# vulintus_omnitrak_controller_v2_0.build.f_cpu=150000000L
+# vulintus_omnitrak_controller_v2_0.build.f_cpu=180000000L
+# vulintus_omnitrak_controller_v2_0.build.f_cpu=200000000L
 
 
 ########################################################################################################################
@@ -357,5 +399,6 @@ vulintus_cage_ring_light_v2_0_fab_sam.bootloader.tool=edbg
 vulintus_cage_ring_light_v2_0_fab_sam.compiler.c.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
 vulintus_cage_ring_light_v2_0_fab_sam.compiler.cpp.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
 vulintus_cage_ring_light_v2_0_fab_sam.compiler.S.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
+
 
 ########################################################################################################################

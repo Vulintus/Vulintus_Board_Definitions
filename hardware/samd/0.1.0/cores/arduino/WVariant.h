@@ -314,8 +314,8 @@ typedef enum _EPioType
   PIO_TIMER,            /* The pin is controlled by the associated signal of peripheral E. */
   PIO_TIMER_ALT,        /* The pin is controlled by the associated signal of peripheral F. */
 #if defined(__SAMD51__)
-  PIO_TCC_PDEC,			/* The pin is controlled by the associated signal of peripheral G. */
-  PIO_COM,             /* The pin is controlled by the associated signal of peripheral H. */
+  PIO_TCC_PDEC,			    /* The pin is controlled by the associated signal of peripheral G. */
+  PIO_COM,              /* The pin is controlled by the associated signal of peripheral H. */
   PIO_SDHC,             /* The pin is controlled by the associated signal of peripheral I. */
   PIO_I2S,              /* The pin is controlled by the associated signal of peripheral J. */
   PIO_PCC,              /* The pin is controlled by the associated signal of peripheral K. */
