@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "variant.h"
+#include "../cage_ring_light_v2_0/variant.h"
 

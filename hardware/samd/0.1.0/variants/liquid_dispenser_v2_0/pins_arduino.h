@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "variant.h"
+#include "../liquid_dispenser_v2_0/variant.h"
 

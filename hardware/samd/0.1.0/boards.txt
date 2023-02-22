@@ -248,4 +248,111 @@ vulintus_liquid_dispenser_v2_0.build.pid=0x804d
 vulintus_linear_autopositioner_v2_0.bootloader.tool=openocd
 vulintus_linear_autopositioner_v2_0.bootloader.file=liquid_dispenser_v2_0/samd21g17a_sam_ba.bin
 
-##############################################################
+
+########################################################################################################################
+# Vulintus Cage Ring Light V2.0 (SAMD11C14A)
+# ------------------------------
+
+vulintus_cage_ring_light_v2_0.name=Vulintus Cage Ring Light V2.0 (SAMD11C14A)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4290, submitted by Drew on 1/13/2022
+vulintus_cage_ring_light_v2_0.vid.0=0x04D8    
+vulintus_cage_ring_light_v2_0.pid.0=0xE6C0    
+vulintus_cage_ring_light_v2_0.build.vid=0x04D8
+vulintus_cage_ring_light_v2_0.build.pid=0xE6C0
+
+# Upload
+vulintus_cage_ring_light_v2_0.upload.erase=
+vulintus_cage_ring_light_v2_0.upload.maximum_data_size=4096
+vulintus_cage_ring_light_v2_0.upload.maximum_size=12288
+vulintus_cage_ring_light_v2_0.upload.native_usb=true
+vulintus_cage_ring_light_v2_0.upload.offset=0x1000
+vulintus_cage_ring_light_v2_0.upload.protocol=sam-ba
+vulintus_cage_ring_light_v2_0.upload.tool=bossac19
+vulintus_cage_ring_light_v2_0.upload.use_1200bps_touch=true
+vulintus_cage_ring_light_v2_0.upload.wait_for_upload_port=true
+
+# Build
+vulintus_cage_ring_light_v2_0.build.board=CAGE_RING_LIGHT_V2_0
+vulintus_cage_ring_light_v2_0.build.cache_flags=-DENABLE_CACHE
+vulintus_cage_ring_light_v2_0.build.core=Fab_SAM_Arduino:arduino
+vulintus_cage_ring_light_v2_0.build.extra_flags=-DCRYSTALLESS -D__SAMD11__ -D__SAMD11C14A__ -DVULINTUS_CAGE_RING_LIGHT_V2_0 -DARM_MATH_CM0PLUS {build.usb_flags}
+vulintus_cage_ring_light_v2_0.build.f_cpu=48000000L
+vulintus_cage_ring_light_v2_0.build.flags.optimize=-Os
+vulintus_cage_ring_light_v2_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_cage_ring_light_v2_0.build.mcu=cortex-m0plus
+vulintus_cage_ring_light_v2_0.build.openocdscript=openocd_scripts/cage_ring_light_v2_0.cfg
+vulintus_cage_ring_light_v2_0.build.usb_product="Vulintus Cage Ring Light V2.0"
+vulintus_cage_ring_light_v2_0.build.usb_manufacturer="Vulintus Inc"
+vulintus_cage_ring_light_v2_0.build.variant=cage_ring_light_v2_0
+vulintus_cage_ring_light_v2_0.build.variant_system_lib=
+
+# Bootloader
+vulintus_cage_ring_light_v2_0.bootloader.tool=openocd
+vulintus_cage_ring_light_v2_0.bootloader.file=cage_ring_light_v2_0/sam_ba_SAMD11C14A.bin
+
+
+########################################################################################################################
+# Vulintus Cage Ring Light V2.0 (SAMD11C14A)
+# ------------------------------
+
+vulintus_cage_ring_light_v2_0_fab_sam.name=Vulintus Cage Ring Light V2.0 (SAMD11C14A) - Fab Sam Workaround
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4290, submitted by Drew on 1/13/2022
+vulintus_cage_ring_light_v2_0_fab_sam.vid.0=0x04D8    
+vulintus_cage_ring_light_v2_0_fab_sam.pid.0=0xE6C0    
+vulintus_cage_ring_light_v2_0_fab_sam.build.vid=0x04D8
+vulintus_cage_ring_light_v2_0_fab_sam.build.pid=0xE6C0
+
+# Upload (with Bootloader)
+vulintus_cage_ring_light_v2_0_fab_sam.upload.erase=
+vulintus_cage_ring_light_v2_0_fab_sam.upload.maximum_data_size=4096
+vulintus_cage_ring_light_v2_0_fab_sam.upload.maximum_size=12288
+vulintus_cage_ring_light_v2_0_fab_sam.upload.offset=0x1000
+vulintus_cage_ring_light_v2_0_fab_sam.upload.native_usb=true
+vulintus_cage_ring_light_v2_0_fab_sam.upload.protocol=sam-ba
+vulintus_cage_ring_light_v2_0_fab_sam.upload.tool=Fab_SAM_Arduino:bossac
+vulintus_cage_ring_light_v2_0_fab_sam.upload.use_1200bps_touch=true
+vulintus_cage_ring_light_v2_0_fab_sam.upload.wait_for_upload_port=true
+
+# Build
+# vulintus_cage_ring_light_v2_0_fab_sam.build.board=CAGE_RING_LIGHT_V2_0
+vulintus_cage_ring_light_v2_0_fab_sam.build.board=SAMD_ZERO
+vulintus_cage_ring_light_v2_0_fab_sam.build.bootloader_size=__4KB_BOOTLOADER__
+vulintus_cage_ring_light_v2_0_fab_sam.build.buildconfig=CONFIG_H_DISABLED
+vulintus_cage_ring_light_v2_0_fab_sam.build.cache_flags=-DENABLE_CACHE
+vulintus_cage_ring_light_v2_0_fab_sam.build.chip=samd11
+vulintus_cage_ring_light_v2_0_fab_sam.build.clockconfig=CLOCKCONFIG_INTERNAL_USB
+vulintus_cage_ring_light_v2_0_fab_sam.build.core=fab_sam
+vulintus_cage_ring_light_v2_0_fab_sam.build.extra_flags=-D__SAMD11C14A__ {build.usb_flags} -DARM_MATH_CM0PLUS
+vulintus_cage_ring_light_v2_0_fab_sam.build.f_cpu=48000000L
+vulintus_cage_ring_light_v2_0_fab_sam.build.floatconfig=FLOAT_BOTH_DOUBLES_ONLY
+vulintus_cage_ring_light_v2_0_fab_sam.build.ldscript=linker_scripts/gcc/4KB_Bootloader/flash_16KB.ld
+vulintus_cage_ring_light_v2_0_fab_sam.build.mathlib=arm_cortexM0l_math
+vulintus_cage_ring_light_v2_0_fab_sam.build.mcu=cortex-m0plus
+vulintus_cage_ring_light_v2_0_fab_sam.build.openocdscript=openocd_scripts/cage_ring_light_v2_0_fab_sam.cfg
+vulintus_cage_ring_light_v2_0_fab_sam.build.flags.optimize=-Os
+vulintus_cage_ring_light_v2_0_fab_sam.build.serialcom_uart=NO_UART
+vulintus_cage_ring_light_v2_0_fab_sam.build.serialcom_wire=NO_WIRE
+vulintus_cage_ring_light_v2_0_fab_sam.build.serialcom_spi=NO_SPI
+vulintus_cage_ring_light_v2_0_fab_sam.build.timerconfig=TIMER_732Hz
+vulintus_cage_ring_light_v2_0_fab_sam.build.usb_product="Vulintus Cage Ring Light V2.0"
+vulintus_cage_ring_light_v2_0_fab_sam.build.usb_manufacturer="Vulintus Inc"
+vulintus_cage_ring_light_v2_0_fab_sam.build.usbcom=CDC_ONLY
+vulintus_cage_ring_light_v2_0_fab_sam.build.variant=cage_ring_light_v2_0_fab_sam
+vulintus_cage_ring_light_v2_0_fab_sam.build.variant_system_lib=
+
+# Bootloader
+vulintus_cage_ring_light_v2_0_fab_sam.bootloader.file=cage_ring_light_v2_0_fab_sam/sam_ba_SAMD11C14A.bin
+vulintus_cage_ring_light_v2_0_fab_sam.bootloader.tool=edbg
+
+# Compiler
+vulintus_cage_ring_light_v2_0_fab_sam.compiler.c.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
+vulintus_cage_ring_light_v2_0_fab_sam.compiler.cpp.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
+vulintus_cage_ring_light_v2_0_fab_sam.compiler.S.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
+
+########################################################################################################################
