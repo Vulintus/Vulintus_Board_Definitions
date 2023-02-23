@@ -19,6 +19,8 @@
 #ifndef _VARIANT_LIQUID_DISPENSER_V2_0_
 #define _VARIANT_LIQUID_DISPENSER_V2_0_
 
+#define VULINTUS_LIQUID_DISPENSER       // Used for conditional compilation in Vulintus libraries.
+
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
@@ -31,10 +33,10 @@
 #define NUM_NEOPIX          2           // Number of NeoPixels.
 
 // I2C Addresses.
-#define OLED_I2C_ADDR				0x3C		    // OLED display.
-#define AD5273_L_I2C_ADDR		0x2C		    // AD5273 digital potentiometer #1 (left loadcell baseline adjustment).
-#define AD5273_R_I2C_ADDR		0x2D		    // AD5273 digital potentiometer #2 (right loadcell baseline adjustment).
-#define MCP40D18T_I2C_ADDR	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
+#define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell baseline adjustment).
+#define I2C_ADDR_AD5273_R		0x2D		    // AD5273 digital potentiometer #2 (right loadcell baseline adjustment).
+#define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
+#define I2C_ADDR_OLED				0x3C		    // OLED display.
 
 
 /*----------------------------------------------------------------------------

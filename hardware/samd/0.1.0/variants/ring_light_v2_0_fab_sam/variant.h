@@ -21,8 +21,8 @@
  * See README.md for documentation and pin mapping information
  */
 
-#ifndef _VARIANT_CAGE_RING_LIGHT_V2_0_
-#define _VARIANT_CAGE_RING_LIGHT_V2_0_
+#ifndef _VARIANT_RING_LIGHT_V2_0_
+#define _VARIANT_RING_LIGHT_V2_0_
 
 /* This variant requires the MattairTech SAM D|L|C Core for Arduino >= 1.6.18-beta-b1.
  * The format is different than the stock Arduino SAMD core,
@@ -255,4 +255,4 @@ extern Uart Serial2;
 #define Serial                      Serial1
 #endif
 
-#endif /* _VARIANT_CAGE_RING_LIGHT_V2_0_ */
+#endif /* _VARIANT_RING_LIGHT_V2_0_ */

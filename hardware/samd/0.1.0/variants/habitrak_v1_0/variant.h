@@ -19,8 +19,14 @@
 #ifndef _VARIANT_HABITRAK_V1_0_
 #define _VARIANT_HABITRAK_V1_0_
 
+#define VULINTUS_HABITRAK               // Used for conditional compilation in Vulintus libraries.
+
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
+
+// Non-pin definitions specific to this circuit board iteration.
+#define CIRCUIT_BOARD_VER   10          // Divide by 10 to match the Eagle design version.
+
 
 /*----------------------------------------------------------------------------
  *        Definitions

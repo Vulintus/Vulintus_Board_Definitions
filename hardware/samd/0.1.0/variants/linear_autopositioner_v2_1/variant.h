@@ -19,8 +19,21 @@
 #ifndef _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_
 #define _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_
 
+#define VULINTUS_LINEAR_AUTOPOSITIONER  // Used for conditional compilation in Vulintus libraries.
+
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
+
+// Non-pin definitions specific to this circuit board iteration.
+#define CIRCUIT_BOARD_VER   21          // Divide by 10 to match the Eagle design version.
+#define NUM_NEOPIX          1           // Number of NeoPixels.
+
+// I2C Addresses.
+#define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell baseline adjustment).
+#define I2C_ADDR_AD5273_R		0x2D		    // AD5273 digital potentiometer #2 (right loadcell baseline adjustment).
+#define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
+#define I2C_ADDR_OLED				0x3C		    // OLED display.
+
 
 /*----------------------------------------------------------------------------
  *        Definitions

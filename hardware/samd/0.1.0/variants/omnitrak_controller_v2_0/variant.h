@@ -19,8 +19,18 @@
 #ifndef _VARIANT_OMNITRAK_CONTROLLER_V2_0_
 #define _VARIANT_OMNITRAK_CONTROLLER_V2_0_
 
+#define VULINTUS_OMNITRAK_CONTROLLER    // Used for conditional compilation in Vulintus libraries.
+
 // The definitions here need a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
+
+// Non-pin definitions specific to this circuit board iteration.
+#define CIRCUIT_BOARD_VER   20          // Divide by 10 to match the Eagle design version.
+#define NUM_OTMP_PORTS      5           // Number of OTMP ports.
+
+// I2C Addresses.
+#define I2C_ADDR_ATECC608   0x60        // ATECC608x cryptographic co-processor.
+#define I2C_ADDR_BME680     0x76        // BME680 temperature/pressure/humidity/gas sensor.
 
 
 /*----------------------------------------------------------------------------
