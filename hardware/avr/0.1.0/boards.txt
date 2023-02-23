@@ -23,6 +23,7 @@ mouse_three_poke.upload.maximum_data_size=2048
 mouse_three_poke.upload.protocol=arduino
 mouse_three_poke.upload.speed=115200
 mouse_three_poke.upload.tool=avrdude
+mouse_three_poke.upload.tool.default=avrdude
 
 # Build
 mouse_three_poke.build.board=AVR_MOUSE_THREE_POKE
@@ -51,7 +52,7 @@ mouse_three_poke.menu.pcb_ver.v1_0.build.variant=mouse_three_poke_v2_3
 # Vulintus Autopositioner
 # --------------------------
 
-autopositioner.name=Vulintus Autopositioner
+autopositioner.name=Vulintus Linear Autopositioner
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # For now, the Autopositioner uses the same VID/PID as the Arduino Uno.
@@ -66,6 +67,7 @@ autopositioner.upload.maximum_data_size=2048
 autopositioner.upload.protocol=arduino
 autopositioner.upload.speed=115200
 autopositioner.upload.tool=avrdude
+autopositioner.upload.tool.default=avrdude
 
 # Build
 autopositioner.build.board=AVR_AUTOPOSITIONER
@@ -88,3 +90,6 @@ autopositioner.bootloader.unlock_bits=0x3F
 # Menu
 autopositioner.menu.pcb_ver.v1_0=Autopositioner V1.3
 autopositioner.menu.pcb_ver.v1_0.build.variant=autopositioner_v1_3
+
+
+########################################################################################################################
