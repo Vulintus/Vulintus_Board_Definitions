@@ -19,6 +19,13 @@
 #ifndef _VARIANT_LIQUID_DISPENSER_V2_0_
 #define _VARIANT_LIQUID_DISPENSER_V2_0_
 
+// Non-pin definitions specific to this circuit board iteration.
+#define CIRCUIT_BOARD_VER   21          //Divide by 10 to match the Eagle design version.
+#define DRV_ITRIP_REF				3.0				  //Reference voltage for the DRV8834 current control. 
+#define R_ISENSE						0.402 		  //Sense resistor value for the DRV8834 current control.
+#define LEFT_MOTOR_I				0					  //Index (0 or 1) for the left motor.
+#define LEFT_NEOPIX_I				1 				  //Index (0 or 1) for the left NeoPixel.
+
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
@@ -179,6 +186,7 @@ static const uint8_t ATN = PIN_ATN;
 // USB
 #define PIN_USB_DETECT      (32ul)
 
+
 /*
  * Serial interfaces
  */
@@ -194,6 +202,7 @@ static const uint8_t ATN = PIN_ATN;
 #define PIN_SERIAL1_TX       (24ul)      //PA10
 #define PAD_SERIAL1_TX       (UART_TX_PAD_2)
 #define PAD_SERIAL1_RX       (SERCOM_RX_PAD_3)
+
 
 /*
  * SPI Interfaces
@@ -233,12 +242,14 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 #define AD5273_R_I2C_ADDR		0x2D		//I2C address for the second AD5273 digital potentiometer (right loadcell baseline adjustment).
 #define MCP40D18T_I2C_ADDR	0x2E		//I2C address for the MCP40D18T digital potentiometer (motor current adjustment).
 
+
 /*
  * USB
  */
 #define PIN_USB_HOST_ENABLE   PIN_USB_DETECT
 #define PIN_USB_DM            (33ul)
 #define PIN_USB_DP            (34ul)
+
 
 /*
  * I2S Interfaces
