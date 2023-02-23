@@ -268,8 +268,8 @@ static const uint8_t SCL = PIN_WIRE_SCL;
   extern SERCOM sercom4;
   extern SERCOM sercom5;
 
-  extern Uart Serial;
-  extern Uart Serial1;
+  // extern Uart Serial;
+  // extern Uart Serial1;
 
 #endif
 
@@ -303,7 +303,7 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
+// Alias Serial to SerialUSB
 #define SerialUSB                   Serial
 
 #endif    // _VARIANT_LIQUID_DISPENSER_V2_0_
-
