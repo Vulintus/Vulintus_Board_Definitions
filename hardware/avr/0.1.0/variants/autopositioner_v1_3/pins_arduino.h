@@ -78,31 +78,30 @@ static const uint8_t A7 = PIN_A7;
 
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : NOT_AN_INTERRUPT))
 
-#define PIN_IR_INT			10
-#define PIN_NOSEPOKE_L 	A2
-#define PIN_NOSEPOKE_C 	A1
-#define PIN_NOSEPOKE_R 	A0
+//A4988 Stepper Driver
+#define PIN_A4988_STEP  3      //Stepper controller step.
+#define PIN_A4988_DIR   4      //Stepper controller direction select.
+#define PIN_A4988_EN    5      //Stepper controller enable.
+#define PIN_A4988_MS0   6      //Stepper controller  microstep select 0.
+#define PIN_A4988_MS1   7      //Stepper controller  microstep select 1.
+#define PIN_A4988_MS2   8      //Stepper controller  microstep select 2.
+#define PIN_A4988_RST   9      //Stepper controller reset.
+#define PIN_A4988_SLP   10     //Stepper controller sleep.
 
-#define PIN_IV_IN_ADC 	A7
-#define PIN_I_IN_ADC 		A4
-#define PIN_PWR_FAULT 	A3
-#define PIN_I_IN_RESET 	A5
+//Vulintus Peripheral Bus (VPB)
+#define PIN_VPB_TRG     A0     //Vulintus Peripherial Bus (VPB) trigger.
+#define PIN_VPB_CLK     11     //Vulintus Peripherial Bus (VPB) clock.
 
-#define PIN_BNC_IO 			A6
+//LEDs
+#define PIN_LED_GRN     13     //Green LED.
+#define PIN_LED_RED     12     //Red LED.
 
-#define PIN_CAP_SEND 		2
-#define PIN_CAPSENSE_L 	8
-#define PIN_CAPSENSE_C 	9
-#define PIN_CAPSENSE_R 	4
+//Calibration
+#define PIN_SLOT        A1     //Slot detector.
 
-#define PIN_LEDS_EN 		3
-#define PIN_NEOPIX			13
-
-#define PIN_24VPB_TRG				12
-#define PIN_24VPB_CLK_IN		11
-#define PIN_24VPB_CLK_IN		6
-#define PIN_24VPB_BLOCK_AB	7
-#define PIN_24VPB_BLOCK_BC	5
+//User Input
+#define PIN_SW_FWD      A3     //Manual forward switch.
+#define PIN_SW_REV      A2     //manual reverse switch.
 
 #ifdef ARDUINO_MAIN
 

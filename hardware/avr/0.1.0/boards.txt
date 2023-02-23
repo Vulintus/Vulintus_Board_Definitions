@@ -1,30 +1,90 @@
 # See: https://arduino.github.io/arduino-cli/latest/platform-specification/
 
-##############################################################
-# Vulintus Kroener Box V2.3 (ATMEGA328P)
-# ------------------------------
 
-kroener_box_v2_3.name=Vulintus Kroener Box V2.3 (ATMEGA328P)
+menu.pcb_ver=Circuit Board Version
 
-kroener_box_v2_3.upload.tool=avrdude
-kroener_box_v2_3.upload.protocol=arduino
-kroener_box_v2_3.upload.maximum_size=32256
-kroener_box_v2_3.upload.maximum_data_size=2048
-kroener_box_v2_3.upload.speed=115200
 
-kroener_box_v2_3.bootloader.tool=avrdude
-kroener_box_v2_3.bootloader.tool.default=avrdude
-kroener_box_v2_3.bootloader.low_fuses=0xFF
-kroener_box_v2_3.bootloader.high_fuses=0xDE
-kroener_box_v2_3.bootloader.extended_fuses=0xFD
-kroener_box_v2_3.bootloader.unlock_bits=0x3F
-kroener_box_v2_3.bootloader.lock_bits=0x0F
-kroener_box_v2_3.bootloader.file=optiboot/optiboot_atmega328.hex
+########################################################################################################################
+# Vulintus Mouse 3-Poke Wall
+# --------------------------
 
-kroener_box_v2_3.build.mcu=atmega328p
-kroener_box_v2_3.build.f_cpu=16000000L
-kroener_box_v2_3.build.core=arduino:arduino
-kroener_box_v2_3.build.variant=kroener_box_v2_3
-kroener_box_v2_3.build.board=AVR_KROENER_BOX_V2_3
+mouse_three_poke.name=Vulintus Mouse 3-Nosepoke Wall
 
-##############################################################
+# VID/PID for Bootloader, Arduino & CircuitPython
+# For now, the Mouse 3-Nosepoke Wall uses the same VID/PID as the Arduino Uno.
+mouse_three_poke.vid.0=0x2341
+mouse_three_poke.pid.0=0x0043
+mouse_three_poke.upload_port.0.vid=0x2341
+mouse_three_poke.upload_port.0.pid=0x0043
+
+# Upload
+mouse_three_poke.upload.maximum_size=32256
+mouse_three_poke.upload.maximum_data_size=2048
+mouse_three_poke.upload.protocol=arduino
+mouse_three_poke.upload.speed=115200
+mouse_three_poke.upload.tool=avrdude
+
+# Build
+mouse_three_poke.build.board=AVR_MOUSE_THREE_POKE
+mouse_three_poke.build.core=arduino:arduino
+mouse_three_poke.build.f_cpu=16000000L
+mouse_three_poke.build.mcu=atmega328p
+# MOVED TO MENU: mouse_three_poke.build.variant=mouse_three_poke_v2_3
+mouse_three_poke.build.extra_flags=-DVULINTUS_MOUSE_THREE_POKE
+
+# Bootloader
+mouse_three_poke.bootloader.file=optiboot/optiboot_atmega328.hex
+mouse_three_poke.bootloader.tool=avrdude
+mouse_three_poke.bootloader.tool.default=avrdude
+mouse_three_poke.bootloader.low_fuses=0xFF
+mouse_three_poke.bootloader.high_fuses=0xDE
+mouse_three_poke.bootloader.extended_fuses=0xFD
+mouse_three_poke.bootloader.lock_bits=0x0F
+mouse_three_poke.bootloader.unlock_bits=0x3F
+
+# Menu
+mouse_three_poke.menu.pcb_ver.v1_0=Mouse 3-Nosepoke Wall V2.3
+mouse_three_poke.menu.pcb_ver.v1_0.build.variant=mouse_three_poke_v2_3
+
+
+########################################################################################################################
+# Vulintus Autopositioner
+# --------------------------
+
+autopositioner.name=Vulintus Autopositioner
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# For now, the Autopositioner uses the same VID/PID as the Arduino Uno.
+autopositioner.vid.0=0x2341
+autopositioner.pid.0=0x0043
+autopositioner.upload_port.0.vid=0x2341
+autopositioner.upload_port.0.pid=0x0043
+
+# Upload
+autopositioner.upload.maximum_size=32256
+autopositioner.upload.maximum_data_size=2048
+autopositioner.upload.protocol=arduino
+autopositioner.upload.speed=115200
+autopositioner.upload.tool=avrdude
+
+# Build
+autopositioner.build.board=AVR_AUTOPOSITIONER
+autopositioner.build.core=arduino:arduino
+autopositioner.build.f_cpu=16000000L
+autopositioner.build.mcu=atmega328p
+# MOVED TO MENU: autopositioner.build.variant=autopositioner_v1_3
+autopositioner.build.extra_flags=-DVULINTUS_AUTOPOSITIONER
+
+# Bootloader
+autopositioner.bootloader.file=optiboot/optiboot_atmega328.hex
+autopositioner.bootloader.tool=avrdude
+autopositioner.bootloader.tool.default=avrdude
+autopositioner.bootloader.low_fuses=0xFF
+autopositioner.bootloader.high_fuses=0xDE
+autopositioner.bootloader.extended_fuses=0xFD
+autopositioner.bootloader.lock_bits=0x0F
+autopositioner.bootloader.unlock_bits=0x3F
+
+# Menu
+autopositioner.menu.pcb_ver.v1_0=Autopositioner V1.3
+autopositioner.menu.pcb_ver.v1_0.build.variant=autopositioner_v1_3
