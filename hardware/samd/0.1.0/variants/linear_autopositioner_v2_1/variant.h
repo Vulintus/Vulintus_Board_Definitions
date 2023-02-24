@@ -19,8 +19,6 @@
 #ifndef _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_
 #define _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_
 
-#define VULINTUS_LINEAR_AUTOPOSITIONER  // Used for conditional compilation in Vulintus libraries.
-
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 

@@ -19,8 +19,6 @@
 #ifndef _VARIANT_OMNITRAK_CONTROLLER_V2_0_
 #define _VARIANT_OMNITRAK_CONTROLLER_V2_0_
 
-#define VULINTUS_OMNITRAK_CONTROLLER    // Used for conditional compilation in Vulintus libraries.
-
 // The definitions here need a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 

@@ -19,8 +19,6 @@
 #ifndef _VARIANT_LIQUID_DISPENSER_V2_0_
 #define _VARIANT_LIQUID_DISPENSER_V2_0_
 
-#define VULINTUS_LIQUID_DISPENSER       // Used for conditional compilation in Vulintus libraries.
-
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 

@@ -6,6 +6,8 @@
 # Datatypes (KEYWORD1)
 #######################################
 
+Wire	KEYWORD1
+
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
@@ -15,16 +17,8 @@ setClock	KEYWORD2
 beginTransmission	KEYWORD2
 endTransmission	KEYWORD2
 requestFrom	KEYWORD2
-send	KEYWORD2
-receive	KEYWORD2
 onReceive	KEYWORD2
 onRequest	KEYWORD2
-
-#######################################
-# Instances (KEYWORD2)
-#######################################
-
-Wire	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

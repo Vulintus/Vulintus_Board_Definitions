@@ -15,390 +15,368 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 
-########################################################################################################################
-# Vulintus HabiTrak V1.0 (SAMD51P19A)
-# ------------------------------
+menu.pcb_ver=Circuit Board Version
 
-vulintus_habitrak_v1_0.name=Vulintus HabiTrak V1.0 (SAMD51P19A)
+
+########################################################################################################################
+# Vulintus HabiTrak
+# -----------------
+
+vulintus_habitrak.name=Vulintus HabiTrak
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
 # Sublicense Request 4325, submitted by Drew on 2/2/2022
-vulintus_habitrak_v1_0.vid.0=0x04D8
-vulintus_habitrak_v1_0.pid.0=0xE6AC
-vulintus_habitrak_v1_0.build.vid=0x04D8
-vulintus_habitrak_v1_0.build.pid=0xE6AC
+vulintus_habitrak.vid.0=0x04D8
+vulintus_habitrak.pid.0=0xE6AC
+vulintus_habitrak.build.vid=0x04D8
+vulintus_habitrak.build.pid=0xE6AC
 
 # Upload
-vulintus_habitrak_v1_0.upload.maximum_size=520192
-vulintus_habitrak_v1_0.upload.native_usb=true
-vulintus_habitrak_v1_0.upload.offset=0x4000
-vulintus_habitrak_v1_0.upload.protocol=sam-ba
-vulintus_habitrak_v1_0.upload.tool=bossac18
-vulintus_habitrak_v1_0.upload.use_1200bps_touch=true
-vulintus_habitrak_v1_0.upload.wait_for_upload_port=true
+vulintus_habitrak.upload.maximum_size=520192
+vulintus_habitrak.upload.native_usb=true
+vulintus_habitrak.upload.offset=0x4000
+vulintus_habitrak.upload.protocol=sam-ba
+vulintus_habitrak.upload.tool=bossac18
+vulintus_habitrak.upload.use_1200bps_touch=true
+vulintus_habitrak.upload.wait_for_upload_port=true
 
 # Build
-vulintus_habitrak_v1_0.build.board=HABITRAK_V1_0
-vulintus_habitrak_v1_0.build.cache_flags=-DENABLE_CACHE
-vulintus_habitrak_v1_0.build.core=arduino
-vulintus_habitrak_v1_0.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK_V1_0 -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
-vulintus_habitrak_v1_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
-vulintus_habitrak_v1_0.build.flags.optimize=-Os
-vulintus_habitrak_v1_0.build.f_cpu=120000000L
-vulintus_habitrak_v1_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_habitrak_v1_0.build.mcu=cortex-m4
-vulintus_habitrak_v1_0.build.openocdscript=openocd_scripts/habitrak_v1_0.cfg
-vulintus_habitrak_v1_0.build.usb_product="Vulintus HabiTrak V1.0"
-vulintus_habitrak_v1_0.build.usb_manufacturer="Vulintus Inc"
-vulintus_habitrak_v1_0.build.variant=habitrak_v1_0
-vulintus_habitrak_v1_0.build.variant_system_lib=
+vulintus_habitrak.build.board=HABITRAK
+vulintus_habitrak.build.cache_flags=-DENABLE_CACHE
+vulintus_habitrak.build.core=arduino
+vulintus_habitrak.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+vulintus_habitrak.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+vulintus_habitrak.build.flags.optimize=-Os
+vulintus_habitrak.build.f_cpu=120000000L
+vulintus_habitrak.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_habitrak.build.mcu=cortex-m4
+# MOVED TO MENU: vulintus_habitrak.build.openocdscript=openocd_scripts/habitrak_v1_0.cfg
+# MOVED TO MENU: vulintus_habitrak.build.usb_product="Vulintus HabiTrak V1.0"
+vulintus_habitrak.build.usb_manufacturer="Vulintus Inc"
+# MOVED TO MENU: vulintus_habitrak.build.variant=habitrak_v1_0
+vulintus_habitrak.build.variant_system_lib=
 
 # Bootloader
-vulintus_habitrak_v1_0.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
-vulintus_habitrak_v1_0.bootloader.tool=openocd
+vulintus_habitrak.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
+vulintus_habitrak.bootloader.tool=openocd
 
 # Compiler
-vulintus_habitrak_v1_0.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+vulintus_habitrak.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
-#Parameter options formerly set with the menu:
-# vulintus_habitrak_v1_0.build.cache_flags=-DENABLE_CACHE
-# vulintus_habitrak_v1_0.build.cache_flags=
-# vulintus_habitrak_v1_0.build.flags.debug=-g
-# vulintus_habitrak_v1_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
-# vulintus_habitrak_v1_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
-# vulintus_habitrak_v1_0.build.flags.optimize=-Os
-# vulintus_habitrak_v1_0.build.flags.optimize=-O2
-# vulintus_habitrak_v1_0.build.flags.optimize=-O3
-# vulintus_habitrak_v1_0.build.flags.optimize=-Ofast
-# vulintus_habitrak_v1_0.build.flags.optimize=-Ofast -funroll-loops
-# vulintus_habitrak_v1_0.build.flags.usbstack=-DUSE_TINYUSB
-# vulintus_habitrak_v1_0.build.f_cpu=120000000L
-# vulintus_habitrak_v1_0.build.f_cpu=150000000L
-# vulintus_habitrak_v1_0.build.f_cpu=180000000L
-# vulintus_habitrak_v1_0.build.f_cpu=200000000L
+# Menu
+vulintus_habitrak.menu.pcb_ver.v1_0=HabiTrak V1.0
+vulintus_habitrak.menu.pcb_ver.v1_0.build.variant=habitrak_v1_0
+vulintus_habitrak.menu.pcb_ver.v1_0.build.openocdscript=openocd_scripts/habitrak_v1_0.cfg
+vulintus_habitrak.menu.pcb_ver.v1_0.build.usb_product="Vulintus HabiTrak V1.0"
+vulintus_habitrak.menu.pcb_ver.v1_1=HabiTrak V1.1
+vulintus_habitrak.menu.pcb_ver.v1_1.build.variant=habitrak_v1_1
+vulintus_habitrak.menu.pcb_ver.v1_1.build.openocdscript=openocd_scripts/habitrak_v1_1.cfg
+vulintus_habitrak.menu.pcb_ver.v1_1.build.usb_product="Vulintus HabiTrak V1.1"
+
+# Parameter options formerly set with the menu:
+# vulintus_habitrak.build.cache_flags=-DENABLE_CACHE
+# vulintus_habitrak.build.cache_flags=
+# vulintus_habitrak.build.flags.debug=-g
+# vulintus_habitrak.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+# vulintus_habitrak.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+# vulintus_habitrak.build.flags.optimize=-Os
+# vulintus_habitrak.build.flags.optimize=-O2
+# vulintus_habitrak.build.flags.optimize=-O3
+# vulintus_habitrak.build.flags.optimize=-Ofast
+# vulintus_habitrak.build.flags.optimize=-Ofast -funroll-loops
+# vulintus_habitrak.build.flags.usbstack=-DUSE_TINYUSB
+# vulintus_habitrak.build.f_cpu=120000000L
+# vulintus_habitrak.build.f_cpu=150000000L
+# vulintus_habitrak.build.f_cpu=180000000L
+# vulintus_habitrak.build.f_cpu=200000000L
 
 
 ########################################################################################################################
-# Vulintus HabiTrak V1.1 (SAMD51P19A)
-# ------------------------------
+# Vulintus OmniTrak Controller
+# ----------------------------
 
-vulintus_habitrak_v1_1.name=Vulintus HabiTrak V1.1 (SAMD51P19A)
-
-# VID/PID for Bootloader, Arduino & CircuitPython
-# Microchip's VID (https://www.microchip.com/usblicensing/)
-# Sublicense Request 4290, submitted by Drew on 1/13/2022
-vulintus_habitrak_v1_1.vid.0=0x04D8    
-vulintus_habitrak_v1_1.pid.0=0xE6C2    
-vulintus_habitrak_v1_1.build.vid=0x04D8
-vulintus_habitrak_v1_1.build.pid=0xE6C2
-
-# Upload
-vulintus_habitrak_v1_1.upload.maximum_size=520192
-vulintus_habitrak_v1_1.upload.native_usb=true
-vulintus_habitrak_v1_1.upload.offset=0x4000
-vulintus_habitrak_v1_1.upload.protocol=sam-ba
-vulintus_habitrak_v1_1.upload.tool=bossac18
-vulintus_habitrak_v1_1.upload.use_1200bps_touch=true
-vulintus_habitrak_v1_1.upload.wait_for_upload_port=true
-
-# Build
-vulintus_habitrak_v1_1.build.board=HABITRAK_V1_1
-vulintus_habitrak_v1_1.build.cache_flags=-DENABLE_CACHE
-vulintus_habitrak_v1_1.build.core=arduino
-vulintus_habitrak_v1_1.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK_V1_1 -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
-vulintus_habitrak_v1_1.build.flags.optimize=-Os
-vulintus_habitrak_v1_1.build.f_cpu=120000000L
-vulintus_habitrak_v1_1.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_habitrak_v1_1.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
-vulintus_habitrak_v1_1.build.mcu=cortex-m4
-vulintus_habitrak_v1_1.build.openocdscript=openocd_scripts/habitrak_v1_1.cfg
-vulintus_habitrak_v1_1.build.usb_manufacturer="Vulintus Inc"
-vulintus_habitrak_v1_1.build.usb_product="Vulintus HabiTrak V1.1"
-vulintus_habitrak_v1_1.build.variant=habitrak_v1_1
-vulintus_habitrak_v1_1.build.variant_system_lib=
-
-# Bootloader
-vulintus_habitrak_v1_1.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
-vulintus_habitrak_v1_1.bootloader.tool=openocd
-
-# Compiler
-vulintus_habitrak_v1_1.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
-
-#Parameter options formerly set with the menu:
-# vulintus_habitrak_v1_1.build.cache_flags=-DENABLE_CACHE
-# vulintus_habitrak_v1_1.build.cache_flags=
-# vulintus_habitrak_v1_1.build.flags.debug=-g
-# vulintus_habitrak_v1_1.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
-# vulintus_habitrak_v1_1.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
-# vulintus_habitrak_v1_1.build.flags.optimize=-Os
-# vulintus_habitrak_v1_1.build.flags.optimize=-O2
-# vulintus_habitrak_v1_1.build.flags.optimize=-O3
-# vulintus_habitrak_v1_1.build.flags.optimize=-Ofast
-# vulintus_habitrak_v1_1.build.flags.optimize=-Ofast -funroll-loops
-# vulintus_habitrak_v1_1.build.flags.usbstack=-DUSE_TINYUSB
-# vulintus_habitrak_v1_1.build.f_cpu=120000000L
-# vulintus_habitrak_v1_1.build.f_cpu=150000000L
-# vulintus_habitrak_v1_1.build.f_cpu=180000000L
-# vulintus_habitrak_v1_1.build.f_cpu=200000000L
-
-
-########################################################################################################################
-# Vulintus OmniTrak Controller V2.0 (SAMD51P20A)
-# ------------------------------
-
-vulintus_omnitrak_controller_v2_0.name=Vulintus OmniTrak Controller V2.0 (SAMD51P20A)
+vulintus_omnitrak_controller.name=Vulintus OmniTrak Controller
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
 # Sublicense Request 4289, submitted by Drew on 1/13/2022
-vulintus_omnitrak_controller_v2_0.vid.0=0x04D8    
-vulintus_omnitrak_controller_v2_0.pid.0=0xE6C3    
-vulintus_omnitrak_controller_v2_0.build.vid=0x04D8
-vulintus_omnitrak_controller_v2_0.build.pid=0xE6C3
+vulintus_omnitrak_controller.vid.0=0x04D8    
+vulintus_omnitrak_controller.pid.0=0xE6C3    
+vulintus_omnitrak_controller.build.vid=0x04D8
+vulintus_omnitrak_controller.build.pid=0xE6C3
 
 # Upload
-vulintus_omnitrak_controller_v2_0.upload.offset=0x4000
-vulintus_omnitrak_controller_v2_0.upload.protocol=sam-ba
-vulintus_omnitrak_controller_v2_0.upload.maximum_size=1032192
-vulintus_omnitrak_controller_v2_0.upload.tool=bossac18
-vulintus_omnitrak_controller_v2_0.upload.use_1200bps_touch=true
-vulintus_omnitrak_controller_v2_0.upload.wait_for_upload_port=true
-vulintus_omnitrak_controller_v2_0.upload.native_usb=true
+vulintus_omnitrak_controller.upload.offset=0x4000
+vulintus_omnitrak_controller.upload.protocol=sam-ba
+vulintus_omnitrak_controller.upload.maximum_size=1032192
+vulintus_omnitrak_controller.upload.tool=bossac18
+vulintus_omnitrak_controller.upload.use_1200bps_touch=true
+vulintus_omnitrak_controller.upload.wait_for_upload_port=true
+vulintus_omnitrak_controller.upload.native_usb=true
 
 # Build
-vulintus_omnitrak_controller_v2_0.build.board=OMNITRAK_CONTROLLER_V2_0
-vulintus_omnitrak_controller_v2_0.build.cache_flags=-DENABLE_CACHE
-vulintus_omnitrak_controller_v2_0.build.core=arduino
-vulintus_omnitrak_controller_v2_0.build.extra_flags=-D__SAMD51P20A__ -DVULINTUS_OMNITRAK_CONTROLLER_V2_0 -D__SAMD51__ -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 {build.usb_flags}
-vulintus_omnitrak_controller_v2_0.build.flags.optimize=-Os
-vulintus_omnitrak_controller_v2_0.build.f_cpu=120000000L
-vulintus_omnitrak_controller_v2_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_omnitrak_controller_v2_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
-vulintus_omnitrak_controller_v2_0.build.mcu=cortex-m4
-vulintus_omnitrak_controller_v2_0.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
-vulintus_omnitrak_controller_v2_0.build.usb_product="Vulintus OmniTrak Controller V2.0"
-vulintus_omnitrak_controller_v2_0.build.usb_manufacturer="Vulintus Inc"
-vulintus_omnitrak_controller_v2_0.build.variant=omnitrak_controller_v2_0
-vulintus_omnitrak_controller_v2_0.build.variant_system_lib=
+vulintus_omnitrak_controller.build.board=OMNITRAK_CONTROLLER
+vulintus_omnitrak_controller.build.cache_flags=-DENABLE_CACHE
+vulintus_omnitrak_controller.build.core=arduino
+vulintus_omnitrak_controller.build.extra_flags=-D__SAMD51P20A__ -DVULINTUS_OMNITRAK_CONTROLLER -D__SAMD51__ -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 {build.usb_flags}
+vulintus_omnitrak_controller.build.flags.optimize=-Os
+vulintus_omnitrak_controller.build.f_cpu=120000000L
+vulintus_omnitrak_controller.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_omnitrak_controller.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+vulintus_omnitrak_controller.build.mcu=cortex-m4
+# MOVED TO MENU: vulintus_omnitrak_controller.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
+# MOVED TO MENU: vulintus_omnitrak_controller.build.usb_product="Vulintus OmniTrak Controller V2.0"
+vulintus_omnitrak_controller.build.usb_manufacturer="Vulintus Inc"
+# MOVED TO MENU: vulintus_omnitrak_controller.build.variant=omnitrak_controller_v2_0
+vulintus_omnitrak_controller.build.variant_system_lib=
 
 # Bootloader
-vulintus_omnitrak_controller_v2_0.bootloader.tool=openocd
-vulintus_omnitrak_controller_v2_0.bootloader.file=omnitrak_controller_v2_0/bootloader-omnitrak_controller_v2_0.bin
+vulintus_omnitrak_controller.bootloader.tool=openocd
+vulintus_omnitrak_controller.bootloader.file=omnitrak_controller_v2_0/bootloader-omnitrak_controller_v2_0.bin
 
 # Compiler
-vulintus_omnitrak_controller_v2_0.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+vulintus_omnitrak_controller.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
-#Parameter options formerly set with the menu:
-# vulintus_omnitrak_controller_v2_0.build.cache_flags=-DENABLE_CACHE
-# vulintus_omnitrak_controller_v2_0.build.cache_flags=
-# vulintus_omnitrak_controller_v2_0.build.flags.debug=-g
-# vulintus_omnitrak_controller_v2_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
-# vulintus_omnitrak_controller_v2_0.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
-# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-Os
-# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-O2
-# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-O3
-# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-Ofast
-# vulintus_omnitrak_controller_v2_0.build.flags.optimize=-Ofast -funroll-loops
-# vulintus_omnitrak_controller_v2_0.build.flags.usbstack=-DUSE_TINYUSB
-# vulintus_omnitrak_controller_v2_0.build.f_cpu=120000000L
-# vulintus_omnitrak_controller_v2_0.build.f_cpu=150000000L
-# vulintus_omnitrak_controller_v2_0.build.f_cpu=180000000L
-# vulintus_omnitrak_controller_v2_0.build.f_cpu=200000000L
+# Menu
+vulintus_omnitrak_controller.menu.pcb_ver.v2_0=OmniTrak Controller V2.0
+vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.variant=omnitrak_controller_v2_0
+vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
+vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.usb_product="Vulintus OmniTrak Controller V2.0"
+
+# Parameter options formerly set with the menu:
+# vulintus_omnitrak_controller.build.cache_flags=-DENABLE_CACHE
+# vulintus_omnitrak_controller.build.cache_flags=
+# vulintus_omnitrak_controller.build.flags.debug=-g
+# vulintus_omnitrak_controller.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+# vulintus_omnitrak_controller.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+# vulintus_omnitrak_controller.build.flags.optimize=-Os
+# vulintus_omnitrak_controller.build.flags.optimize=-O2
+# vulintus_omnitrak_controller.build.flags.optimize=-O3
+# vulintus_omnitrak_controller.build.flags.optimize=-Ofast
+# vulintus_omnitrak_controller.build.flags.optimize=-Ofast -funroll-loops
+# vulintus_omnitrak_controller.build.flags.usbstack=-DUSE_TINYUSB
+# vulintus_omnitrak_controller.build.f_cpu=120000000L
+# vulintus_omnitrak_controller.build.f_cpu=150000000L
+# vulintus_omnitrak_controller.build.f_cpu=180000000L
+# vulintus_omnitrak_controller.build.f_cpu=200000000L
 
 
 ########################################################################################################################
-# Vulintus Linear Autopositioner V2.1 (SAMD21G17A)
+# Vulintus Linear Autopositioner
 # ------------------------------
 
-vulintus_linear_autopositioner_v2_1.name=Vulintus Linear Autopositioner V2.1 (SAMD21G17A)
+vulintus_linear_autopositioner.name=Vulintus Linear Autopositioner
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-vulintus_linear_autopositioner_v2_1.vid.0=0x239A
-vulintus_linear_autopositioner_v2_1.pid.0=0x8013
-vulintus_linear_autopositioner_v2_1.vid.1=0x239A
-vulintus_linear_autopositioner_v2_1.pid.1=0x0013
+vulintus_linear_autopositioner.vid.0=0x239A
+vulintus_linear_autopositioner.pid.0=0x8013
+vulintus_linear_autopositioner.vid.1=0x239A
+vulintus_linear_autopositioner.pid.1=0x0013
+vulintus_linear_autopositioner.build.vid=0x239A
+vulintus_linear_autopositioner.build.pid=0x8013
 
 # Upload
-vulintus_linear_autopositioner_v2_1.upload.tool=bossac18
-vulintus_linear_autopositioner_v2_1.upload.protocol=sam-ba
-vulintus_linear_autopositioner_v2_1.upload.maximum_size=122880
-vulintus_linear_autopositioner_v2_1.upload.offset=0x2000
-vulintus_linear_autopositioner_v2_1.upload.use_1200bps_touch=true
-vulintus_linear_autopositioner_v2_1.upload.wait_for_upload_port=true
-vulintus_linear_autopositioner_v2_1.upload.native_usb=true
+vulintus_linear_autopositioner.upload.tool=bossac18
+vulintus_linear_autopositioner.upload.protocol=sam-ba
+vulintus_linear_autopositioner.upload.maximum_size=122880
+vulintus_linear_autopositioner.upload.offset=0x2000
+vulintus_linear_autopositioner.upload.use_1200bps_touch=true
+vulintus_linear_autopositioner.upload.wait_for_upload_port=true
+vulintus_linear_autopositioner.upload.native_usb=true
 
 # Build
-vulintus_linear_autopositioner_v2_1.build.mcu=cortex-m0plus
-vulintus_linear_autopositioner_v2_1.build.f_cpu=48000000L
-vulintus_linear_autopositioner_v2_1.build.cache_flags=-DENABLE_CACHE
-vulintus_linear_autopositioner_v2_1.build.flags.optimize=-Os
-vulintus_linear_autopositioner_v2_1.build.usb_product="Vulintus Linear Autopositioner V2.0"
-vulintus_linear_autopositioner_v2_1.build.usb_manufacturer="Vulintus Inc"
-vulintus_linear_autopositioner_v2_1.build.board=LINEAR_AUTOPOSITIONER_V2_1
-vulintus_linear_autopositioner_v2_1.build.core=arduino
-vulintus_linear_autopositioner_v2_1.build.extra_flags=-D__SAMD21G17A__ -DVULINTUS_LINEAR_AUTOPOSITIONER_V2_1 -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
-vulintus_linear_autopositioner_v2_1.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_linear_autopositioner_v2_1.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
-vulintus_linear_autopositioner_v2_1.build.variant=linear_autopositioner_v2_1
-vulintus_linear_autopositioner_v2_1.build.variant_system_lib=
-vulintus_linear_autopositioner_v2_1.build.vid=0x239A
-vulintus_linear_autopositioner_v2_1.build.pid=0x8013
+vulintus_linear_autopositioner.build.mcu=cortex-m0plus
+vulintus_linear_autopositioner.build.f_cpu=48000000L
+vulintus_linear_autopositioner.build.cache_flags=-DENABLE_CACHE
+vulintus_linear_autopositioner.build.flags.optimize=-Os
+# MOVED TO MENU: vulintus_linear_autopositioner.build.usb_product="Vulintus Linear Autopositioner V2.1"
+vulintus_linear_autopositioner.build.usb_manufacturer="Vulintus Inc"
+vulintus_linear_autopositioner.build.board=LINEAR_AUTOPOSITIONER
+vulintus_linear_autopositioner.build.core=arduino
+vulintus_linear_autopositioner.build.extra_flags=-D__SAMD21G17A__ -DVULINTUS_LINEAR_AUTOPOSITIONER -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
+vulintus_linear_autopositioner.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+# MOVED TO MENU: vulintus_linear_autopositioner.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
+# MOVED TO MENU: vulintus_linear_autopositioner.build.variant=linear_autopositioner_v2_1
+vulintus_linear_autopositioner.build.variant_system_lib=
 
 # Bootloader
-vulintus_linear_autopositioner_v2_1.bootloader.tool=openocd
-vulintus_linear_autopositioner_v2_1.bootloader.file=linear_autopositioner_v2_1/bootloader-linear_autopositioner_v2_1.bin
+vulintus_linear_autopositioner.bootloader.tool=openocd
+vulintus_linear_autopositioner.bootloader.file=linear_autopositioner_v2_1/bootloader-linear_autopositioner_v2_1.bin
+
+# Menu
+vulintus_linear_autopositioner.menu.pcb_ver.v2_1=Linear Autopositioner V2.1
+vulintus_linear_autopositioner.menu.pcb_ver.v2_1.build.variant=linear_autopositioner_v2_1
+vulintus_linear_autopositioner.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
+vulintus_linear_autopositioner.menu.pcb_ver.v2_1.build.usb_product="Vulintus Linear Autopositioner V2.1"
 
 
 ########################################################################################################################
-# Vulintus Liquid Dispenser V2.0 (SAMD21G17A)
-# ------------------------------
+# Vulintus Liquid Dispenser
+# -------------------------
 
-vulintus_liquid_dispenser_v2_0.name=Vulintus Liquid Dispenser V2.0 (SAMD21G17A)
+vulintus_liquid_dispenser.name=Vulintus Liquid Dispenser
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-vulintus_liquid_dispenser_v2_0.vid.0=0x2341
-vulintus_liquid_dispenser_v2_0.pid.0=0x804d
-vulintus_liquid_dispenser_v2_0.vid.1=0x2341
-vulintus_liquid_dispenser_v2_0.pid.1=0x804d
+vulintus_liquid_dispenser.vid.0=0x2341
+vulintus_liquid_dispenser.pid.0=0x804d
+vulintus_liquid_dispenser.vid.1=0x2341
+vulintus_liquid_dispenser.pid.1=0x804d
+vulintus_liquid_dispenser.build.vid=0x2341
+vulintus_liquid_dispenser.build.pid=0x804d
 
 # Upload
-vulintus_liquid_dispenser_v2_0.upload.tool=bossac18
-vulintus_liquid_dispenser_v2_0.upload.protocol=sam-ba
-vulintus_liquid_dispenser_v2_0.upload.maximum_size=122880
-vulintus_liquid_dispenser_v2_0.upload.maximum_data_size=16384
-vulintus_liquid_dispenser_v2_0.upload.offset=0x2000
-vulintus_liquid_dispenser_v2_0.upload.use_1200bps_touch=true
-vulintus_liquid_dispenser_v2_0.upload.wait_for_upload_port=true
-vulintus_liquid_dispenser_v2_0.upload.native_usb=true
+vulintus_liquid_dispenser.upload.tool=bossac18
+vulintus_liquid_dispenser.upload.protocol=sam-ba
+vulintus_liquid_dispenser.upload.maximum_size=122880
+vulintus_liquid_dispenser.upload.maximum_data_size=16384
+vulintus_liquid_dispenser.upload.offset=0x2000
+vulintus_liquid_dispenser.upload.use_1200bps_touch=true
+vulintus_liquid_dispenser.upload.wait_for_upload_port=true
+vulintus_liquid_dispenser.upload.native_usb=true
 
 # Build
-vulintus_liquid_dispenser_v2_0.build.mcu=cortex-m0plus
-vulintus_liquid_dispenser_v2_0.build.f_cpu=48000000L
-vulintus_liquid_dispenser_v2_0.build.cache_flags=-DENABLE_CACHE
-vulintus_liquid_dispenser_v2_0.build.flags.optimize=-Os
-vulintus_liquid_dispenser_v2_0.build.usb_product="Vulintus Liquid Dispenser V2.0"
-vulintus_liquid_dispenser_v2_0.build.usb_manufacturer="Vulintus Inc"
-vulintus_liquid_dispenser_v2_0.build.board=LIQUID_DISPENSER_V2_0
-vulintus_liquid_dispenser_v2_0.build.core=arduino
-vulintus_liquid_dispenser_v2_0.build.extra_flags=-DCRYSTALLESS -D__SAMD21G17A__ -DVULINTUS_LIQUID_DISPENSER_V2_0 -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
-vulintus_liquid_dispenser_v2_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_liquid_dispenser_v2_0.build.openocdscript=openocd_scripts/liquid_dispenser_v2_0.cfg
-vulintus_liquid_dispenser_v2_0.build.variant=liquid_dispenser_v2_0
-vulintus_liquid_dispenser_v2_0.build.variant_system_lib=
-vulintus_liquid_dispenser_v2_0.build.vid=0x2341
-vulintus_liquid_dispenser_v2_0.build.pid=0x804d
+vulintus_liquid_dispenser.build.mcu=cortex-m0plus
+vulintus_liquid_dispenser.build.f_cpu=48000000L
+vulintus_liquid_dispenser.build.cache_flags=-DENABLE_CACHE
+vulintus_liquid_dispenser.build.flags.optimize=-Os
+# MOVED TO MENU: vulintus_liquid_dispenser.build.usb_product="Vulintus Liquid Dispenser V2.0"
+vulintus_liquid_dispenser.build.usb_manufacturer="Vulintus Inc"
+vulintus_liquid_dispenser.build.board=LIQUID_DISPENSER_V2_0
+vulintus_liquid_dispenser.build.core=arduino
+vulintus_liquid_dispenser.build.extra_flags=-DCRYSTALLESS -D__SAMD21G17A__ -DVULINTUS_LIQUID_DISPENSER -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
+vulintus_liquid_dispenser.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+# MOVED TO MENU: vulintus_liquid_dispenser.build.openocdscript=openocd_scripts/liquid_dispenser_v2_0.cfg
+# MOVED TO MENU: vulintus_liquid_dispenser.build.variant=liquid_dispenser_v2_0
+vulintus_liquid_dispenser.build.variant_system_lib=
 
 # Bootloader
-vulintus_liquid_dispenser_v2_0.bootloader.tool=openocd
-vulintus_liquid_dispenser_v2_0.bootloader.file=liquid_dispenser_v2_0/samd21g17a_sam_ba.bin
+vulintus_liquid_dispenser.bootloader.tool=openocd
+vulintus_liquid_dispenser.bootloader.file=liquid_dispenser_v2_0/samd21g17a_sam_ba.bin
+
+# Menu
+vulintus_liquid_dispenser.menu.pcb_ver.v2_0=Liquid Dispenser V2.0
+vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.variant=liquid_dispenser_v2_0
+vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/liquid_dispenser_v2_0.cfg
+vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.usb_product="Vulintus Liquid Dispenser V2.0"
 
 
 ########################################################################################################################
-# Vulintus Ring Light V2.0 (SAMD11C14A)
-# ------------------------------
+# Vulintus Ring Light
+# -------------------
 
-vulintus_ring_light_v2_0.name=Vulintus Ring Light V2.0 (SAMD11C14A)
+vulintus_ring_light.name=Vulintus Ring Light
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
 # Sublicense Request 4290, submitted by Drew on 1/13/2022
-vulintus_ring_light_v2_0.vid.0=0x04D8    
-vulintus_ring_light_v2_0.pid.0=0xE6C0    
-vulintus_ring_light_v2_0.build.vid=0x04D8
-vulintus_ring_light_v2_0.build.pid=0xE6C0
+vulintus_ring_light.vid.0=0x04D8    
+vulintus_ring_light.pid.0=0xE6C0    
+vulintus_ring_light.build.vid=0x04D8
+vulintus_ring_light.build.pid=0xE6C0
 
 # Upload
-vulintus_ring_light_v2_0.upload.erase=
-vulintus_ring_light_v2_0.upload.maximum_data_size=4096
-vulintus_ring_light_v2_0.upload.maximum_size=12288
-vulintus_ring_light_v2_0.upload.native_usb=true
-vulintus_ring_light_v2_0.upload.offset=0x1000
-vulintus_ring_light_v2_0.upload.protocol=sam-ba
-vulintus_ring_light_v2_0.upload.tool=bossac19
-vulintus_ring_light_v2_0.upload.use_1200bps_touch=true
-vulintus_ring_light_v2_0.upload.wait_for_upload_port=true
+vulintus_ring_light.upload.erase=
+vulintus_ring_light.upload.maximum_data_size=4096
+vulintus_ring_light.upload.maximum_size=12288
+vulintus_ring_light.upload.native_usb=true
+vulintus_ring_light.upload.offset=0x1000
+vulintus_ring_light.upload.protocol=sam-ba
+vulintus_ring_light.upload.tool=bossac19
+vulintus_ring_light.upload.use_1200bps_touch=true
+vulintus_ring_light.upload.wait_for_upload_port=true
 
 # Build
-vulintus_ring_light_v2_0.build.board=RING_LIGHT_V2_0
-vulintus_ring_light_v2_0.build.cache_flags=-DENABLE_CACHE
-vulintus_ring_light_v2_0.build.core=Fab_SAM_Arduino:arduino
-vulintus_ring_light_v2_0.build.extra_flags=-DCRYSTALLESS -D__SAMD11__ -D__SAMD11C14A__ -DVULINTUS_RING_LIGHT_V2_0 -DARM_MATH_CM0PLUS {build.usb_flags}
-vulintus_ring_light_v2_0.build.f_cpu=48000000L
-vulintus_ring_light_v2_0.build.flags.optimize=-Os
-vulintus_ring_light_v2_0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-vulintus_ring_light_v2_0.build.mcu=cortex-m0plus
-vulintus_ring_light_v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
-vulintus_ring_light_v2_0.build.usb_product="Vulintus Ring Light V2.0"
-vulintus_ring_light_v2_0.build.usb_manufacturer="Vulintus Inc"
-vulintus_ring_light_v2_0.build.variant=ring_light_v2_0
-vulintus_ring_light_v2_0.build.variant_system_lib=
+vulintus_ring_light.build.board=RING_LIGHT_V2_0
+vulintus_ring_light.build.cache_flags=-DENABLE_CACHE
+vulintus_ring_light.build.core=Fab_SAM_Arduino:arduino
+vulintus_ring_light.build.extra_flags=-DCRYSTALLESS -D__SAMD11__ -D__SAMD11C14A__ -DVULINTUS_RING_LIGHT -DARM_MATH_CM0PLUS {build.usb_flags}
+vulintus_ring_light.build.f_cpu=48000000L
+vulintus_ring_light.build.flags.optimize=-Os
+vulintus_ring_light.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vulintus_ring_light.build.mcu=cortex-m0plus
+# MOVED TO MENU: vulintus_ring_light.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
+# MOVED TO MENU: vulintus_ring_light.build.usb_product="Vulintus Ring Light V2.0"
+vulintus_ring_light.build.usb_manufacturer="Vulintus Inc"
+# MOVED TO MENU: vulintus_ring_light.build.variant=ring_light_v2_0
+vulintus_ring_light.build.variant_system_lib=
 
 # Bootloader
-vulintus_ring_light_v2_0.bootloader.tool=openocd
-vulintus_ring_light_v2_0.bootloader.file=ring_light_v2_0/sam_ba_SAMD11C14A.bin
+vulintus_ring_light.bootloader.tool=openocd
+vulintus_ring_light.bootloader.file=ring_light_v2_0/sam_ba_SAMD11C14A.bin
+
+# Menu
+vulintus_liquid_dispenser.menu.pcb_ver.v2_0=Ring Light V2.0
+vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0
+vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
+vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.usb_product="Vulintus Ring Light V2.0"
 
 
 ########################################################################################################################
-# Vulintus Ring Light V2.0 (SAMD11C14A)
-# ------------------------------
+# Vulintus Ring Light - FabSam Workaround
+# ---------------------------------------
 
-vulintus_ring_light_v2_0_fab_sam.name=Vulintus Ring Light V2.0 (SAMD11C14A) - Fab Sam Workaround
+vulintus_ring_light_fab_sam.name=Vulintus Ring Light - FabSam Workaround
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
 # Sublicense Request 4290, submitted by Drew on 1/13/2022
-vulintus_ring_light_v2_0_fab_sam.vid.0=0x04D8    
-vulintus_ring_light_v2_0_fab_sam.pid.0=0xE6C0    
-vulintus_ring_light_v2_0_fab_sam.build.vid=0x04D8
-vulintus_ring_light_v2_0_fab_sam.build.pid=0xE6C0
+vulintus_ring_light_fab_sam.vid.0=0x04D8    
+vulintus_ring_light_fab_sam.pid.0=0xE6C0    
+vulintus_ring_light_fab_sam.build.vid=0x04D8
+vulintus_ring_light_fab_sam.build.pid=0xE6C0
 
 # Upload (with Bootloader)
-vulintus_ring_light_v2_0_fab_sam.upload.erase=
-vulintus_ring_light_v2_0_fab_sam.upload.maximum_data_size=4096
-vulintus_ring_light_v2_0_fab_sam.upload.maximum_size=12288
-vulintus_ring_light_v2_0_fab_sam.upload.offset=0x1000
-vulintus_ring_light_v2_0_fab_sam.upload.native_usb=true
-vulintus_ring_light_v2_0_fab_sam.upload.protocol=sam-ba
-vulintus_ring_light_v2_0_fab_sam.upload.tool=Fab_SAM_Arduino:bossac
-vulintus_ring_light_v2_0_fab_sam.upload.use_1200bps_touch=true
-vulintus_ring_light_v2_0_fab_sam.upload.wait_for_upload_port=true
+vulintus_ring_light_fab_sam.upload.erase=
+vulintus_ring_light_fab_sam.upload.maximum_data_size=4096
+vulintus_ring_light_fab_sam.upload.maximum_size=12288
+vulintus_ring_light_fab_sam.upload.offset=0x1000
+vulintus_ring_light_fab_sam.upload.native_usb=true
+vulintus_ring_light_fab_sam.upload.protocol=sam-ba
+vulintus_ring_light_fab_sam.upload.tool=Fab_SAM_Arduino:bossac
+vulintus_ring_light_fab_sam.upload.use_1200bps_touch=true
+vulintus_ring_light_fab_sam.upload.wait_for_upload_port=true
 
 # Build
-# vulintus_ring_light_v2_0_fab_sam.build.board=RING_LIGHT_V2_0
-vulintus_ring_light_v2_0_fab_sam.build.board=SAMD_ZERO
-vulintus_ring_light_v2_0_fab_sam.build.bootloader_size=__4KB_BOOTLOADER__
-vulintus_ring_light_v2_0_fab_sam.build.buildconfig=CONFIG_H_DISABLED
-vulintus_ring_light_v2_0_fab_sam.build.cache_flags=-DENABLE_CACHE
-vulintus_ring_light_v2_0_fab_sam.build.chip=samd11
-vulintus_ring_light_v2_0_fab_sam.build.clockconfig=CLOCKCONFIG_INTERNAL_USB
-vulintus_ring_light_v2_0_fab_sam.build.core=fab_sam
-vulintus_ring_light_v2_0_fab_sam.build.extra_flags=-D__SAMD11C14A__ {build.usb_flags} -DARM_MATH_CM0PLUS
-vulintus_ring_light_v2_0_fab_sam.build.f_cpu=48000000L
-vulintus_ring_light_v2_0_fab_sam.build.floatconfig=FLOAT_BOTH_DOUBLES_ONLY
-vulintus_ring_light_v2_0_fab_sam.build.ldscript=linker_scripts/gcc/4KB_Bootloader/flash_16KB.ld
-vulintus_ring_light_v2_0_fab_sam.build.mathlib=arm_cortexM0l_math
-vulintus_ring_light_v2_0_fab_sam.build.mcu=cortex-m0plus
-vulintus_ring_light_v2_0_fab_sam.build.openocdscript=openocd_scripts/ring_light_v2_0_fab_sam.cfg
-vulintus_ring_light_v2_0_fab_sam.build.flags.optimize=-Os
-vulintus_ring_light_v2_0_fab_sam.build.serialcom_uart=NO_UART
-vulintus_ring_light_v2_0_fab_sam.build.serialcom_wire=NO_WIRE
-vulintus_ring_light_v2_0_fab_sam.build.serialcom_spi=NO_SPI
-vulintus_ring_light_v2_0_fab_sam.build.timerconfig=TIMER_732Hz
-vulintus_ring_light_v2_0_fab_sam.build.usb_product="Vulintus Ring Light V2.0"
-vulintus_ring_light_v2_0_fab_sam.build.usb_manufacturer="Vulintus Inc"
-vulintus_ring_light_v2_0_fab_sam.build.usbcom=CDC_ONLY
-vulintus_ring_light_v2_0_fab_sam.build.variant=ring_light_v2_0_fab_sam
-vulintus_ring_light_v2_0_fab_sam.build.variant_system_lib=
+# vulintus_ring_light_fab_sam.build.board=RING_LIGHT
+vulintus_ring_light_fab_sam.build.board=SAMD_ZERO
+vulintus_ring_light_fab_sam.build.bootloader_size=__4KB_BOOTLOADER__
+vulintus_ring_light_fab_sam.build.buildconfig=CONFIG_H_DISABLED
+vulintus_ring_light_fab_sam.build.cache_flags=-DENABLE_CACHE
+vulintus_ring_light_fab_sam.build.chip=samd11
+vulintus_ring_light_fab_sam.build.clockconfig=CLOCKCONFIG_INTERNAL_USB
+vulintus_ring_light_fab_sam.build.core=fab_sam
+vulintus_ring_light_fab_sam.build.extra_flags=-D__SAMD11C14A__ -DVULINTUS_RING_LIGHT {build.usb_flags} -DARM_MATH_CM0PLUS
+vulintus_ring_light_fab_sam.build.f_cpu=48000000L
+vulintus_ring_light_fab_sam.build.floatconfig=FLOAT_BOTH_DOUBLES_ONLY
+vulintus_ring_light_fab_sam.build.ldscript=linker_scripts/gcc/4KB_Bootloader/flash_16KB.ld
+vulintus_ring_light_fab_sam.build.mathlib=arm_cortexM0l_math
+vulintus_ring_light_fab_sam.build.mcu=cortex-m0plus
+# MOVED TO MENU: vulintus_ring_light_fab_sam.build.openocdscript=openocd_scripts/ring_light_v2_0_fab_sam.cfg
+vulintus_ring_light_fab_sam.build.flags.optimize=-Os
+vulintus_ring_light_fab_sam.build.serialcom_uart=NO_UART
+vulintus_ring_light_fab_sam.build.serialcom_wire=NO_WIRE
+vulintus_ring_light_fab_sam.build.serialcom_spi=NO_SPI
+vulintus_ring_light_fab_sam.build.timerconfig=TIMER_732Hz
+# MOVED TO MENU: vulintus_ring_light_fab_sam.build.usb_product="Vulintus Ring Light V2.0"
+vulintus_ring_light_fab_sam.build.usb_manufacturer="Vulintus Inc"
+vulintus_ring_light_fab_sam.build.usbcom=CDC_ONLY
+# MOVED TO MENU: vulintus_ring_light_fab_sam.build.variant=ring_light_v2_0_fab_sam
+vulintus_ring_light_fab_sam.build.variant_system_lib=
 
 # Bootloader
-vulintus_ring_light_v2_0_fab_sam.bootloader.file=ring_light_v2_0_fab_sam/sam_ba_SAMD11C14A.bin
-vulintus_ring_light_v2_0_fab_sam.bootloader.tool=edbg
+vulintus_ring_light_fab_sam.bootloader.file=ring_light_v2_0_fab_sam/sam_ba_SAMD11C14A.bin
+vulintus_ring_light_fab_sam.bootloader.tool=edbg
 
 # Compiler
-vulintus_ring_light_v2_0_fab_sam.compiler.c.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
-vulintus_ring_light_v2_0_fab_sam.compiler.cpp.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
-vulintus_ring_light_v2_0_fab_sam.compiler.S.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
+vulintus_ring_light_fab_sam.compiler.c.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
+vulintus_ring_light_fab_sam.compiler.cpp.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
+vulintus_ring_light_fab_sam.compiler.S.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path}/CMSIS/Include/" "-I{runtime.tools.CMSIS-Atmel-1.0.0-mattairtech-2.path}/CMSIS/Device/ATMEL/" -D{build.floatconfig} -D{build.timerconfig} -D{build.buildconfig} -D{build.clockconfig} -D{build.usbcom} -D{build.serialcom_uart} -D{build.serialcom_wire} -D{build.serialcom_spi} -D{build.bootloader_size}
 
+# Menu
+vulintus_ring_light_fab_sam.menu.pcb_ver.v2_0=Ring Light V2.0
+vulintus_ring_light_fab_sam.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0_fab_sam
+vulintus_ring_light_fab_sam.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0_fab_sam.cfg
+vulintus_ring_light_fab_sam.menu.pcb_ver.v2_0.build.usb_product="Vulintus Ring Light V2.0"
 
 ########################################################################################################################
