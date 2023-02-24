@@ -92,19 +92,19 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_A4988_SLP   10     //Stepper controller sleep.
 
 //Vulintus Peripheral Bus (VPB)
-#define PIN_VPB_TRG     A0     //Vulintus Peripherial Bus (VPB) trigger.
-#define PIN_VPB_CLK     11     //Vulintus Peripherial Bus (VPB) clock.
+#define PIN_VPB_TRG     PIN_A0 		//Vulintus Peripherial Bus (VPB) trigger.
+#define PIN_VPB_CLK     11     		//Vulintus Peripherial Bus (VPB) clock.
 
 //LEDs
-#define PIN_LED_GRN     13     //Green LED.
-#define PIN_LED_RED     12     //Red LED.
+#define PIN_LED_GRN     13     		//Green LED.
+#define PIN_LED_RED     12     		//Red LED.
 
 //Calibration
-#define PIN_SLOT        A1     //Slot detector.
+#define PIN_SLOT        PIN_A1    //Slot detector.
 
 //User Input
-#define PIN_SW_FWD      A3     //Manual forward switch.
-#define PIN_SW_REV      A2     //manual reverse switch.
+#define PIN_SW_FWD      PIN_A3    //Manual forward switch.
+#define PIN_SW_REV      PIN_A2    //Manual reverse switch.
 
 #ifdef ARDUINO_MAIN
 
