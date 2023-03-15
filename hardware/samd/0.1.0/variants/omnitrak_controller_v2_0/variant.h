@@ -114,6 +114,7 @@ extern "C" unsigned int PINCOUNT_fn();
 #define LED_R               PIN_LED_R
 #define LED_G               PIN_LED_G
 #define LED_B               PIN_LED_B
+#define LED_BUILTIN         PIN_LED_G
 
 
 /*
