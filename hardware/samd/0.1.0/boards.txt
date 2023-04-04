@@ -82,12 +82,12 @@ vulintus_habitrak.menu.pcb_ver.v1_1.build.variant=habitrak_v1_1
 vulintus_habitrak.menu.pcb_ver.v1_1.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
 
 vulintus_habitrak.menu.pcb_ver.v1_2=HabiTrak V1.2
-vulintus_habitrak.menu.pcb_ver.v1_2.upload.maximum_size=1032192
-vulintus_habitrak.menu.pcb_ver.v1_2.build.extra_flags=-D__SAMD51P20A__ -DVULINTUS_HABITRAK -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+vulintus_habitrak.menu.pcb_ver.v1_2.upload.maximum_size=520192
+vulintus_habitrak.menu.pcb_ver.v1_2.build.extra_flags=-D__SAMD51P19A__ -DVULINTUS_HABITRAK -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
 vulintus_habitrak.menu.pcb_ver.v1_2.build.openocdscript=openocd_scripts/habitrak_v1_2.cfg
 vulintus_habitrak.menu.pcb_ver.v1_2.build.usb_product="HabiTrak V1.2"
 vulintus_habitrak.menu.pcb_ver.v1_2.build.variant=habitrak_v1_2
-vulintus_habitrak.menu.pcb_ver.v1_2.bootloader.file=omnitrak_controller_v2_0/bootloader-omnitrak_controller_v2_0.bin
+vulintus_habitrak.menu.pcb_ver.v1_2.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
 
 # Parameter options formerly set with the menu:
 # vulintus_habitrak.build.cache_flags=-DENABLE_CACHE

@@ -109,15 +109,15 @@ extern "C" unsigned int PINCOUNT_fn();
 /*
  * Analog pins
  */
-#define PIN_A0              (35u)       //PB06, BTN_U (ADC)
-#define PIN_A1              (36u)       //PC30, BTN_S (ADC)
-#define PIN_A2              (37u)       //PA03, BTN_D (ADC)
+#define PIN_A0              (35u)       //PB01, BTN_U (ADC)
+#define PIN_A1              (36u)       //PC31, BTN_S (ADC)
+#define PIN_A2              (37u)       //PB03, BTN_D (ADC)
 #define PIN_A3              (47u)       //PB06, BAT_NTC
-#define PIN_A4              (70u)       //PC01, BOARD_ID
-#define PIN_A5              (75u)       //PA03
+#define PIN_A4              (70u)       //PA07, BOARD_ID
+#define PIN_A5              (75u)       //PA03, VREF
 
 
-#define PIN_DAC0            (8u)        //PA02, unused, but define in case required by libraries
+#define PIN_DAC0            (5u)        //PA02, unused, but define in case required by libraries
 #define PIN_DAC1            (11u)       //PA05, unused, but define in case required by libraries
 
 static const uint8_t A0   = PIN_A0;
@@ -145,10 +145,10 @@ static const uint8_t DAC1 = PIN_DAC1;
  */
 
 // NINA W102 WiFi-Bluetooth module.
-#define PIN_NINA_RST        (5u)        //PC00
-#define PIN_NINA_BOOT       (6u)        //PB04
+#define PIN_NINA_RST        (5u)        //PA02
+#define PIN_NINA_BOOT       (6u)        //PD01
 #define PIN_NINA_ACK        (7u)        //PC02
-#define PIN_NINA_DEBUG      (8u)        //PA02
+#define PIN_NINA_DEBUG      (8u)        //PB04
 #define PIN_NINA_CS         (9u)        //PB05
 #define NINA_RST            PIN_NINA_RST
 #define NINA_RESETN         PIN_NINA_RST      //Required for NINA library.
@@ -175,22 +175,22 @@ static const uint8_t DAC1 = PIN_DAC1;
 
 // User Input
 #define PIN_BTN_U           (32u)       //PB00
-#define PIN_BTN_S           (33u)       //PA01
-#define PIN_BTN_D           (34u)       //PC30
-#define PIN_QT_MODE         (38u)       //PB04
+#define PIN_BTN_S           (33u)       //PC30
+#define PIN_BTN_D           (34u)       //PA01
+#define PIN_QT_MODE         (38u)       //PC00
 
 // VL53L0X Distance Sensor
 #define PIN_VLX_GPIO        (40u)       //PB09
 #define PIN_VLX_XSHUT       (41u)       //PC06
 
 // Pushbuton On-Off controller
-#define PIN_MAX_INT         (42u)       //PC24
-#define PIN_MAX_CLR         (43u)       //PC26
+#define PIN_MAX_INT         (42u)       //PC26
+#define PIN_MAX_CLR         (43u)       //PC24
 
 // BH1749 Light/Color Sensor
 #define PIN_RGB_INT         (44u)       //PC04
 
-// BME6888 Temperature-Pressure-Humidity-Gas Sensor
+// BME688 Temperature-Pressure-Humidity-Gas Sensor
 #define PIN_BME_CS          (45u)       //PB18
 #define BME_CS              PIN_BME_CS
 
@@ -336,9 +336,9 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 /*
  * Parallel Capture Controller (PCC)
 */
-#define PIN_PCC_DEN1        (68u)       //PA12 (PCC / DEN1)
-#define PIN_PCC_DEN2        (69u)       //PA13 (PCC / DEN2)
-#define PIN_PCC_CLK         (57u)       //PA14 (PCC / CLK)
+#define PIN_PCC_DEN1        (68u)       //PA12 (PCC/DEN1)
+#define PIN_PCC_DEN2        (69u)       //PA13 (PCC/DEN2)
+#define PIN_PCC_CLK         (57u)       //PA14 (PCC/CLK)
 #define PIN_PCC_XCLK	      (54u)       //PC11 (TCCO/WO[1], TCC1/WO[5])
 #define PIN_PCC_D0          (58u)       //PA16 (PCC/DATA[0])
 #define PIN_PCC_D1          (59u)       //PA17 (PCC/DATA[1])
@@ -413,7 +413,7 @@ extern Uart SerialHCI;
 // SERIAL_PORT_USBVIRTUAL     Port which is USB virtual serial
 //
 // SERIAL_PORT_LINUXBRIDGE    Port which connects to a Linux system via Bridge library
-//V1_1
+//
 // SERIAL_PORT_HARDWARE       Hardware serial port, physical RX & TX pins.
 //
 // SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
