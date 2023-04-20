@@ -334,9 +334,9 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 /*
  * Parallel Capture Controller (PCC)
 */
-#define PIN_PCC_DEN1        (71u)       //PA12 (PCC / DEN1)
-#define PIN_PCC_DEN2        (72u)       //PA13 (PCC / DEN2)
-#define PIN_PCC_CLK         (60u)       //PA14 (PCC / CLK)
+#define PIN_PCC_DEN1        (71u)       //PA12 (PCC/DEN1)
+#define PIN_PCC_DEN2        (72u)       //PA13 (PCC/DEN2)
+#define PIN_PCC_CLK         (60u)       //PA14 (PCC/CLK)
 #define PIN_PCC_XCLK	      (57u)       //PC11 (TCCO/WO[1], TCC1/WO[5])
 #define PIN_PCC_D0          (61u)       //PA16 (PCC/DATA[0])
 #define PIN_PCC_D1          (62u)       //PA17 (PCC/DATA[1])
