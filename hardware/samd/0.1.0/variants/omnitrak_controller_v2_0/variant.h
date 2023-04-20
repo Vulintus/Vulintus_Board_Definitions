@@ -117,7 +117,6 @@ extern "C" unsigned int PINCOUNT_fn();
 #define LED_BUILTIN         PIN_LED_G
 
 
-
 /*
  * Analog pins
  */
