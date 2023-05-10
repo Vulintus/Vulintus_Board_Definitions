@@ -243,6 +243,7 @@ static const uint8_t POCI = PIN_SPI_POCI;
 #define SPIWIFI_SS          PIN_NINA_CS
 #define SPIWIFI_ACK         PIN_NINA_ACK
 #define SPIWIFI_RESET       PIN_NINA_RST
+#define SS                  SPIWIFI_SS
 
 
 // Needed for SD library
@@ -258,7 +259,7 @@ static const uint8_t MOSI1 = PIN_SPI1_MOSI;
 static const uint8_t MISO1 = PIN_SPI1_MISO;   
 static const uint8_t SCK1  = PIN_SPI1_SCK;    
 
-#define SDCARD_SPI          SPI1
+#define SDCARD_SPI          SPI
 #define SDCARD_MISO_PIN     PIN_SPI1_MISO
 #define SDCARD_MOSI_PIN     PIN_SPI1_MOSI
 #define SDCARD_SCK_PIN      PIN_SPI1_SCK
