@@ -23,7 +23,7 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   12          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   13          // Divide by 10 to match the Eagle design version.
 
 
 /*----------------------------------------------------------------------------
