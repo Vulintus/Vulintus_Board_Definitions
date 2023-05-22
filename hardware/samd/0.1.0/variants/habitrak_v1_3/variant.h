@@ -176,7 +176,7 @@ static const uint8_t DAC1 = PIN_DAC1;
 // User Input
 #define PIN_BTN_U           (32u)       //PB00
 #define PIN_BTN_S           (33u)       //PC30
-#define PIN_BTN_D           (34u)       //PA01
+#define PIN_BTN_D           (37u)       //PA01
 #define PIN_QT_MODE         (38u)       //PC00
 
 // VL53L0X Distance Sensor
@@ -260,10 +260,14 @@ static const uint8_t MOSI1 = PIN_SPI1_MOSI;
 static const uint8_t MISO1 = PIN_SPI1_MISO;   
 static const uint8_t SCK1  = PIN_SPI1_SCK;    
 
-#define SDCARD_SPI          SPI1
-#define SDCARD_MISO_PIN     PIN_SPI1_MISO
-#define SDCARD_MOSI_PIN     PIN_SPI1_MOSI
-#define SDCARD_SCK_PIN      PIN_SPI1_SCK
+// #define SDCARD_SPI          SPI1
+#define SDCARD_SPI          SPI
+// #define SDCARD_MISO_PIN     PIN_SPI1_MISO
+// #define SDCARD_MOSI_PIN     PIN_SPI1_MOSI
+// #define SDCARD_SCK_PIN      PIN_SPI1_SCK
+#define SDCARD_MISO_PIN     PIN_SPI_MISO
+#define SDCARD_MOSI_PIN     PIN_SPI_MOSI
+#define SDCARD_SCK_PIN      PIN_SPI_SCK
 #define SDCARD_SS_PIN       PIN_SPI1_SS
 
 /*
