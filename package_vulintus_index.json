@@ -43,7 +43,8 @@
 					},
 					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_samd_v0_2_0.zip",
 					"archiveFileName": "vulintus_samd_v0_2_0.zip",
-					"checksum": "SHA-256:0ee11ab2374ff9710ff87209e3f57c94fc20aa6a3b67785e2157c3bd49f2d913",
+					"checksum": "SHA-256:1E67470ECE87FA832AB91512098DE5153FAB16AD9ACD7103921BB3587836830C",
+          "_comment_ln47": "get-filehash -path 'C:\\Users\\[user]\\AppData\\Local\\Arduino15\\packages\\vulintus_beta\\zip files\\vulintus_samd_v0_2_0.zip' | format-list",
 					"size": "1024040",			
 					"toolsDependencies": [
 						{
