@@ -14,19 +14,37 @@
 
 
 				{
-					"name": "Vulintus SAMD Devices (Beta)",
+					"name": "Vulintus SAMD Devices",
 					"architecture": "samd",
-					"version": "0.1.0",
+					"version": "0.2.0",
 					"boards": [
-						{"name": "HabiTrak V1.0.0"}
+						{
+              "name": "Vulintus HabiTrak"
+            },
+            {
+              "name": "Vulintus OmniTrak Controller"
+            },
+            {
+              "name": "Vulintus Linear Autopositioner"
+            },
+            {
+              "name": "Vulintus Liquid Dispenser"
+            },
+            {
+              "name": "Vulintus Ring Light"
+            },
+            {
+              "name": "Vulintus Ring Light - FabSam Workaround"
+            }
 					],
 					"category": "Vulintus",
 					"help": {
 						"online": "https://www.vulintus.com/support/"
 					},
-					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_samd_v0_1_0_20220425T1232.zip",
-					"archiveFileName": "vulintus_samd_v0_1_0_20220425T1232.zip",
-					"checksum": "SHA-256:0ee11ab2374ff9710ff87209e3f57c94fc20aa6a3b67785e2157c3bd49f2d913",
+					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_samd_v0_2_0.zip",
+					"archiveFileName": "vulintus_samd_v0_2_0.zip",
+					"checksum": "SHA-256:1E67470ECE87FA832AB91512098DE5153FAB16AD9ACD7103921BB3587836830C",
+          "_comment_ln47": "get-filehash -path 'C:\\Users\\[user]\\AppData\\Local\\Arduino15\\packages\\vulintus_beta\\zip files\\vulintus_samd_v0_2_0.zip' | format-list",
 					"size": "1024040",			
 					"toolsDependencies": [
 						{
@@ -64,8 +82,8 @@
 					"help": {
 						"online": "https://www.vulintus.com/support/"
 					},
-					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_avr_v0_1_0_202205222156.zip",
-					"archiveFileName": "vulintus_avr_v0_1_0_202205222156.zip",
+					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_avr_v0_1_0.zip",
+					"archiveFileName": "vulintus_avr_v0_1_0.zip",
 					"checksum": "SHA-256:0128b45743784717326602b94118063d97c9b2adfd1f03f66135908e0ffd534c",
 					"size": "72056",			
 					"toolsDependencies": [
