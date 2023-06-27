@@ -20,7 +20,8 @@
 # https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
 
 name=Vulintus SAMD Devices (Beta)
-version=0.1.0
+# name=Vulintus SAMD Devices
+version=0.2.0
 
 # Compile variables
 # -----------------
