@@ -16,14 +16,14 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_OMNITRAK_CONTROLLER_V2_0_
-#define _VARIANT_OMNITRAK_CONTROLLER_V2_0_
+#ifndef _VARIANT_OMNITRAK_CONTROLLER_V2_1_
+#define _VARIANT_OMNITRAK_CONTROLLER_V2_1_
 
 // The definitions here need a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   20          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   21          // Divide by 10 to match the Eagle design version.
 #define NUM_OTMP_PORTS      5           // Number of OTMP ports.
 
 // I2C Addresses.
@@ -61,26 +61,26 @@ extern "C" unsigned int PINCOUNT_fn();
 
 // Number of pins defined in PinDescription array
 #define PINS_COUNT           (PINCOUNT_fn())
-#define NUM_DIGITAL_PINS     (94u)
+#define NUM_DIGITAL_PINS     (97u)
 #define NUM_ANALOG_INPUTS    (15u)
 #define NUM_ANALOG_OUTPUTS   (2u)
 #define analogInputToDigitalPin(p) ((p < 5) ? 43 + (p) : (p < 10) ? 67 + (p) - 5 : (p < 14) ? 82 + (p) - 10 : (p == 14) ? 91 : -1)
 
 /* 
   if (p < 5) {                          (p < 5) ?
-    43 + (p);                           43 + (p)
+    46 + (p);                           46 + (p)
   }             
   else if (p < 10) {                    : (p < 10) ?
-    67 + (p) - 5;                       67 + (p) - 5
+    70 + (p) - 5;                       70 + (p) - 5
   }
   else if (p < 14) {                    : (p < 14) ?
-    82 + (p) - 10;                      82 + (p) - 10
+    87 + (p) - 10;                      87 + (p) - 10
   }
   else if (p == 14) {                   : (p == 14) ?
-    91;                                 91
+    94;                                 94
   }
   else if (p == 15) {                   : (p == 15) ?
-    96;                                 96
+    99;                                 99
   }
   else {
     -1;                                 : -1
@@ -111,6 +111,10 @@ extern "C" unsigned int PINCOUNT_fn();
 #define PIN_LED_R           (30u)        //Red channel of the RGB LED.
 #define PIN_LED_G           (31u)        //Green channel of the RGB LED.
 #define PIN_LED_B           (32u)        //Blue channel of the RGB LED.
+#define PIN_LED_DEMUX_A     (41u)
+#define PIN_LED_DEMUX_B     (42u)
+#define PIN_LED_DEMUX_C     (43u)
+#define PIN_LED_DEMUX_D     (44u)
 #define LED_R               PIN_LED_R
 #define LED_G               PIN_LED_G
 #define LED_B               PIN_LED_B
@@ -480,4 +484,4 @@ extern Uart SerialHCI;
 // Alias Serial to SerialUSB
 #define SerialUSB                   Serial
 
-#endif /* _VARIANT_OMNITRAK_CONTROLLER_V2_0_ */
+#endif /* _VARIANT_OMNITRAK_CONTROLLER_V2_1_ */
