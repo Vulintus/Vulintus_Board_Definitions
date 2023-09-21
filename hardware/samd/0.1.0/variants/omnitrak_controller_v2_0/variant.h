@@ -64,17 +64,17 @@ extern "C" unsigned int PINCOUNT_fn();
 #define NUM_DIGITAL_PINS     (94u)
 #define NUM_ANALOG_INPUTS    (15u)
 #define NUM_ANALOG_OUTPUTS   (2u)
-#define analogInputToDigitalPin(p) ((p < 5) ? 43 + (p) : (p < 10) ? 67 + (p) - 5 : (p < 14) ? 82 + (p) - 10 : (p == 14) ? 91 : -1)
+#define analogInputToDigitalPin(p) ((p < 5) ? 43 + (p) : (p < 10) ? 67 + (p) : (p < 14) ? 82 + (p) : (p == 14) ? 91 : (p == 15) ? 96 : -1)
 
 /* 
   if (p < 5) {                          (p < 5) ?
     43 + (p);                           43 + (p)
   }             
   else if (p < 10) {                    : (p < 10) ?
-    67 + (p) - 5;                       67 + (p) - 5
+    67 + (p) - 5;                       67 + (p)
   }
   else if (p < 14) {                    : (p < 14) ?
-    82 + (p) - 10;                      82 + (p) - 10
+    82 + (p) - 10;                      82 + (p)
   }
   else if (p == 14) {                   : (p == 14) ?
     91;                                 91
@@ -207,6 +207,13 @@ static const uint8_t DAC1 = PIN_DAC1;
 #define PIN_TFT_LED         (27u)
 #define PIN_TFT_DC          (28u)
 #define PIN_TFT_CS          (29u)
+#define TFT_RST             PIN_TFT_RST
+#define TFT_LED             PIN_TFT_LED
+#define TFT_DC              PIN_TFT_DC
+#define TFT_CS              PIN_TFT_CS
+#define TFT_WIDTH           160
+#define TFT_HEIGHT          128
+#define TFT_ROTATION        1
 
 // RV-3208-C7 Real-Time Clock
 #define PIN_RTC_INT         (33u)

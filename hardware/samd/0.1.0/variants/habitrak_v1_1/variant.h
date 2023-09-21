@@ -155,6 +155,9 @@ static const uint8_t DAC1 = PIN_DAC1;
 #define TFT_LED             PIN_TFT_LED
 #define TFT_DC              PIN_TFT_DC
 #define TFT_CS              PIN_TFT_CS
+#define TFT_WIDTH           128
+#define TFT_HEIGHT          160
+#define TFT_ROTATION        4
 
 // RV-3208-C7 Real-Time Clock
 #define PIN_RTC_INT         (31u)       //PD21

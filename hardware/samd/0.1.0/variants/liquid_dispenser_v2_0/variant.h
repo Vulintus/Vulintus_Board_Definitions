@@ -23,7 +23,7 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   21          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   20          // Divide by 10 to match the Eagle design version.
 #define DRV_ITRIP_REF				3.0				  // Reference voltage for the DRV8834 current control. 
 #define R_ISENSE						0.402 		  // Sense resistor value for the DRV8834 current control.
 #define LEFT_MOTOR_I				0					  // Index (0 or 1) for the left motor.
@@ -161,10 +161,10 @@ static const uint8_t A7  = PIN_A7 ;
 static const uint8_t ATN = PIN_ATN;
 
 // Vulintus Peripheral Bux (VPB)
-#define PIN_24VPB_CLK_IN    (2u)       
-#define PIN_24VPB_CLK_OUT   (3u)   
-#define PIN_24VPB_TRG       (4u)
-#define PIN_24VPB_BLK       (5u)
+#define PIN_VPB_CLK_IN      (2u)       
+#define PIN_VPB_CLK_OUT     (3u)   
+#define PIN_VPB_TRG         (4u)
+#define PIN_VPB_BLK         (5u)
 
 // Display / Status
 #define PIN_OLED_RST        (8u)

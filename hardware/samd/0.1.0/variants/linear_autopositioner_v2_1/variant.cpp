@@ -28,9 +28,9 @@ const PinDescription g_APinDescription[]=
 //{ _EPortType, [Port Number], _EPioType, [Pin Attributes], _EAnalogChannel, _ETCChannel, _ETCChannel, EExt_Interrupts }
 
   // SPI Bus (SERCOM1)
-  { PORTA, 16, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, TCC2_CH0,   NOT_ON_TIMER, EXTERNAL_INT_0    }, //SPI_PICO         (0)
-  { PORTA, 19, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, TCC2_CH1,   NOT_ON_TIMER, EXTERNAL_INT_3    }, //SPI_POCI         (1)
-  { PORTA, 17, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, TC3_CH1,    NOT_ON_TIMER, EXTERNAL_INT_1    }, //SPI_SCK          (2)
+  { PORTA, 16, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_0    }, //SPI_PICO         (0)
+  { PORTA, 19, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_3    }, //SPI_POCI         (1)
+  { PORTA, 17, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1    }, //SPI_SCK          (2)
 
   // I2C Bus (SERCOM3)
   { PORTA, 22, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6    }, //I2C_SDA          (3)

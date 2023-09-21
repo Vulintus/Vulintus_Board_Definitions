@@ -156,7 +156,7 @@ vulintus_omnitrak_controller.build.variant_system_lib=
 
 # Bootloader
 vulintus_omnitrak_controller.bootloader.tool=openocd
-vulintus_omnitrak_controller.bootloader.file=omnitrak_controller_v2_0/bootloader-omnitrak_controller_v2_0.bin
+vulintus_omnitrak_controller.bootloader.file=omnitrak_controller_v2_x/bootloader-omnitrak_controller_v2_x.bin
 
 # Compiler
 vulintus_omnitrak_controller.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
@@ -166,6 +166,11 @@ vulintus_omnitrak_controller.menu.pcb_ver.v2_0=OmniTrak Controller V2.0
 vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.variant=omnitrak_controller_v2_0
 vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
 vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.usb_product="OmniTrak Controller V2.0"
+
+vulintus_omnitrak_controller.menu.pcb_ver.v2_1=OmniTrak Controller V2.1
+vulintus_omnitrak_controller.menu.pcb_ver.v2_1.build.variant=omnitrak_controller_v2_1
+vulintus_omnitrak_controller.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/omnitrak_controller_v2_1.cfg
+vulintus_omnitrak_controller.menu.pcb_ver.v2_1.build.usb_product="OmniTrak Controller V2.1"
 
 # Parameter options formerly set with the menu:
 # vulintus_omnitrak_controller.build.cache_flags=-DENABLE_CACHE
@@ -329,10 +334,10 @@ vulintus_ring_light.bootloader.tool=openocd
 vulintus_ring_light.bootloader.file=ring_light_v2_0/sam_ba_SAMD11C14A.bin
 
 # Menu
-vulintus_liquid_dispenser.menu.pcb_ver.v2_0=Ring Light V2.0
-vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0
-vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
-vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.usb_product="Ring Light V2.0"
+vulintus_ring_light.menu.pcb_ver.v2_0=Ring Light V2.0
+vulintus_ring_light.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0
+vulintus_ring_light.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
+vulintus_ring_light.menu.pcb_ver.v2_0.build.usb_product="Ring Light V2.0"
 
 
 ########################################################################################################################
