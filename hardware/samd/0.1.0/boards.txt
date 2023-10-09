@@ -246,12 +246,14 @@ vulintus_linear_autopositioner.menu.pcb_ver.v2_1.build.usb_product="Linear Autop
 vulintus_liquid_dispenser.name=Vulintus Liquid Dispenser
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-vulintus_liquid_dispenser.vid.0=0x2341
-vulintus_liquid_dispenser.pid.0=0x804d
-vulintus_liquid_dispenser.vid.1=0x2341
-vulintus_liquid_dispenser.pid.1=0x804d
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4470, submitted by Drew on 10/9/2023
+vulintus_liquid_dispenser.vid.0=0x04D8
+vulintus_liquid_dispenser.pid.0=0xE62E
+vulintus_liquid_dispenser.vid.1=0x04D8
+vulintus_liquid_dispenser.pid.1=0xE62E
 vulintus_liquid_dispenser.build.vid=0x2341
-vulintus_liquid_dispenser.build.pid=0x804d
+vulintus_liquid_dispenser.build.pid=0xE62E
 
 # Upload
 vulintus_liquid_dispenser.upload.tool=bossac18
