@@ -68,14 +68,14 @@ extern "C"
 #define NUM_DIGITAL_PINS     (33u)
 #define NUM_ANALOG_INPUTS    (6u)
 #define NUM_ANALOG_OUTPUTS   (0u)
-#define analogInputToDigitalPin(p)  ((p < 4u) ? 17u + (p) : (p == 4u) ? 24u : (p == 5u) ? 31u :-1)
+#define analogInputToDigitalPin(p)  ((p < 4u) ? 16u + (p) : (p == 4u) ? 23u : (p == 5u) ? 31u :-1)
 
 /* 
   if (p < 4) {                          (p < 4u) ?
-    17 + (p);                           17u + (p)
+    16 + (p);                           16u + (p)
   }             
   else if (p == 4) {                    : (p == 4u) ?
-    24;                                 24u
+    23;                                 23u
   }
   else if (p == 5) {                    : (p == 5u) ?
     31;                                 31u
@@ -103,7 +103,7 @@ extern "C"
 // #define digitalPinToTimer(P)
 
 // LEDs
-#define NEOPIXEL_BUILTIN     (12u)
+#define NEOPIXEL_BUILTIN     (11u)
 #define PIN_NEOPIXEL         NEOPIXEL_BUILTIN
 #define PIN_NEOPIX           NEOPIXEL_BUILTIN
 
@@ -111,18 +111,21 @@ extern "C"
 /*
  * Analog pins
  */
-#define PIN_A0               (17u)
+#define PIN_A0               (16u)
 #define PIN_A1               (PIN_A0 + 1)
 #define PIN_A2               (PIN_A0 + 2)
 #define PIN_A3               (PIN_A0 + 3)
-#define PIN_A4               (24u)
-#define PIN_A4               (31u)
+#define PIN_A4               (23u)
+#define PIN_A5               (31u)
+#define PIN_DAC0             (36ul)     //Required, even if not used.
 
 static const uint8_t A0  = PIN_A0;
 static const uint8_t A1  = PIN_A1;
 static const uint8_t A2  = PIN_A2;
 static const uint8_t A3  = PIN_A3;
 static const uint8_t A4  = PIN_A4;
+static const uint8_t A5  = PIN_A5;
+static const uint8_t DAC0 = PIN_DAC0;
 
 #define ADC_RESOLUTION		12
 
@@ -140,45 +143,39 @@ static const uint8_t A4  = PIN_A4;
 static const uint8_t ATN = PIN_ATN;
 
 // Display / Status
-#define PIN_OLED_RST        (11u)
-#define PIN_SPKR            (13u)
+#define PIN_OLED_RST        (10u)
+#define PIN_SPKR            (12u)
+#define OLED_I2C_ADDR       0x3C
 
 // User Input
-#define PIN_QT_BTN_U        (14u)
-#define PIN_QT_BTN_S        (15u)
-#define PIN_QT_BTN_D        (16u)
+#define PIN_QT_BTN_U        (13u)
+#define PIN_QT_BTN_S        (14u)
+#define PIN_QT_BTN_D        (15u)
+static const uint8_t BTN_U = PIN_QT_BTN_U;
+static const uint8_t BTN_S = PIN_QT_BTN_S;
+static const uint8_t BTN_D = PIN_QT_BTN_D;
 
 // Power Control
-#define PIN_15V_ON_FLAG     (21u)
+#define PIN_15V_ON_FLAG     (20u)
 
 // 24VPB
-#define PIN_24VPB_CLK_IN    (7u)       
-#define PIN_24VPB_CLK_OUT   (8u)   
-#define PIN_24VPB_TRG       (9u)
-#define PIN_24VPB_BLK       (10u)
+#define PIN_24VPB_CLK_IN    (6u)       
+#define PIN_24VPB_CLK_OUT   (7u)   
+#define PIN_24VPB_TRG       (8u)
+#define PIN_24VPB_BLK       (9u)
 
 // Calibration
-#define PIN_VLX_GPIO        (22u)
-#define VLX_XSHUT           (23u)
+#define PIN_VLX_GPIO        (21u)
+#define VLX_XSHUT           (22u)
 
 // DRV8434S Stepper Driver
-#define PIN_DRV_DIR         (25u)
-#define PIN_DRV_STEP        (26u)
-#define PIN_DRV_SLP         (27u)
-#define PIN_DRV_EN          (28u)
-#define PIN_DRV_FLT         (29u)
-#define PIN_DRV_CS          (30u)
+#define PIN_DRV_DIR         (24u)
+#define PIN_DRV_STEP        (25u)
+#define PIN_DRV_SLP         (26u)
+#define PIN_DRV_EN          (27u)
+#define PIN_DRV_FLT         (28u)
+#define PIN_DRV_CS          (29u)
 
-
-/*
- * Serial interfaces
- */
-
-// Serial1
-#define PIN_SERIAL1_RX       (6ul)
-#define PIN_SERIAL1_TX       (5ul)
-#define PAD_SERIAL1_TX       (UART_TX_PAD_2)
-#define PAD_SERIAL1_RX       (SERCOM_RX_PAD_3)
 
 /*
  * SPI Interfaces
@@ -192,12 +189,14 @@ static const uint8_t ATN = PIN_ATN;
 #define PAD_SPI_TX           SPI_PAD_2_SCK_3
 #define PAD_SPI_RX           SERCOM_RX_PAD_0
 
-static const uint8_t SS	  = (26u) ;	// SERCOM4 last PAD is present on A2 but HW SS isn't used. Set here only for reference.
 static const uint8_t MOSI = PIN_SPI_MOSI ;
 static const uint8_t MISO = PIN_SPI_MISO ;
 static const uint8_t SCK  = PIN_SPI_SCK ;
-static const uint8_t COPI = PIN_SPI_MOSI ;
-static const uint8_t CIPO = PIN_SPI_MISO ;
+
+#define PIN_SPI_PICO        PIN_SPI_MOSI
+#define PIN_SPI_POCI        PIN_SPI_MISO
+static const uint8_t PICO = PIN_SPI_MOSI ;
+static const uint8_t POCI = PIN_SPI_MISO ;
 
 
 /*
@@ -213,6 +212,7 @@ static const uint8_t CIPO = PIN_SPI_MISO ;
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
+
 /*
  * USB
  */
@@ -220,6 +220,7 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 #define PIN_USB_DM          (33ul)
 #define PIN_USB_DP          (34ul)
 #define PIN_USB_DETECT      (32ul)
+
 
 /*
  * I2S Interfaces
@@ -247,8 +248,6 @@ extern SERCOM sercom3;
 extern SERCOM sercom4;
 extern SERCOM sercom5;
 
-extern Uart Serial5;
-extern Uart Serial1;
 
 #endif
 
@@ -270,7 +269,7 @@ extern Uart Serial1;
 #define SERIAL_PORT_USBVIRTUAL      Serial
 #define SERIAL_PORT_MONITOR         Serial
 // Serial has no physical pins broken out, so it's not listed as HARDWARE port
-#define SERIAL_PORT_HARDWARE        Serial1
-#define SERIAL_PORT_HARDWARE_OPEN   Serial1
+// #define SERIAL_PORT_HARDWARE        Serial1
+// #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
 #endif /* _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_ */
