@@ -28,9 +28,9 @@ const PinDescription g_APinDescription[]=
 //{ _EPortType, [Port Number], _EPioType, [Pin Attributes], _EAnalogChannel, _ETCChannel, _ETCChannel, EExt_Interrupts }
 
   // SPI Bus (SERCOM1)
-  { PORTA, 16, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, TCC2_CH0,   NOT_ON_TIMER, EXTERNAL_INT_0    }, //SPI_PICO         (0)
-  { PORTA, 19, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, TCC2_CH1,   NOT_ON_TIMER, EXTERNAL_INT_3    }, //SPI_POCI         (1)
-  { PORTA, 17, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, TC3_CH1,    NOT_ON_TIMER, EXTERNAL_INT_1    }, //SPI_SCK          (2)
+  { PORTA, 16, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_0    }, //SPI_PICO         (0)
+  { PORTA, 19, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_3    }, //SPI_POCI         (1)
+  { PORTA, 17, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1    }, //SPI_SCK          (2)
 
   // I2C Bus (SERCOM3)
   { PORTA, 22, PIO_SERCOM,  PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6    }, //I2C_SDA          (3)
@@ -48,13 +48,13 @@ const PinDescription g_APinDescription[]=
 
   // Display / Status
   { PORTA, 28, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_8    }, //OLED_RST         (10)
-  { PORTB, 10, PIO_DIGITAL, PIN_ATTR_PWM,     No_ADC_Channel, TC5_CH0,    NOT_ON_TIMER, EXTERNAL_INT_10   }, //NEOPIX_3V3       (11)
-  { PORTB, 11, PIO_DIGITAL, PIN_ATTR_PWM,     No_ADC_Channel, TC5_CH1,    NOT_ON_TIMER, EXTERNAL_INT_11   }, //SPKR             (12)
+  { PORTB, 10, PIO_PWM,     PIN_ATTR_PWM,     No_ADC_Channel, PWM5_CH0,   NOT_ON_TIMER, EXTERNAL_INT_10   }, //NEOPIX_3V3       (11)
+  { PORTB, 11, PIO_PWM,     PIN_ATTR_PWM,     No_ADC_Channel, PWM5_CH1,   NOT_ON_TIMER, EXTERNAL_INT_11   }, //SPKR             (12)
 
   // User Input
-  { PORTA, 6,  PIO_DIGITAL, PIN_ATTR_DIGITAL, ADC_Channel6,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14   }, //QT_BTN_U         (13)
-  { PORTA, 5,  PIO_DIGITAL, PIN_ATTR_DIGITAL, ADC_Channel5,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15   }, //QT_BTN_S         (14)
-  { PORTA, 7,  PIO_DIGITAL, PIN_ATTR_DIGITAL, ADC_Channel7,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13   }, //QT_BTN_D         (15)
+  { PORTA, 5,  PIO_EXTINT,  PIN_ATTR_DIGITAL, ADC_Channel5,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_5    }, //QT_BTN_U         (13)
+  { PORTA, 6,  PIO_EXTINT,  PIN_ATTR_DIGITAL, ADC_Channel6,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6    }, //QT_BTN_S         (14)
+  { PORTA, 7,  PIO_EXTINT,  PIN_ATTR_DIGITAL, ADC_Channel7,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_7    }, //QT_BTN_D         (15)
 
   // Power Control
   { PORTA, 2,  PIO_ANALOG,  PIN_ATTR_ANALOG,  ADC_Channel0,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_2    }, //24V_ADC          (16)
@@ -66,7 +66,7 @@ const PinDescription g_APinDescription[]=
   // Calibration
   { PORTA, 14, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14   }, //VLX_GPIO         (21)
   { PORTA, 13, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13   }, //VLX_XSHUT        (22)  
-  { PORTA, 11, PIO_ANALOG,  PIN_ATTR_DIGITAL, ADC_Channel11,  NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11   }, //SLOT             (23)
+  { PORTA, 11, PIO_ANALOG,  PIN_ATTR_ANALOG,  ADC_Channel19,  NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11   }, //SLOT             (23)
 
   // DRV8434S Stepper Driver
   { PORTB, 22, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6    }, //DRV_DIR          (24)
@@ -75,10 +75,10 @@ const PinDescription g_APinDescription[]=
   { PORTB, 23, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_7    }, //DRV_EN           (27)
   { PORTA, 27, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15   }, //nDRV_FLT         (28)  
   { PORTA, 20, PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4    }, //nDRV_CS          (29)
-  { PORTA, 15, PIO_DIGITAL, PIN_ATTR_PWM,     No_ADC_Channel, TC3_CH1,    NOT_ON_TIMER, EXTERNAL_INT_15   }, //DRV_VREF/SAMBA   (30)
+  { PORTA, 15, PIO_DIGITAL, PIN_ATTR_PWM,     No_ADC_Channel, PWM3_CH1,   NOT_ON_TIMER, EXTERNAL_INT_15   }, //DRV_VREF/SAMBA   (30)
 
   // Board ID
-  { PORTA, 11, PIO_ANALOG,  PIN_ATTR_ANALOG,  ADC_Channel19,  NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11   }, //BOARD_ID         (31)
+  { PORTA, 10, PIO_ANALOG,  PIN_ATTR_ANALOG,  ADC_Channel18,  NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10   }, //BOARD_ID         (31)
   
   // USB
   { PORTA, 9,  PIO_DIGITAL, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_9    }, //USB_DETECT       (32) >>USB Host Enable
@@ -87,6 +87,9 @@ const PinDescription g_APinDescription[]=
 
   // Analog Reference
   { PORTA, 3,  PIO_ANALOG,  PIN_ATTR_ANALOG,  No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, //VREF             (35)
+
+  // Required inclusion of DAC0
+  { PORTA,  2, PIO_ANALOG,  PIN_ATTR_ANALOG,  DAC_Channel0,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_2    }, // DAC/VOUT        (36)
 
 } ;
 
@@ -99,10 +102,3 @@ SERCOM sercom2( SERCOM2 ) ;
 SERCOM sercom3( SERCOM3 ) ;
 SERCOM sercom4( SERCOM4 ) ;
 SERCOM sercom5( SERCOM5 ) ;
-
-Uart Serial1( &sercom2, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ;
-
-void SERCOM2_Handler()
-{
-  Serial1.IrqHandler();
-}

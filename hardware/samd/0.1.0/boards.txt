@@ -58,7 +58,7 @@ vulintus_habitrak.build.usb_manufacturer="Vulintus"
 vulintus_habitrak.build.variant_system_lib=
 
 # Bootloader
-# MOVED TO MENU: vulintus_habitrak.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
+# MOVED TO MENU: vulintus_habitrak.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 vulintus_habitrak.bootloader.tool=openocd
 
 # Compiler
@@ -71,7 +71,7 @@ vulintus_habitrak.menu.pcb_ver.v1_0.build.extra_flags=-D__SAMD51__ -D__SAMD51P19
 vulintus_habitrak.menu.pcb_ver.v1_0.build.openocdscript=openocd_scripts/habitrak_v1_0.cfg
 vulintus_habitrak.menu.pcb_ver.v1_0.build.usb_product="HabiTrak V1.0"
 vulintus_habitrak.menu.pcb_ver.v1_0.build.variant=habitrak_v1_0
-vulintus_habitrak.menu.pcb_ver.v1_0.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
+vulintus_habitrak.menu.pcb_ver.v1_0.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 
 vulintus_habitrak.menu.pcb_ver.v1_1=HabiTrak V1.1
 vulintus_habitrak.menu.pcb_ver.v1_1.upload.maximum_size=520192
@@ -79,7 +79,7 @@ vulintus_habitrak.menu.pcb_ver.v1_1.build.extra_flags=-D__SAMD51__ -D__SAMD51P19
 vulintus_habitrak.menu.pcb_ver.v1_1.build.openocdscript=openocd_scripts/habitrak_v1_1.cfg
 vulintus_habitrak.menu.pcb_ver.v1_1.build.usb_product="HabiTrak V1.1"
 vulintus_habitrak.menu.pcb_ver.v1_1.build.variant=habitrak_v1_1
-vulintus_habitrak.menu.pcb_ver.v1_1.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
+vulintus_habitrak.menu.pcb_ver.v1_1.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 
 vulintus_habitrak.menu.pcb_ver.v1_2=HabiTrak V1.2
 vulintus_habitrak.menu.pcb_ver.v1_2.upload.maximum_size=520192
@@ -87,7 +87,7 @@ vulintus_habitrak.menu.pcb_ver.v1_2.build.extra_flags=-D__SAMD51__ -D__SAMD51P19
 vulintus_habitrak.menu.pcb_ver.v1_2.build.openocdscript=openocd_scripts/habitrak_v1_2.cfg
 vulintus_habitrak.menu.pcb_ver.v1_2.build.usb_product="HabiTrak V1.2"
 vulintus_habitrak.menu.pcb_ver.v1_2.build.variant=habitrak_v1_2
-vulintus_habitrak.menu.pcb_ver.v1_2.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
+vulintus_habitrak.menu.pcb_ver.v1_2.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 
 vulintus_habitrak.menu.pcb_ver.v1_3=HabiTrak V1.3
 vulintus_habitrak.menu.pcb_ver.v1_3.upload.maximum_size=520192
@@ -95,7 +95,7 @@ vulintus_habitrak.menu.pcb_ver.v1_3.build.extra_flags=-D__SAMD51__ -D__SAMD51P19
 vulintus_habitrak.menu.pcb_ver.v1_3.build.openocdscript=openocd_scripts/habitrak_v1_3.cfg
 vulintus_habitrak.menu.pcb_ver.v1_3.build.usb_product="HabiTrak V1.3"
 vulintus_habitrak.menu.pcb_ver.v1_3.build.variant=habitrak_v1_3
-vulintus_habitrak.menu.pcb_ver.v1_3.bootloader.file=habitrak_v1_x/bootloader-vulintus_habitrak_v1-v3.14.0-5-g779ccde-dirty.bin
+vulintus_habitrak.menu.pcb_ver.v1_3.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 
 # Parameter options formerly set with the menu:
 # vulintus_habitrak.build.cache_flags=-DENABLE_CACHE
@@ -156,7 +156,7 @@ vulintus_omnitrak_controller.build.variant_system_lib=
 
 # Bootloader
 vulintus_omnitrak_controller.bootloader.tool=openocd
-vulintus_omnitrak_controller.bootloader.file=omnitrak_controller_v2_0/bootloader-omnitrak_controller_v2_0.bin
+vulintus_omnitrak_controller.bootloader.file=samd51x20a/bootloader_samd51x20a.bin
 
 # Compiler
 vulintus_omnitrak_controller.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
@@ -166,6 +166,11 @@ vulintus_omnitrak_controller.menu.pcb_ver.v2_0=OmniTrak Controller V2.0
 vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.variant=omnitrak_controller_v2_0
 vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
 vulintus_omnitrak_controller.menu.pcb_ver.v2_0.build.usb_product="OmniTrak Controller V2.0"
+
+vulintus_omnitrak_controller.menu.pcb_ver.v2_1=OmniTrak Controller V2.1
+vulintus_omnitrak_controller.menu.pcb_ver.v2_1.build.variant=omnitrak_controller_v2_1
+vulintus_omnitrak_controller.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/omnitrak_controller_v2_1.cfg
+vulintus_omnitrak_controller.menu.pcb_ver.v2_1.build.usb_product="OmniTrak Controller V2.1"
 
 # Parameter options formerly set with the menu:
 # vulintus_omnitrak_controller.build.cache_flags=-DENABLE_CACHE
@@ -225,7 +230,7 @@ vulintus_linear_autopositioner.build.variant_system_lib=
 
 # Bootloader
 vulintus_linear_autopositioner.bootloader.tool=openocd
-vulintus_linear_autopositioner.bootloader.file=linear_autopositioner_v2_1/bootloader-linear_autopositioner_v2_1.bin
+vulintus_linear_autopositioner.bootloader.file=samd21g17a/bootloader_samd21x17a.bin
 
 # Menu
 vulintus_linear_autopositioner.menu.pcb_ver.v2_1=Linear Autopositioner V2.1
@@ -241,12 +246,14 @@ vulintus_linear_autopositioner.menu.pcb_ver.v2_1.build.usb_product="Linear Autop
 vulintus_liquid_dispenser.name=Vulintus Liquid Dispenser
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-vulintus_liquid_dispenser.vid.0=0x2341
-vulintus_liquid_dispenser.pid.0=0x804d
-vulintus_liquid_dispenser.vid.1=0x2341
-vulintus_liquid_dispenser.pid.1=0x804d
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4470, submitted by Drew on 10/9/2023
+vulintus_liquid_dispenser.vid.0=0x04D8
+vulintus_liquid_dispenser.pid.0=0xE62E
+vulintus_liquid_dispenser.vid.1=0x04D8
+vulintus_liquid_dispenser.pid.1=0xE62E
 vulintus_liquid_dispenser.build.vid=0x2341
-vulintus_liquid_dispenser.build.pid=0x804d
+vulintus_liquid_dispenser.build.pid=0xE62E
 
 # Upload
 vulintus_liquid_dispenser.upload.tool=bossac18
@@ -275,7 +282,7 @@ vulintus_liquid_dispenser.build.variant_system_lib=
 
 # Bootloader
 vulintus_liquid_dispenser.bootloader.tool=openocd
-vulintus_liquid_dispenser.bootloader.file=liquid_dispenser_v2_0/samd21g17a_sam_ba.bin
+vulintus_liquid_dispenser.bootloader.file=samd21g17a/bootloader_samd21x17a.bin
 
 # Menu
 vulintus_liquid_dispenser.menu.pcb_ver.v2_0=Liquid Dispenser V2.0
@@ -329,10 +336,10 @@ vulintus_ring_light.bootloader.tool=openocd
 vulintus_ring_light.bootloader.file=ring_light_v2_0/sam_ba_SAMD11C14A.bin
 
 # Menu
-vulintus_liquid_dispenser.menu.pcb_ver.v2_0=Ring Light V2.0
-vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0
-vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
-vulintus_liquid_dispenser.menu.pcb_ver.v2_0.build.usb_product="Ring Light V2.0"
+vulintus_ring_light.menu.pcb_ver.v2_0=Ring Light V2.0
+vulintus_ring_light.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0
+vulintus_ring_light.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
+vulintus_ring_light.menu.pcb_ver.v2_0.build.usb_product="Ring Light V2.0"
 
 
 ########################################################################################################################
