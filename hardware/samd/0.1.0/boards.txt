@@ -230,7 +230,7 @@ vulintus_linear_autopositioner.build.variant_system_lib=
 
 # Bootloader
 vulintus_linear_autopositioner.bootloader.tool=openocd
-vulintus_linear_autopositioner.bootloader.file=samd21g17a/bootloader_samd21g17a.bin
+vulintus_linear_autopositioner.bootloader.file=samd21g17a/bootloader_samd21x17a.bin
 
 # Menu
 vulintus_linear_autopositioner.menu.pcb_ver.v2_1=Linear Autopositioner V2.1
@@ -282,7 +282,7 @@ vulintus_liquid_dispenser.build.variant_system_lib=
 
 # Bootloader
 vulintus_liquid_dispenser.bootloader.tool=openocd
-vulintus_liquid_dispenser.bootloader.file=samd21g17a/bootloader_samd21g17a.bin
+vulintus_liquid_dispenser.bootloader.file=samd21g17a/bootloader_samd21x17a.bin
 
 # Menu
 vulintus_liquid_dispenser.menu.pcb_ver.v2_0=Liquid Dispenser V2.0
