@@ -5,47 +5,47 @@ menu.pcb_ver=Circuit Board Version
 
 
 ########################################################################################################################
-# Vulintus Mouse 3-Poke Wall
+# Vulintus OmniTrak Three-Nosepoke Module
 # --------------------------
 
-mouse_three_poke.name=Vulintus Mouse 3-Nosepoke Wall
+three_nosepoke.name=Vulintus OmniTrak Three-Nosepoke Module
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # For now, the Mouse 3-Nosepoke Wall uses the same VID/PID as the Arduino Uno.
-mouse_three_poke.vid.0=0x2341
-mouse_three_poke.pid.0=0x0043
-mouse_three_poke.upload_port.0.vid=0x2341
-mouse_three_poke.upload_port.0.pid=0x0043
+three_nosepoke.vid.0=0x2341
+three_nosepoke.pid.0=0x0043
+three_nosepoke.upload_port.0.vid=0x2341
+three_nosepoke.upload_port.0.pid=0x0043
 
 # Upload
-mouse_three_poke.upload.maximum_size=32256
-mouse_three_poke.upload.maximum_data_size=2048
-mouse_three_poke.upload.protocol=arduino
-mouse_three_poke.upload.speed=115200
-mouse_three_poke.upload.tool=avrdude
-mouse_three_poke.upload.tool.default=avrdude
+three_nosepoke.upload.maximum_size=32256
+three_nosepoke.upload.maximum_data_size=2048
+three_nosepoke.upload.protocol=arduino
+three_nosepoke.upload.speed=115200
+three_nosepoke.upload.tool=avrdude
+three_nosepoke.upload.tool.default=avrdude
 
 # Build
-mouse_three_poke.build.board=AVR_MOUSE_THREE_POKE
-mouse_three_poke.build.core=arduino:arduino
-mouse_three_poke.build.f_cpu=16000000L
-mouse_three_poke.build.mcu=atmega328p
-# MOVED TO MENU: mouse_three_poke.build.variant=mouse_three_poke_v2_3
-mouse_three_poke.build.extra_flags=-DVULINTUS_MOUSE_THREE_POKE
+three_nosepoke.build.board=AVR_THREE_NOSEPOKE
+three_nosepoke.build.core=arduino:arduino
+three_nosepoke.build.f_cpu=16000000L
+three_nosepoke.build.mcu=atmega328p
+# MOVED TO MENU: three_nosepoke.build.variant=three_nosepoke_v2_3
+three_nosepoke.build.extra_flags=-DVULINTUS_THREE_NOSEPOKE
 
 # Bootloader
-mouse_three_poke.bootloader.file=optiboot/optiboot_atmega328.hex
-mouse_three_poke.bootloader.tool=avrdude
-mouse_three_poke.bootloader.tool.default=avrdude
-mouse_three_poke.bootloader.low_fuses=0xFF
-mouse_three_poke.bootloader.high_fuses=0xDE
-mouse_three_poke.bootloader.extended_fuses=0xFD
-mouse_three_poke.bootloader.lock_bits=0x0F
-mouse_three_poke.bootloader.unlock_bits=0x3F
+three_nosepoke.bootloader.file=optiboot/optiboot_atmega328.hex
+three_nosepoke.bootloader.tool=avrdude
+three_nosepoke.bootloader.tool.default=avrdude
+three_nosepoke.bootloader.low_fuses=0xFF
+three_nosepoke.bootloader.high_fuses=0xDE
+three_nosepoke.bootloader.extended_fuses=0xFD
+three_nosepoke.bootloader.lock_bits=0x0F
+three_nosepoke.bootloader.unlock_bits=0x3F
 
 # Menu
-mouse_three_poke.menu.pcb_ver.v1_0=Mouse 3-Nosepoke Wall V2.3
-mouse_three_poke.menu.pcb_ver.v1_0.build.variant=mouse_three_poke_v2_3
+three_nosepoke.menu.pcb_ver.v1_0=Mouse 3-Nosepoke Wall V2.3
+three_nosepoke.menu.pcb_ver.v1_0.build.variant=three_nosepoke_v2_3
 
 
 ########################################################################################################################
@@ -74,7 +74,7 @@ autopositioner.build.board=AVR_AUTOPOSITIONER
 autopositioner.build.core=arduino:arduino
 autopositioner.build.f_cpu=16000000L
 autopositioner.build.mcu=atmega328p
-# MOVED TO MENU: autopositioner.build.variant=autopositioner_v1_3
+# MOVED TO MENU: autopositioner.build.variant=linear_autopositioner_v1_3
 autopositioner.build.extra_flags=-DVULINTUS_AUTOPOSITIONER
 
 # Bootloader
@@ -89,7 +89,7 @@ autopositioner.bootloader.unlock_bits=0x3F
 
 # Menu
 autopositioner.menu.pcb_ver.v1_0=Autopositioner V1.3
-autopositioner.menu.pcb_ver.v1_0.build.variant=autopositioner_v1_3
+autopositioner.menu.pcb_ver.v1_0.build.variant=linear_autopositioner_v1_3
 
 
 ########################################################################################################################

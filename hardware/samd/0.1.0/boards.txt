@@ -197,12 +197,10 @@ vulintus_omnitrak_controller.menu.pcb_ver.v2_1.build.usb_product="OmniTrak Contr
 vulintus_linear_autopositioner.name=Vulintus Linear Autopositioner
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-vulintus_linear_autopositioner.vid.0=0x239A
-vulintus_linear_autopositioner.pid.0=0x8013
-vulintus_linear_autopositioner.vid.1=0x239A
-vulintus_linear_autopositioner.pid.1=0x0013
-vulintus_linear_autopositioner.build.vid=0x239A
-vulintus_linear_autopositioner.build.pid=0x8013
+vulintus_linear_autopositioner.vid.0=0x04D8
+vulintus_linear_autopositioner.pid.0=0xE6AC
+vulintus_linear_autopositioner.build.vid=0x04D8
+vulintus_linear_autopositioner.build.pid=0xE6AC
 
 # Upload
 vulintus_linear_autopositioner.upload.tool=bossac18
@@ -250,9 +248,7 @@ vulintus_liquid_dispenser.name=Vulintus Liquid Dispenser
 # Sublicense Request 4470, submitted by Drew on 10/9/2023
 vulintus_liquid_dispenser.vid.0=0x04D8
 vulintus_liquid_dispenser.pid.0=0xE62E
-vulintus_liquid_dispenser.vid.1=0x04D8
-vulintus_liquid_dispenser.pid.1=0xE62E
-vulintus_liquid_dispenser.build.vid=0x2341
+vulintus_liquid_dispenser.build.vid=0x04D8
 vulintus_liquid_dispenser.build.pid=0xE62E
 
 # Upload

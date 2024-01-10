@@ -26,7 +26,7 @@
 #include <avr/pgmspace.h>
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   23          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   		23          // Divide by 10 to match the Eagle design version.
 
 #define NUM_DIGITAL_PINS            20
 #define NUM_ANALOG_INPUTS           6
