@@ -175,6 +175,7 @@ static const uint8_t BTN_D = PIN_QT_BTN_D;
 #define PIN_DRV_EN          (27u)
 #define PIN_DRV_FLT         (28u)
 #define PIN_DRV_CS          (29u)
+#define PIN_DRV_VREF        (30u)
 
 
 /*
@@ -186,8 +187,8 @@ static const uint8_t BTN_D = PIN_QT_BTN_D;
 #define PIN_SPI_MOSI         (0u)
 #define PIN_SPI_SCK          (2u)
 #define PERIPH_SPI           sercom1
-#define PAD_SPI_TX           SPI_PAD_2_SCK_3
-#define PAD_SPI_RX           SERCOM_RX_PAD_0
+#define PAD_SPI_TX           SPI_PAD_0_SCK_1    // PICO/MOSI is on PAD[0], SCK is on PAD[1]
+#define PAD_SPI_RX           SERCOM_RX_PAD_3    // POCI/MISO is on PAD[3]
 
 static const uint8_t MOSI = PIN_SPI_MOSI ;
 static const uint8_t MISO = PIN_SPI_MISO ;
