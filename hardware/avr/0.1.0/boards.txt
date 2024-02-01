@@ -5,17 +5,61 @@ menu.pcb_ver=Circuit Board Version
 
 
 ########################################################################################################################
-# Vulintus OmniTrak Three-Nosepoke Module
+# Vulintus OmniTrak Nosepoke Module (OT-NP)
 # --------------------------
 
-three_nosepoke.name=Vulintus OmniTrak Three-Nosepoke Module
+nosepoke.name=Vulintus OmniTrak Nosepoke Module (OT-NP)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # For now, the Mouse 3-Nosepoke Wall uses the same VID/PID as the Arduino Uno.
-three_nosepoke.vid.0=0x2341
-three_nosepoke.pid.0=0x0043
-three_nosepoke.upload_port.0.vid=0x2341
-three_nosepoke.upload_port.0.pid=0x0043
+nosepoke.vid.0=0x0403 
+nosepoke.pid.0=0x6A20
+nosepoke.upload_port.0.vid=0x0403 
+nosepoke.upload_port.0.pid=0x6A20
+
+# Upload
+nosepoke.upload.maximum_size=32256
+nosepoke.upload.maximum_data_size=2048
+nosepoke.upload.protocol=arduino
+nosepoke.upload.speed=115200
+nosepoke.upload.tool=avrdude
+nosepoke.upload.tool.default=avrdude
+
+# Build
+nosepoke.build.board=AVR_THREE_NOSEPOKE
+nosepoke.build.core=arduino:arduino
+nosepoke.build.f_cpu=16000000L
+nosepoke.build.mcu=atmega328p
+# MOVED TO MENU: nosepoke.build.variant=omnitrak_nosepoke_v3_1
+nosepoke.build.extra_flags=-DVULINTUS_OMNITRAK_NOSEPOKE
+
+# Bootloader
+nosepoke.bootloader.file=optiboot/optiboot_atmega328.hex
+nosepoke.bootloader.tool=avrdude
+nosepoke.bootloader.tool.default=avrdude
+nosepoke.bootloader.low_fuses=0xFF
+nosepoke.bootloader.high_fuses=0xDE
+nosepoke.bootloader.extended_fuses=0xFD
+nosepoke.bootloader.lock_bits=0x0F
+nosepoke.bootloader.unlock_bits=0x3F
+
+# Menu
+nosepoke.menu.pcb_ver.v3_1=OmniTrak Nosepoke Module V3.1
+nosepoke.menu.pcb_ver.v3_1.build.variant=omnitrak_nosepoke_v3_1
+
+
+########################################################################################################################
+# Vulintus OmniTrak Three-Nosepoke Module (OT-3P)
+# --------------------------
+
+three_nosepoke.name=Vulintus OmniTrak Three-Nosepoke Module (OT-3P)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# For now, the Mouse 3-Nosepoke Wall uses the same VID/PID as the Arduino Uno.
+three_nosepoke.vid.0=0x0403 
+three_nosepoke.pid.0=0x6A24
+three_nosepoke.upload_port.0.vid=0x0403 
+three_nosepoke.upload_port.0.pid=0x6A24
 
 # Upload
 three_nosepoke.upload.maximum_size=32256
@@ -49,10 +93,10 @@ three_nosepoke.menu.pcb_ver.v1_0.build.variant=three_nosepoke_v2_3
 
 
 ########################################################################################################################
-# Vulintus Autopositioner
+# Vulintus Linear Autopositioner (VP-LA)
 # --------------------------
 
-autopositioner.name=Vulintus Linear Autopositioner
+autopositioner.name=Vulintus Linear Autopositioner (VP-LA)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # For now, the Autopositioner uses the same VID/PID as the Arduino Uno.
