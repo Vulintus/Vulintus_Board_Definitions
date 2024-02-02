@@ -26,7 +26,7 @@
 #include <avr/pgmspace.h>
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   		31          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   		23          // Divide by 10 to match the Eagle design version.
 
 #define NUM_DIGITAL_PINS            20
 #define NUM_ANALOG_INPUTS           6
@@ -81,35 +81,31 @@ static const uint8_t A7 = PIN_A7;
 
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : NOT_AN_INTERRUPT))
 
-// Pin definitions. //
-#define PIN_IR_DET_A        A0
-#define PIN_IR_DET_D        2
+#define PIN_IR_INT				10
+#define PIN_NOSEPOKE_L 			A2
+#define PIN_NOSEPOKE_C 			A1
+#define PIN_NOSEPOKE_R 			A0
 
-#define PIN_SPKR            A1
-#define PIN_VOLUME_CS       A5 
+#define PIN_IV_IN_ADC 			A7
+#define PIN_I_IN_ADC 			A4
+#define PIN_PWR_FAULT 			A3
+#define PIN_I_IN_RESET 			A5
 
-#define PIN_LED_R           3
-#define PIN_LED_G           5
-#define PIN_LED_B           6
-#define PIN_LED_W           9
-#define PIN_LED_STATUS      10
+#define PIN_BNC_IO 				A6
 
-#define PIN_IQS_TOUT        4
-#define PIN_IQS_POUT        7
+#define PIN_CAP_SEND 			2
+#define PIN_CAPSENSE_L 			8
+#define PIN_CAPSENSE_C 			9
+#define PIN_CAPSENSE_R 			4
 
-#define PIN_CAP_SEND        A4 
-#define PIN_CAP_RECEIVE     A2
+#define PIN_LEDS_EN 			3
+#define PIN_NEOPIX				13
 
-#define USB_DETECT          8
-#define PINBOARD_ID         A7
-
-#define PIN_VIN_ADC         A3
-
-// EEPROM address assignments. //
-#define NVM_ADDR_VULINTUS_ALIAS		736     //  Starting address for the Vulintus-set alias (characters).
-#define NVM_ADDR_USERSET_ALIAS  	768     //Starting address for the user-set device alias (characters).
-#define NVM_ADDR_VOLUME		      	8		//Starting address for the volume-control digital potentiometer value.
-
+#define PIN_24VPB_TRG			12
+#define PIN_24VPB_CLK_IN		11
+#define PIN_24VPB_CLK_IN		6
+#define PIN_24VPB_BLOCK_AB		7
+#define PIN_24VPB_BLOCK_BC		5
 
 #ifdef ARDUINO_MAIN
 

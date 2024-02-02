@@ -5,135 +5,261 @@ menu.pcb_ver=Circuit Board Version
 
 
 ########################################################################################################################
+# Vulintus MotoTrak Autopositioner (VP-MA)
+# --------------------------
+
+mototrak_autopositioner.name=Vulintus MotoTrak Autopositioner (MT-AP)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# For now, the Autopositioner uses the same VID/PID as the Arduino Uno.
+mototrak_autopositioner.vid.0=0x2341
+mototrak_autopositioner.pid.0=0x0043
+mototrak_autopositioner.upload_port.0.vid=0x2341
+mototrak_autopositioner.upload_port.0.pid=0x0043
+
+# Upload
+mototrak_autopositioner.upload.maximum_size=32256
+mototrak_autopositioner.upload.maximum_data_size=2048
+mototrak_autopositioner.upload.protocol=arduino
+mototrak_autopositioner.upload.speed=115200
+mototrak_autopositioner.upload.tool=avrdude
+mototrak_autopositioner.upload.tool.default=avrdude
+
+# Build
+mototrak_autopositioner.build.board=AVR_MOTOTRAK_AUTOPOSITIONER
+mototrak_autopositioner.build.core=arduino:arduino
+mototrak_autopositioner.build.f_cpu=16000000L
+mototrak_autopositioner.build.mcu=atmega328p
+# MOVED TO MENU: mototrak_autopositioner.build.variant=mototrak_autopositioner_v1_3
+mototrak_autopositioner.build.extra_flags=-DVULINTUS_MOTOTRAK_AUTOPOSITIONER
+
+# Bootloader
+mototrak_autopositioner.bootloader.file=optiboot/optiboot_atmega328.hex
+mototrak_autopositioner.bootloader.tool=avrdude
+mototrak_autopositioner.bootloader.tool.default=avrdude
+mototrak_autopositioner.bootloader.low_fuses=0xFF
+mototrak_autopositioner.bootloader.high_fuses=0xDE
+mototrak_autopositioner.bootloader.extended_fuses=0xFD
+mototrak_autopositioner.bootloader.lock_bits=0x0F
+mototrak_autopositioner.bootloader.unlock_bits=0x3F
+
+# Menu
+mototrak_autopositioner.menu.pcb_ver.v1_3=MotoTrak Autopositioner V1.3
+mototrak_autopositioner.menu.pcb_ver.v1_3.build.variant=mototrak_autopositioner_v1_3
+
+
+########################################################################################################################
+# Vulintus MotoTrak Pellet Pedestal Module (MT-PP)
+# --------------------------
+
+mototrak_pellet_pedestal.name=Vulintus MotoTrak Pellet Pedestal Module (MT-PP)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+mototrak_pellet_pedestal.vid.0=0x0403 
+mototrak_pellet_pedestal.pid.0=0x6A21
+mototrak_pellet_pedestal.upload_port.0.vid=0x0403 
+mototrak_pellet_pedestal.upload_port.0.pid=0x6A21
+
+# Upload
+mototrak_pellet_pedestal.upload.maximum_size=32256
+mototrak_pellet_pedestal.upload.maximum_data_size=2048
+mototrak_pellet_pedestal.upload.protocol=arduino
+mototrak_pellet_pedestal.upload.speed=115200
+mototrak_pellet_pedestal.upload.tool=avrdude
+mototrak_pellet_pedestal.upload.tool.default=avrdude
+
+# Build
+mototrak_pellet_pedestal.build.board=AVR_MOTOTRAK_PELLET_PEDESTAL
+mototrak_pellet_pedestal.build.core=arduino:arduino
+mototrak_pellet_pedestal.build.f_cpu=16000000L
+mototrak_pellet_pedestal.build.mcu=atmega328p
+# MOVED TO MENU: mototrak_pellet_pedestal.build.variant=mototrak_pellet_pedestal_v0_1
+mototrak_pellet_pedestal.build.extra_flags=-DVULINTUS_MOTOTRAK_PELLET_PEDESTAL
+
+# Bootloader
+mototrak_pellet_pedestal.bootloader.file=optiboot/optiboot_atmega328.hex
+mototrak_pellet_pedestal.bootloader.tool=avrdude
+mototrak_pellet_pedestal.bootloader.tool.default=avrdude
+mototrak_pellet_pedestal.bootloader.low_fuses=0xFF
+mototrak_pellet_pedestal.bootloader.high_fuses=0xDE
+mototrak_pellet_pedestal.bootloader.extended_fuses=0xFD
+mototrak_pellet_pedestal.bootloader.lock_bits=0x0F
+mototrak_pellet_pedestal.bootloader.unlock_bits=0x3F
+
+# Menu
+mototrak_pellet_pedestal.menu.pcb_ver.v0_1=MotoTrak Pellet Pedestal Module V0.1
+mototrak_pellet_pedestal.menu.pcb_ver.v0_1.build.variant=mototrak_pellet_pedestal_v0_1
+
+
+########################################################################################################################
 # Vulintus OmniTrak Nosepoke Module (OT-NP)
 # --------------------------
 
-nosepoke.name=Vulintus OmniTrak Nosepoke Module (OT-NP)
+omnitrak_nosepoke.name=Vulintus OmniTrak Nosepoke Module (OT-NP)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-# For now, the Mouse 3-Nosepoke Wall uses the same VID/PID as the Arduino Uno.
-nosepoke.vid.0=0x0403 
-nosepoke.pid.0=0x6A20
-nosepoke.upload_port.0.vid=0x0403 
-nosepoke.upload_port.0.pid=0x6A20
+omnitrak_nosepoke.vid.0=0x0403 
+omnitrak_nosepoke.pid.0=0x6A20
+omnitrak_nosepoke.upload_port.0.vid=0x0403 
+omnitrak_nosepoke.upload_port.0.pid=0x6A20
 
 # Upload
-nosepoke.upload.maximum_size=32256
-nosepoke.upload.maximum_data_size=2048
-nosepoke.upload.protocol=arduino
-nosepoke.upload.speed=115200
-nosepoke.upload.tool=avrdude
-nosepoke.upload.tool.default=avrdude
+omnitrak_nosepoke.upload.maximum_size=32256
+omnitrak_nosepoke.upload.maximum_data_size=2048
+omnitrak_nosepoke.upload.protocol=arduino
+omnitrak_nosepoke.upload.speed=115200
+omnitrak_nosepoke.upload.tool=avrdude
+omnitrak_nosepoke.upload.tool.default=avrdude
 
 # Build
-nosepoke.build.board=AVR_THREE_NOSEPOKE
-nosepoke.build.core=arduino:arduino
-nosepoke.build.f_cpu=16000000L
-nosepoke.build.mcu=atmega328p
-# MOVED TO MENU: nosepoke.build.variant=omnitrak_nosepoke_v3_1
-nosepoke.build.extra_flags=-DVULINTUS_OMNITRAK_NOSEPOKE
+omnitrak_nosepoke.build.board=AVR_OMNITRAK_NOSEPOKE
+omnitrak_nosepoke.build.core=arduino:arduino
+omnitrak_nosepoke.build.f_cpu=16000000L
+omnitrak_nosepoke.build.mcu=atmega328p
+# MOVED TO MENU: omnitrak_nosepoke.build.variant=omnitrak_nosepoke_v3_1
+omnitrak_nosepoke.build.extra_flags=-DVULINTUS_OMNITRAK_NOSEPOKE
 
 # Bootloader
-nosepoke.bootloader.file=optiboot/optiboot_atmega328.hex
-nosepoke.bootloader.tool=avrdude
-nosepoke.bootloader.tool.default=avrdude
-nosepoke.bootloader.low_fuses=0xFF
-nosepoke.bootloader.high_fuses=0xDE
-nosepoke.bootloader.extended_fuses=0xFD
-nosepoke.bootloader.lock_bits=0x0F
-nosepoke.bootloader.unlock_bits=0x3F
+omnitrak_nosepoke.bootloader.file=optiboot/optiboot_atmega328.hex
+omnitrak_nosepoke.bootloader.tool=avrdude
+omnitrak_nosepoke.bootloader.tool.default=avrdude
+omnitrak_nosepoke.bootloader.low_fuses=0xFF
+omnitrak_nosepoke.bootloader.high_fuses=0xDE
+omnitrak_nosepoke.bootloader.extended_fuses=0xFD
+omnitrak_nosepoke.bootloader.lock_bits=0x0F
+omnitrak_nosepoke.bootloader.unlock_bits=0x3F
 
 # Menu
-nosepoke.menu.pcb_ver.v3_1=OmniTrak Nosepoke Module V3.1
-nosepoke.menu.pcb_ver.v3_1.build.variant=omnitrak_nosepoke_v3_1
+omnitrak_nosepoke.menu.pcb_ver.v3_1=OmniTrak Nosepoke Module V3.1
+omnitrak_nosepoke.menu.pcb_ver.v3_1.build.variant=omnitrak_nosepoke_v3_1
 
 
 ########################################################################################################################
 # Vulintus OmniTrak Three-Nosepoke Module (OT-3P)
 # --------------------------
 
-three_nosepoke.name=Vulintus OmniTrak Three-Nosepoke Module (OT-3P)
+omnitrak_three_nosepoke.name=Vulintus OmniTrak Three-Nosepoke Module (OT-3P)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-# For now, the Mouse 3-Nosepoke Wall uses the same VID/PID as the Arduino Uno.
-three_nosepoke.vid.0=0x0403 
-three_nosepoke.pid.0=0x6A24
-three_nosepoke.upload_port.0.vid=0x0403 
-three_nosepoke.upload_port.0.pid=0x6A24
+omnitrak_three_nosepoke.vid.0=0x0403 
+omnitrak_three_nosepoke.pid.0=0x6A24
+omnitrak_three_nosepoke.upload_port.0.vid=0x0403 
+omnitrak_three_nosepoke.upload_port.0.pid=0x6A24
 
 # Upload
-three_nosepoke.upload.maximum_size=32256
-three_nosepoke.upload.maximum_data_size=2048
-three_nosepoke.upload.protocol=arduino
-three_nosepoke.upload.speed=115200
-three_nosepoke.upload.tool=avrdude
-three_nosepoke.upload.tool.default=avrdude
+omnitrak_three_nosepoke.upload.maximum_size=32256
+omnitrak_three_nosepoke.upload.maximum_data_size=2048
+omnitrak_three_nosepoke.upload.protocol=arduino
+omnitrak_three_nosepoke.upload.speed=115200
+omnitrak_three_nosepoke.upload.tool=avrdude
+omnitrak_three_nosepoke.upload.tool.default=avrdude
 
 # Build
-three_nosepoke.build.board=AVR_THREE_NOSEPOKE
-three_nosepoke.build.core=arduino:arduino
-three_nosepoke.build.f_cpu=16000000L
-three_nosepoke.build.mcu=atmega328p
-# MOVED TO MENU: three_nosepoke.build.variant=three_nosepoke_v2_3
-three_nosepoke.build.extra_flags=-DVULINTUS_THREE_NOSEPOKE
+omnitrak_three_nosepoke.build.board=AVR_OMNITRAK_THREE_NOSEPOKE
+omnitrak_three_nosepoke.build.core=arduino:arduino
+omnitrak_three_nosepoke.build.f_cpu=16000000L
+omnitrak_three_nosepoke.build.mcu=atmega328p
+# MOVED TO MENU: omnitrak_three_nosepoke.build.variant=omnitrak_three_nosepoke_v2_3
+omnitrak_three_nosepoke.build.extra_flags=-DVULINTUS_OMNITRAK_THREE_NOSEPOKE
 
 # Bootloader
-three_nosepoke.bootloader.file=optiboot/optiboot_atmega328.hex
-three_nosepoke.bootloader.tool=avrdude
-three_nosepoke.bootloader.tool.default=avrdude
-three_nosepoke.bootloader.low_fuses=0xFF
-three_nosepoke.bootloader.high_fuses=0xDE
-three_nosepoke.bootloader.extended_fuses=0xFD
-three_nosepoke.bootloader.lock_bits=0x0F
-three_nosepoke.bootloader.unlock_bits=0x3F
+omnitrak_three_nosepoke.bootloader.file=optiboot/optiboot_atmega328.hex
+omnitrak_three_nosepoke.bootloader.tool=avrdude
+omnitrak_three_nosepoke.bootloader.tool.default=avrdude
+omnitrak_three_nosepoke.bootloader.low_fuses=0xFF
+omnitrak_three_nosepoke.bootloader.high_fuses=0xDE
+omnitrak_three_nosepoke.bootloader.extended_fuses=0xFD
+omnitrak_three_nosepoke.bootloader.lock_bits=0x0F
+omnitrak_three_nosepoke.bootloader.unlock_bits=0x3F
 
 # Menu
-three_nosepoke.menu.pcb_ver.v1_0=Mouse 3-Nosepoke Wall V2.3
-three_nosepoke.menu.pcb_ver.v1_0.build.variant=three_nosepoke_v2_3
+omnitrak_three_nosepoke.menu.pcb_ver.v2_3=OmniTrak 3-Nosepoke Module V2.3
+omnitrak_three_nosepoke.menu.pcb_ver.v2_3.build.variant=omnitrak_three_nosepoke_v2_3
 
 
 ########################################################################################################################
-# Vulintus Linear Autopositioner (VP-LA)
+# Vulintus SensiTrak Arm Proprioception Module (ST-AP)
 # --------------------------
 
-autopositioner.name=Vulintus Linear Autopositioner (VP-LA)
+sensitrak_arm_proprioception.name=Vulintus SensiTrak Arm Proprioception Module (ST-AP)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-# For now, the Autopositioner uses the same VID/PID as the Arduino Uno.
-autopositioner.vid.0=0x2341
-autopositioner.pid.0=0x0043
-autopositioner.upload_port.0.vid=0x2341
-autopositioner.upload_port.0.pid=0x0043
+sensitrak_arm_proprioception.vid.0=0x0403 
+sensitrak_arm_proprioception.pid.0=0x6A23
+sensitrak_arm_proprioception.upload_port.0.vid=0x0403 
+sensitrak_arm_proprioception.upload_port.0.pid=0x6A23
 
 # Upload
-autopositioner.upload.maximum_size=32256
-autopositioner.upload.maximum_data_size=2048
-autopositioner.upload.protocol=arduino
-autopositioner.upload.speed=115200
-autopositioner.upload.tool=avrdude
-autopositioner.upload.tool.default=avrdude
+sensitrak_arm_proprioception.upload.maximum_size=32256
+sensitrak_arm_proprioception.upload.maximum_data_size=2048
+sensitrak_arm_proprioception.upload.protocol=arduino
+sensitrak_arm_proprioception.upload.speed=115200
+sensitrak_arm_proprioception.upload.tool=avrdude
+sensitrak_arm_proprioception.upload.tool.default=avrdude
 
 # Build
-autopositioner.build.board=AVR_AUTOPOSITIONER
-autopositioner.build.core=arduino:arduino
-autopositioner.build.f_cpu=16000000L
-autopositioner.build.mcu=atmega328p
-# MOVED TO MENU: autopositioner.build.variant=linear_autopositioner_v1_3
-autopositioner.build.extra_flags=-DVULINTUS_AUTOPOSITIONER
+sensitrak_arm_proprioception.build.board=AVR_SENSITRAK_ARM_PROPRIOCEPTION
+sensitrak_arm_proprioception.build.core=arduino:arduino
+sensitrak_arm_proprioception.build.f_cpu=16000000L
+sensitrak_arm_proprioception.build.mcu=atmega328p
+# MOVED TO MENU: sensitrak_arm_proprioception.build.variant=sensitrak_arm_proprioception_v0_3
+sensitrak_arm_proprioception.build.extra_flags=-DVULINTUS_SENSITRAK_ARM_PROPRIOCEPTION
 
 # Bootloader
-autopositioner.bootloader.file=optiboot/optiboot_atmega328.hex
-autopositioner.bootloader.tool=avrdude
-autopositioner.bootloader.tool.default=avrdude
-autopositioner.bootloader.low_fuses=0xFF
-autopositioner.bootloader.high_fuses=0xDE
-autopositioner.bootloader.extended_fuses=0xFD
-autopositioner.bootloader.lock_bits=0x0F
-autopositioner.bootloader.unlock_bits=0x3F
+sensitrak_arm_proprioception.bootloader.file=optiboot/optiboot_atmega328.hex
+sensitrak_arm_proprioception.bootloader.tool=avrdude
+sensitrak_arm_proprioception.bootloader.tool.default=avrdude
+sensitrak_arm_proprioception.bootloader.low_fuses=0xFF
+sensitrak_arm_proprioception.bootloader.high_fuses=0xDE
+sensitrak_arm_proprioception.bootloader.extended_fuses=0xFD
+sensitrak_arm_proprioception.bootloader.lock_bits=0x0F
+sensitrak_arm_proprioception.bootloader.unlock_bits=0x3F
 
 # Menu
-autopositioner.menu.pcb_ver.v1_0=Autopositioner V1.3
-autopositioner.menu.pcb_ver.v1_0.build.variant=linear_autopositioner_v1_3
+sensitrak_arm_proprioception.menu.pcb_ver.v0_3=SensiTrak Arm Proprioception Module V0.3
+sensitrak_arm_proprioception.menu.pcb_ver.v0_3.build.variant=sensitrak_arm_proprioception_v0_3
 
+
+########################################################################################################################
+# Vulintus SensiTrak Tactile Carousel Module (ST-TC)
+# --------------------------
+
+sensitrak_tactile_carousel.name=Vulintus SensiTrak Tactile Carousel Module (ST-TC)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+sensitrak_tactile_carousel.vid.0=0x0403 
+sensitrak_tactile_carousel.pid.0=0x6A22
+sensitrak_tactile_carousel.upload_port.0.vid=0x0403 
+sensitrak_tactile_carousel.upload_port.0.pid=0x6A22
+
+# Upload
+sensitrak_tactile_carousel.upload.maximum_size=32256
+sensitrak_tactile_carousel.upload.maximum_data_size=2048
+sensitrak_tactile_carousel.upload.protocol=arduino
+sensitrak_tactile_carousel.upload.speed=115200
+sensitrak_tactile_carousel.upload.tool=avrdude
+sensitrak_tactile_carousel.upload.tool.default=avrdude
+
+# Build
+sensitrak_tactile_carousel.build.board=AVR_SENSITRAK_TACTILE_CAROUSEL
+sensitrak_tactile_carousel.build.core=arduino:arduino
+sensitrak_tactile_carousel.build.f_cpu=16000000L
+sensitrak_tactile_carousel.build.mcu=atmega328p
+# MOVED TO MENU: sensitrak_tactile_carousel.build.variant=sensitrak_tactile_carousel_v0_1
+sensitrak_tactile_carousel.build.extra_flags=-DVULINTUS_SENSITRAK_ARM_PROPRIOCEPTION
+
+# Bootloader
+sensitrak_tactile_carousel.bootloader.file=optiboot/optiboot_atmega328.hex
+sensitrak_tactile_carousel.bootloader.tool=avrdude
+sensitrak_tactile_carousel.bootloader.tool.default=avrdude
+sensitrak_tactile_carousel.bootloader.low_fuses=0xFF
+sensitrak_tactile_carousel.bootloader.high_fuses=0xDE
+sensitrak_tactile_carousel.bootloader.extended_fuses=0xFD
+sensitrak_tactile_carousel.bootloader.lock_bits=0x0F
+sensitrak_tactile_carousel.bootloader.unlock_bits=0x3F
+
+# Menu
+sensitrak_tactile_carousel.menu.pcb_ver.v0_1=SensiTrak Tactile Carousel Module V0.1
+sensitrak_tactile_carousel.menu.pcb_ver.v0_1.build.variant=sensitrak_tactile_carousel_v0_1
 
 ########################################################################################################################

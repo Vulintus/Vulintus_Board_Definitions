@@ -106,6 +106,7 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_SW_FWD      PIN_A3    //Manual forward switch.
 #define PIN_SW_REV      PIN_A2    //Manual reverse switch.
 
+
 #ifdef ARDUINO_MAIN
 
 // On the Arduino board, digital pins are also used
