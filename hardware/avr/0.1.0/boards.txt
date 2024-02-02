@@ -263,3 +263,45 @@ sensitrak_tactile_carousel.menu.pcb_ver.v0_1=SensiTrak Tactile Carousel Module V
 sensitrak_tactile_carousel.menu.pcb_ver.v0_1.build.variant=sensitrak_tactile_carousel_v0_1
 
 ########################################################################################################################
+# Vulintus SensiTrak Vibrotactile Module (ST-VT)
+# --------------------------
+
+sensitrak_vibrotactile.name=Vulintus SensiTrak Vibrotactile Module (ST-VT)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+sensitrak_vibrotactile.vid.0=0x0403 
+sensitrak_vibrotactile.pid.0=0x6A25
+sensitrak_vibrotactile.upload_port.0.vid=0x0403 
+sensitrak_vibrotactile.upload_port.0.pid=0x6A25
+
+# Upload
+sensitrak_vibrotactile.upload.maximum_size=32256
+sensitrak_vibrotactile.upload.maximum_data_size=2048
+sensitrak_vibrotactile.upload.protocol=arduino
+sensitrak_vibrotactile.upload.speed=115200
+sensitrak_vibrotactile.upload.tool=avrdude
+sensitrak_vibrotactile.upload.tool.default=avrdude
+
+# Build
+sensitrak_vibrotactile.build.board=AVR_SENSITRAK_VIBROTACTILE
+sensitrak_vibrotactile.build.core=arduino:arduino
+sensitrak_vibrotactile.build.f_cpu=16000000L
+sensitrak_vibrotactile.build.mcu=atmega328p
+# MOVED TO MENU: sensitrak_vibrotactile.build.variant=sensitrak_vibrotactile_v2_1
+sensitrak_vibrotactile.build.extra_flags=-DVULINTUS_SENSITRAK_VIBROTACTILE
+
+# Bootloader
+sensitrak_vibrotactile.bootloader.file=optiboot/optiboot_atmega328.hex
+sensitrak_vibrotactile.bootloader.tool=avrdude
+sensitrak_vibrotactile.bootloader.tool.default=avrdude
+sensitrak_vibrotactile.bootloader.low_fuses=0xFF
+sensitrak_vibrotactile.bootloader.high_fuses=0xDE
+sensitrak_vibrotactile.bootloader.extended_fuses=0xFD
+sensitrak_vibrotactile.bootloader.lock_bits=0x0F
+sensitrak_vibrotactile.bootloader.unlock_bits=0x3F
+
+# Menu
+sensitrak_vibrotactile.menu.pcb_ver.v2_1=SensiTrak Vibrotactile Module V0.1
+sensitrak_vibrotactile.menu.pcb_ver.v2_1.build.variant=sensitrak_vibrotactile_v2_1
+
+########################################################################################################################
