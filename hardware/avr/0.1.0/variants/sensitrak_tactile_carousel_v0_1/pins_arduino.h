@@ -101,11 +101,11 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_LEDS_EN 			3
 #define PIN_NEOPIX				13
 
-#define PIN_24VPB_TRG			12
-#define PIN_24VPB_CLK_IN		11
-#define PIN_24VPB_CLK_IN		6
-#define PIN_24VPB_BLOCK_AB		7
-#define PIN_24VPB_BLOCK_BC		5
+#define PIN_VPB_TRG			12
+#define PIN_VPB_CLK_IN		11
+#define PIN_VPB_CLK_IN		6
+#define PIN_VPB_BLOCK_AB		7
+#define PIN_VPB_BLOCK_BC		5
 
 #ifdef ARDUINO_MAIN
 
