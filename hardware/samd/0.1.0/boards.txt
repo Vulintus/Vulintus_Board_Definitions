@@ -278,7 +278,7 @@ vulintus_liquid_dispenser.build.variant_system_lib=
 
 # Bootloader
 vulintus_liquid_dispenser.bootloader.tool=openocd
-vulintus_liquid_dispenser.bootloader.file=samd21g17a/bootloader_samd21x17a.bin
+vulintus_liquid_dispenser.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
 
 # Menu
 vulintus_liquid_dispenser.menu.pcb_ver.v2_0=Liquid Dispenser V2.0
