@@ -84,31 +84,20 @@ static const uint8_t A7 = PIN_A7;
 
 // VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION **********************************************************/
 // Pin definitions. //
-#define PIN_IR_INT				10
-#define PIN_NOSEPOKE_L 			A2
-#define PIN_NOSEPOKE_C 			A1
-#define PIN_NOSEPOKE_R 			A0
+#define PIN_LOADCELL		A0
+#define PIN_MCP6N16_FB 		A2
+#define PIN_LC_VREF			A3
 
-#define PIN_IV_IN_ADC 			A7
-#define PIN_I_IN_ADC 			A4
-#define PIN_PWR_FAULT 			A3
-#define PIN_I_IN_RESET 			A5
+#define PIN_TOUCH 			A6
 
-#define PIN_BNC_IO 				A6
+#define PIN_SPKR			A1
 
-#define PIN_CAP_SEND 			2
-#define PIN_CAPSENSE_L 			8
-#define PIN_CAPSENSE_C 			9
-#define PIN_CAPSENSE_R 			4
+#define PIN_LED_STATUS		5
 
-#define PIN_LEDS_EN 			3
-#define PIN_NEOPIX				13
+#define PIN_LRA1			7
+#define PIN_LRA2			8
 
-#define PIN_VPB_TRG			12
-#define PIN_VPB_CLK_IN		11
-#define PIN_VPB_CLK_IN		6
-#define PIN_VPB_BLOCK_AB		7
-#define PIN_VPB_BLOCK_BC		5
+#define PIN_BOARD_ID		A7
 
 // EEPROM address assignments. //
 #define NVM_ADDR_VULINTUS_ALIAS		736     //  Starting address for the Vulintus-set alias (characters).
