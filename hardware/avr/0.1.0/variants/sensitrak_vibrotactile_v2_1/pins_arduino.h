@@ -83,6 +83,7 @@ static const uint8_t A7 = PIN_A7;
 
 
 // VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION **********************************************************/
+
 // Pin definitions. //
 #define PIN_LOADCELL		A0
 #define PIN_MCP6N16_FB 		A2
@@ -101,8 +102,8 @@ static const uint8_t A7 = PIN_A7;
 
 // EEPROM address assignments. //
 #define NVM_ADDR_VULINTUS_ALIAS		736     //  Starting address for the Vulintus-set alias (characters).
-#define NVM_ADDR_USERSET_ALIAS  	768     //Starting address for the user-set device alias (characters).
-#define NVM_ADDR_VOLUME		      	8		//Starting address for the volume-control digital potentiometer value.
+#define NVM_ADDR_USERSET_ALIAS  	768     // Starting address for the user-set device alias (characters).
+#define NVM_ADDR_VOLUME		      	8		// Starting address for the volume-control digital potentiometer value.
 
 //*********************************************************************************************************************/
 

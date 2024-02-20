@@ -81,6 +81,13 @@ static const uint8_t A7 = PIN_A7;
 
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : NOT_AN_INTERRUPT))
 
+
+// VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION **********************************************************/
+
+// OmniTrak library definitions.
+#define OMNITRAK_NUM_POKES  3
+
+// Pin definitions. //
 #define PIN_IR_INT				10
 #define PIN_NOSEPOKE_L 			A2
 #define PIN_NOSEPOKE_C 			A1
@@ -106,6 +113,12 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_VPB_CLK_IN		6
 #define PIN_VPB_BLOCK_AB		7
 #define PIN_VPB_BLOCK_BC		5
+
+// EEPROM address assignments. //
+#define NVM_ADDR_VULINTUS_ALIAS		736     //  Starting address for the Vulintus-set alias (characters).
+#define NVM_ADDR_USERSET_ALIAS  	768     // Starting address for the user-set device alias (characters).
+
+//*********************************************************************************************************************/
 
 #ifdef ARDUINO_MAIN
 
