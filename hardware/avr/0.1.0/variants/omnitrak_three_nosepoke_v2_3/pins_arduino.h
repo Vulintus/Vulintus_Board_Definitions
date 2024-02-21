@@ -85,40 +85,44 @@ static const uint8_t A7 = PIN_A7;
 // VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION **********************************************************/
 
 // OmniTrak library definitions.
-#define OMNITRAK_NUM_POKES  3
+#define OMNITRAK_NUM_POKES  	3
+#define OMNITRAK_NUM_CUE_LED	3
 
 // Pin definitions. //
-#define PIN_IR_INT				10
-#define PIN_NOSEPOKE_L 			A2
-#define PIN_NOSEPOKE_C 			A1
-#define PIN_NOSEPOKE_R 			A0
+#define PIN_IR_INT			10
+#define PIN_NOSEPOKE_L 		A2
+#define PIN_NOSEPOKE_C 		A1
+#define PIN_NOSEPOKE_R 		A0
 
-#define PIN_IV_IN_ADC 			A7
-#define PIN_I_IN_ADC 			A4
-#define PIN_PWR_FAULT 			A3
-#define PIN_I_IN_RESET 			A5
+#define PIN_V_IN_ADC 		A7
+#define PIN_I_IN_ADC 		A4
+#define PIN_PWR_FAULT 		A3
+#define PIN_I_IN_RESET 		A5
 
-#define PIN_BNC_IO 				A6
+#define PIN_BNC_IO 			A6
 
-#define PIN_CAP_SEND 			2
-#define PIN_CAPSENSE_L 			8
-#define PIN_CAPSENSE_C 			9
-#define PIN_CAPSENSE_R 			4
+#define PIN_CAP_SEND 		2
+#define PIN_CAPSENSE_L 		8
+#define PIN_CAPSENSE_C 		9
+#define PIN_CAPSENSE_R 		4
 
-#define PIN_LEDS_EN 			3
-#define PIN_NEOPIX				13
+#define PIN_SPKR        	PIN_CAPSENSE_L
 
-#define PIN_VPB_TRG				12
-#define PIN_VPB_CLK_IN			11
-#define PIN_VPB_CLK_IN			6
-#define PIN_VPB_BLOCK_AB		7
-#define PIN_VPB_BLOCK_BC		5
+#define PIN_LEDS_EN 		3
+#define PIN_NEOPIX			13
+
+#define PIN_VPB_TRG			12
+#define PIN_VPB_CLK_IN		11
+#define PIN_VPB_CLK_OUT		6
+#define PIN_VPB_BLOCK_AB	7
+#define PIN_VPB_BLOCK_BC	5
 
 // EEPROM address assignments. //
-#define NVM_ADDR_VULINTUS_ALIAS		736     //  Starting address for the Vulintus-set alias (characters).
+#define NVM_ADDR_VULINTUS_ALIAS		736     // Starting address for the Vulintus-set alias (characters).
 #define NVM_ADDR_USERSET_ALIAS  	768     // Starting address for the user-set device alias (characters).
 
 //*********************************************************************************************************************/
+
 
 #ifdef ARDUINO_MAIN
 

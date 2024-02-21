@@ -81,7 +81,13 @@ static const uint8_t A7 = PIN_A7;
 
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : NOT_AN_INTERRUPT))
 
+
 // VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION **********************************************************/
+
+// OmniTrak library definitions.
+#define OMNITRAK_NUM_POKES  	1
+#define OMNITRAK_NUM_CUE_LED	1
+
 // Pin definitions. //
 #define PIN_IR_DET_A        A0
 #define PIN_IR_DET_D        2
@@ -112,6 +118,7 @@ static const uint8_t A7 = PIN_A7;
 #define NVM_ADDR_VOLUME		      	8		//Starting address for the volume-control digital potentiometer value.
 
 //*********************************************************************************************************************/
+
 
 #ifdef ARDUINO_MAIN
 

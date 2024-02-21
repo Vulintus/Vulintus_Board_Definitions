@@ -81,6 +81,9 @@ static const uint8_t A7 = PIN_A7;
 
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : NOT_AN_INTERRUPT))
 
+
+// VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION **********************************************************/
+
 //A4988 Stepper Driver
 #define PIN_A4988_STEP  3      //Stepper controller step.
 #define PIN_A4988_DIR   4      //Stepper controller direction select.
