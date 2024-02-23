@@ -117,9 +117,9 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_VPB_BLOCK_AB	7
 #define PIN_VPB_BLOCK_BC	5
 
-// EEPROM address assignments. //
-#define NVM_ADDR_VULINTUS_ALIAS		736     // Starting address for the Vulintus-set alias (characters).
-#define NVM_ADDR_USERSET_ALIAS  	768     // Starting address for the user-set device alias (characters).
+// EEPROM address assignments (1024 bytes total). //
+#define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
+#define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
 
 //*********************************************************************************************************************/
 

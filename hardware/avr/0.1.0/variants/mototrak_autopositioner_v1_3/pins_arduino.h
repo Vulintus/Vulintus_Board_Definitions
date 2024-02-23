@@ -109,6 +109,12 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_SW_FWD      PIN_A3    //Manual forward switch.
 #define PIN_SW_REV      PIN_A2    //Manual reverse switch.
 
+// EEPROM address assignments (1024 bytes total). //
+#define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
+#define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
+
+//*********************************************************************************************************************/
+
 
 #ifdef ARDUINO_MAIN
 
