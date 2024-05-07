@@ -89,6 +89,51 @@ mototrak_pellet_pedestal.bootloader.unlock_bits=0x3F
 # Menu
 mototrak_pellet_pedestal.menu.pcb_ver.v0_1=MotoTrak Pellet Pedestal Module V0.1
 mototrak_pellet_pedestal.menu.pcb_ver.v0_1.build.variant=mototrak_pellet_pedestal_v0_1
+mototrak_pellet_pedestal.menu.pcb_ver.v0_2=MotoTrak Pellet Pedestal Module V0.2
+mototrak_pellet_pedestal.menu.pcb_ver.v0_2.build.variant=mototrak_pellet_pedestal_v0_2
+
+
+########################################################################################################################
+# Vulintus MotoTrak Pocket Door Module (MT-PD)
+# --------------------------
+
+mototrak_pocket_door.name=Vulintus MotoTrak Pocket Door Module (MT-PD)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+mototrak_pocket_door.vid.0=0x0403 
+mototrak_pocket_door.pid.0=0x6A21
+mototrak_pocket_door.upload_port.0.vid=0x0403 
+mototrak_pocket_door.upload_port.0.pid=0x6A21
+
+# Upload
+mototrak_pocket_door.upload.maximum_size=32256
+mototrak_pocket_door.upload.maximum_data_size=2048
+mototrak_pocket_door.upload.protocol=arduino
+mototrak_pocket_door.upload.speed=115200
+mototrak_pocket_door.upload.tool=avrdude
+mototrak_pocket_door.upload.tool.default=avrdude
+
+# Build
+mototrak_pocket_door.build.board=AVR_MOTOTRAK_POCKET_DOOR
+mototrak_pocket_door.build.core=arduino:arduino
+mototrak_pocket_door.build.f_cpu=16000000L
+mototrak_pocket_door.build.mcu=atmega328p
+# MOVED TO MENU: mototrak_pocket_door.build.variant=mototrak_pocket_door_v0_1
+mototrak_pocket_door.build.extra_flags=-DVULINTUS_MOTOTRAK_POCKET_DOOR
+
+# Bootloader
+mototrak_pocket_door.bootloader.file=optiboot/optiboot_atmega328.hex
+mototrak_pocket_door.bootloader.tool=avrdude
+mototrak_pocket_door.bootloader.tool.default=avrdude
+mototrak_pocket_door.bootloader.low_fuses=0xFF
+mototrak_pocket_door.bootloader.high_fuses=0xDE
+mototrak_pocket_door.bootloader.extended_fuses=0xFD
+mototrak_pocket_door.bootloader.lock_bits=0x0F
+mototrak_pocket_door.bootloader.unlock_bits=0x3F
+
+# Menu
+mototrak_pocket_door.menu.pcb_ver.v0_1=MotoTrak Pocket Door Module V0.1
+mototrak_pocket_door.menu.pcb_ver.v0_1.build.variant=mototrak_pocket_door_v0_1
 
 
 ########################################################################################################################
