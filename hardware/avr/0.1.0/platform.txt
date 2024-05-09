@@ -5,7 +5,8 @@
 # For more info:
 # https://arduino.github.io/arduino-cli/latest/platform-specification/
 
-name=Vulintus AVR Devices
+name=Vulintus AVR Devices (beta)
+# name=Vulintus AVR Devices
 version=0.1.0
 
 # AVR compile variables
