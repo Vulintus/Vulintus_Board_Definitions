@@ -13,7 +13,7 @@
 			"platforms": [
 
 
-				{
+        {
 					"name": "Vulintus SAMD Devices",
 					"architecture": "samd",
 					"version": "0.2.0",
@@ -43,7 +43,7 @@
 					},
 					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_samd_v0_2_0.zip",
 					"archiveFileName": "vulintus_samd_v0_2_0.zip",
-					"checksum": "SHA-256:1E67470ECE87FA832AB91512098DE5153FAB16AD9ACD7103921BB3587836830C",
+					"checksum": "SHA-256:11b5a85cec82e6de9784418b1bb891f6c361a97ee5f9286110e6f09c7f0779fd",
           "_comment_ln47": "get-filehash -path 'C:\\Users\\[user]\\AppData\\Local\\Arduino15\\packages\\vulintus_beta\\zip files\\vulintus_samd_v0_2_0.zip' | format-list",
 					"size": "1024040",			
 					"toolsDependencies": [
@@ -76,7 +76,30 @@
 					"architecture": "avr",
 					"version": "0.1.0",
 					"boards": [
-						{"name": "Kroener Box V2.3"}
+						{
+              "name": "MotoTrak Autopositioner"
+            },
+            {
+              "name": "MotoTrak Pellet Pedestal Module"
+            },
+            {
+              "name": "MotoTrak Pocket Door Module"
+            },
+            {
+              "name": "OmniTrak Nosepoke Module"
+            },
+            {
+              "name": "OmniTrak Three-Nosepoke Module"
+            },
+            {
+              "name": "SensiTrak Arm Proprioception Module"
+            },
+            {
+              "name": "SensiTrak Tactile Carousel Module"
+            },
+            {
+              "name": "SensiTrak Vibrotactile Module"
+            }
 					],
 					"category": "Vulintus",
 					"help": {
@@ -84,7 +107,7 @@
 					},
 					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_avr_v0_1_0.zip",
 					"archiveFileName": "vulintus_avr_v0_1_0.zip",
-					"checksum": "SHA-256:0128b45743784717326602b94118063d97c9b2adfd1f03f66135908e0ffd534c",
+					"checksum": "SHA-256:76b20306431e442de188d5c9e357b7fa473efcbcd777fd51ef2ecc33231ce572",
 					"size": "72056",			
 					"toolsDependencies": [
             {
@@ -101,6 +124,7 @@
 				}
 			],
 			"_comment_ln85": "end of 'platforms'",
+
 
 			"tools": [
         {
