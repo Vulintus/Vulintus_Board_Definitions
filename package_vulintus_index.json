@@ -43,9 +43,9 @@
 					},
 					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_samd_v0_2_0.zip",
 					"archiveFileName": "vulintus_samd_v0_2_0.zip",
-					"checksum": "SHA-256:7b12766c00c1bed32f3e64e16c48c80284f309e5d33eeba0d960ddbe5846e8bd",
+					"checksum": "SHA-256:02c317fba925cddf0001624f0e803d75ebaf39c0e7a65686640eb715d6474b0b",
           "_comment_ln47": "get-filehash -path 'C:\\Users\\[user]\\AppData\\Local\\Arduino15\\packages\\vulintus_beta\\zip files\\vulintus_samd_v0_2_0.zip' | format-list",
-					"size": "1024040",			
+					"size": "1248103",			
 					"toolsDependencies": [
 						{
 							"packager": "arduino",
@@ -107,8 +107,8 @@
 					},
 					"url": "https://github.com/Vulintus/Vulintus_Board_Definitions/raw/main/zip%20files/vulintus_avr_v0_1_0.zip",
 					"archiveFileName": "vulintus_avr_v0_1_0.zip",
-					"checksum": "SHA-256:d261c0bcf72e9562a334a43ed9a6a012476a26c968fa2b64569d34a04838b97d",
-					"size": "72056",			
+					"checksum": "SHA-256:33cc3ba1e4dfa9f5770cf2eec7827abe4a1ccf9966a4bd45a67fc87174cbeb6d",
+					"size": "506677",			
 					"toolsDependencies": [
             {
               "name": "avr-gcc",
