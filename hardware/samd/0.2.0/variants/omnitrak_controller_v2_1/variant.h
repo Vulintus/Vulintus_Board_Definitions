@@ -26,6 +26,16 @@
 #define CIRCUIT_BOARD_VER   21          // Divide by 10 to match the Eagle design version.
 #define NUM_OTMP_PORTS      5           // Number of OTMP ports.
 
+// RTC nonvolatile memory address assignments (43 bytes total).
+#define NVM_ADDR_VULINTUS_ALIAS		0     // Starting address for the Vulintus-set alias (30 bytes).
+
+// I2C Addresses.
+#define I2C_ADDR_AT42QT2120   0x1C        // AT42QT2120 QTouch controller.
+#define I2C_ADDR_MCP40D17     0x2E        // MCP40D17 digital potentiometer (for volume control).
+#define I2C_ADDR_RV3028C7     0x52        // RV-3028-C7 real-time clock.
+#define I2C_ADDR_ATECC608     0x60        // ATECC608x cryptographic co-processor.
+#define I2C_ADDR_BME680       0x76        // BME680 temperature/pressure/humidity/gas sensor.
+
 
 /*----------------------------------------------------------------------------
  *        Definitions
@@ -370,13 +380,6 @@ static const uint8_t SCK1  = PIN_SPI1_SCK;
 
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
-
-// I2C Addresses.
-#define I2C_ADDR_AT42QT2120   0x1C        // AT42QT2120 QTouch controller.
-#define I2C_ADDR_MCP40D17     0x2E        // MCP40D17 digital potentiometer (for volume control).
-#define I2C_ADDR_RV3028C7     0x52        // RV-3028-C7 real-time clock.
-#define I2C_ADDR_ATECC608     0x60        // ATECC608x cryptographic co-processor.
-#define I2C_ADDR_BME680       0x76        // BME680 temperature/pressure/humidity/gas sensor.
 
 
 /*
