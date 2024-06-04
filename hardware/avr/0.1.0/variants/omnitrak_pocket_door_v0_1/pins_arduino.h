@@ -98,8 +98,9 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_BTN_UP          A4
 
 #define PIN_DRV_EN          4
+#define PIN_DRV_SLP        	6
 #define PIN_DRV_DIR         7
-#define PIN_DRV_STEP        6
+#define PIN_DRV_STEP        8
 #define PIN_DRV_CS          A3
 #define PIN_DRV_FLT         3
 
