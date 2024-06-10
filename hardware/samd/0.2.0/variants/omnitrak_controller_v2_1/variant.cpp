@@ -76,14 +76,14 @@ const PinDescription g_APinDescription[]=
 
   // TFT Display
   { PORTC, 13, PIO_DIGITAL,    PIN_ATTR_DIGITAL,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13  }, //nTFT_RST        (26) DIGITAL OUT
-  { PORTC, 11, PIO_DIGITAL,    PIN_ATTR_PWM_F,      No_ADC_Channel, TCC0_CH1,   NOT_ON_TIMER, EXTERNAL_INT_11  }, //TFT_LED         (27) PWM TCC0 WO/1
+  { PORTC, 11, PIO_DIGITAL,    PIN_ATTR_PWM_F,      No_ADC_Channel, TCC0_CH1,   TCC0_CH1,     EXTERNAL_INT_11  }, //TFT_LED         (27) PWM TCC0 WO/1
   { PORTB, 13, PIO_DIGITAL,    PIN_ATTR_DIGITAL,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13  }, //TFT_DC          (28) DIGITAL OUT
   { PORTC, 14, PIO_DIGITAL,    PIN_ATTR_DIGITAL,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14  }, //nTFT_CS         (29) DIGITAL OUT
 
   // Status LED (RGB)
-  { PORTA, 18, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH6,   NOT_ON_TIMER, EXTERNAL_INT_2   }, //LED_R           (30) PWM TCC0 WO/6
-  { PORTA, 17, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH5,   NOT_ON_TIMER, EXTERNAL_INT_1   }, //LED_G           (31) PWM TCC0 WO/5
-  { PORTA, 16, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH4,   NOT_ON_TIMER, EXTERNAL_INT_0   }, //LED_B           (32) PWM TCC0 WO/4
+  { PORTA, 18, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH6,   TCC0_CH6,     EXTERNAL_INT_2   }, //LED_R           (30) PWM TCC0 WO/6
+  { PORTA, 17, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH5,   TCC0_CH5,     EXTERNAL_INT_1   }, //LED_G           (31) PWM TCC0 WO/5
+  { PORTA, 16, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH4,   TCC0_CH4,     EXTERNAL_INT_0   }, //LED_B           (32) PWM TCC0 WO/4
 
   // RV-3208-C7 Real-Time Clock
   { PORTC, 15, PIO_DIGITAL,    PIN_ATTR_DIGITAL,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15  }, //nRTC_INT        (33) XINT
@@ -106,7 +106,7 @@ const PinDescription g_APinDescription[]=
   { PORTA, 31, PIO_DIGITAL,    PIN_ATTR_DIGITAL,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_15  }, //SWDIO/DEMUX_D   (44) DIGITAL OUT
 
   // Piezo Speaker
-  { PORTB, 14, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH2,   TCC0_CH2,     EXTERNAL_INT_14  }, //SPKR            (45) PWM TCC0 WO/2
+  { PORTB, 14, PIO_PWM,        PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH2,   TCC0_CH2,     EXTERNAL_INT_14  }, //SPKR            (45) PWM TCC0 WO/2
   
   // Power Control
   { PORTC, 30, PIO_ANALOG,     PIN_ATTR_ANALOG_ALT, ADC_Channel12,  NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14  }, //V_IN_ADC        (46) ADC1 AIN/12
@@ -175,7 +175,7 @@ const PinDescription g_APinDescription[]=
   { PORTC, 21, PIO_DIGITAL,    PIN_ATTR_DIGITAL,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_5   }, //BNC_EN_2        (92) DIGITAL OUT
 
   // Fan Control
-  { PORTA, 19, PIO_DIGITAL,    PIN_ATTR_PWM_E,      No_ADC_Channel, TC3_CH1,    NOT_ON_TIMER, EXTERNAL_INT_3   }, //FAN             (93) PWM TC3 WO/1
+  { PORTA, 19, PIO_PWM,        PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH7,   TCC0_CH7,     EXTERNAL_INT_3   }, //FAN             (93) PWM TC3 WO/1
 
   // Board ID Analog Input
   { PORTB, 7, PIO_ANALOG,      PIN_ATTR_ANALOG_ALT, ADC_Channel9,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_7   }, //BOARD_ID        (94) ADC1 AIN/9
