@@ -28,9 +28,9 @@ vulintus_habitrak.name=Vulintus HabiTrak
 # Microchip's VID (https://www.microchip.com/usblicensing/)
 # Sublicense Request 4325, submitted by Drew on 2/2/2022
 vulintus_habitrak.vid.0=0x04D8
-vulintus_habitrak.pid.0=0xE6AC
+vulintus_habitrak.pid.0=0xE6C2
 vulintus_habitrak.build.vid=0x04D8
-vulintus_habitrak.build.pid=0xE6AC
+vulintus_habitrak.build.pid=0xE6C2
 
 # Upload
 # MOVED TO MENU: vulintus_habitrak.upload.maximum_size=520192
