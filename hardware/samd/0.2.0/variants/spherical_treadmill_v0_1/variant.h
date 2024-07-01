@@ -135,8 +135,8 @@ static const uint8_t DAC0 = PIN_DAC0;
 #define PIN_PMW_RST         (16u)       //PA06
 #define PIN_PMW_CS_1        (17u)       //PA27
 #define PIN_PMW_CS_2        (18u)       //PA18
-#define PIN_PMW_MOT_1       (27u)       //PA19
-#define PIN_PMW_MOT_2       (28u)       //PA04
+#define PIN_PMW_MOT_1       (19u)       //PA19
+#define PIN_PMW_MOT_2       (20u)       //PA04
 
 
 /*
