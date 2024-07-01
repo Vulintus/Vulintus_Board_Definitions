@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "../linear_autopositioner_v2_1/variant.h"
+#include "../habitrak_charging_station_v0_1/variant.h"
 
