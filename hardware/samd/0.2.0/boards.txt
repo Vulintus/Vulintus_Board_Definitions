@@ -208,12 +208,17 @@ omnitrak_common_controller.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.
 omnitrak_common_controller.menu.pcb_ver.v2_0=Version 2.0
 omnitrak_common_controller.menu.pcb_ver.v2_0.build.variant=omnitrak_controller_v2_0
 omnitrak_common_controller.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
-omnitrak_common_controller.menu.pcb_ver.v2_0.build.usb_product="OmniTrak Common Controller V2.0"
+omnitrak_common_controller.menu.pcb_ver.v2_0.build.usb_product="Version 2.0"
 
 omnitrak_common_controller.menu.pcb_ver.v2_1=Version 2.1
 omnitrak_common_controller.menu.pcb_ver.v2_1.build.variant=omnitrak_controller_v2_1
 omnitrak_common_controller.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/omnitrak_controller_v2_1.cfg
-omnitrak_common_controller.menu.pcb_ver.v2_1.build.usb_product="OmniTrak Common Controller V2.1"
+omnitrak_common_controller.menu.pcb_ver.v2_1.build.usb_product="Version 2.1"
+
+omnitrak_common_controller.menu.pcb_ver.v2_2=Version 2.2
+omnitrak_common_controller.menu.pcb_ver.v2_2.build.variant=omnitrak_controller_v2_2
+omnitrak_common_controller.menu.pcb_ver.v2_2.build.openocdscript=openocd_scripts/omnitrak_controller_v2_2.cfg
+omnitrak_common_controller.menu.pcb_ver.v2_2.build.usb_product="Version 2.2"
 
 # Parameter options formerly set with the menu:
 # omnitrak_common_controller.build.cache_flags=-DENABLE_CACHE
