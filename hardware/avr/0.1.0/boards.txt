@@ -5,10 +5,10 @@ menu.pcb_ver=Circuit Board Version
 
 
 ########################################################################################################################
-# Vulintus MotoTrak Autopositioner (VP-MA)
+# MotoTrak Autopositioner (VP-MA)
 # --------------------------
 
-mototrak_autopositioner.name=Vulintus MotoTrak Autopositioner (MT-AP)
+mototrak_autopositioner.name=MotoTrak Autopositioner (MT-AP)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # For now, the Autopositioner uses the same VID/PID as the Arduino Uno.
@@ -44,15 +44,15 @@ mototrak_autopositioner.bootloader.lock_bits=0x0F
 mototrak_autopositioner.bootloader.unlock_bits=0x3F
 
 # Menu
-mototrak_autopositioner.menu.pcb_ver.v1_3=MotoTrak Autopositioner V1.3
+mototrak_autopositioner.menu.pcb_ver.v1_3=Version 1.3
 mototrak_autopositioner.menu.pcb_ver.v1_3.build.variant=mototrak_autopositioner_v1_3
 
 
 ########################################################################################################################
-# Vulintus MotoTrak Pellet Pedestal Module (MT-PP)
+# MotoTrak Pellet Pedestal Module (MT-PP)
 # --------------------------
 
-mototrak_pellet_pedestal.name=Vulintus MotoTrak Pellet Pedestal Module (MT-PP)
+mototrak_pellet_pedestal.name=MotoTrak Pellet Pedestal Module (MT-PP)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 mototrak_pellet_pedestal.vid.0=0x0403 
@@ -87,17 +87,17 @@ mototrak_pellet_pedestal.bootloader.lock_bits=0x0F
 mototrak_pellet_pedestal.bootloader.unlock_bits=0x3F
 
 # Menu
-mototrak_pellet_pedestal.menu.pcb_ver.v0_1=MotoTrak Pellet Pedestal Module V0.1
+mototrak_pellet_pedestal.menu.pcb_ver.v0_1=Version 0.1
 mototrak_pellet_pedestal.menu.pcb_ver.v0_1.build.variant=mototrak_pellet_pedestal_v0_1
-mototrak_pellet_pedestal.menu.pcb_ver.v0_2=MotoTrak Pellet Pedestal Module V0.2
+mototrak_pellet_pedestal.menu.pcb_ver.v0_2=Version 0.2
 mototrak_pellet_pedestal.menu.pcb_ver.v0_2.build.variant=mototrak_pellet_pedestal_v0_2
 
 
 ########################################################################################################################
-# Vulintus OmniTrak Pocket Door Module (OT-PD)
+# OmniTrak Pocket Door Module (OT-PD)
 # --------------------------
 
-omnitrak_pocket_door.name=Vulintus OmniTrak Pocket Door Module (OT-PD)
+omnitrak_pocket_door.name=OmniTrak Pocket Door Module (OT-PD)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 omnitrak_pocket_door.vid.0=0x0403 
@@ -132,15 +132,15 @@ omnitrak_pocket_door.bootloader.lock_bits=0x0F
 omnitrak_pocket_door.bootloader.unlock_bits=0x3F
 
 # Menu
-omnitrak_pocket_door.menu.pcb_ver.v0_1=OmniTrak Pocket Door Module V0.1
+omnitrak_pocket_door.menu.pcb_ver.v0_1=Version 0.1
 omnitrak_pocket_door.menu.pcb_ver.v0_1.build.variant=omnitrak_pocket_door_v0_1
 
 
 ########################################################################################################################
-# Vulintus OmniTrak Nosepoke Module (OT-NP)
+# OmniTrak Nosepoke Module (OT-NP)
 # --------------------------
 
-omnitrak_nosepoke.name=Vulintus OmniTrak Nosepoke Module (OT-NP)
+omnitrak_nosepoke.name=OmniTrak Nosepoke Module (OT-NP)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 omnitrak_nosepoke.vid.0=0x0403 
@@ -175,15 +175,17 @@ omnitrak_nosepoke.bootloader.lock_bits=0x0F
 omnitrak_nosepoke.bootloader.unlock_bits=0x3F
 
 # Menu
-omnitrak_nosepoke.menu.pcb_ver.v3_1=OmniTrak Nosepoke Module V3.1
+omnitrak_nosepoke.menu.pcb_ver.v3_0=Version 3.0
+omnitrak_nosepoke.menu.pcb_ver.v3_0.build.variant=omnitrak_nosepoke_v3_0
+omnitrak_nosepoke.menu.pcb_ver.v3_1=Version 3.1
 omnitrak_nosepoke.menu.pcb_ver.v3_1.build.variant=omnitrak_nosepoke_v3_1
 
 
 ########################################################################################################################
-# Vulintus OmniTrak Three-Nosepoke Module (OT-3P)
+# OmniTrak Three-Nosepoke Module (OT-3P)
 # --------------------------
 
-omnitrak_three_nosepoke.name=Vulintus OmniTrak Three-Nosepoke Module (OT-3P)
+omnitrak_three_nosepoke.name=OmniTrak Three-Nosepoke Module (OT-3P)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 omnitrak_three_nosepoke.vid.0=0x0403 
@@ -218,15 +220,15 @@ omnitrak_three_nosepoke.bootloader.lock_bits=0x0F
 omnitrak_three_nosepoke.bootloader.unlock_bits=0x3F
 
 # Menu
-omnitrak_three_nosepoke.menu.pcb_ver.v2_3=OmniTrak 3-Nosepoke Module V2.3
+omnitrak_three_nosepoke.menu.pcb_ver.v2_3=Version 2.3
 omnitrak_three_nosepoke.menu.pcb_ver.v2_3.build.variant=omnitrak_three_nosepoke_v2_3
 
 
 ########################################################################################################################
-# Vulintus SensiTrak Arm Proprioception Module (ST-AP)
+# SensiTrak Arm Proprioception Module (ST-AP)
 # --------------------------
 
-sensitrak_arm_proprioception.name=Vulintus SensiTrak Arm Proprioception Module (ST-AP)
+sensitrak_arm_proprioception.name=SensiTrak Arm Proprioception Module (ST-AP)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 sensitrak_arm_proprioception.vid.0=0x0403 
@@ -261,15 +263,15 @@ sensitrak_arm_proprioception.bootloader.lock_bits=0x0F
 sensitrak_arm_proprioception.bootloader.unlock_bits=0x3F
 
 # Menu
-sensitrak_arm_proprioception.menu.pcb_ver.v0_3=SensiTrak Arm Proprioception Module V0.3
+sensitrak_arm_proprioception.menu.pcb_ver.v0_3=Version 0.3
 sensitrak_arm_proprioception.menu.pcb_ver.v0_3.build.variant=sensitrak_arm_proprioception_v0_3
 
 
 ########################################################################################################################
-# Vulintus SensiTrak Tactile Carousel Module (ST-TC)
+# SensiTrak Tactile Carousel Module (ST-TC)
 # --------------------------
 
-sensitrak_tactile_carousel.name=Vulintus SensiTrak Tactile Carousel Module (ST-TC)
+sensitrak_tactile_carousel.name=SensiTrak Tactile Carousel Module (ST-TC)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 sensitrak_tactile_carousel.vid.0=0x0403 
@@ -304,14 +306,14 @@ sensitrak_tactile_carousel.bootloader.lock_bits=0x0F
 sensitrak_tactile_carousel.bootloader.unlock_bits=0x3F
 
 # Menu
-sensitrak_tactile_carousel.menu.pcb_ver.v0_1=SensiTrak Tactile Carousel Module V0.1
+sensitrak_tactile_carousel.menu.pcb_ver.v0_1=Version 0.1
 sensitrak_tactile_carousel.menu.pcb_ver.v0_1.build.variant=sensitrak_tactile_carousel_v0_1
 
 ########################################################################################################################
-# Vulintus SensiTrak Vibrotactile Module (ST-VT)
+# SensiTrak Vibrotactile Module (ST-VT)
 # --------------------------
 
-sensitrak_vibrotactile.name=Vulintus SensiTrak Vibrotactile Module (ST-VT)
+sensitrak_vibrotactile.name=SensiTrak Vibrotactile Module (ST-VT)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 sensitrak_vibrotactile.vid.0=0x0403 
@@ -346,7 +348,7 @@ sensitrak_vibrotactile.bootloader.lock_bits=0x0F
 sensitrak_vibrotactile.bootloader.unlock_bits=0x3F
 
 # Menu
-sensitrak_vibrotactile.menu.pcb_ver.v2_1=SensiTrak Vibrotactile Module V0.1
+sensitrak_vibrotactile.menu.pcb_ver.v2_1=Version 0.1
 sensitrak_vibrotactile.menu.pcb_ver.v2_1.build.variant=sensitrak_vibrotactile_v2_1
 
 ########################################################################################################################
