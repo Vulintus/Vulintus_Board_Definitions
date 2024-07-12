@@ -164,7 +164,7 @@ static const uint8_t ATN = PIN_ATN;
 #define PIN_VPB_CLK_IN      (2u)       
 #define PIN_VPB_CLK_OUT     (3u)   
 #define PIN_VPB_TRG         (4u)
-#define PIN_VPB_BLK         (5u)
+#define PIN_VPB_BLOCK       (5u)
 
 // Display / Status
 #define PIN_OLED_RST        (8u)

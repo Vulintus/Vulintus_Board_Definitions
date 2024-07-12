@@ -162,7 +162,7 @@ static const uint8_t BTN_D = PIN_QT_BTN_D;
 #define PIN_VPB_CLK_IN    (6u)       
 #define PIN_VPB_CLK_OUT   (7u)   
 #define PIN_VPB_TRG       (8u)
-#define PIN_VPB_BLK       (9u)
+#define PIN_VPB_BLOCK       (9u)
 
 // Calibration
 #define PIN_VLX_GPIO        (21u)
