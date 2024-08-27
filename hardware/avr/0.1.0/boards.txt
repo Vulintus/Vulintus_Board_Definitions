@@ -101,9 +101,9 @@ omnitrak_pocket_door.name=OmniTrak Pocket Door Module (OT-PD)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 omnitrak_pocket_door.vid.0=0x0403 
-omnitrak_pocket_door.pid.0=0x6A21
+omnitrak_pocket_door.pid.0=0x6A26
 omnitrak_pocket_door.upload_port.0.vid=0x0403 
-omnitrak_pocket_door.upload_port.0.pid=0x6A21
+omnitrak_pocket_door.upload_port.0.pid=0x6A26
 
 # Upload
 omnitrak_pocket_door.upload.maximum_size=32256
