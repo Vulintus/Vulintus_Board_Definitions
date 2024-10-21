@@ -105,6 +105,11 @@ static const uint8_t A7 = PIN_A7;
 #define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
 #define NVM_ADDR_VOLUME		      	60		// Starting address for the volume-control digital potentiometer value (4 bytes).
 
+// I2C Addresses.
+#define I2C_ADDR_MCP4631     		0x28        // MCP4631 digital potentiometer (volume and loadcell baseline control).
+#define I2C_ADDR_AD5273       		0x2C        // AD5273 digital potentiometer (oadcell gain control).
+
+
 //*********************************************************************************************************************/
 
 

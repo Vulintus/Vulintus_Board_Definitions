@@ -348,7 +348,7 @@ sensitrak_vibrotactile.bootloader.lock_bits=0x0F
 sensitrak_vibrotactile.bootloader.unlock_bits=0x3F
 
 # Menu
-sensitrak_vibrotactile.menu.pcb_ver.v2_1=Version 0.1
+sensitrak_vibrotactile.menu.pcb_ver.v2_1=Version 2.1
 sensitrak_vibrotactile.menu.pcb_ver.v2_1.build.variant=sensitrak_vibrotactile_v2_1
 
 ########################################################################################################################
