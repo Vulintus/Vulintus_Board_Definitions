@@ -104,6 +104,10 @@ static const uint8_t A7 = PIN_A7;
 #define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
 #define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
 #define NVM_ADDR_VOLUME		      	60		// Starting address for the volume-control digital potentiometer value (4 bytes).
+#define NVM_ADDR_CAL_SLOPE			64		// Starting address for the calibration slope (4 bytes).
+#define NVM_ADDR_CAL_BASELINE		68		// Starting address for the calibration baseline (4 bytes).
+#define NVM_ADDR_GAIN_POT			72		// Starting address for the gain potentiometer setting (4 bytes).
+#define NVM_ADDR_BASELINE_POT		76		// Starting address for the baseline potentiometer setting (4 bytes).
 
 // I2C Addresses.
 #define I2C_ADDR_MCP4631     		0x28        // MCP4631 digital potentiometer (volume and loadcell baseline control).
