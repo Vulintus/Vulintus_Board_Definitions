@@ -91,6 +91,8 @@ mototrak_pellet_pedestal.menu.pcb_ver.v0_1=Version 0.1
 mototrak_pellet_pedestal.menu.pcb_ver.v0_1.build.variant=mototrak_pellet_pedestal_v0_1
 mototrak_pellet_pedestal.menu.pcb_ver.v0_2=Version 0.2
 mototrak_pellet_pedestal.menu.pcb_ver.v0_2.build.variant=mototrak_pellet_pedestal_v0_2
+mototrak_pellet_pedestal.menu.pcb_ver.v0_3=Version 0.3
+mototrak_pellet_pedestal.menu.pcb_ver.v0_3.build.variant=mototrak_pellet_pedestal_v0_3
 
 
 ########################################################################################################################
