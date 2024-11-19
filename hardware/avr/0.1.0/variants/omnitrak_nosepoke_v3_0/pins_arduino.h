@@ -110,7 +110,7 @@ static const uint8_t A7 = PIN_A7;
 #define USB_DETECT          8
 #define PINBOARD_ID         A1
 
-#define PIN_VIN_ADC         A53
+#define PIN_VIN_ADC         A5
 
 // EEPROM address assignments (1024 bytes total). //
 #define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).

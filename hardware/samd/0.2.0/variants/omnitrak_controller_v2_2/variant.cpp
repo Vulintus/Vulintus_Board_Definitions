@@ -82,7 +82,7 @@ const PinDescription g_APinDescription[]=
   { PORTC, 14, PIO_DIGITAL,    PIN_ATTR_DIGITAL,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14  }, //nTFT_CS         (31) DIGITAL OUT *
 
   // Status LED (RGB)
-  { PORTA, 18, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH6,   TCC0_CH6,     EXTERNAL_INT_2   }, //LED_R           (32) PWM TCC0 WO/6 *
+  { PORTA, 18, PIO_DIGITAL,    PIN_ATTR_PWM_F,      No_ADC_Channel, TCC1_CH2,   TCC1_CH2,     EXTERNAL_INT_2   }, //LED_R           (32) PWM TCC0 WO/6 *
   { PORTA, 17, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH5,   TCC0_CH5,     EXTERNAL_INT_1   }, //LED_G           (33) PWM TCC0 WO/5 *
   { PORTA, 16, PIO_DIGITAL,    PIN_ATTR_PWM_G,      No_ADC_Channel, TCC0_CH4,   TCC0_CH4,     EXTERNAL_INT_0   }, //LED_B           (34) PWM TCC0 WO/4 *
 
