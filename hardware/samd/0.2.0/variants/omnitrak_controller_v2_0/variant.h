@@ -23,8 +23,10 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   20                  // Divide by 10 to match the Eagle design version.
-#define NUM_OTMP_PORTS      5                   // Number of OTMP ports.
+#define CIRCUIT_BOARD_VER       20              // Divide by 10 to match the Eagle design version.
+#define NUM_OTMP_PORTS          5               // Number of OTMP ports.
+#define OMNITRAK_NUM_CUE_LED		1               // Number of cue/indicator LEDs.
+#define OMNITRAK_NUM_TTL_IO		  2               // Number of TTL I/O connections.
 #define VULINTUS_DEVICE_MAX_BAUDRATE  1000000   // Maximum serial baud rate.
 
 // RTC nonvolatile memory address assignments (43 bytes total).
