@@ -26,7 +26,7 @@
 #include <avr/pgmspace.h>
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   		23          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   		3          // Divide by 10 to match the Eagle design version.
 
 #define NUM_DIGITAL_PINS            20
 #define NUM_ANALOG_INPUTS           6
@@ -114,6 +114,10 @@ static const uint8_t A7 = PIN_A7;
 #define NVM_ADDR_CAL_BASELINE		68		// Starting address for the calibration baseline (4 bytes).
 #define NVM_ADDR_GAIN				72		// Starting address for the gain setting (4 bytes).
 #define NVM_ADDR_BASELINE_POT		76		// Starting address for the baseline potentiometer setting (4 bytes).
+
+// I2C Addresses.
+#define I2C_ADDR_MCP4631     		0x28        // MCP4631 digital potentiometer (volume and loadcell baseline control).
+#define I2C_ADDR_AD5273       		0x2C        // AD5273 digital potentiometer (oadcell gain control).
 
 
 //*********************************************************************************************************************/
