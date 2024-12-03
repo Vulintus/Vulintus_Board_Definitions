@@ -334,6 +334,11 @@ vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.variant=liquid_dispenser_v2_0
 vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/liquid_dispenser_v2_0.cfg
 vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.usb_product="VPB Liquid Dispenser V2.0"
 
+vpb_liquid_dispenser.menu.pcb_ver.v2_1=Version 2.1
+vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.variant=liquid_dispenser_v2_1
+vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/liquid_dispenser_v2_1.cfg
+vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.usb_product="VPB Liquid Dispenser V2.1"
+
 
 
 ########################################################################################################################

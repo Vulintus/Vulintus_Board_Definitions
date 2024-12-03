@@ -16,26 +16,27 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_LIQUID_DISPENSER_V2_0_
-#define _VARIANT_LIQUID_DISPENSER_V2_0_
+#ifndef _VARIANT_LIQUID_DISPENSER_V2_1_
+#define _VARIANT_LIQUID_DISPENSER_V2_1_
 
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   20          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   21          // Divide by 10 to match the Eagle design version.
 #define DRV_ITRIP_REF				3.0				  // Reference voltage for the DRV8834 current control. 
 #define R_ISENSE						0.402 		  // Sense resistor value for the DRV8834 current control.
 #define LEFT_MOTOR_I				0					  // Index (0 or 1) for the left motor.
 #define LEFT_NEOPIX_I				1 				  // Index (0 or 1) for the left NeoPixel.
 #define NUM_NEOPIX          2           // Number of NeoPixels.
-#define EEPROM_SIZE         0           // Available EEPROM bytes.
+#define EEPROM_SIZE         256         // Available EEPROM bytes.
 
 // I2C Addresses.
 #define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell baseline adjustment).
 #define I2C_ADDR_AD5273_R		0x2D		    // AD5273 digital potentiometer #2 (right loadcell baseline adjustment).
 #define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
 #define I2C_ADDR_OLED				0x3C		    // OLED display.
+#define I2C_ADDR_EEPROM 		0x50		    // AT24C02D I2C EEPROM.
 
 
 /*----------------------------------------------------------------------------
