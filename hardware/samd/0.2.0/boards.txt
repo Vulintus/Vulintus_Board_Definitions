@@ -26,7 +26,7 @@ habitrak_thermal_activity_monitor.name=HabiTrak Thermal Activity Monitor (HT-TH)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
-# Sublicense Request 4325, submitted by Drew on 2/2/2022
+# Sublicense Request 4325, submitted by Drew on 2022-02-02
 habitrak_thermal_activity_monitor.vid.0=0x04D8
 habitrak_thermal_activity_monitor.pid.0=0xE6C2
 habitrak_thermal_activity_monitor.build.vid=0x04D8
@@ -69,7 +69,7 @@ habitrak_thermal_activity_monitor.menu.pcb_ver.v1_0=Version 1.0
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_0.upload.maximum_size=520192
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_0.build.extra_flags=-D__SAMD51__ -D__SAMD51P19A__ -DVULINTUS_HABITRAK {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_0.build.openocdscript=openocd_scripts/habitrak_v1_0.cfg
-habitrak_thermal_activity_monitor.menu.pcb_ver.v1_0.build.usb_product="HabiTrak Thermal Activity Monitor V1.0"
+habitrak_thermal_activity_monitor.menu.pcb_ver.v1_0.build.usb_product="Version 1.0"
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_0.build.variant=habitrak_v1_0
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_0.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 
@@ -77,7 +77,7 @@ habitrak_thermal_activity_monitor.menu.pcb_ver.v1_1=Version 1.1
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_1.upload.maximum_size=520192
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_1.build.extra_flags=-D__SAMD51__ -D__SAMD51P19A__ -DVULINTUS_HABITRAK {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_1.build.openocdscript=openocd_scripts/habitrak_v1_1.cfg
-habitrak_thermal_activity_monitor.menu.pcb_ver.v1_1.build.usb_product="HabiTrak Thermal Activity Monitor V1.1"
+habitrak_thermal_activity_monitor.menu.pcb_ver.v1_1.build.usb_product="Version 1.1"
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_1.build.variant=habitrak_v1_1
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_1.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 
@@ -85,7 +85,7 @@ habitrak_thermal_activity_monitor.menu.pcb_ver.v1_2=Version 1.2
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_2.upload.maximum_size=520192
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_2.build.extra_flags=-D__SAMD51__ -D__SAMD51P19A__ -DVULINTUS_HABITRAK {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_2.build.openocdscript=openocd_scripts/habitrak_v1_2.cfg
-habitrak_thermal_activity_monitor.menu.pcb_ver.v1_2.build.usb_product="HabiTrak Thermal Activity Monitor V1.2"
+habitrak_thermal_activity_monitor.menu.pcb_ver.v1_2.build.usb_product="Version 1.2"
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_2.build.variant=habitrak_v1_2
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_2.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 
@@ -93,7 +93,7 @@ habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3=Version 1.3
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3.upload.maximum_size=520192
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3.build.extra_flags=-D__SAMD51__ -D__SAMD51P19A__ -DVULINTUS_HABITRAK {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3.build.openocdscript=openocd_scripts/habitrak_v1_3.cfg
-habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3.build.usb_product="HabiTrak Thermal Activity Monitor V1.3"
+habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3.build.usb_product="Version 1.3"
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3.build.variant=habitrak_v1_3
 habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3.bootloader.file=samd51x19a/bootloader_samd51x19a.bin
 
@@ -122,6 +122,8 @@ habitrak_thermal_activity_monitor.menu.pcb_ver.v1_3.bootloader.file=samd51x19a/b
 mototrak_spherical_treadmill.name=MotoTrak Spherical Treadmill (MT-ST)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4626, submitted by Drew on 2024-06-28
 mototrak_spherical_treadmill.vid.0=0x04D8
 mototrak_spherical_treadmill.pid.0=0xE59E
 mototrak_spherical_treadmill.build.vid=0x04D8
@@ -155,7 +157,7 @@ mototrak_spherical_treadmill.bootloader.file=samd21x18a/bootloader_samd21e18a.bi
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1=Version 0.1
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.variant=spherical_treadmill_v0_1
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.openocdscript=openocd_scripts/spherical_treadmill_v0_1.cfg
-mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.usb_product="Spherical Treadmill V0.1"
+mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.usb_product="Version 0.1"
 
 
 ########################################################################################################################
@@ -166,7 +168,7 @@ omnitrak_common_controller.name=OmniTrak Common Controller (OT-CC)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
-# Sublicense Request 4289, submitted by Drew on 1/13/2022
+# Sublicense Request 4289, submitted by Drew on 2022-01-13
 omnitrak_common_controller.vid.0=0x04D8    
 omnitrak_common_controller.pid.0=0xE6C3    
 omnitrak_common_controller.build.vid=0x04D8
@@ -191,10 +193,7 @@ omnitrak_common_controller.build.f_cpu=120000000L
 omnitrak_common_controller.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 omnitrak_common_controller.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
 omnitrak_common_controller.build.mcu=cortex-m4
-# MOVED TO MENU: omnitrak_common_controller.build.openocdscript=openocd_scripts/omnitrak_controller_v2_0.cfg
-# MOVED TO MENU: omnitrak_common_controller.build.usb_product="OmniTrak Controller V2.0"
 omnitrak_common_controller.build.usb_manufacturer="Vulintus"
-# MOVED TO MENU: omnitrak_common_controller.build.variant=omnitrak_controller_v2_0
 omnitrak_common_controller.build.variant_system_lib=
 
 # Bootloader
@@ -239,12 +238,59 @@ omnitrak_common_controller.menu.pcb_ver.v2_2.build.usb_product="Version 2.2"
 
 
 ########################################################################################################################
+# OmniTrak Social Choice Module (OT-SC)
+# ------------------------------
+
+omnitrak_social_choice.name=OmniTrak Social Choice Module (OT-SC)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4754, submitted by Drew on 2025-01-01
+omnitrak_social_choice.vid.0=0x04D8
+omnitrak_social_choice.pid.0=0xE52F
+omnitrak_social_choice.build.vid=0x04D8
+omnitrak_social_choice.build.pid=0xE52F
+
+# Upload
+omnitrak_social_choice.upload.tool=bossac18
+omnitrak_social_choice.upload.protocol=sam-ba
+omnitrak_social_choice.upload.maximum_size=262144
+omnitrak_social_choice.upload.offset=0x2000
+omnitrak_social_choice.upload.use_1200bps_touch=true
+omnitrak_social_choice.upload.wait_for_upload_port=true
+omnitrak_social_choice.upload.native_usb=true
+
+# Build
+omnitrak_social_choice.build.mcu=cortex-m0plus
+omnitrak_social_choice.build.f_cpu=48000000L
+omnitrak_social_choice.build.flags.optimize=-Os
+omnitrak_social_choice.build.usb_manufacturer="Vulintus"
+omnitrak_social_choice.build.board=SOCIAL_CHOICE_MODULE
+omnitrak_social_choice.build.core=arduino
+omnitrak_social_choice.build.extra_flags=-DCRYSTALLESS -D__SAMD21__ -D__SAMD21E18A__ -DVULINTUS_OMNITRAK_SOCIAL_CHOICE -DARM_MATH_CM0PLUS {build.usb_flags}
+omnitrak_social_choice.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+omnitrak_social_choice.build.variant_system_lib=
+
+# Bootloader
+omnitrak_social_choice.bootloader.tool=openocd
+omnitrak_social_choice.bootloader.file=samd21x18a/bootloader_samd21e18a.bin
+
+# Menu
+omnitrak_social_choice.menu.pcb_ver.v0_1=Version 0.1
+omnitrak_social_choice.menu.pcb_ver.v0_1.build.variant=social_choice_v0_1
+omnitrak_social_choice.menu.pcb_ver.v0_1.build.openocdscript=openocd_scripts/social_choice_v0_1.cfg
+omnitrak_social_choice.menu.pcb_ver.v0_1.build.usb_product="Version 0.1"
+
+
+########################################################################################################################
 # VPB Linear Autopositioner (PB-LA)
 # ------------------------------
 
 vpb_linear_autopositioner.name=VPB Linear Autopositioner (PB-LA)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4325, submitted by Drew on 2023-02-02
 vpb_linear_autopositioner.vid.0=0x04D8
 vpb_linear_autopositioner.pid.0=0xE6AC
 vpb_linear_autopositioner.build.vid=0x04D8
@@ -264,14 +310,11 @@ vpb_linear_autopositioner.build.mcu=cortex-m0plus
 vpb_linear_autopositioner.build.f_cpu=48000000L
 vpb_linear_autopositioner.build.cache_flags=-DENABLE_CACHE
 vpb_linear_autopositioner.build.flags.optimize=-Os
-# MOVED TO MENU: vpb_linear_autopositioner.build.usb_product="Linear Autopositioner V2.1"
 vpb_linear_autopositioner.build.usb_manufacturer="Vulintus"
 vpb_linear_autopositioner.build.board=LINEAR_AUTOPOSITIONER
 vpb_linear_autopositioner.build.core=arduino
 vpb_linear_autopositioner.build.extra_flags=-D__SAMD21__ -D__SAMD21G17A__ -DVULINTUS_VPB_LINEAR_AUTOPOSITIONER -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
 vpb_linear_autopositioner.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-# MOVED TO MENU: vpb_linear_autopositioner.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
-# MOVED TO MENU: vpb_linear_autopositioner.build.variant=linear_autopositioner_v2_1
 vpb_linear_autopositioner.build.variant_system_lib=
 
 # Bootloader
@@ -282,7 +325,7 @@ vpb_linear_autopositioner.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
 vpb_linear_autopositioner.menu.pcb_ver.v2_1=Version 2.1
 vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.variant=linear_autopositioner_v2_1
 vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
-vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.usb_product="VPB Linear Autopositioner V2.1"
+vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.usb_product="Version 2.1"
 
 
 ########################################################################################################################
@@ -293,7 +336,7 @@ vpb_liquid_dispenser.name=VPB Liquid Dispenser (PB-LD)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
-# Sublicense Request 4470, submitted by Drew on 10/9/2023
+# Sublicense Request 4470, submitted by Drew on 2023-10-09
 vpb_liquid_dispenser.vid.0=0x04D8
 vpb_liquid_dispenser.pid.0=0xE62E
 vpb_liquid_dispenser.build.vid=0x04D8
@@ -314,14 +357,11 @@ vpb_liquid_dispenser.build.mcu=cortex-m0plus
 vpb_liquid_dispenser.build.f_cpu=48000000L
 vpb_liquid_dispenser.build.cache_flags=-DENABLE_CACHE
 vpb_liquid_dispenser.build.flags.optimize=-Os
-# MOVED TO MENU: vpb_liquid_dispenser.build.usb_product="Liquid Dispenser V2.0"
 vpb_liquid_dispenser.build.usb_manufacturer="Vulintus"
-vpb_liquid_dispenser.build.board=LIQUID_DISPENSER_V2_0
+vpb_liquid_dispenser.build.board=LIQUID_DISPENSER
 vpb_liquid_dispenser.build.core=arduino
 vpb_liquid_dispenser.build.extra_flags=-D__SAMD21__  -D__SAMD21G17A__ -DVULINTUS_VPB_LIQUID_DISPENSER -DCRYSTALLESS -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
 vpb_liquid_dispenser.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-# MOVED TO MENU: vpb_liquid_dispenser.build.openocdscript=openocd_scripts/liquid_dispenser_v2_0.cfg
-# MOVED TO MENU: vpb_liquid_dispenser.build.variant=liquid_dispenser_v2_0
 vpb_liquid_dispenser.build.variant_system_lib=
 
 # Bootloader
@@ -332,13 +372,59 @@ vpb_liquid_dispenser.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
 vpb_liquid_dispenser.menu.pcb_ver.v2_0=Version 2.0
 vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.variant=liquid_dispenser_v2_0
 vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/liquid_dispenser_v2_0.cfg
-vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.usb_product="VPB Liquid Dispenser V2.0"
+vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.usb_product="Version 2.0"
 
 vpb_liquid_dispenser.menu.pcb_ver.v2_1=Version 2.1
 vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.variant=liquid_dispenser_v2_1
 vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/liquid_dispenser_v2_1.cfg
-vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.usb_product="VPB Liquid Dispenser V2.1"
+vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.usb_product="Version 2.1"
 
+
+########################################################################################################################
+# VPB Pellet Dispenser (PB-PD)
+# -------------------------
+
+vpb_pellet_dispenser.name=VPB Pellet Dispenser (PB-LD)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4753, submitted by Drew on 2025-01-01
+vpb_pellet_dispenser.vid.0=0x04D8
+vpb_pellet_dispenser.pid.0=0xE530
+vpb_pellet_dispenser.build.vid=0x04D8
+vpb_pellet_dispenser.build.pid=0xE530
+
+# Upload
+vpb_pellet_dispenser.upload.tool=bossac18
+vpb_pellet_dispenser.upload.protocol=sam-ba
+vpb_pellet_dispenser.upload.maximum_size=262144
+vpb_pellet_dispenser.upload.maximum_data_size=32768
+vpb_pellet_dispenser.upload.offset=0x2000
+vpb_pellet_dispenser.upload.use_1200bps_touch=true
+vpb_pellet_dispenser.upload.wait_for_upload_port=true
+vpb_pellet_dispenser.upload.native_usb=true
+
+# Build
+vpb_pellet_dispenser.build.mcu=cortex-m0plus
+vpb_pellet_dispenser.build.f_cpu=48000000L
+vpb_pellet_dispenser.build.cache_flags=-DENABLE_CACHE
+vpb_pellet_dispenser.build.flags.optimize=-Os
+vpb_pellet_dispenser.build.usb_manufacturer="Vulintus"
+vpb_pellet_dispenser.build.board=PELLET_DISEPNSER
+vpb_pellet_dispenser.build.core=arduino
+vpb_pellet_dispenser.build.extra_flags=-D__SAMD21__  -D__SAMD21G18A__ -DVULINTUS_VPB_PELLET_DISPENSER -DCRYSTALLESS -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
+vpb_pellet_dispenser.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+vpb_pellet_dispenser.build.variant_system_lib=
+
+# Bootloader
+vpb_pellet_dispenser.bootloader.tool=openocd
+vpb_pellet_dispenser.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
+
+# Menu
+vpb_pellet_dispenser.menu.pcb_ver.v2_0=Version 6.0
+vpb_pellet_dispenser.menu.pcb_ver.v2_0.build.variant=pellet_dispenser_v6_0
+vpb_pellet_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/pellet_dispenser_v6_0.cfg
+vpb_pellet_dispenser.menu.pcb_ver.v2_0.build.usb_product="Version 6.0"
 
 
 ########################################################################################################################
@@ -349,7 +435,7 @@ vpb_ring_light.name=VPB Ring Light (PB-RL)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
-# Sublicense Request 4290, submitted by Drew on 1/13/2022
+# Sublicense Request 4290, submitted by Drew on 2022-01-13
 vpb_ring_light.vid.0=0x04D8    
 vpb_ring_light.pid.0=0xE6C0    
 vpb_ring_light.build.vid=0x04D8
@@ -389,7 +475,7 @@ vpb_ring_light.bootloader.file=ring_light_v2_0/sam_ba_SAMD11C14A.bin
 vpb_ring_light.menu.pcb_ver.v2_0=Version 2.0
 vpb_ring_light.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0
 vpb_ring_light.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
-vpb_ring_light.menu.pcb_ver.v2_0.build.usb_product="VPB Ring Light V2.0"
+vpb_ring_light.menu.pcb_ver.v2_0.build.usb_product="Version 2.0"
 
 
 ########################################################################################################################
@@ -400,7 +486,7 @@ vpb_ring_light_fab_sam.name=VPB Ring Light (PB-RL) - FabSam Workaround
 
 # VID/PID for Bootloader, Arduino & CircuitPython
 # Microchip's VID (https://www.microchip.com/usblicensing/)
-# Sublicense Request 4290, submitted by Drew on 1/13/2022
+# Sublicense Request 4290, submitted by Drew on 2022-01-13
 vpb_ring_light_fab_sam.vid.0=0x04D8    
 vpb_ring_light_fab_sam.pid.0=0xE6C0    
 vpb_ring_light_fab_sam.build.vid=0x04D8
@@ -457,6 +543,6 @@ vpb_ring_light_fab_sam.compiler.S.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path
 vpb_ring_light_fab_sam.menu.pcb_ver.v2_0=Version 2.0
 vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0_fab_sam
 vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0_fab_sam.cfg
-vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.usb_product="VPB Ring Light V2.0"
+vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.usb_product="Version 2.0"
 
 ########################################################################################################################

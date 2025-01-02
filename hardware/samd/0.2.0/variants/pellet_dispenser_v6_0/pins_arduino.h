@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "../liquid_dispenser_v2_1/variant.h"
+#include "../pellet_dispenser_v6_0/variant.h"
 
