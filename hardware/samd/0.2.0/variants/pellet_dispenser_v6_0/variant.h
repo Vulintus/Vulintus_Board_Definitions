@@ -23,7 +23,8 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   50          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   60          // Divide by 10 to match the Eagle design version.
+#define STEPPER_DRIVER_MODEL_DRV8434S   // Stepper driver model.
 #define NUM_NEOPIX          4           // Number of NeoPixels.
 #define EEPROM_SIZE         256         // Available EEPROM bytes.
 

@@ -24,6 +24,7 @@
 
 // Non-pin definitions specific to this circuit board iteration.
 #define CIRCUIT_BOARD_VER   21          // Divide by 10 to match the Eagle design version.
+#define STEPPER_DRIVER_MODEL_DRV8834    // Stepper driver model.
 #define DRV_ITRIP_REF				3.0				  // Reference voltage for the DRV8834 current control. 
 #define R_ISENSE						0.402 		  // Sense resistor value for the DRV8834 current control.
 #define LEFT_MOTOR_I				0					  // Index (0 or 1) for the left motor.

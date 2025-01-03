@@ -24,6 +24,7 @@
 
 // Non-pin definitions specific to this circuit board iteration.
 #define CIRCUIT_BOARD_VER   1           // Divide by 10 to match the Eagle design version.
+#define STEPPER_DRIVER_MODEL_DRV8434S   // Stepper driver model.
 
 
 /*----------------------------------------------------------------------------
