@@ -87,6 +87,7 @@ static const uint8_t A7 = PIN_A7;
 
 // Stepper driver model.
 #define STEPPER_DRIVER_MODEL_DRV8434S
+#define STEPPER_DRIVER_CURRENT_MAX		3788
 
 // Pin definitions. //
 #define PIN_LOADCELL		A6

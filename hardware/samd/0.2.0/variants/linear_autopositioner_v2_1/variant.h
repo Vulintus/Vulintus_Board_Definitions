@@ -23,9 +23,10 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   21          // Divide by 10 to match the Eagle design version.
-#define NUM_NEOPIX          1           // Number of NeoPixels.
-#define STEPPER_DRIVER_MODEL_DRV8434S   // Stepper driver model.
+#define CIRCUIT_BOARD_VER   21              // Divide by 10 to match the Eagle design version.
+#define NUM_NEOPIX          1               // Number of NeoPixels.
+#define STEPPER_DRIVER_MODEL_DRV8434S       // Stepper driver model.
+#define STEPPER_DRIVER_CURRENT_MAX		2500  // Maximum possible stepper coil current, in mA
 
 // I2C Addresses.
 #define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell baseline adjustment).

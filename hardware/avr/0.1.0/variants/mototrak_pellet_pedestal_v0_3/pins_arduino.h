@@ -85,8 +85,9 @@ static const uint8_t A7 = PIN_A7;
 // Circuit board version. Divide by 10 to match the Eagle design version.
 #define CIRCUIT_BOARD_VER   		3 		
 
-// Stepper driver model.
+// Stepper driver parameters.
 #define STEPPER_DRIVER_MODEL_DRV8434S
+#define STEPPER_DRIVER_CURRENT_MAX		1000
 
 // OmniTrak library definitions.
 #define OMNITRAK_NUM_CUE_LED	1
