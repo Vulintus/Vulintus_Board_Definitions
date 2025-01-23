@@ -146,11 +146,11 @@ static const uint8_t DAC0 = PIN_DAC0;
  * Serial interfaces
  */
 
-// Serial1, OTMP (SERCOM3)
-#define PIN_SERIAL1_TX      (0ul)       // PA22
-#define PIN_SERIAL1_RX      (1ul)       // PA23
-#define PAD_SERIAL1_TX      (UART_TX_PAD_0)
-#define PAD_SERIAL1_RX      (SERCOM_RX_PAD_1)
+// Serial1, OTMP (SERCOM2)
+#define PIN_SERIAL1_TX      (0ul)       // PA14
+#define PIN_SERIAL1_RX      (1ul)       // PA15
+#define PAD_SERIAL1_TX      (UART_TX_PAD_2)
+#define PAD_SERIAL1_RX      (SERCOM_RX_PAD_3)
 #define SERCOM_SERIAL1		  sercom2
 
 
@@ -159,6 +159,7 @@ static const uint8_t DAC0 = PIN_DAC0;
  */
 #define SPI_INTERFACES_COUNT 1
 
+// SPI0 (SERCOM0)
 #define PIN_SPI_MOSI         (2u)       // PA06
 #define PIN_SPI_MISO         (3u)       // PA05
 #define PIN_SPI_SCK          (4u)       // PA07
@@ -181,7 +182,18 @@ static const uint8_t POCI = PIN_SPI_MISO ;
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 0
+// The social choice module board doesn't use I2C, but it's defined here
+// for libraries that require the possibility of an I2C interface.
+#define WIRE_INTERFACES_COUNT 1
+
+// Wire0 (SERCOM1)
+#define PIN_WIRE_SDA         (13u)        // PA16
+#define PIN_WIRE_SCL         (14u)        // PA17
+#define PERIPH_WIRE          sercom1
+#define WIRE_IT_HANDLER      SERCOM1_Handler
+
+static const uint8_t SDA = PIN_WIRE_SDA;
+static const uint8_t SCL = PIN_WIRE_SCL;
 
 
 /*
