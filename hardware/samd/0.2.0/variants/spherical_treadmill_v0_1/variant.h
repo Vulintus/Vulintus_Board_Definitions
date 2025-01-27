@@ -23,7 +23,9 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   1           // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER           1   // Divide by 10 to match the Eagle design version.
+#define OMNITRAK_NUM_CUE_LED		    1   // We'll treat the status LED as a cue LED.
+#define OMNITRAK_NUM_OPTICAL_FLOW	  2   // Number of optical flow sensors.
 
 // I2C Addresses.
 #define I2C_ADDR_OLED				0x3C		    // OLED display.

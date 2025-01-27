@@ -23,9 +23,10 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   1               // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER             1     // Divide by 10 to match the Eagle design version.
 #define STEPPER_DRIVER_MODEL_DRV8434S       // Stepper driver model.
-#define STEPPER_DRIVER_CURRENT_MAX		2500  // Maximum possible stepper coil current, in mA
+#define STEPPER_DRIVER_CURRENT_MAX		2500  // Maximum possible stepper coil current, in mA.
+#define OMNITRAK_NUM_CUE_LED		      1     // We'll treat the status LED as a cue LED.
 
 
 /*----------------------------------------------------------------------------
