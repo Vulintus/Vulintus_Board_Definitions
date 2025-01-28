@@ -23,11 +23,11 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   60              // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER             60    // Divide by 10 to match the Eagle design version.
 #define STEPPER_DRIVER_MODEL_DRV8434S       // Stepper driver model.
 #define STEPPER_DRIVER_CURRENT_MAX		2500  // Maximum possible stepper coil current, in mA
-#define NUM_NEOPIX          4               // Number of NeoPixels.
-#define EEPROM_SIZE         256             // Available EEPROM bytes.
+#define NUM_NEOPIX                    4     // Number of NeoPixels.
+#define EEPROM_SIZE                   256   // Available EEPROM bytes.
 
 // I2C Addresses.
 #define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (pellet detector reference).
@@ -127,7 +127,6 @@ static const uint8_t A3  = PIN_A3;
 static const uint8_t A4  = PIN_A4;
 static const uint8_t A5  = PIN_A5;
 static const uint8_t A6  = PIN_A6 ;
-static const uint8_t A7  = PIN_A7 ;
 
 #define ADC_RESOLUTION		12
 
