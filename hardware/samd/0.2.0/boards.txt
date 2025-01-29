@@ -155,8 +155,8 @@ mototrak_spherical_treadmill.bootloader.file=samd21x18a/bootloader_samd21e18a.bi
 
 # Menu
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1=Version 0.1
-mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.variant=spherical_treadmill_v0_1
-mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.openocdscript=openocd_scripts/spherical_treadmill_v0_1.cfg
+mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.variant=mototrak_spherical_treadmill_v0_1
+mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.openocdscript=openocd_scripts/mototrak_spherical_treadmill_v0_1.cfg
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.usb_product="Version 0.1"
 
 
@@ -277,8 +277,8 @@ omnitrak_social_choice.bootloader.file=samd21x18a/bootloader_samd21e18a.bin
 
 # Menu
 omnitrak_social_choice.menu.pcb_ver.v0_1=Version 0.1
-omnitrak_social_choice.menu.pcb_ver.v0_1.build.variant=social_choice_v0_1
-omnitrak_social_choice.menu.pcb_ver.v0_1.build.openocdscript=openocd_scripts/social_choice_v0_1.cfg
+omnitrak_social_choice.menu.pcb_ver.v0_1.build.variant=omnitrak_social_choice_v0_1
+omnitrak_social_choice.menu.pcb_ver.v0_1.build.openocdscript=openocd_scripts/omnitrak_social_choice_v0_1.cfg
 omnitrak_social_choice.menu.pcb_ver.v0_1.build.usb_product="Version 0.1"
 
 
@@ -323,8 +323,8 @@ vpb_linear_autopositioner.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
 
 # Menu
 vpb_linear_autopositioner.menu.pcb_ver.v2_1=Version 2.1
-vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.variant=linear_autopositioner_v2_1
-vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
+vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.variant=vpb_linear_autopositioner_v2_1
+vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/vpb_linear_autopositioner_v2_1.cfg
 vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.usb_product="Version 2.1"
 
 
@@ -370,13 +370,13 @@ vpb_liquid_dispenser.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
 
 # Menu
 vpb_liquid_dispenser.menu.pcb_ver.v2_0=Version 2.0
-vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.variant=liquid_dispenser_v2_0
-vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/liquid_dispenser_v2_0.cfg
+vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.variant=vpb_liquid_dispenser_v2_0
+vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/vpb_liquid_dispenser_v2_0.cfg
 vpb_liquid_dispenser.menu.pcb_ver.v2_0.build.usb_product="Version 2.0"
 
 vpb_liquid_dispenser.menu.pcb_ver.v2_1=Version 2.1
-vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.variant=liquid_dispenser_v2_1
-vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/liquid_dispenser_v2_1.cfg
+vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.variant=vpb_liquid_dispenser_v2_1
+vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/vpb_liquid_dispenser_v2_1.cfg
 vpb_liquid_dispenser.menu.pcb_ver.v2_1.build.usb_product="Version 2.1"
 
 
@@ -422,8 +422,8 @@ vpb_pellet_dispenser.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
 
 # Menu
 vpb_pellet_dispenser.menu.pcb_ver.v2_0=Version 6.0
-vpb_pellet_dispenser.menu.pcb_ver.v2_0.build.variant=pellet_dispenser_v6_0
-vpb_pellet_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/pellet_dispenser_v6_0.cfg
+vpb_pellet_dispenser.menu.pcb_ver.v2_0.build.variant=vpb_pellet_dispenser_v6_0
+vpb_pellet_dispenser.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/vpb_pellet_dispenser_v6_0.cfg
 vpb_pellet_dispenser.menu.pcb_ver.v2_0.build.usb_product="Version 6.0"
 
 
@@ -461,20 +461,20 @@ vpb_ring_light.build.f_cpu=48000000L
 vpb_ring_light.build.flags.optimize=-Os
 vpb_ring_light.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 vpb_ring_light.build.mcu=cortex-m0plus
-# MOVED TO MENU: vpb_ring_light.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
+# MOVED TO MENU: vpb_ring_light.build.openocdscript=openocd_scripts/vpb_ring_light_v2_0.cfg
 # MOVED TO MENU: vpb_ring_light.build.usb_product="Ring Light V2.0"
 vpb_ring_light.build.usb_manufacturer="Vulintus"
-# MOVED TO MENU: vpb_ring_light.build.variant=ring_light_v2_0
+# MOVED TO MENU: vpb_ring_light.build.variant=vpb_ring_light_v2_0
 vpb_ring_light.build.variant_system_lib=
 
 # Bootloader
 vpb_ring_light.bootloader.tool=openocd
-vpb_ring_light.bootloader.file=ring_light_v2_0/sam_ba_SAMD11C14A.bin
+vpb_ring_light.bootloader.file=vpb_ring_light_v2_0/sam_ba_SAMD11C14A.bin
 
 # Menu
 vpb_ring_light.menu.pcb_ver.v2_0=Version 2.0
-vpb_ring_light.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0
-vpb_ring_light.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0.cfg
+vpb_ring_light.menu.pcb_ver.v2_0.build.variant=vpb_ring_light_v2_0
+vpb_ring_light.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/vpb_ring_light_v2_0.cfg
 vpb_ring_light.menu.pcb_ver.v2_0.build.usb_product="Version 2.0"
 
 
@@ -518,7 +518,7 @@ vpb_ring_light_fab_sam.build.floatconfig=FLOAT_BOTH_DOUBLES_ONLY
 vpb_ring_light_fab_sam.build.ldscript=linker_scripts/gcc/4KB_Bootloader/flash_16KB.ld
 vpb_ring_light_fab_sam.build.mathlib=arm_cortexM0l_math
 vpb_ring_light_fab_sam.build.mcu=cortex-m0plus
-# MOVED TO MENU: vpb_ring_light_fab_sam.build.openocdscript=openocd_scripts/ring_light_v2_0_fab_sam.cfg
+# MOVED TO MENU: vpb_ring_light_fab_sam.build.openocdscript=openocd_scripts/vpb_ring_light_v2_0_fab_sam.cfg
 vpb_ring_light_fab_sam.build.flags.optimize=-Os
 vpb_ring_light_fab_sam.build.serialcom_uart=NO_UART
 vpb_ring_light_fab_sam.build.serialcom_wire=NO_WIRE
@@ -527,11 +527,11 @@ vpb_ring_light_fab_sam.build.timerconfig=TIMER_732Hz
 # MOVED TO MENU: vpb_ring_light_fab_sam.build.usb_product="Ring Light V2.0"
 vpb_ring_light_fab_sam.build.usb_manufacturer="Vulintus"
 vpb_ring_light_fab_sam.build.usbcom=CDC_ONLY
-# MOVED TO MENU: vpb_ring_light_fab_sam.build.variant=ring_light_v2_0_fab_sam
+# MOVED TO MENU: vpb_ring_light_fab_sam.build.variant=vpb_ring_light_v2_0_fab_sam
 vpb_ring_light_fab_sam.build.variant_system_lib=
 
 # Bootloader
-vpb_ring_light_fab_sam.bootloader.file=ring_light_v2_0_fab_sam/sam_ba_SAMD11C14A.bin
+vpb_ring_light_fab_sam.bootloader.file=vpb_ring_light_v2_0_fab_sam/sam_ba_SAMD11C14A.bin
 vpb_ring_light_fab_sam.bootloader.tool=edbg
 
 # Compiler
@@ -541,8 +541,8 @@ vpb_ring_light_fab_sam.compiler.S.extra_flags="-I{runtime.tools.CMSIS-4.5.0.path
 
 # Menu
 vpb_ring_light_fab_sam.menu.pcb_ver.v2_0=Version 2.0
-vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.variant=ring_light_v2_0_fab_sam
-vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/ring_light_v2_0_fab_sam.cfg
+vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.variant=vpb_ring_light_v2_0_fab_sam
+vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.openocdscript=openocd_scripts/vpb_ring_light_v2_0_fab_sam.cfg
 vpb_ring_light_fab_sam.menu.pcb_ver.v2_0.build.usb_product="Version 2.0"
 
 ########################################################################################################################

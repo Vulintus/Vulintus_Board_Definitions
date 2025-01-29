@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "../ring_light_v2_0/variant.h"
+#include "../vpb_liquid_dispenser_v2_1/variant.h"
 

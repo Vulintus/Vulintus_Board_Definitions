@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "../social_choice_v0_1/variant.h"
+#include "../vpb_liquid_dispenser_v2_0/variant.h"
 

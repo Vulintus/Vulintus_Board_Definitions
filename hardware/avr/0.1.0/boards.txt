@@ -353,4 +353,46 @@ sensitrak_vibrotactile.bootloader.unlock_bits=0x3F
 sensitrak_vibrotactile.menu.pcb_ver.v2_1=Version 2.1
 sensitrak_vibrotactile.menu.pcb_ver.v2_1.build.variant=sensitrak_vibrotactile_v2_1
 
+
+########################################################################################################################
+# VPB Pellet Dispenser (PB-PD)
+# -------------------------
+
+vpb_pellet_dispenser.name=VPB Pellet Dispenser (PB-LD)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+vpb_pellet_dispenser.vid.0=0x2341
+vpb_pellet_dispenser.pid.0=0x0043
+vpb_pellet_dispenser.upload_port.0.vid=0x2341 
+vpb_pellet_dispenser.upload_port.0.pid=0x0043
+
+# Upload
+vpb_pellet_dispenser.upload.maximum_size=32256
+vpb_pellet_dispenser.upload.maximum_data_size=2048
+vpb_pellet_dispenser.upload.protocol=arduino
+vpb_pellet_dispenser.upload.speed=115200
+vpb_pellet_dispenser.upload.tool=avrdude
+vpb_pellet_dispenser.upload.tool.default=avrdude
+
+# Build
+vpb_pellet_dispenser.build.board=AVR_VPB_PELLET_DISPENSER
+vpb_pellet_dispenser.build.core=arduino:arduino
+vpb_pellet_dispenser.build.f_cpu=16000000L
+vpb_pellet_dispenser.build.mcu=atmega328p
+vpb_pellet_dispenser.build.extra_flags=-DVULINTUS_VPB_PELLET_DISPENSER
+
+# Bootloader
+vpb_pellet_dispenser.bootloader.file=optiboot/optiboot_atmega328.hex
+vpb_pellet_dispenser.bootloader.tool=avrdude
+vpb_pellet_dispenser.bootloader.tool.default=avrdude
+vpb_pellet_dispenser.bootloader.low_fuses=0xFF
+vpb_pellet_dispenser.bootloader.high_fuses=0xDE
+vpb_pellet_dispenser.bootloader.extended_fuses=0xFD
+vpb_pellet_dispenser.bootloader.lock_bits=0x0F
+vpb_pellet_dispenser.bootloader.unlock_bits=0x3F
+
+# Menu
+vpb_pellet_dispenser.menu.pcb_ver.v0_1=Version 5.2
+vpb_pellet_dispenser.menu.pcb_ver.v0_1.build.variant=vpb_pellet_dispenser_v5_2
+
 ########################################################################################################################

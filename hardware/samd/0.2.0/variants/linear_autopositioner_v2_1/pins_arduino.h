@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "../linear_autopositioner_v2_1/variant.h"
+#include "../vpb_linear_autopositioner_v2_1/variant.h"
 

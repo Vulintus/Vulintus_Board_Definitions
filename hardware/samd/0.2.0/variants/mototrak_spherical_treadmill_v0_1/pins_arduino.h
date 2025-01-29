@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "../pellet_dispenser_v6_0/variant.h"
+#include "../mototrak_spherical_treadmill_v0_1/variant.h"
 

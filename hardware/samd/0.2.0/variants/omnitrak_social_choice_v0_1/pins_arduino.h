@@ -17,5 +17,5 @@
 */
 
 // API compatibility
-#include "../spherical_treadmill_v0_1/variant.h"
+#include "../omnitrak_social_choice_v0_1/variant.h"
 
