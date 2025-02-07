@@ -245,8 +245,12 @@ extern Uart Serial1;
 //                            pins are NOT connected to anything by default.
 #define SERIAL_PORT_USBVIRTUAL      Serial
 #define SERIAL_PORT_MONITOR         Serial
+
 // Serial has no physical pins broken out, so it's not listed as HARDWARE port
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
+
+// Alias Serial to SerialUSB
+#define SerialUSB                   Serial
 
 #endif /* _VARIANT_SPHERICAL_TREADMILL_V0_1_ */
