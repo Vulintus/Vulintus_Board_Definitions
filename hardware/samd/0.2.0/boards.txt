@@ -219,6 +219,11 @@ omnitrak_common_controller.menu.pcb_ver.v2_2.build.variant=omnitrak_controller_v
 omnitrak_common_controller.menu.pcb_ver.v2_2.build.openocdscript=openocd_scripts/omnitrak_controller_v2_2.cfg
 omnitrak_common_controller.menu.pcb_ver.v2_2.build.usb_product="Version 2.2"
 
+omnitrak_common_controller.menu.pcb_ver.ble=BLE Test
+omnitrak_common_controller.menu.pcb_ver.ble.build.variant=omnitrak_controller_ble
+omnitrak_common_controller.menu.pcb_ver.ble.build.openocdscript=openocd_scripts/omnitrak_controller_ble.cfg
+omnitrak_common_controller.menu.pcb_ver.ble.build.usb_product="BLE TEST"
+
 # Parameter options formerly set with the menu:
 # omnitrak_common_controller.build.cache_flags=-DENABLE_CACHE
 # omnitrak_common_controller.build.cache_flags=
@@ -323,8 +328,8 @@ vpb_linear_autopositioner.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
 
 # Menu
 vpb_linear_autopositioner.menu.pcb_ver.v2_1=Version 2.1
-vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.variant=vpb_linear_autopositioner_v2_1
-vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/vpb_linear_autopositioner_v2_1.cfg
+vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.variant=linear_autopositioner_v2_1
+vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
 vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.usb_product="Version 2.1"
 
 
