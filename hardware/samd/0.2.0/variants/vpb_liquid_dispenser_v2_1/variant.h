@@ -152,10 +152,10 @@ static const uint8_t A7  = PIN_A7 ;
 
 #define PIN_DRV_VREF          PIN_A1     // Stepper Driver Current-Control Voltage Reference.
 
-#define PIN_LOADCELL_1        PIN_A2     // Water Scale Loadcell #1 Signal.
-#define PIN_LOADCELL_VREF_1   PIN_A3     // Water Scale Loadcell #1 Baseline.
-#define PIN_LOADCELL_2        PIN_A4     // Water Scale Loadcell #2 Signal.
-#define PIN_LOADCELL_VREF_2   PIN_A5     // Water Scale Loadcell #2 Baseline.
+#define PIN_LOADCELL_L        PIN_A4     // Water Scale Left Loadcell #2 Signal.
+#define PIN_LOADCELL_VREF_L   PIN_A5     // Water Scale Left Loadcell #2 Baseline.
+#define PIN_LOADCELL_R        PIN_A2     // Water Scale Right Loadcell #1 Signal.
+#define PIN_LOADCELL_VREF_R   PIN_A3     // Water Scale Right Loadcell #1 Baseline.
 #define PIN_DET_L             PIN_A6     // Water Detector Signal - Left.
 #define PIN_DET_R             PIN_A7     // Water Detector Signal - Right.
 
