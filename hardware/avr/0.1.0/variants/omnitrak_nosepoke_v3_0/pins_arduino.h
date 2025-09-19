@@ -85,7 +85,7 @@ static const uint8_t A7 = PIN_A7;
 // VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION **********************************************************/
 
 // OmniTrak library definitions.
-#define OMNITRAK_NUM_POKES  	1
+#define OMNITRAK_NUM_IR_BEAMS  	1
 #define OMNITRAK_NUM_CUE_LED	1
 
 // Pin definitions. //
