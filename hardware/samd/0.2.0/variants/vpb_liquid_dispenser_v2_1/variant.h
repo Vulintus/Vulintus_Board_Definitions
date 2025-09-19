@@ -33,8 +33,9 @@
 #define EEPROM_SIZE         256         // Available EEPROM bytes.
 
 // I2C Addresses.
-#define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell baseline adjustment).
-#define I2C_ADDR_AD5273_R		0x2D		    // AD5273 digital potentiometer #2 (right loadcell baseline adjustment).
+#define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell gain adjustment).
+#define I2C_ADDR_AD5273_R		0x2D		    // AD5273 digital potentiometer #2 (right loadcell gain adjustment).
+#define I2C_ADDR_MCP4631		0x28		    // MCP4631 digital potentiometer (baseline control).
 #define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
 #define I2C_ADDR_OLED				0x3C		    // OLED display.
 #define I2C_ADDR_EEPROM 		0x50		    // AT24C02D I2C EEPROM.
@@ -178,7 +179,7 @@ static const uint8_t ATN = PIN_ATN;
 #define PIN_BTN_C           (12u)
 #define PIN_BTN_R           (13u)
 
-// DRV8434S Stepper Driver
+// DRV8834 Stepper Driver
 #define PIN_DRV_DIR         (15u)
 #define PIN_DRV_STEP        (16u)
 #define PIN_DRV_EN          (17u)

@@ -106,6 +106,7 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_DRV_STEP        10
 #define PIN_DRV_CS          A0
 #define PIN_DRV_FLT         2
+#define PIN_DRV_VREF		6
 
 #define PIN_QUAD_CS        	4
 
