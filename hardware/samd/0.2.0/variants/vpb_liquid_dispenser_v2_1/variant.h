@@ -23,19 +23,23 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER       21      // Divide by 10 to match the Eagle design version.
-#define STEPPER_DRIVER_MODEL_DRV8834    // Stepper driver model.
-#define DRV_ITRIP_REF				    3.0		  // Reference voltage for the DRV8834 current control. 
-#define R_ISENSE						    0.402   // Sense resistor value for the DRV8834 current control.
-#define LEFT_MOTOR_I				    0			  // Index (0 or 1) for the left motor.
-#define LEFT_NEOPIX_I				    1 		  // Index (0 or 1) for the left NeoPixel.
-#define LEFT_LOADCELL_I			    0       // Wiper index (0 or 1) for the left loadcell baseline adjustment.
-#define NUM_NEOPIX              2       // Number of NeoPixels.
-#define EEPROM_SIZE             256     // Available EEPROM bytes.
-#define OMNITRAK_NUM_LOADCELLS  2       // There's two loadcells in the liquid weight scale.
-#define OMNITRAK_NUM_IR_BEAMS   2       // Left and right liquid detectors.
-#define OMNITRAK_NUM_CUE_LED	  2       // We'll treat the status LEDs as cue LEDs.
-#define ANALOG_READ_RESOLUTION  12      // Analog read resolution (in bits)
+#define CIRCUIT_BOARD_VER           21        // Divide by 10 to match the Eagle design version.
+#define STEPPER_DRIVER_MODEL_DRV8834          // Stepper driver model.
+#define NUM_NEOPIX                  2         // Number of NeoPixels.
+#define OMNITRAK_NUM_LOADCELLS      2         // There's two loadcells in the liquid weight scale.
+#define OMNITRAK_NUM_IR_BEAMS       2         // Left and right liquid detectors.
+#define OMNITRAK_NUM_CUE_LED	      2         // We'll treat the status LEDs as cue LEDs.
+#define EEPROM_SIZE                 256       // Available EEPROM bytes.
+#define DRV_ITRIP_REF				        3.0		    // Reference voltage for the DRV8834 current control. 
+#define R_ISENSE						        0.402     // Sense resistor value for the DRV8834 current control.
+#define LEFT_MOTOR_I				        0			    // Index (0 or 1) for the left motor.
+#define LEFT_NEOPIX_I				        1 		    // Index (0 or 1) for the left NeoPixel.
+#define LEFT_BASE_WIPER_I			      1         // Wiper index (0 or 1) for the left loadcell baseline adjustment.
+#define GAIN_MAX_RESISTANCE         1000      // Maximum resistance for the loadcell gain adjustment potentiometer.
+#define GAIN_WIPER_RESISTANCE       60        // Wiper resistance for the loadcell gain adjustment potentiometer.
+#define BASELINE_MAX_RESISTANCE     10000     // Maximum resistance for the loadcell baseline adjustment potentiometer.
+#define BASELINE_WIPER_RESISTANCE   75        // Wiper resistance for the loadcell baseline adjustment potentiometer.
+#define LOADCELL_FB_RESISTANCE      1000000   // Feedback resistor value for the loadcell amplifier.
 
 // I2C Addresses.
 #define I2C_ADDR_AD5273_L		0x2D		    // AD5273 digital potentiometer #1 (left loadcell gain adjustment).
@@ -147,7 +151,7 @@ static const uint8_t A5  = PIN_A5;
 static const uint8_t A6  = PIN_A6 ;
 static const uint8_t A7  = PIN_A7 ;
 
-#define ADC_RESOLUTION		12
+#define ADC_RESOLUTION		    12
 
 #define PIN_VIN               PIN_A0     // Input Voltage Monitor.
 
