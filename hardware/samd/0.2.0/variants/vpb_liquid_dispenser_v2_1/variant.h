@@ -29,6 +29,7 @@
 #define R_ISENSE						    0.402   // Sense resistor value for the DRV8834 current control.
 #define LEFT_MOTOR_I				    0			  // Index (0 or 1) for the left motor.
 #define LEFT_NEOPIX_I				    1 		  // Index (0 or 1) for the left NeoPixel.
+#define LEFT_LOADCELL_I			    0       // Wiper index (0 or 1) for the left loadcell baseline adjustment.
 #define NUM_NEOPIX              2       // Number of NeoPixels.
 #define EEPROM_SIZE             256     // Available EEPROM bytes.
 #define OMNITRAK_NUM_LOADCELLS  2       // There's two loadcells in the liquid weight scale.
@@ -37,8 +38,8 @@
 #define ANALOG_READ_RESOLUTION  12      // Analog read resolution (in bits)
 
 // I2C Addresses.
-#define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell gain adjustment).
-#define I2C_ADDR_AD5273_R		0x2D		    // AD5273 digital potentiometer #2 (right loadcell gain adjustment).
+#define I2C_ADDR_AD5273_L		0x2D		    // AD5273 digital potentiometer #1 (left loadcell gain adjustment).
+#define I2C_ADDR_AD5273_R		0x2C		    // AD5273 digital potentiometer #2 (right loadcell gain adjustment).
 #define I2C_ADDR_MCP4631		0x28		    // MCP4631 digital potentiometer (baseline control).
 #define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
 #define I2C_ADDR_OLED				0x3C		    // OLED display.
@@ -152,10 +153,10 @@ static const uint8_t A7  = PIN_A7 ;
 
 #define PIN_DRV_VREF          PIN_A1     // Stepper Driver Current-Control Voltage Reference.
 
-#define PIN_LOADCELL_L        PIN_A4     // Water Scale Left Loadcell #2 Signal.
-#define PIN_LOADCELL_VREF_L   PIN_A5     // Water Scale Left Loadcell #2 Baseline.
-#define PIN_LOADCELL_R        PIN_A2     // Water Scale Right Loadcell #1 Signal.
-#define PIN_LOADCELL_VREF_R   PIN_A3     // Water Scale Right Loadcell #1 Baseline.
+#define PIN_LOADCELL_L        PIN_A2     // Water Scale Left Loadcell #2 Signal.
+#define PIN_LOADCELL_VREF_L   PIN_A3     // Water Scale Left Loadcell #2 Baseline.
+#define PIN_LOADCELL_R        PIN_A4     // Water Scale Right Loadcell #1 Signal.
+#define PIN_LOADCELL_VREF_R   PIN_A5     // Water Scale Right Loadcell #1 Baseline.
 #define PIN_DET_L             PIN_A6     // Water Detector Signal - Left.
 #define PIN_DET_R             PIN_A7     // Water Detector Signal - Right.
 
