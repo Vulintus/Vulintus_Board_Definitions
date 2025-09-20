@@ -81,7 +81,7 @@
   extern "C" unsigned int PINCOUNT_fn();
 #endif
 #define PINS_COUNT           (PINCOUNT_fn())
-#define NUM_DIGITAL_PINS     (34u)
+#define NUM_DIGITAL_PINS     (33u)
 #define NUM_ANALOG_INPUTS    (9u)
 #define NUM_ANALOG_OUTPUTS   (0u)
 #define analogInputToDigitalPin(p)  ((p == 0u) ?  14u : (p == 1u) ?  21 : (p < 8u) ? 21u + (p) : (p == 8u) ? 30u :-1)
@@ -260,9 +260,9 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE   (33ul)
-#define PIN_USB_DM            (34ul)
-#define PIN_USB_DP            (35ul)
+#define PIN_USB_HOST_ENABLE   (6ul)
+#define PIN_USB_DM            (33ul)
+#define PIN_USB_DP            (34ul)
 
 
 /*
