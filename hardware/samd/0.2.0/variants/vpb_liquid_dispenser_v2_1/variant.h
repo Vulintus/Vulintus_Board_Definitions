@@ -204,7 +204,7 @@ static const uint8_t ATN = PIN_ATN;
 #define PIN_DET_INT         (29u)
 
 // USB
-#define PIN_USB_DETECT      (32ul)
+#define PIN_USB_DETECT      (31ul)
 
 
 /*
@@ -261,8 +261,8 @@ static const uint8_t SCL = PIN_WIRE_SCL;
  * USB
  */
 #define PIN_USB_HOST_ENABLE   (6ul)
-#define PIN_USB_DM            (33ul)
-#define PIN_USB_DP            (34ul)
+#define PIN_USB_DM            (32ul)
+#define PIN_USB_DP            (33ul)
 
 
 /*
