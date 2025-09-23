@@ -42,12 +42,16 @@
 #define LOADCELL_FB_RESISTANCE      1000000   // Feedback resistor value for the loadcell amplifier.
 
 // I2C Addresses.
-#define I2C_ADDR_AD5273_L		0x2D		    // AD5273 digital potentiometer #1 (left loadcell gain adjustment).
-#define I2C_ADDR_AD5273_R		0x2C		    // AD5273 digital potentiometer #2 (right loadcell gain adjustment).
-#define I2C_ADDR_MCP4631		0x28		    // MCP4631 digital potentiometer (baseline control).
-#define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
-#define I2C_ADDR_OLED				0x3C		    // OLED display.
-#define I2C_ADDR_EEPROM 		0x50		    // AT24C02D I2C EEPROM.
+#define I2C_ADDR_AD5273_L		0x2D		      // AD5273 digital potentiometer #1 (left loadcell gain adjustment).
+#define I2C_ADDR_AD5273_R		0x2C		      // AD5273 digital potentiometer #2 (right loadcell gain adjustment).
+#define I2C_ADDR_MCP4631		0x28		      // MCP4631 digital potentiometer (baseline control).
+#define I2C_ADDR_MCP40D18T	0x2E		      // MCP40D18T digital potentiometer (motor current adjustment).
+#define I2C_ADDR_OLED				0x3C		      // OLED display.
+#define I2C_ADDR_EEPROM 		0x50		      // AT24C02D I2C EEPROM.
+
+// EEPROM address assignments (1024 bytes total). //
+#define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
+#define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
 
 
 /*----------------------------------------------------------------------------
