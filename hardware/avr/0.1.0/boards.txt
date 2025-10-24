@@ -96,6 +96,51 @@ mototrak_pellet_pedestal.menu.pcb_ver.v0_3.build.variant=mototrak_pellet_pedesta
 
 
 ########################################################################################################################
+# OmniTrak Pellet Receiver (OT-PR)
+# --------------------------
+
+omnitrak_pellet_receiver.name=OmniTrak Pellet Receiver Module (OT-PR)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+omnitrak_pellet_receiver.vid.0=0x0403 
+omnitrak_pellet_receiver.pid.0=0x6A20
+omnitrak_pellet_receiver.upload_port.0.vid=0x0403 
+omnitrak_pellet_receiver.upload_port.0.pid=0x6A20
+
+# Upload
+omnitrak_pellet_receiver.upload.maximum_size=32256
+omnitrak_pellet_receiver.upload.maximum_data_size=2048
+omnitrak_pellet_receiver.upload.protocol=arduino
+omnitrak_pellet_receiver.upload.speed=115200
+omnitrak_pellet_receiver.upload.tool=avrdude
+omnitrak_pellet_receiver.upload.tool.default=avrdude
+
+# Build
+omnitrak_pellet_receiver.build.board=AVR_OMNITRAK_PELLET_RECEIVER
+omnitrak_pellet_receiver.build.core=arduino:arduino
+omnitrak_pellet_receiver.build.f_cpu=16000000L
+omnitrak_pellet_receiver.build.mcu=atmega328p
+# MOVED TO MENU: omnitrak_pellet_receiver.build.variant=omnitrak_pellet_receiver_v3_1
+omnitrak_pellet_receiver.build.extra_flags=-DVULINTUS_OMNITRAK_PELLET_RECEIVER
+
+# Bootloader
+omnitrak_pellet_receiver.bootloader.file=optiboot/optiboot_atmega328.hex
+omnitrak_pellet_receiver.bootloader.tool=avrdude
+omnitrak_pellet_receiver.bootloader.tool.default=avrdude
+omnitrak_pellet_receiver.bootloader.low_fuses=0xFF
+omnitrak_pellet_receiver.bootloader.high_fuses=0xDE
+omnitrak_pellet_receiver.bootloader.extended_fuses=0xFD
+omnitrak_pellet_receiver.bootloader.lock_bits=0x0F
+omnitrak_pellet_receiver.bootloader.unlock_bits=0x3F
+
+# Menu
+omnitrak_pellet_receiver.menu.pcb_ver.v3_0=Version 3.0
+omnitrak_pellet_receiver.menu.pcb_ver.v3_0.build.variant=omnitrak_nosepoke_v3_0
+omnitrak_pellet_receiver.menu.pcb_ver.v3_1=Version 3.1
+omnitrak_pellet_receiver.menu.pcb_ver.v3_1.build.variant=omnitrak_nosepoke_v3_1
+
+
+########################################################################################################################
 # OmniTrak Pocket Door Module (OT-PD)
 # --------------------------
 

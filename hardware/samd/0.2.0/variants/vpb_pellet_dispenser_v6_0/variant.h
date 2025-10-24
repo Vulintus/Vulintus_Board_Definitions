@@ -34,6 +34,10 @@
 #define I2C_ADDR_OLED				0x3C		    // OLED display.
 #define I2C_ADDR_EEPROM 		0x50		    // AT24C02D I2C EEPROM.
 
+// EEPROM address assignments (256 bytes total). //
+#define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
+#define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
+
 
 /*----------------------------------------------------------------------------
  *        Definitions
@@ -233,7 +237,7 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE   PIN_USB_DETECT
+#define PIN_USB_HOST_ENABLE   (9ul)
 #define PIN_USB_DM            (33ul)
 #define PIN_USB_DP            (34ul)
 

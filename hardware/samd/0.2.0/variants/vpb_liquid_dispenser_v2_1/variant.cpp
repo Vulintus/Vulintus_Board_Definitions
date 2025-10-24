@@ -82,7 +82,6 @@ const PinDescription g_APinDescription[] =
   { PORTA, 24, PIO_COM,     PIN_ATTR_NONE,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_12  }, //USB_D_N         (32) USB DATA-
   { PORTA, 25, PIO_COM,     PIN_ATTR_NONE,    No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_13  }, //USB_D_P         (33) USB DATA+
 
-
   // Analog Reference
   { PORTA, 3,  PIO_ANALOG,  PIN_ATTR_ANALOG,  No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_3  }, //VREF             (34) ANALOG
 
