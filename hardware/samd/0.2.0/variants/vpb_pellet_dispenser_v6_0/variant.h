@@ -37,6 +37,7 @@
 // EEPROM address assignments (256 bytes total). //
 #define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
 #define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
+#define NVM_ADDR_DISPENSER_NUM  	60     	// Address for the user-set dispenser number (1 byte).
 
 
 /*----------------------------------------------------------------------------
