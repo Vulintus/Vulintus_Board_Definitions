@@ -238,7 +238,7 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE   (9ul)
+// #define PIN_USB_HOST_ENABLE   (9ul) // PA31 << Fixed samd21_host.c so this doesn't have to be defined.
 #define PIN_USB_DM            (33ul)
 #define PIN_USB_DP            (34ul)
 

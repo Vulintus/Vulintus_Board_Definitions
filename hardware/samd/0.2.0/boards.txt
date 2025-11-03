@@ -151,7 +151,7 @@ mototrak_spherical_treadmill.build.variant_system_lib=
 
 # Bootloader
 mototrak_spherical_treadmill.bootloader.tool=openocd
-mototrak_spherical_treadmill.bootloader.file=samd21x18a/bootloader_samd21e18a.bin
+mototrak_spherical_treadmill.bootloader.file=samd21x18a/bootloader_samd21x18a.bin
 
 # Menu
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1=Version 0.1
@@ -278,7 +278,7 @@ omnitrak_social_choice.build.variant_system_lib=
 
 # Bootloader
 omnitrak_social_choice.bootloader.tool=openocd
-omnitrak_social_choice.bootloader.file=samd21x18a/bootloader_samd21e18a.bin
+omnitrak_social_choice.bootloader.file=samd21x18a/bootloader_samd21x18a.bin
 
 # Menu
 omnitrak_social_choice.menu.pcb_ver.v0_1=Version 0.1
