@@ -34,7 +34,7 @@
 #define I2C_ADDR_OLED				0x3C		    // OLED display.
 #define I2C_ADDR_EEPROM 		0x50		    // AT24C02D I2C EEPROM.
 
-// EEPROM address assignments (256 bytes total). //
+// Nonvolatile memory (EEPROM) address assignments (256 bytes total). //
 #define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
 #define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
 #define NVM_ADDR_DISPENSER_NUM  	60     	// Address for the user-set dispenser number (1 byte).
