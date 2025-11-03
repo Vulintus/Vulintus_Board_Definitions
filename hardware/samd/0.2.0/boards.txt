@@ -16,7 +16,7 @@
 
 
 menu.pcb_ver=Circuit Board Version
-
+menu.ball_diameter=Ball Diameter
 
 ########################################################################################################################
 # HabiTrak Thermal Activity Monitor (HT-TH)
@@ -153,11 +153,15 @@ mototrak_spherical_treadmill.build.variant_system_lib=
 mototrak_spherical_treadmill.bootloader.tool=openocd
 mototrak_spherical_treadmill.bootloader.file=samd21x18a/bootloader_samd21x18a.bin
 
-# Menu
+# Menu (PCB Version)
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1=Version 0.1
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.variant=mototrak_spherical_treadmill_v0_1
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.openocdscript=openocd_scripts/mototrak_spherical_treadmill_v0_1.cfg
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.usb_product="Version 0.1"
+
+# Menu (Ball Diameter)
+mototrak_spherical_treadmill.menu.ball_diameter.195p5mm=195.5mm
+mototrak_spherical_treadmill.menu.ball_diameter.195p5mm.build.flags.hwver=-DMTST_BALL_DIAM=195.5 -DMTST_THETA1=120 -DMTST_THETA2=-60 -DMTST_PHI=-40 -DMTST_SENSOR_ANGLE=45
 
 
 ########################################################################################################################
