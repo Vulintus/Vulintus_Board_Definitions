@@ -160,8 +160,8 @@ mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.openocdscript=openocd_scrip
 mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.usb_product="Version 0.1"
 
 # Menu (Ball Diameter)
-mototrak_spherical_treadmill.menu.ball_diameter.195p5mm=195.5mm
-mototrak_spherical_treadmill.menu.ball_diameter.195p5mm.build.flags.hwver=-DMTST_BALL_DIAM=195.5 -DMTST_THETA1=120 -DMTST_THETA2=-60 -DMTST_PHI=-40 -DMTST_SENSOR_ANGLE=45
+mototrak_spherical_treadmill.menu.ball_diameter.200mm=200mm
+mototrak_spherical_treadmill.menu.ball_diameter.200mm.build.flags.hwver=-MTST_BALL_DIAM_NOM=200 -DMTST_BALL_DIAM_MM=195.5
 
 
 ########################################################################################################################
