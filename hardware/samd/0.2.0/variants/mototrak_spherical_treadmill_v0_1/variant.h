@@ -23,9 +23,11 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER           1   // Divide by 10 to match the Eagle design version.
-#define OMNITRAK_NUM_CUE_LED		    1   // We'll treat the status LED as a cue LED.
-#define OMNITRAK_NUM_OPTICAL_FLOW	  2   // Number of optical flow sensors.
+#define CIRCUIT_BOARD_VER           1           // Divide by 10 to match the Eagle design version.
+#define OMNITRAK_NUM_CUE_LED		    1           // We'll treat the status LED as a cue LED.
+#define OMNITRAK_NUM_OPTICAL_FLOW	  2           // Number of optical flow sensors.
+#define R_VIN_TOP                   10000.0f    // Input voltage monitor top resistor value, in ohms.
+#define R_VIN_BOTTOM                1000.0f     // Input voltage monitor bottom resistor value, in ohms.
 
 // I2C Addresses.
 #define I2C_ADDR_OLED				0x3C		    // OLED display.
@@ -33,6 +35,7 @@
 // Nonvolatile memory (Flash) address assignments (60 bytes total). //
 #define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
 #define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
+
 
 
 /*----------------------------------------------------------------------------

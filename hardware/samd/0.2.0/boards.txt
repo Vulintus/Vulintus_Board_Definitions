@@ -161,7 +161,7 @@ mototrak_spherical_treadmill.menu.pcb_ver.v0_1.build.usb_product="Version 0.1"
 
 # Menu (Ball Diameter)
 mototrak_spherical_treadmill.menu.ball_diameter.200mm=200mm
-mototrak_spherical_treadmill.menu.ball_diameter.200mm.build.flags.hwver=-DMTST_BALL_DIAM_NOM=200 -DMTST_BALL_DIAM_MM=195.5
+mototrak_spherical_treadmill.menu.ball_diameter.200mm.build.flags.hwver=-DMTST_BALL_DIAM_NOM=200 -DMTST_BALL_DIAM_MM=195.5f
 
 
 ########################################################################################################################
