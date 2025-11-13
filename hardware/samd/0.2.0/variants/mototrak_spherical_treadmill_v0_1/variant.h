@@ -26,8 +26,8 @@
 #define CIRCUIT_BOARD_VER           1           // Divide by 10 to match the Eagle design version.
 #define OMNITRAK_NUM_CUE_LED		    1           // We'll treat the status LED as a cue LED.
 #define OMNITRAK_NUM_OPTICAL_FLOW	  2           // Number of optical flow sensors.
-#define R_VIN_TOP                   10000.0f    // Input voltage monitor top resistor value, in ohms.
-#define R_VIN_BOTTOM                1000.0f     // Input voltage monitor bottom resistor value, in ohms.
+#define R_TOP_VIN                   10000.0f    // Input voltage monitor top resistor value, in ohms.
+#define R_BOTTOM_VIN                1000.0f     // Input voltage monitor bottom resistor value, in ohms.
 
 // I2C Addresses.
 #define I2C_ADDR_OLED				0x3C		    // OLED display.

@@ -23,16 +23,28 @@
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   21              // Divide by 10 to match the Eagle design version.
-#define NUM_NEOPIX          1               // Number of NeoPixels.
-#define STEPPER_DRIVER_MODEL_DRV8434S       // Stepper driver model.
-#define STEPPER_DRIVER_CURRENT_MAX		2500  // Maximum possible stepper coil current, in mA
+#define CIRCUIT_BOARD_VER   21                  // Divide by 10 to match the Eagle design version.
+#define NUM_NEOPIX          1                   // Number of NeoPixels.
+#define STEPPER_DRIVER_MODEL_DRV8434S           // Stepper driver model.
+#define STEPPER_DRIVER_CURRENT_MAX		2500      // Maximum possible stepper coil current, in mA
+#define R_TOP_VIN                     10000.0f  // Input voltage monitor top resistor value, in ohms.
+#define R_BOTTOM_VIN                  1000.0f   // Input voltage monitor bottom resistor value, in ohms.
+#define R_TOP_15V                     10000.0f  // 15V supply voltage monitor top resistor value, in ohms.
+#define R_BOTTOM_15V                  1000.0f   // 15V supply voltage monitor bottom resistor value, in ohms.
+#define R_TOP_5V                      10000.0f  // 5V supply voltage monitor top resistor value, in ohms.
+#define R_BOTTOM_5V                   1000.0f   // 5V supply voltage monitor bottom resistor value, in ohms.
 
 // I2C Addresses.
 #define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell baseline adjustment).
 #define I2C_ADDR_AD5273_R		0x2D		    // AD5273 digital potentiometer #2 (right loadcell baseline adjustment).
 #define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
 #define I2C_ADDR_OLED				0x3C		    // OLED display.
+
+// Nonvolatile memory (Flash) address assignments (60 bytes total). //
+#define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
+#define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
+#define NVM_ADDR_DISPLAY_OFFSET   60      // Starting address for the display offset, in millimeters (4 bytes).
+#define NVM_ADDR_LAST_POS         64      // Starting address for the last known position, in millimeters (4 bytes).
 
 
 /*----------------------------------------------------------------------------
