@@ -16,14 +16,14 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_
-#define _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_
+#ifndef _VARIANT_LINEAR_AUTOPOSITIONER_V2_2_
+#define _VARIANT_LINEAR_AUTOPOSITIONER_V2_2_
 
 // The definitions here needs a SAMD core >=1.6.10
 #define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
 
 // Non-pin definitions specific to this circuit board iteration.
-#define CIRCUIT_BOARD_VER   21                  // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER   22                  // Divide by 10 to match the Eagle design version.
 #define NUM_NEOPIX          1                   // Number of NeoPixels.
 #define STEPPER_DRIVER_MODEL_DRV8434S           // Stepper driver model.
 #define STEPPER_DRIVER_CURRENT_MAX		2500      // Maximum possible stepper coil current, in mA
@@ -37,6 +37,7 @@
 // I2C Addresses.
 #define I2C_ADDR_VL53L0X		0x29		    // VL53L0X time-of-flight distance sensor.
 #define I2C_ADDR_OLED				0x3C		    // OLED display.
+#define I2C_ADDR_EEPROM 		0x50		    // AT24C02D I2C EEPROM.
 
 // Nonvolatile memory (Flash) address assignments (60 bytes total). //
 #define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
@@ -291,4 +292,4 @@ extern SERCOM sercom5;
 #define SerialUSB                   Serial
 
 
-#endif /* _VARIANT_LINEAR_AUTOPOSITIONER_V2_1_ */
+#endif /* _VARIANT_LINEAR_AUTOPOSITIONER_V2_2_ */

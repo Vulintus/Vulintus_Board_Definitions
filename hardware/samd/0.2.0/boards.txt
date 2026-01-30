@@ -336,6 +336,11 @@ vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.variant=linear_autopositioner_
 vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.openocdscript=openocd_scripts/linear_autopositioner_v2_1.cfg
 vpb_linear_autopositioner.menu.pcb_ver.v2_1.build.usb_product="Version 2.1"
 
+vpb_linear_autopositioner.menu.pcb_ver.v2_2=Version 2.2
+vpb_linear_autopositioner.menu.pcb_ver.v2_2.build.variant=linear_autopositioner_v2_2
+vpb_linear_autopositioner.menu.pcb_ver.v2_2.build.openocdscript=openocd_scripts/linear_autopositioner_v2_2.cfg
+vpb_linear_autopositioner.menu.pcb_ver.v2_2.build.usb_product="Version 2.2"
+
 
 ########################################################################################################################
 # VPB Liquid Dispenser (PB-LD)

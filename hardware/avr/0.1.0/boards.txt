@@ -5,7 +5,7 @@ menu.pcb_ver=Circuit Board Version
 
 
 ########################################################################################################################
-# MotoTrak Autopositioner (VP-MA)
+# MotoTrak Autopositioner (MT-AP)
 # --------------------------
 
 mototrak_autopositioner.name=MotoTrak Autopositioner (MT-AP)
@@ -46,6 +46,50 @@ mototrak_autopositioner.bootloader.unlock_bits=0x3F
 # Menu
 mototrak_autopositioner.menu.pcb_ver.v1_3=Version 1.3
 mototrak_autopositioner.menu.pcb_ver.v1_3.build.variant=mototrak_autopositioner_v1_3
+
+
+########################################################################################################################
+# MotoTrak Controller (MT-CC)
+# --------------------------
+
+mototrak_controller.name=MotoTrak Controller (MT-CC)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# For now, the Autopositioner uses the same VID/PID as the Arduino Uno.
+mototrak_controller.vid.0=0x2341
+mototrak_controller.pid.0=0x0043
+mototrak_controller.upload_port.0.vid=0x2341
+mototrak_controller.upload_port.0.pid=0x0043
+
+# Upload
+mototrak_controller.upload.maximum_size=32256
+mototrak_controller.upload.maximum_data_size=2048
+mototrak_controller.upload.protocol=arduino
+mototrak_controller.upload.speed=115200
+mototrak_controller.upload.tool=avrdude
+mototrak_controller.upload.tool.default=avrdude
+
+# Build
+mototrak_controller.build.board=AVR_MOTOTRAK_CONTROLLER
+mototrak_controller.build.core=arduino:arduino
+mototrak_controller.build.f_cpu=16000000L
+mototrak_controller.build.mcu=atmega328p
+# MOVED TO MENU: mototrak_controller.build.variant=mototrak_controller_v5_0
+mototrak_controller.build.extra_flags=-DVULINTUS_MOTOTRAK_CONTROLLER
+
+# Bootloader
+mototrak_controller.bootloader.file=optiboot/optiboot_atmega328.hex
+mototrak_controller.bootloader.tool=avrdude
+mototrak_controller.bootloader.tool.default=avrdude
+mototrak_controller.bootloader.low_fuses=0xFF
+mototrak_controller.bootloader.high_fuses=0xDE
+mototrak_controller.bootloader.extended_fuses=0xFD
+mototrak_controller.bootloader.lock_bits=0x0F
+mototrak_controller.bootloader.unlock_bits=0x3F
+
+# Menu
+mototrak_controller.menu.pcb_ver.v5_0=Version 5.0
+mototrak_controller.menu.pcb_ver.v5_0.build.variant=mototrak_controller_v5_0
 
 
 ########################################################################################################################

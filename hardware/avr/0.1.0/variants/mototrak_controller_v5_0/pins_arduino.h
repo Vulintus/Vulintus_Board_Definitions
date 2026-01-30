@@ -80,43 +80,59 @@ static const uint8_t A7 = PIN_A7;
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : NOT_AN_INTERRUPT))
 
 
-// VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION ***********************************************************
+// VULINTUS-SPECIFIC ADDITIONS TO THE ARDUINO UNO DEFINITION **********************************************************/
 
 // Circuit board version.
-#define CIRCUIT_BOARD_VER   		31          // Divide by 10 to match the Eagle design version.
+#define CIRCUIT_BOARD_VER		50	// Divide by 10 to match the Eagle design version.
 
 // OmniTrak library definitions.
-#define OMNITRAK_NUM_IR_BEAMS  	1
-#define OMNITRAK_NUM_CUE_LED	1
+#define OMNITRAK_NUM_CUE_LED	0	// Number of cue LEDs.
 
 // Pin definitions. //
-#define PIN_IR_DET_A        A0
-#define PIN_IR_DET_D        2
 
-#define PIN_SPKR            A1
-#define PIN_VOLUME_CS       A5 
+#define PIN_VPB_TRG       8		// Set the analog pin for the feeder trigger output.
+#define PIN_VPB_CLK       2  	// Set the pin for the feeder error signal.
 
-#define PIN_LED_R           3
-#define PIN_LED_G           5
-#define PIN_LED_B           6
-#define PIN_LED_W           9
-#define PIN_LED_STATUS      10
+#define PIN_BNC_DIO       3   	// Set the pin for the front panel digital input/output.
 
-#define PIN_IQS_TOUT        4
-#define PIN_IQS_POUT        7
+#define PIN_NEOPIX        6   	// Set the pin for the Neopixels.
 
-#define PIN_CAP_SEND        A4 
-#define PIN_CAP_RECEIVE     A2
+#define PIN_LED_FEED      4   	// Set the pin for the feeder LED output.
+#define PIN_LED_RUN       5   	// Set the pin for the "RUN" LED.
+#define PIN_LED_PWR       6   	// Set the pin for the "PWR" LED.
 
-#define USB_DETECT          8
-#define PINBOARD_ID         A7
+#define PIN_LIGHTS        7   	// Set the pin for the cage light output.
 
-#define PIN_VIN_ADC         A3
+#define PIN_BUZZER        9   	// Set the pin for the tone buzzer.
 
-// Nonvolatile memory (EEPROM) address assignments (1024 bytes total). //
-#define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
-#define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
-#define NVM_ADDR_VOLUME		      	60		// Starting address for the volume-control digital potentiometer value (4 bytes).
+#define PIN_LS7366R_SS    10   	// Set the pin for the rotary encoder slave select.
+
+#define PIN_DAC_AIO_SS    5   	// Set the pin for the MCP4921 DAC connected to the A I/O BNC.
+#define PIN_DAC_DIO_SS    4   	// Set the pin for the MCP4921 DAC connected to the D I/O BNC.
+
+#define PIN_LRA_1         A2   	// Set the pin for the LRA #1 (vibration) output.
+#define PIN_LRA_2         A5   	// Set the pin for the LRA #2 (vibration) output.
+#define PIN_VIB_BUZZER    A1   	// Set the pin for the vibration masking buzzer output.
+
+// MotoTrak Controller V3.2+ analog input pin assignments. // 
+#define SIGNAL_S    A0        	// S: Primary loadcell/potentiometer input.
+#define SIGNAL_A    A2         	// A: Quadrature "A" input.
+#define SIGNAL_B    A1        	// B: Quadrature "B" input.
+#define SIGNAL_C    A4        	// C: Capacitive sensor input.
+#define SIGNAL_D    A5         	// D: IR swipe sensor input.
+#define SIGNAL_I    A3        	// I: Module identification input.
+
+// EEPROM address assignments (1024 bytes total). //
+#define NVM_ADDR_BOOTH_NUM     		0		// Starting address for the booth number (4 bytes).
+#define NVM_ADDR_CAL_BASE_INT		4		// Starting address for the loadcell/potentiometer zero offset calibration value (2 bytes).
+#define NVM_ADDR_CAL_FORCE_INT		6		// Starting address for the loadcell/potentiometer force calibration value (2 bytes).
+#define NVM_ADDR_CAL_TICK_INT		8		// Starting address for the loadcell/potentiometer tick calibration value (2 bytes).
+#define NVM_ADDR_LEVER_RANGE		126		// Starting address for the lever range calibration value (2 bytes).
+#define NVM_ADDR_SN              	10		// Starting address for the serial number (4 bytes).
+#define NVM_ADDR_BOOTH_ID         	14		// Starting address for the booth ID (4 bytes).
+#define NVM_ADDR_CAL_BASE_FL      	38		// Starting address for the loadcell/potentiometer baseline calibration value (4 bytes).
+#define NVM_ADDR_CAL_SLOPE_FL    	42		// Starting address for the loadcell/potentiometer slope calibration value (4 bytes).
+
 
 //*********************************************************************************************************************/
 
