@@ -134,8 +134,8 @@ static const uint8_t DAC0 = PIN_DAC0;
 
 // Speaker  
 #define PIN_SPKR            (11u)       //PA08
-#define PIN_PAM_EN_1        (12u)       //PA15
-#define PIN_PAM_EN_2        (13u)       //PA14
+#define PIN_PAM_EN1         (12u)       //PA15
+#define PIN_PAM_EN2         (13u)       //PA14
 
 // User Input
 #define PIN_BTN             (14u)       //PA07

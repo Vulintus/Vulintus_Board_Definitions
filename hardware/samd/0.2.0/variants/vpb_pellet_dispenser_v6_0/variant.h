@@ -163,8 +163,8 @@ static const uint8_t ATN = PIN_ATN;
 // Display / Status
 #define PIN_OLED_RST        (11u)        // PB08
 #define PIN_SPKR            (13u)        // PA27
-#define PIN_PAM_EN_1        (14u)        // PB23
-#define PIN_PAM_EN_2        (15u)        // PB22
+#define PIN_PAM_EN1         (14u)        // PB23
+#define PIN_PAM_EN2         (15u)        // PB22
 
 // User Input
 #define PIN_BTN             (16u)        // PB03
