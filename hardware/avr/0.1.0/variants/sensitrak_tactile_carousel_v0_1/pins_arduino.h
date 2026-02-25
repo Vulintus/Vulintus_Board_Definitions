@@ -91,9 +91,9 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_NOSEPOKE_R 			A0
 
 #define PIN_IV_IN_ADC 			A7
-#define PIN_I_IN_ADC 			A4
+#define PIN_IIN_ADC 			A4
 #define PIN_PWR_FAULT 			A3
-#define PIN_I_IN_RESET 			A5
+#define PIN_IIN_RESET 			A5
 
 #define PIN_BNC_IO 				A6
 

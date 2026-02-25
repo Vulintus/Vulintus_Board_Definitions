@@ -177,9 +177,10 @@ static const uint8_t DAC1 = PIN_DAC1;
 
 #define ADC_RESOLUTION		  12
 
-#define PIN_V_IN_ADC        PIN_A0        // 24V power supply voltage monitor.
-#define PIN_I_IN_ADC        PIN_A1        // 24V power supply current monitor.
+#define PIN_VIN_ADC         PIN_A0        // 24V power supply voltage monitor.
+#define PIN_IIN_ADC         PIN_A1        // 24V power supply current monitor.
 #define PIN_9V_UVLO         PIN_A2        // Under-voltage lock-out level on the 9V power supply.
+#define PIN_24V_ADC         PIN_VIN_ADC  // Alias for 24V power supply voltage monitor.
 #define PIN_9V_ADC          PIN_A3        // 9V power supply voltage monitor.
 #define PIN_5V_ADC          PIN_A4        // 9V power supply voltage monitor.
 
@@ -244,7 +245,7 @@ static const uint8_t DAC1 = PIN_DAC1;
 
 // Power Control
 #define PIN_PWR_SHDN        (50u)         // PB17 - nPWR_SHDN    (50)
-#define PIN_I_IN_RESET      (51u)         // PB16 - I_IN_REST    (51)
+#define PIN_IIN_RESET      (51u)         // PB16 - I_IN_REST    (51)
 #define PIN_PWR_FAULT       (52u)         // PD21 - nPWR_FAULT   (52)
 #define PIN_9V_ON_FLAG      (53u)         // PD20 - n9V_ON_FLAG  (53)
 

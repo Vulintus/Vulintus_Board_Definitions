@@ -141,10 +141,11 @@ static const uint8_t A6  = PIN_A6 ;
 
 #define ADC_RESOLUTION		12
 
-#define PIN_5V_ADC            PIN_A0     // PA02, 5V Supply Voltage Monitor.
-#define PIN_15V_ADC           PIN_A1     // PA04, 15V Supply Voltage Monitor.
-#define PIN_24V_UVLO          PIN_A2     // PA06, 24V Under-Voltage Lock-Out Monitor.
-#define PIN_15V_ON_FLAG       PIN_A3     // PB09, 15V Supply On Flag.
+#define PIN_5V_ADC            PIN_A0        // PA02, 5V Supply Voltage Monitor.
+#define PIN_15V_ADC           PIN_A1        // PA04, 15V Supply Voltage Monitor.
+#define PIN_24V_UVLO          PIN_A2        // PA06, 24V Under-Voltage Lock-Out Monitor.
+#define PIN_VIN_ADC           PIN_24V_UVLO  // Alias for 24V input voltage monitor
+#define PIN_15V_ON_FLAG       PIN_A3        // PB09, 15V Supply On Flag.
 
 #define PIN_SLOT_A            PIN_A4     // Slot detector, analog signal.
 

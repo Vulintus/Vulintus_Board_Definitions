@@ -112,7 +112,7 @@ static const uint8_t A1   = PIN_A1;
 
 #define ADC_RESOLUTION		12
 
-#define PIN_V_IN_ADC        PIN_A0      //24V power supply voltage monitor.
+#define PIN_VIN_ADC        PIN_A0      //24V power supply voltage monitor.
 #define PIN_BOARD_ID        PIN_A1      //Board ID analog reference.
 
 
