@@ -35,6 +35,7 @@
 // Nonvolatile memory (Flash) address assignments (60 bytes total). //
 #define NVM_ADDR_VULINTUS_ALIAS		0     	// Starting address for the Vulintus-set alias (30 bytes).
 #define NVM_ADDR_USERSET_ALIAS  	30     	// Starting address for the user-set device alias (30 bytes).
+#define NVM_ADDR_HID_OUTPUT       60      // Starting address for the HID state (1 byte).
 
 
 
