@@ -24,13 +24,12 @@
 
 // Non-pin definitions specific to this circuit board iteration.
 #define CIRCUIT_BOARD_VER   01          // Divide by 10 to match the Eagle design version.
-#define NUM_NEOPIX          1           // Number of NeoPixels.
 
 // I2C Addresses.
-#define I2C_ADDR_AD5273_L		0x2C		    // AD5273 digital potentiometer #1 (left loadcell baseline adjustment).
-#define I2C_ADDR_AD5273_R		0x2D		    // AD5273 digital potentiometer #2 (right loadcell baseline adjustment).
-#define I2C_ADDR_MCP40D18T	0x2E		    // MCP40D18T digital potentiometer (motor current adjustment).
-#define I2C_ADDR_OLED				0x3C		    // OLED display.
+#define I2C_ADDR_CYPD3177		0x08		    // CYPD3177 USB-C power deliver controller.
+#define I2C_ADDR_BQ27441		0x55		    // BQ27441 fuel gauges.
+#define I2C_ADDR_MCP40D17T	0x2E		    // MCP40D17T digital potentiometers (charging current adjustment).
+#define I2C_ADDR_OLED				0x3C		    // OLED displays
 
 
 /*----------------------------------------------------------------------------
@@ -64,21 +63,21 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (33u)
-#define NUM_DIGITAL_PINS     (33u)
-#define NUM_ANALOG_INPUTS    (6u)
+#ifdef __cplusplus
+  extern "C" unsigned int PINCOUNT_fn();
+#endif
+#define PINS_COUNT           (PINCOUNT_fn())
+#define NUM_DIGITAL_PINS     (32u)
+#define NUM_ANALOG_INPUTS    (8u)
 #define NUM_ANALOG_OUTPUTS   (0u)
-#define analogInputToDigitalPin(p)  ((p < 4u) ? 16u + (p) : (p == 4u) ? 23u : (p == 5u) ? 31u :-1)
+#define analogInputToDigitalPin(p)  ((p < 6u) ? 24u + (p) : (p < 8u) ? 25u + (p): -1)
 
 /* 
-  if (p < 4) {                          (p < 4u) ?
-    16 + (p);                           16u + (p)
+  if (p < 6) {                          (p < 6u) ?
+    24 + (p);                           24u + (p)
   }             
-  else if (p == 4) {                    : (p == 4u) ?
-    23;                                 23u
-  }
-  else if (p == 5) {                    : (p == 5u) ?
-    31;                                 31u
+  else if (p < 8) {                     :(p < 8u) ?
+    25 + (p);                           25u + (p)
   }
   else {
     -1;
@@ -103,21 +102,21 @@ extern "C"
 // #define digitalPinToTimer(P)
 
 // LEDs
-#define NEOPIXEL_BUILTIN     (11u)
-#define PIN_NEOPIXEL         NEOPIXEL_BUILTIN
-#define PIN_NEOPIX           NEOPIXEL_BUILTIN
+// None controlled by the SAMD21.
 
 
 /*
  * Analog pins
  */
-#define PIN_A0               (16u)
+#define PIN_A0               (24u)
 #define PIN_A1               (PIN_A0 + 1)
 #define PIN_A2               (PIN_A0 + 2)
 #define PIN_A3               (PIN_A0 + 3)
-#define PIN_A4               (23u)
-#define PIN_A5               (31u)
-#define PIN_DAC0             (36ul)     //Required, even if not used.
+#define PIN_A4               (PIN_A0 + 4)
+#define PIN_A5               (PIN_A0 + 5)
+#define PIN_A6               (31u)
+#define PIN_A7               (PIN_A6 + 1)
+#define PIN_DAC0             (38ul)     //Required, even if not used.
 
 static const uint8_t A0  = PIN_A0;
 static const uint8_t A1  = PIN_A1;
@@ -125,102 +124,122 @@ static const uint8_t A2  = PIN_A2;
 static const uint8_t A3  = PIN_A3;
 static const uint8_t A4  = PIN_A4;
 static const uint8_t A5  = PIN_A5;
+static const uint8_t A6  = PIN_A6;
+static const uint8_t A7  = PIN_A7;
 static const uint8_t DAC0 = PIN_DAC0;
 
 #define ADC_RESOLUTION		12
 
-#define PIN_24V_ADC         PIN_A0      //24V power supply voltage monitor.
-#define PIN_15V_ADC         PIN_A1      //15V power supply current monitor.
-#define PIN_15V_UVLO        PIN_A2      //Under-voltage lock-out level on the 15V power supply.
-#define PIN_5V_ADC          PIN_A3      //5V power supply voltage monitor.
+// NTC Thermistors
+#define PIN_NTC0            PIN_A0      // Charging slot 0 thermistor.
+#define PIN_NTC1            PIN_A1      // Charging slot 1 thermistor.
+#define PIN_NTC2            PIN_A2      // Charging slot 2 thermistor.
+#define PIN_NTC3            PIN_A3      // Charging slot 3 thermistor.
+#define PIN_NTC4            PIN_A4      // Charging slot 4 thermistor.
+#define PIN_NTC5            PIN_A5      // Charging slot 5 thermistor.
 
-#define PIN_SLOT            PIN_A4      //Slot detector.
+// Power Supply Monitoring
+#define PIN_VIN_ADC         PIN_A6      // Power input voltage monitor.
 
-#define PIN_BOARD_ID        PIN_A5      //Board ID analog reference.
+#define PIN_BOARD_ID        PIN_A7      //Board ID analog reference.
 
 // Other pins
-#define PIN_ATN             (28ul)
+#define PIN_ATN             (37ul)
 static const uint8_t ATN = PIN_ATN;
 
-// Display / Status
-#define PIN_OLED_RST        (10u)
-#define PIN_SPKR            (12u)
-#define OLED_I2C_ADDR       0x3C
+// USB-C Power Delivery
+#define PIN_USB_INT         (33u)
+#define PIN_USB_FAULT       (34u)
+#define PIN_PGOOD           (30u)
 
-// User Input
-#define PIN_QT_BTN_U        (13u)
-#define PIN_QT_BTN_S        (14u)
-#define PIN_QT_BTN_D        (15u)
-static const uint8_t BTN_U = PIN_QT_BTN_U;
-static const uint8_t BTN_S = PIN_QT_BTN_S;
-static const uint8_t BTN_D = PIN_QT_BTN_D;
 
-// Power Control
-#define PIN_15V_ON_FLAG     (20u)
+// Charger Enable.
+#define PIN_CHG_EN0         (12u)
+#define PIN_CHG_EN1         (13u)
+#define PIN_CHG_EN2         (14u)
+#define PIN_CHG_EN3         (15u)
+#define PIN_CHG_EN4         (16u)
+#define PIN_CHG_EN5         (17u)
 
-// Vulintus Peripheral Bus (VPB)
-#define PIN_VPB_CLK_IN    (6u)       
-#define PIN_VPB_CLK_OUT   (7u)   
-#define PIN_VPB_TRG       (8u)
-#define PIN_VPB_BLOCK       (9u)
-
-// Calibration
-#define PIN_VLX_GPIO        (21u)
-#define VLX_XSHUT           (22u)
-
-// DRV8434S Stepper Driver
-#define PIN_DRV_DIR         (24u)
-#define PIN_DRV_STEP        (25u)
-#define PIN_DRV_SLP         (26u)
-#define PIN_DRV_EN          (27u)
-#define PIN_DRV_FLT         (28u)
-#define PIN_DRV_CS          (29u)
-#define PIN_DRV_VREF        (30u)
+// MCP Charger Status.
+#define PIN_CHG_STAT0        (18u)
+#define PIN_CHG_STAT1        (19u)
+#define PIN_CHG_STAT2        (20u)
+#define PIN_CHG_STAT3        (21u)
+#define PIN_CHG_STAT4        (22u)
+#define PIN_CHG_STAT5        (23u)
 
 
 /*
  * SPI Interfaces
  */
-#define SPI_INTERFACES_COUNT 1
-
-#define PIN_SPI_MISO         (1u)
-#define PIN_SPI_MOSI         (0u)
-#define PIN_SPI_SCK          (2u)
-#define PERIPH_SPI           sercom1
-#define PAD_SPI_TX           SPI_PAD_0_SCK_1    // PICO/MOSI is on PAD[0], SCK is on PAD[1]
-#define PAD_SPI_RX           SERCOM_RX_PAD_3    // POCI/MISO is on PAD[3]
-
-static const uint8_t MOSI = PIN_SPI_MOSI ;
-static const uint8_t MISO = PIN_SPI_MISO ;
-static const uint8_t SCK  = PIN_SPI_SCK ;
-
-#define PIN_SPI_PICO        PIN_SPI_MOSI
-#define PIN_SPI_POCI        PIN_SPI_MISO
-static const uint8_t PICO = PIN_SPI_MOSI ;
-static const uint8_t POCI = PIN_SPI_MISO ;
+#define SPI_INTERFACES_COUNT 0
 
 
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 1
+#define WIRE_INTERFACES_COUNT 6
 
-#define PIN_WIRE_SDA         (3u)
-#define PIN_WIRE_SCL         (4u)
-#define PERIPH_WIRE          sercom3
-#define WIRE_IT_HANDLER      SERCOM3_Handler
+#define PIN_WIRE_SDA         (0u)
+#define PIN_WIRE_SCL         (1u)
+#define PERIPH_WIRE          sercom2
+#define WIRE_IT_HANDLER      SERCOM2_Handler
+#define PIN_WIRE_SDA0        PIN_WIRE_SDA
+#define PIN_WIRE_SCL0        PIN_WIRE_SCL
 
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
+static const uint8_t SDA0 = PIN_WIRE_SDA;
+static const uint8_t SCL0 = PIN_WIRE_SCL;
+
+#define PIN_WIRE1_SDA        (2u)
+#define PIN_WIRE1_SCL        (3u)
+#define PERIPH_WIRE1         sercom3
+#define WIRE1_IT_HANDLER     SERCOM3_Handler
+
+static const uint8_t SDA1 = PIN_WIRE1_SDA;
+static const uint8_t SCL1 = PIN_WIRE1_SCL;
+
+#define PIN_WIRE2_SDA        (4u)
+#define PIN_WIRE2_SCL        (5u)
+#define PERIPH_WIRE2         sercom5
+#define WIRE2_IT_HANDLER     SERCOM5_Handler
+
+static const uint8_t SDA2 = PIN_WIRE2_SDA;
+static const uint8_t SCL2 = PIN_WIRE2_SCL;
+
+#define PIN_WIRE3_SDA        (6u)
+#define PIN_WIRE3_SCL        (7u)
+#define PERIPH_WIRE3         sercom0
+#define WIRE3_IT_HANDLER     SERCOM0_Handler
+
+static const uint8_t SDA3 = PIN_WIRE3_SDA;
+static const uint8_t SCL3 = PIN_WIRE3_SCL;
+
+#define PIN_WIRE4_SDA        (8u)
+#define PIN_WIRE4_SCL        (9u)
+#define PERIPH_WIRE4         sercom4
+#define WIRE4_IT_HANDLER     SERCOM4_Handler
+
+static const uint8_t SDA4 = PIN_WIRE4_SDA;
+static const uint8_t SCL4 = PIN_WIRE4_SCL;
+
+#define PIN_WIRE5_SDA        (10u)
+#define PIN_WIRE5_SCL        (11u)
+#define PERIPH_WIRE5         sercom1
+#define WIRE5_IT_HANDLER     SERCOM1_Handler
+
+static const uint8_t SDA5 = PIN_WIRE5_SDA;
+static const uint8_t SCL5 = PIN_WIRE5_SCL;
 
 
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (32ul)
-#define PIN_USB_DM          (33ul)
-#define PIN_USB_DP          (34ul)
-#define PIN_USB_DETECT      (32ul)
+#define PIN_USB_HOST_ENABLE (37ul)
+#define PIN_USB_DM          (35ul)
+#define PIN_USB_DP          (36ul)
 
 
 /*

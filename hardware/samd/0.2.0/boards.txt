@@ -19,6 +19,52 @@ menu.pcb_ver=Circuit Board Version
 menu.ball_diameter=Ball Diameter
 
 ########################################################################################################################
+# HabiTrak Charging Station (HT-CS)
+# ------------------------------
+
+habitrak_charging_station.name=HabiTrak Charging Station (HT-CS)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+# Microchip's VID (https://www.microchip.com/usblicensing/)
+# Sublicense Request 4325, submitted by Drew on 2023-02-02
+habitrak_charging_station.vid.0=0x04D8
+habitrak_charging_station.pid.0=0xE407
+habitrak_charging_station.build.vid=0x04D8
+habitrak_charging_station.build.pid=0xE407
+
+# Upload
+habitrak_charging_station.upload.tool=bossac18
+habitrak_charging_station.upload.protocol=sam-ba
+habitrak_charging_station.upload.maximum_size=122880
+habitrak_charging_station.upload.offset=0x2000
+habitrak_charging_station.upload.use_1200bps_touch=true
+habitrak_charging_station.upload.wait_for_upload_port=true
+habitrak_charging_station.upload.native_usb=true
+
+# Build
+habitrak_charging_station.build.mcu=cortex-m0plus
+habitrak_charging_station.build.f_cpu=48000000L
+habitrak_charging_station.build.cache_flags=-DENABLE_CACHE
+habitrak_charging_station.build.flags.optimize=-Os
+habitrak_charging_station.build.usb_manufacturer="Vulintus"
+habitrak_charging_station.build.board=HABITRAK_CHARGING_STATION
+habitrak_charging_station.build.core=arduino
+habitrak_charging_station.build.extra_flags=-D__SAMD21__ -D__SAMD21G17A__ -DVULINTUS_HABITRAK_CHARGING_STATION -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
+habitrak_charging_station.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+habitrak_charging_station.build.variant_system_lib=
+
+# Bootloader
+habitrak_charging_station.bootloader.tool=openocd
+habitrak_charging_station.bootloader.file=samd21x17a/bootloader_samd21x17a.bin
+
+# Menu
+habitrak_charging_station.menu.pcb_ver.v0_1=Version 0.1
+habitrak_charging_station.menu.pcb_ver.v0_1.build.variant=habitrak_charging_station_v0_1
+habitrak_charging_station.menu.pcb_ver.v0_1.build.openocdscript=openocd_scripts/habitrak_charging_station_v0_1.cfg
+habitrak_charging_station.menu.pcb_ver.v0_1.build.usb_product="Version 0.1"
+
+
+########################################################################################################################
 # HabiTrak Thermal Activity Monitor (HT-TH)
 # -----------------
 
